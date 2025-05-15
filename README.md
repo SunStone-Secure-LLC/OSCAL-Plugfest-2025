@@ -24,7 +24,7 @@ Each model folder contains:
 ## 📄 File Type Overview
 | Format                  | Description                                                                 |
 |-------------------------|-----------------------------------------------------------------------------|
-| SAR (Security Assessment Report)     | Contains results from a completed assessment                                    |
+| SAR (Security Assessment Report)     | Describes how the system implements required security controls.                |
 | SSP (System Security Plan)           | Documents implementation of security controls for an information system        |
 | POAM (Plan of Action and Milestones) | Lists known security issues, planned fixes, and deadlines                      |
 | Component Definition                 | Describes individual system components and associated control implementations  |
