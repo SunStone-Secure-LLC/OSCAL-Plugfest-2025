@@ -1,0 +1,648 @@
+{
+  "assessment-plan": {
+    "uuid": "00ecfccc-7bbb-435a-822b-0ee3f7a8b2f1",
+    "metadata": {
+      "title": "Entra ID cATO Assessment Plan",
+      "last-modified": "2024-08-30T12:00:00.000000-04:00",
+      "version": "1",
+      "oscal-version": "1.1.2",
+      "roles": [
+        {
+          "id": "creator",
+          "title": "Document Creator"
+        },
+        {
+          "id": "contact",
+          "title": "Contact"
+        },
+        {
+          "id": "assessor",
+          "title": "Assessor"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "ecf84661-ed96-4b36-bdb1-8fac3aca02f1",
+          "type": "organization",
+          "name": "Easy Dynamics",
+          "email-addresses": ["oscal@easydynamics.com"]
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "creator",
+          "party-uuids": ["ecf84661-ed96-4b36-bdb1-8fac3aca02f1"]
+        },
+        {
+          "role-id": "contact",
+          "party-uuids": ["ecf84661-ed96-4b36-bdb1-8fac3aca02f1"]
+        }
+      ]
+    },
+    "import-ssp": {
+      "href": "#75e00698-e43b-4d6f-be7f-d1227a3a3e39",
+      "remarks": "Link the SAP to the SSP."
+    },
+    "local-definitions": {
+      "activities": [
+        {
+          "uuid": "c0ef3882-c5c9-4094-adff-f4420a4330fd",
+          "title": "CISA Scuba Test for MS.AAD.1.1v1",
+          "description": "Legacy authentication SHALL be blocked.",
+          "props": [
+            {
+              "name": "method",
+              "value": "EXAMINE"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "c2a2d38a-90d7-4b75-9074-94adf3e1745f",
+              "title": "Tests MS.AAD.1.1v1",
+              "description": "Runs Maester Test for MS.AAD.1.1v1",
+              "props": [
+                {
+                  "name": "scuba-policy",
+                  "value": "MS.AAD.1.1",
+                  "ns": "http://comply0.com/ns/oscal"
+                }
+              ],
+              "links": [
+                { "href": "/path/to/maester-script", "rel": "automation" }
+              ]
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [{ "control-id": "ia-2.8" }]
+              }
+            ]
+          }
+        },
+        {
+          "uuid": "1758b0f9-77b0-433b-9206-c0366a2135f4",
+          "title": "CISA Scuba Test for MS.AAD.2.1v1",
+          "description": "Users detected as high risk SHALL be blocked.",
+          "props": [
+            {
+              "name": "method",
+              "value": "EXAMINE"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "b0f4419f-02cf-49ce-96c4-b5b31fcdd8c7",
+              "title": "Tests MS.AAD.2.1v1",
+              "description": "Runs Maester Test for MS.AAD.2.1v1",
+              "props": [
+                {
+                  "name": "scuba-policy",
+                  "value": "MS.AAD.2.1",
+                  "ns": "http://comply0.com/ns/oscal"
+                }
+              ],
+              "links": [
+                { "href": "/path/to/maester-script", "rel": "automation" }
+              ]
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [{ "control-id": "ac-2.3" }]
+              }
+            ]
+          }
+        },
+        {
+          "uuid": "f678029d-33b0-4695-a5e0-7606f1561335",
+          "title": "CISA Scuba Test for MS.AAD.2.3v1",
+          "description": "Sign-ins detected as high risk SHALL be blocked",
+          "props": [
+            {
+              "name": "method",
+              "value": "EXAMINE"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "3744435f-004d-45c4-acdc-792a35cef1f3",
+              "title": "Tests MS.AAD.2.3v1",
+              "description": "Runs Maester Test for MS.AAD.2.3v1",
+              "props": [
+                {
+                  "name": "scuba-policy",
+                  "value": "MS.AAD.2.1",
+                  "ns": "http://comply0.com/ns/oscal"
+                }
+              ],
+              "links": [
+                { "href": "/path/to/maester-script", "rel": "automation" }
+              ]
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [{ "control-id": "ac-2.3" }]
+              }
+            ]
+          }
+        },
+        {
+          "uuid": "234459a2-b13e-4cb0-ac25-ed23bf0a3595",
+          "title": "CISA Scuba Test for MS.AAD.3.1v1",
+          "description": "Phishing-resistant MFA SHALL be enforced for all users",
+          "props": [
+            {
+              "name": "method",
+              "value": "EXAMINE"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "4b56f56d-c848-4d26-8f08-0c3dec07b968",
+              "title": "Tests MS.AAD.3.1v1",
+              "description": "Runs Maester Test for MS.AAD.3.1v1",
+              "props": [
+                {
+                  "name": "scuba-policy",
+                  "value": "MS.AAD.3.1",
+                  "ns": "http://comply0.com/ns/oscal"
+                }
+              ],
+              "links": [
+                { "href": "/path/to/maester-script", "rel": "automation" }
+              ]
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [{ "control-id": "ia-2.8" }]
+              }
+            ]
+          }
+        },
+        {
+          "uuid": "e6659948-943a-4b1a-8acf-61c713a72b4e",
+          "title": "CISA Scuba Test for MS.AAD.3.3v1",
+          "description": "If phishing-resistant MFA has not been enforced and Microsoft Authenticator is enabled, it SHALL be configured to show login context information.",
+          "props": [
+            {
+              "name": "method",
+              "value": "EXAMINE"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "f274ff8a-3121-48d0-904a-509b9ddc7696",
+              "title": "Tests MS.AAD.3.3v1",
+              "description": "Runs Maester Test for MS.AAD.3.3v1",
+              "props": [
+                {
+                  "name": "scuba-policy",
+                  "value": "MS.AAD.3.3",
+                  "ns": "http://comply0.com/ns/oscal"
+                }
+              ],
+              "links": [
+                { "href": "/path/to/maester-script", "rel": "automation" }
+              ]
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [{ "control-id": "ia-2.8" }]
+              }
+            ]
+          }
+        },
+        {
+          "uuid": "66e1f8ab-1b14-4d02-b4a5-9be06402dbc6",
+          "title": "CISA Scuba Test for MS.AAD.3.5v1",
+          "description": "The authentication methods SMS, voice call, and email one-time password (OTP) SHALL be disabled.",
+          "props": [
+            {
+              "name": "method",
+              "value": "EXAMINE"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "69421702-b87e-4b7f-bf06-f41978f37468",
+              "title": "Tests MS.AAD.3.5v1",
+              "description": "Runs Maester Test for MS.AAD.3.5v1",
+              "props": [
+                {
+                  "name": "scuba-policy",
+                  "value": "MS.AAD.3.5",
+                  "ns": "http://comply0.com/ns/oscal"
+                }
+              ],
+              "links": [
+                { "href": "/path/to/maester-script", "rel": "automation" }
+              ]
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [{ "control-id": "ia-2.8" }]
+              }
+            ]
+          }
+        },
+        {
+          "uuid": "721f516f-7847-4718-bb25-b55ca310b97d",
+          "title": "CISA Scuba Test for MS.AAD.3.6v1",
+          "description": "Phishing-resistant MFA SHALL be required for highly privileged roles.",
+          "props": [
+            {
+              "name": "method",
+              "value": "EXAMINE"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "a489abec-5977-41ce-9294-3a229818b8d3",
+              "title": "Tests MS.AAD.3.6v1",
+              "description": "Runs Maester Test for MS.AAD.3.6v1",
+              "props": [
+                {
+                  "name": "scuba-policy",
+                  "value": "MS.AAD.3.6",
+                  "ns": "http://comply0.com/ns/oscal"
+                }
+              ],
+              "links": [
+                { "href": "/path/to/maester-script", "rel": "automation" }
+              ]
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [{ "control-id": "ia-2.8" }]
+              }
+            ]
+          }
+        },
+        {
+          "uuid": "42ad827b-1e18-430e-be78-77ae6777a643",
+          "title": "CISA Scuba Test for MS.AAD.3.8v1",
+          "description": "Managed devices SHOULD be required to register MFA",
+          "props": [
+            {
+              "name": "method",
+              "value": "EXAMINE"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "44cce6e5-cd4b-4e1c-a6c8-a6133a293ecd",
+              "title": "Tests MS.AAD.3.8v1",
+              "description": "Runs Maester Test for MS.AAD.3.8v1",
+              "props": [
+                {
+                  "name": "scuba-policy",
+                  "value": "MS.AAD.3.8",
+                  "ns": "http://comply0.com/ns/oscal"
+                }
+              ],
+              "links": [
+                { "href": "/path/to/maester-script", "rel": "automation" }
+              ]
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [{ "control-id": "ia-2.8" }]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "reviewed-controls": {
+      "control-selections": [
+        {
+          "description": "# Control Scope",
+          "include-controls": [
+            { "control-id": "ac-2.3" },
+            { "control-id": "ia-2.8" }
+          ]
+        }
+      ]
+    },
+    "assessment-subjects": [
+      {
+        "type": "inventory-item",
+        "description": "Entra ID Instance",
+        "include-subjects": [
+          {
+            "subject-uuid": "691778c1-234b-4e30-8490-07ad2e6fec91",
+            "type": "inventory-item"
+          }
+        ]
+      }
+    ],
+    "assessment-assets": {
+      "components": [
+        {
+          "uuid": "fbe8d6c2-8508-4d22-aa2b-5e001ff3c6f6",
+          "type": "software",
+          "title": "Maester Plugin",
+          "description": "CLI plugin on Comply0 platform for verifying Entra ID configuration settings.",
+          "props": [
+            {
+              "name": "plugin-path",
+              "value": "Comply0.Kansa.Extensions.Maester.dll",
+              "ns": "http://comply0.com/ns/oscal"
+            },
+            {
+              "name": "script-path",
+              "value": "Resources\\Test-EntraID.ps1",
+              "ns": "http://comply0.com/ns/oscal"
+            },
+            {
+              "name": "client-id",
+              "value": "077b2d6b-0a52-4ac0-8b53-a5816a7113ef",
+              "ns": "http://comply0.com/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "d391e1ad-5fca-40cb-b2c9-b01270800997",
+          "type": "software",
+          "title": "Azure Plugin",
+          "description": "Azure plugin on Comply0 platform for reporting assessment results.",
+          "props": [
+            {
+              "name": "plugin-path",
+              "value": "Comply0.Kansa.Extensions.Azure.dll",
+              "ns": "http://comply0.com/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        }
+      ],
+      "assessment-platforms": [
+        {
+          "uuid": "05000cf8-2f2a-4417-8b93-60a1f209ee94",
+          "title": "Comply0 cATO Agent",
+          "uses-components": [
+            {
+              "component-uuid": "fbe8d6c2-8508-4d22-aa2b-5e001ff3c6f6"
+            },
+            {
+              "component-uuid": "d391e1ad-5fca-40cb-b2c9-b01270800997"
+            }
+          ]
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "uuid": "b2f71c67-3d4c-43ba-ad9d-949d0396413e",
+        "type": "action",
+        "title": "Automate assessment of Maester tests using Comply0 Platform Assessment Agent",
+        "description": "",
+        "props": [
+          {
+            "name": "assessment-platform",
+            "value": "05000cf8-2f2a-4417-8b93-60a1f209ee94",
+            "ns": "http://comply0.com/ns/oscal"
+          }
+        ],
+        "timing": {
+          "at-frequency": {
+            "period": 10,
+            "unit": "seconds"
+          }
+        },
+        "associated-activities": [
+          {
+            "activity-uuid": "c0ef3882-c5c9-4094-adff-f4420a4330fd",
+            "props":[
+            {
+                "name": "plugin-uuid",
+                "value": "fbe8d6c2-8508-4d22-aa2b-5e001ff3c6f6",
+                "ns": "http://comply0.com/ns/oscal"
+              }
+            ],
+            "subjects": [
+              {
+                "type": "inventory-item",
+                "include-subjects": [
+                  {
+                    "subject-uuid": "691778c1-234b-4e30-8490-07ad2e6fec91",
+                    "type": "inventory-item"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "activity-uuid": "1758b0f9-77b0-433b-9206-c0366a2135f4",
+            "props":[
+              {
+                  "name": "plugin-uuid",
+                  "value": "fbe8d6c2-8508-4d22-aa2b-5e001ff3c6f6",
+                  "ns": "http://comply0.com/ns/oscal"
+                }
+              ],
+            "subjects": [
+              {
+                "type": "inventory-item",
+                "include-subjects": [
+                  {
+                    "subject-uuid": "691778c1-234b-4e30-8490-07ad2e6fec91",
+                    "type": "inventory-item"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "activity-uuid": "f678029d-33b0-4695-a5e0-7606f1561335",
+            "props":[
+              {
+                  "name": "plugin-uuid",
+                  "value": "fbe8d6c2-8508-4d22-aa2b-5e001ff3c6f6",
+                  "ns": "http://comply0.com/ns/oscal"
+                }
+              ],
+            "subjects": [
+              {
+                "type": "inventory-item",
+                "include-subjects": [
+                  {
+                    "subject-uuid": "691778c1-234b-4e30-8490-07ad2e6fec91",
+                    "type": "inventory-item"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "activity-uuid": "234459a2-b13e-4cb0-ac25-ed23bf0a3595",
+            "props":[
+              {
+                  "name": "plugin-uuid",
+                  "value": "fbe8d6c2-8508-4d22-aa2b-5e001ff3c6f6",
+                  "ns": "http://comply0.com/ns/oscal"
+                }
+              ],
+            "subjects": [
+              {
+                "type": "inventory-item",
+                "include-subjects": [
+                  {
+                    "subject-uuid": "691778c1-234b-4e30-8490-07ad2e6fec91",
+                    "type": "inventory-item"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "activity-uuid": "e6659948-943a-4b1a-8acf-61c713a72b4e",
+            "props":[
+              {
+                  "name": "plugin-uuid",
+                  "value": "fbe8d6c2-8508-4d22-aa2b-5e001ff3c6f6",
+                  "ns": "http://comply0.com/ns/oscal"
+                }
+              ],
+            "subjects": [
+              {
+                "type": "inventory-item",
+                "include-subjects": [
+                  {
+                    "subject-uuid": "691778c1-234b-4e30-8490-07ad2e6fec91",
+                    "type": "inventory-item"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "activity-uuid": "66e1f8ab-1b14-4d02-b4a5-9be06402dbc6",
+            "props":[
+              {
+                  "name": "plugin-uuid",
+                  "value": "fbe8d6c2-8508-4d22-aa2b-5e001ff3c6f6",
+                  "ns": "http://comply0.com/ns/oscal"
+                }
+              ],
+            "subjects": [
+              {
+                "type": "inventory-item",
+                "include-subjects": [
+                  {
+                    "subject-uuid": "691778c1-234b-4e30-8490-07ad2e6fec91",
+                    "type": "inventory-item"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "activity-uuid": "721f516f-7847-4718-bb25-b55ca310b97d",
+            "props":[
+              {
+                  "name": "plugin-uuid",
+                  "value": "fbe8d6c2-8508-4d22-aa2b-5e001ff3c6f6",
+                  "ns": "http://comply0.com/ns/oscal"
+                }
+              ],
+            "subjects": [
+              {
+                "type": "inventory-item",
+                "include-subjects": [
+                  {
+                    "subject-uuid": "691778c1-234b-4e30-8490-07ad2e6fec91",
+                    "type": "inventory-item"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "activity-uuid": "42ad827b-1e18-430e-be78-77ae6777a643",
+            "props":[
+              {
+                  "name": "plugin-uuid",
+                  "value": "fbe8d6c2-8508-4d22-aa2b-5e001ff3c6f6",
+                  "ns": "http://comply0.com/ns/oscal"
+                }
+              ],
+            "subjects": [
+              {
+                "type": "inventory-item",
+                "include-subjects": [
+                  {
+                    "subject-uuid": "691778c1-234b-4e30-8490-07ad2e6fec91",
+                    "type": "inventory-item"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "f56da5c6-da67-4c40-acc8-6814bf7aa374",
+          "title": "System's Full Name",
+          "description": "# USE THIS RESOURCE WHEN NO OSCAL-BASED SSP EXISTS\n\nBriefly describe the system. This will appear in the SAR.",
+          "props": [
+            {
+              "name": "type",
+              "value": "no-oscal-ssp"
+            },
+            {
+              "name": "import-profile",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "#890170c3-d4fa-4d25-ab96-8e4bf7cc237c"
+            },
+            {
+              "name": "purpose",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Briefly state the system's purpose. This will appear in the SAR."
+            }
+          ],
+          "remarks": "Only include this resource if no OSCAL-based SSP is available."
+        },
+        {
+          "uuid": "75e00698-e43b-4d6f-be7f-d1227a3a3e39",
+          "title": "Kalvico Enterprise ICAM SSP",
+          "props": [
+            {
+              "name": "type",
+              "value": "oscal-ssp"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "system-security-plan.json",
+              "media-type": "application/oscal.catalog+json"
+            }
+          ],
+          "remarks": "Use this to point to an OSCAL-based SSP."
+        }
+      ]
+    }
+  }
+}
