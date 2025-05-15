@@ -3,6 +3,10 @@
 This repository contains validated and non-validated OSCAL files across multiple FedRAMP and NIST-supported formats. Validation was performed using the [OSCAL CLI Tool](https://github.com/metaschema-framework/oscal-cli)
 , a high-fidelity metaschema-based framework for OSCAL schema validation.
 
+## Link Share
+
+[Link to OSCAL Foundation Open Letter to FedRAMP](https://github.com/FedRAMP/rev5-continuous-monitoring-cwg/discussions/35)
+
 ## 📂 Repository Structure
 Each top-level directory represents a distinct OSCAL model:
 ```

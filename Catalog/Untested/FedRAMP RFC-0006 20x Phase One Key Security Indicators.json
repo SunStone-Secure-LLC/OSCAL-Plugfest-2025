@@ -1,0 +1,1495 @@
+{
+    "catalog": {
+        "uuid": "70420356-d594-4618-9500-960d603b9010",
+        "groups": [
+            {
+                "id": "c_085a084f-ff6f-4abd-a985-fc4d50e05c48",
+                "parts": [
+                    {
+                        "id": "c_085a084f-ff6f-4abd-a985-fc4d50e05c48_ovw",
+                        "name": "overview",
+                        "prose": "FedRAMP Key Security Indicators summarize the capabilities that satisfy FedRAMP security requirements aligned to NIST SP 800-53 controls, providing an abstraction layer that is simpler to approach and assess. Each Key Security Indicator includes critical security capabilities that must be met and validated. These capabilities are designed to provide a concrete approach to evaluating cloud security risks that can often be automatically derived from technical configurations and resolved to true or false.\n\nKey Security Indicators are engineered to address critical limitations in existing security assessment approaches:\n\n- Simplified capabilities: Reduce lengthy and complex security compliance to clear, actionable, capability-based standards\n- Automation-Friendly: Eliminate reliance on narrative to create a foundation for future automated security assessment processes\n- Flexible Implementation: Enable private innovation to design different methods for validation\n\nAlthough Key Security Indicators are designed to produce final validations that are true or false, the minimum expectations for validation and assessment will require cloud service providers and third party assessment organizations to provide reasonable evidence supporting the final validation.\n\nTo maximize innovation, this standard does not propose validation, evidence, or assessment expectations for Key Security Indicators. Instead, minimum expectations for validation, evidence, and assessment will be determined during active FedRAMP 20x pilots in collaboration with cloud service providers, third party assessment organizations, and federal agencies.\n\nAll FedRAMP 20x packages submitted for assessment based on these standards must be in a machine-readable format that can be regenerated on demand.\n\nThis release includes the Key Security Indicators that must be addressed to meet security requirements for FedRAMP Low authorization for cloud service offerings that meet the following eligibility criteria:\n\n1. Deployed on an existing FedRAMP authorized cloud service offering\n2. Using primarily cloud-native services from the host provider\n3. Using only FedRAMP authorized external services\n4. Service is provided only via the public internet (browser and/or APIs)\n5. Has completed a SOC 2 Type 2 audit or federal agency ATO process within the last 12 months\n\n#"
+                    }
+                ],
+                "props": [
+                    {
+                        "name": "label",
+                        "value": "KSI"
+                    }
+                ],
+                "title": "Key Security Indicators",
+                "controls": [
+                    {
+                        "id": "c_b6688b56-df1b-4f41-8988-2e90088b0a42",
+                        "links": [
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sc-5", 
+                                "text": "SC-5"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sc-7", 
+                                "text": "SC-7"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sc-12", 
+                                "text": "SC-12"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sc-39", 
+                                "text": "SC-39"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sr-12", 
+                                "text": "SR-12"
+                            }
+                        ],
+                        "parts": [
+                            {
+                                "id": "c_b6688b56-df1b-4f41-8988-2e90088b0a42_ovw",
+                                "name": "overview",
+                                "prose": "A secure cloud service offering will use cloud native architecture and design principles to enforce and enhance the Confidentiality, Integrity and Availability of the system."
+                            },
+                            {
+                                "id": "c_b6688b56-df1b-4f41-8988-2e90088b0a42_smt",
+                                "name": "statement",
+                                "parts": [
+                                    {
+                                        "id": "i_36148bff-b604-4d82-8ff9-1b447709b5a4",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "1."
+                                            }
+                                        ],
+                                        "prose": "Have denial of service (DoS) protection"
+                                    },
+                                    {
+                                        "id": "i_59f47301-38ca-45a7-91ca-34b93756cf9c",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "2."
+                                            }
+                                        ],
+                                        "prose": "Configure firewalls/proxy servers to limit inbound and outbound traffic"
+                                    },
+                                    {
+                                        "id": "i_b2713005-2d1e-429b-89dd-ddb31a8cb5ce",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "3."
+                                            }
+                                        ],
+                                        "prose": "Use immutable containers and serverless functions with strictly defined functionality and privileges"
+                                    },
+                                    {
+                                        "id": "i_981df010-66e3-493b-882f-c0d8f051cce6",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "4."
+                                            }
+                                        ],
+                                        "prose": "Design systems as logically segmented micro-services to minimize the attack surface and lateral movement if compromised"
+                                    },
+                                    {
+                                        "id": "i_8d0f03e3-c654-4835-a7e8-d84b138597e3",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "5."
+                                            }
+                                        ],
+                                        "prose": "Use cloud native virtual networks and related capabilities to enforce logical traffic flow controls"
+                                    },
+                                    {
+                                        "id": "i_a2446aef-71d5-4e8f-85a0-cff2be234155",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "6."
+                                            }
+                                        ],
+                                        "prose": "Execute continuous scanning of cloud native system components"
+                                    },
+                                    {
+                                        "id": "i_d772d879-52d1-4789-93a0-51e9b9853f77",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "7."
+                                            }
+                                        ],
+                                        "prose": "Use high availability design principles to maximize uptime"
+                                    }
+                                ],
+                                "prose": "Cloud service providers MUST:"
+                            }
+                        ],
+                        "props": [
+                            {
+                                "name": "label",
+                                "value": "KSI-CNA"
+                            }
+                        ],
+                        "title": "Cloud Native Architecture"
+                    },
+                    {
+                        "id": "c_50dd94f4-3f30-416c-9ac7-ed99c558caad",
+                        "links": [
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "cm-2", 
+                                "text": "CM-2"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "cm-4", 
+                                "text": "CM-4"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "cm-8", 
+                                "text": "CM-8"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ia-7", 
+                                "text": "IA-7"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ra-7", 
+                                "text": "RA-7"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sc-8", 
+                                "text": "SC-8"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sc-8.1", 
+                                "text": "SC-8(1)"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sc-13", 
+                                "text": "SC-13"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sc-28", 
+                                "text": "SC-28"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sc-28.1", 
+                                "text": "SC-28(1)"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "si-3", 
+                                "text": "SI-3"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "si-4", 
+                                "text": "SI-4"
+                            }
+                        ],
+                        "parts": [
+                            {
+                                "id": "c_50dd94f4-3f30-416c-9ac7-ed99c558caad_ovw",
+                                "name": "overview",
+                                "prose": "A secure cloud service offering will enforce the use of approved cryptography, continuously verify component integrity, and restrict access to external services."
+                            },
+                            {
+                                "id": "c_50dd94f4-3f30-416c-9ac7-ed99c558caad_smt",
+                                "name": "statement",
+                                "parts": [
+                                    {
+                                        "id": "i_fbd0576e-6124-4a24-b236-f455cf68202c",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "1."
+                                            }
+                                        ],
+                                        "prose": "Harden and review network and system configurations"
+                                    },
+                                    {
+                                        "id": "i_eb1f7ace-e790-498e-9903-e7a87844f7f1",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "2."
+                                            }
+                                        ],
+                                        "prose": "Encrypt all network traffic"
+                                    },
+                                    {
+                                        "id": "i_84e4a582-834f-4e70-a173-d4fbba4b6399",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "3."
+                                            }
+                                        ],
+                                        "prose": "Encrypt all federal and sensitive information at rest"
+                                    },
+                                    {
+                                        "id": "i_dbd34475-6af3-47be-b23f-e421513802b1",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "4."
+                                            }
+                                        ],
+                                        "prose": "Manage configuration centrally"
+                                    },
+                                    {
+                                        "id": "i_ddfe2182-f606-4aba-b5b4-1136ddd4f0f1",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "5."
+                                            }
+                                        ],
+                                        "prose": "Enforce system and component integrity through cryptographic means"
+                                    },
+                                    {
+                                        "id": "i_93437cd8-8f5a-43fa-975c-6c1f02d7f612",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "6."
+                                            }
+                                        ],
+                                        "prose": "Use a key management capability to execute regular rotation of digital keys"
+                                    },
+                                    {
+                                        "id": "i_23b3f5c2-3d18-4630-902e-d8e7d2f376aa",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "7."
+                                            }
+                                        ],
+                                        "prose": "Use a consistent, risk-informed approach for applying security patches"
+                                    }
+                                ],
+                                "prose": "Cloud service providers MUST:"
+                            }
+                        ],
+                        "props": [
+                            {
+                                "name": "label",
+                                "value": "KSI-SC"
+                            }
+                        ],
+                        "title": "Service Configuration"
+                    },
+                    {
+                        "id": "c_e182ac58-7056-403e-b8de-5c138711af7c",
+                        "links": [
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ac-2", 
+                                "text": "AC-2"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ac-3", 
+                                "text": "AC-3"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "au-9", 
+                                "text": "AU-9"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ac-14", 
+                                "text": "AC-14"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ia-2", 
+                                "text": "IA-2"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ia-2.1", 
+                                "text": "IA-2(1)"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ia-2.2", 
+                                "text": "IA-2(2)"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ia-2.8", 
+                                "text": "IA-2(8)"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ia-2.12", 
+                                "text": "IA-2(12)"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ia-4", 
+                                "text": "IA-4"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ia-5", 
+                                "text": "IA-5"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ia-5.1", 
+                                "text": "IA-5(1)"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ia-6", 
+                                "text": "IA-6"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ia-8", 
+                                "text": "IA-8"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ia-8.1", 
+                                "text": "IA-8(1)"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ia-8.2", 
+                                "text": "IA-8(2)"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ia-8.4", 
+                                "text": "IA-8(4)"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ia-11", 
+                                "text": "IA-11"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "si-1", 
+                                "text": "SI-1"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ps-2", 
+                                "text": "PS-2"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ps-3", 
+                                "text": "PS-3"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ps-4", 
+                                "text": "PS-4"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ps-5", 
+                                "text": "PS-5"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ps-7", 
+                                "text": "PS-7"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ps-9", 
+                                "text": "PS-9"
+                            }
+                        ],
+
+                        "parts": [
+                            {
+                                "id": "c_e182ac58-7056-403e-b8de-5c138711af7c_ovw",
+                                "name": "overview",
+                                "prose": "A secure cloud service offering will enforce the use of approved cryptography, continuously verify component integrity, and restrict access to external services."
+                            },
+                            {
+                                "id": "c_e182ac58-7056-403e-b8de-5c138711af7c_smt",
+                                "name": "statement",
+                                "parts": [
+                                    {
+                                        "id": "i_2e63803e-8859-4c40-b09d-252afbfe52ed",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "1."
+                                            }
+                                        ],
+                                        "prose": "Enforce phishing-resistant multi-factor authentication (MFA)"
+                                    },
+                                    {
+                                        "id": "i_58f29edf-98ec-446b-93d0-117fdde61462",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "2."
+                                            }
+                                        ],
+                                        "prose": "Enforce strong passwords"
+                                    },
+                                    {
+                                        "id": "i_7b99cbbc-6ece-438e-8974-25ce9279d884",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "3."
+                                            }
+                                        ],
+                                        "prose": "Use secure API authentication methods via industry standard protocols"
+                                    },
+                                    {
+                                        "id": "i_aec456f6-8773-48e7-95aa-2840026b8bd9",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "4."
+                                            }
+                                        ],
+                                        "prose": "Use a least-privileged, role-based, and just-in-time security model"
+                                    }
+                                ],
+                                "prose": "Cloud service providers MUST:"
+                            }
+                        ],
+                        "props": [
+                            {
+                                "name": "label",
+                                "value": "KSI-IAM"
+                            }
+                        ],
+                        "title": "Identity and Access Management"
+                    },
+                    {
+                        "id": "c_0873190d-36b9-48e9-afa9-74c667d81677",
+                        "links": [
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ac-7", 
+                                "text": "AC-7"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "au-2", 
+                                "text": "AU-3"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "au-4", 
+                                "text": "AU-4"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "au-8", 
+                                "text": "AU-8"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "au-11", 
+                                "text": "AU-11"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "au-12", 
+                                "text": "AU-12"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ra-5", 
+                                "text": "RA-5"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "si-2", 
+                                "text": "SI-2"
+                            }
+                        ],
+                        "parts": [
+                            {
+                                "id": "c_0873190d-36b9-48e9-afa9-74c667d81677_ovw",
+                                "name": "overview",
+                                "prose": "A secure cloud service offering will monitor, log, and audit all important events, activity, and changes."
+                            },
+                            {
+                                "id": "c_0873190d-36b9-48e9-afa9-74c667d81677_smt",
+                                "name": "statement",
+                                "parts": [
+                                    {
+                                        "id": "i_1eef057c-5a73-479b-a482-c91618f76feb",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "1."
+                                            }
+                                        ],
+                                        "prose": "Operate a Security Information and Event Management (SIEM) system for centralized, tamper-resistant event, activity, and change logging"
+                                    },
+                                    {
+                                        "id": "i_70024616-25c5-41e0-be42-8f888b20d277",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "2."
+                                            }
+                                        ],
+                                        "prose": "Regularly review and audit logs"
+                                    },
+                                    {
+                                        "id": "i_b6210ddf-29e9-4a01-b738-c57fea5b5591",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "3."
+                                            }
+                                        ],
+                                        "prose": "Rapidly detect and remediate or mitigate vulnerabilities"
+                                    },
+                                    {
+                                        "id": "i_bf424654-2db0-4db9-939c-6ec8441e1fb2",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "4."
+                                            }
+                                        ],
+                                        "prose": "Perform authenticated vulnerability scanning on publicly accessible components"
+                                    },
+                                    {
+                                        "id": "i_4a9d3d3f-67a2-4ae0-9538-5da818cecd49",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "5."
+                                            }
+                                        ],
+                                        "prose": "Perform Infrastructure as Code (IaC) and configuration scanning"
+                                    },
+                                    {
+                                        "id": "i_ab57e6bc-0011-49ca-9e76-ffd9f3aaf4a5",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "6."
+                                            }
+                                        ],
+                                        "prose": "Centrally track and prioritize the remediation of identified vulnerabilities"
+                                    }
+                                ],
+                                "prose": "Cloud service providers MUST:"
+                            }
+                        ],
+                        "props": [
+                            {
+                                "name": "label",
+                                "value": "KSI-MLA"
+                            }
+                        ],
+                        "title": "Monitoring, Logging, and Auditing"
+                    },
+                    {
+                        "id": "c_4f681f5e-49bd-4f6b-abef-5240dba50776",
+                        "links": [
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "cm-6", 
+                                "text": "CM-6"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "cm-7", 
+                                "text": "CM-7"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "cm-10", 
+                                "text": "CM-10"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "cm-11", 
+                                "text": "CM-11"
+                            }
+                        ],
+                        "parts": [
+                            {
+                                "id": "c_4f681f5e-49bd-4f6b-abef-5240dba50776_ovw",
+                                "name": "overview",
+                                "prose": "A secure cloud service provider will ensure that all system changes are properly documented, and configuration baselines are updated accordingly."
+                            },
+                            {
+                                "id": "c_4f681f5e-49bd-4f6b-abef-5240dba50776_smt",
+                                "name": "statement",
+                                "parts": [
+                                    {
+                                        "id": "i_7703c68d-cc1a-4e0d-bf20-a18c214a7971",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "1."
+                                            }
+                                        ],
+                                        "prose": "Log and monitor system modifications"
+                                    },
+                                    {
+                                        "id": "i_b1f45d54-6bc9-4676-b96c-4f38f3b5e420",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "2."
+                                            }
+                                        ],
+                                        "prose": "Execute changes though redeployment of version controlled immutable resources rather than direct modification wherever possible"
+                                    },
+                                    {
+                                        "id": "i_c89c891e-9828-432f-b33e-d93440be2d0c",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "3."
+                                            }
+                                        ],
+                                        "prose": "Implement automated testing and validation of changes prior to deployment"
+                                    },
+                                    {
+                                        "id": "i_bfa3788f-2770-4955-95dd-3d4d7345fe9e",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "4."
+                                            }
+                                        ],
+                                        "prose": "Have a documented change management procedure"
+                                    },
+                                    {
+                                        "id": "i_d499cdc5-23c0-42be-b2ca-dcd033a2bc94",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "5."
+                                            }
+                                        ],
+                                        "prose": "Evaluate the risk and potential impact of any change"
+                                    }
+                                ],
+                                "prose": "Cloud service providers MUST:"
+                            }
+                        ],
+                        "props": [
+                            {
+                                "name": "label",
+                                "value": "KSI-CM"
+                            }
+                        ],
+                        "title": "Change Management"
+                    },
+                    {
+                        "id": "c_fa6eed54-796c-42f5-ba2c-b6407728a7a9",
+                        "links": [
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ac-1", 
+                                "text": "AC-1"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "au-1", 
+                                "text": "AU-1"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ca-1", 
+                                "text": "CA-1"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "cm-1", 
+                                "text": "CM-1"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "cm-8", 
+                                "text": "CM-8"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "cp-1", 
+                                "text": "CP-1"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ia-1", 
+                                "text": "IA-1"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ir-1", 
+                                "text": "IR-1"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "pl-1", 
+                                "text": "PL-1"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "pl-2", 
+                                "text": "PL-2"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ps-1", 
+                                "text": "PS-1"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ra-1", 
+                                "text": "RA-1"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sa-1", 
+                                "text": "SA-1"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sa-2", 
+                                "text": "SA-2"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sa-3", 
+                                "text": "SA-3"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sa-5", 
+                                "text": "SA-5"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sa-8", 
+                                "text": "SA-8"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sc-1", 
+                                "text": "SC-1"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "si-1", 
+                                "text": "SI-1"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sr-1", 
+                                "text": "SR-1"
+                            }
+                        ],
+                        "parts": [
+                            {
+                                "id": "c_fa6eed54-796c-42f5-ba2c-b6407728a7a9_ovw",
+                                "name": "overview",
+                                "prose": "A secure cloud service offering will have intentional, organized, universal guidance for how every asset, including personnel, is secured."
+                            },
+                            {
+                                "id": "c_fa6eed54-796c-42f5-ba2c-b6407728a7a9_smt",
+                                "name": "statement",
+                                "parts": [
+                                    {
+                                        "id": "i_4ee47999-4f8c-44be-87a2-ad1fc338fd9b",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "1."
+                                            }
+                                        ],
+                                        "prose": "Have an up-to-date asset inventory or code defining all deployed assets"
+                                    },
+                                    {
+                                        "id": "i_23fc678f-cbf0-4a84-b7ca-93a0cf2e33f1",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "2."
+                                            }
+                                        ],
+                                        "prose": "Have policies outlining their security objectives"
+                                    },
+                                    {
+                                        "id": "i_99f78b8e-baeb-4554-be45-ea4aae601e6f",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "3."
+                                            }
+                                        ],
+                                        "prose": "Maintain a vulnerability disclosure program"
+                                    },
+                                    {
+                                        "id": "i_8525c130-8fd2-4467-bd39-a26795409723",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "4."
+                                            }
+                                        ],
+                                        "prose": "Build security considerations into the Software Development Lifecycle (SDLC) and aligning with Secure By Design principles"
+                                    },
+                                    {
+                                        "id": "i_0604ae05-0183-4ac0-97a6-9fafff2270de",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "5."
+                                            }
+                                        ],
+                                        "prose": "Document methods used to automatically evaluate implementations"
+                                    },
+                                    {
+                                        "id": "i_eaf237e9-520a-4736-9d75-612b11b0b12a",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "6."
+                                            }
+                                        ],
+                                        "prose": "Have a dedicated staff and budget for security"
+                                    }
+                                ],
+                                "prose": "Cloud service providers MUST:"
+                            }
+                        ],
+                        "props": [
+                            {
+                                "name": "label",
+                                "value": "KSI-PI"
+                            }
+                        ],
+                        "title": "Policy and Inventory"
+                    },
+                    {
+                        "id": "c_a8bace46-4063-4cd9-ab73-2b50dcc6dcf8",
+                        "links": [
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ac-2", 
+                                "text": "AC-2"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ac-20", 
+                                "text": "AC-20"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ac-23", 
+                                "text": "AC-23"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ca-3", 
+                                "text": "CA-3"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ca-9", 
+                                "text": "CA-9"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ra-3.1", 
+                                "text": "RA-3(1)"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sa-4", 
+                                "text": "SA-4"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sa-9", 
+                                "text": "SA-9"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sa-22", 
+                                "text": "SA-22"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "si-5", 
+                                "text": "SI-5"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sr-2", 
+                                "text": "SR-2"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sr-2.1", 
+                                "text": "SR-2(1)"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sr-3", 
+                                "text": "SR-3"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sr-5", 
+                                "text": "SR-5"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sr-8", 
+                                "text": "SR-8"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sr-10", 
+                                "text": "SR-10"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sr-11", 
+                                "text": "SR-11"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "sr-11.2", 
+                                "text": "SR-11(2)"
+                            }
+                        ],
+                        "parts": [
+                            {
+                                "id": "c_a8bace46-4063-4cd9-ab73-2b50dcc6dcf8_ovw",
+                                "name": "overview",
+                                "prose": "A secure cloud service offering will understand, monitor, and manage supply chain risks from third party services or components."
+                            },
+                            {
+                                "id": "c_a8bace46-4063-4cd9-ab73-2b50dcc6dcf8_smt",
+                                "name": "statement",
+                                "parts": [
+                                    {
+                                        "id": "i_7a6b7ef0-a152-4fd4-b4d2-fb9909bb0d28",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "1."
+                                            }
+                                        ],
+                                        "prose": "Regularly confirm that services storing Federal information are all FedRAMP authorized and securely configured"
+                                    },
+                                    {
+                                        "id": "i_1cb460e8-ffee-4293-8e4f-46b356931676",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "2."
+                                            }
+                                        ],
+                                        "prose": "Identify and prioritize potential supply chain risks"
+                                    },
+                                    {
+                                        "id": "i_49403296-4496-49f3-82f9-565c93b4576a",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "3."
+                                            }
+                                        ],
+                                        "prose": "Obtain a Software Bill of Materials (SBOM) for third party commercial software components"
+                                    },
+                                    {
+                                        "id": "i_72d66c30-52c6-48a7-a34e-e139177d8325",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "4."
+                                            }
+                                        ],
+                                        "prose": "Confirm that third party information resources have a Secure Software Development Attestation with CISA"
+                                    },
+                                    {
+                                        "id": "i_bc5f6c54-f882-4356-b196-9392bf9f568b",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "5."
+                                            }
+                                        ],
+                                        "prose": "Implement zero trust design principles"
+                                    }
+                                ],
+                                "prose": "Cloud service providers MUST:"
+                            }
+                        ],
+                        "props": [
+                            {
+                                "name": "label",
+                                "value": "KSI-3IR"
+                            }
+                        ],
+                        "title": "Third Party Information Resources"
+                    },
+                    {
+                        "id": "c_527a1330-dd6a-4157-a25e-c4c1844a66c2",
+                        "links": [
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "at-2", 
+                                "text": "AT-2"
+                            },{
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "at-3", 
+                                "text": "AT-3"
+                            },{
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "at-6", 
+                                "text": "AT-6"
+                            }
+                        ],
+                        "parts": [
+                            {
+                                "id": "c_527a1330-dd6a-4157-a25e-c4c1844a66c2_ovw",
+                                "name": "overview",
+                                "prose": "A secure cloud service provider will continuously educate their employees on cybersecurity measures, testing them regularly to ensure their knowledge is satisfactory."
+                            },
+                            {
+                                "id": "c_527a1330-dd6a-4157-a25e-c4c1844a66c2_smt",
+                                "name": "statement",
+                                "parts": [
+                                    {
+                                        "id": "i_6e49770d-e6c5-4161-a9ee-556c830cb0ac",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "1."
+                                            }
+                                        ],
+                                        "prose": "Ensure all employees receive security awareness training"
+                                    },
+                                    {
+                                        "id": "i_f0b37559-7b7d-4949-86da-daf4ed75e414",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "2."
+                                            }
+                                        ],
+                                        "prose": "Require role-specific training for high risk roles"
+                                    }
+                                ],
+                                "prose": "Cloud service providers MUST:"
+                            }
+                        ],
+                        "props": [
+                            {
+                                "name": "label",
+                                "value": "KSI-CE"
+                            }
+                        ],
+                        "title": "Cybersecurity Education"
+                    },
+                    {
+                        "id": "c_ecf8f385-97a8-4d61-96d4-3ffd9174db2b",
+                        "links": [
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "cp-2", 
+                                "text": "CP-2"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "cp-4", 
+                                "text": "CP-4"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "cp-9", 
+                                "text": "CP-9"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "cp-10", 
+                                "text": "CP-10"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ir-4", 
+                                "text": "IR-4"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ir-5", 
+                                "text": "IR-5"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ir-6", 
+                                "text": "IR-6"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ir-7", 
+                                "text": "IR-7"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ir-8", 
+                                "text": "IR-8"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ps-8", 
+                                "text": "PS-8"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ra-3", 
+                                "text": "RA-3"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ra-5.2", 
+                                "text": "RA-5(2)"
+                            },
+                            {
+                                "rel": "reference",
+                                "href": "#3dee4f20-a636-4726-aebf-b80e74736373",
+                                "resource-fragment": "ra-5.11", 
+                                "text": "RA-5(11)"
+                            }
+                        ],
+                        "parts": [
+                            {
+                                "id": "c_ecf8f385-97a8-4d61-96d4-3ffd9174db2b_ovw",
+                                "name": "overview",
+                                "prose": "A secure cloud service offering will maintain, test, and execute effective Incident Response Plans for routine incidents such as vulnerability discovery, abnormal activity detection, and exfiltration of data."
+                            },
+                            {
+                                "id": "c_ecf8f385-97a8-4d61-96d4-3ffd9174db2b_smt",
+                                "name": "statement",
+                                "parts": [
+                                    {
+                                        "id": "i_4fe424c3-14f9-47c1-b0e2-be8bd0c63c77",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "1."
+                                            }
+                                        ],
+                                        "prose": "Define Recovery Time Objective (RTO) and Recovery Point Objective (RPO)"
+                                    },
+                                    {
+                                        "id": "i_41796346-8ad5-408b-b99d-76ae9f19e23e",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "2."
+                                            }
+                                        ],
+                                        "prose": "Perform system backups aligned with the RTO and RPO"
+                                    },
+                                    {
+                                        "id": "i_1208d454-3147-416e-9822-8c5152d4b012",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "3."
+                                            }
+                                        ],
+                                        "prose": "Test the capability to recover from incidents and contingencies"
+                                    },
+                                    {
+                                        "id": "i_ede82323-c2f1-472a-8da3-61ec133a2131",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "4."
+                                            }
+                                        ],
+                                        "prose": "Report incidents according to federal requirements"
+                                    },
+                                    {
+                                        "id": "i_56e0efe2-ea84-431e-94d9-aef8a7faa554",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "5."
+                                            }
+                                        ],
+                                        "prose": "Maintain a log of incidents and periodically review past incidents for patterns or vulnerabilities"
+                                    },
+                                    {
+                                        "id": "i_4a685907-e0c2-4ca0-9fa2-4ab7ee07948c",
+                                        "name": "item",
+                                        "props": [
+                                            {
+                                                "name": "label",
+                                                "value": "6."
+                                            }
+                                        ],
+                                        "prose": "Measure Mean Time To Detect (MTTD) and Mean Time To Resolution (MTTR) for incidents"
+                                    }
+                                ],
+                                "prose": "Cloud service providers MUST:"
+                            }
+                        ],
+                        "props": [
+                            {
+                                "name": "label",
+                                "value": "KSI-IR"
+                            }
+                        ],
+                        "title": "Incident Response"
+                    }
+                ]
+            }
+        ],
+        "metadata": {
+            "links": [
+                {
+                "rel" : "canonical",
+                "href": "#02a7fb6a-2d1d-4706-bbd3-e9acd4e8b7e8"}
+            ],
+            "title": "FedRAMP RFC-0006 20x Phase One Key Security Indicators",
+            "remarks": "This catalog represents the DRAFT key security indicators (KSIs) published by the Federal Risk and Authorization Management Program (FedRAMP) Program Management Office (PMO) as a suggested starting point for community engagement. The KSIs are subject to change pending community feedback.",
+            "version": "DRAFT-01",
+            "document-ids": [
+                {
+                    "scheme": "http://oscal.io/oscal/identifier/contentuuid",
+                    "identifier": "ae97a4cd-c3b1-4499-898f-a3af566977ce"
+                }
+            ],
+            "last-modified": "2025-05-02T20:30:00+00:00",
+            "oscal-version": "v1.1.2"
+        },
+        "back-matter": {
+            "resources": [
+                {
+                    "uuid": "3dee4f20-a636-4726-aebf-b80e74736373",
+                    "title": "NIST 800-53 Rev 5.1.1",
+                    "rlinks": [
+                        {
+                            "href": "https://raw.githubusercontent.com/usnistgov/oscal-content/refs/tags/v1.3.0/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json",
+                            "media-type": "application/json"
+                        },
+                        {
+                            "href": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf",
+                            "media-type": "application/pdf"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "02a7fb6a-2d1d-4706-bbd3-e9acd4e8b7e8",
+                    "title": "FedRAMP 20X Phase One Key Security Indicators (KSI)",
+                    "rlinks": [
+                        {"href": "https://www.fedramp.gov/rfcs/0006/"}
+                    ],
+                    "description": "This describes the FedRAMP PMO's intentions to pilot the use of Key Security Indicators (KSI) related to FedRAMP Authorizations."
+                },
+                {
+                    "uuid": "b0fe3afb-8d22-4b75-9945-29ea02fd5be2",
+                    "title": "FedRAMP RFC-0006: 20x Phase One Key Security Indicators",
+                    "rlinks": [
+                        {"href": "https://github.com/FedRAMP/rfcs/discussions/18"}
+                    ],
+                    "description": "This is the discussion thread for the FedRAMP PMO's RFC-0006 / Phase One Key Security Indicators (KSI)."
+                },
+                {
+                    "uuid": "b6043452-679e-4551-9733-0bcf0089444f",
+                    "title": "FedRAMP RFC-006 KSI Feedback Form",
+                    "rlinks": [
+                        {"href": "https://docs.google.com/forms/d/e/1FAIpQLSdrUqq1nnRy5q5jx-Qe3pZZGVyKaM0mpWtPvlAD19QckZRnhA/viewform"}
+                    ],
+                    "description": "This is the official channel for FedRAMP stakeholders to provide feedback related to the FedRAMP PMO's RFC-006 Key Security Indicators."
+                }
+            ]
+        }
+    }
+}
