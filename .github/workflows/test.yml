@@ -1,0 +1,39 @@
+name: "CI Tests"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test_core:
+    runs-on: ubuntu-24.04
+    steps:
+    - id: checkout
+      name: Checkout repository
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+    - id: setup_java
+      name: Setup Java
+      uses: actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00
+      with:
+        distribution: temurin
+        java-version: 17
+    - id: test
+      name: Validate content with oscal-cli
+      uses: oscal-club/oscal-cli-action@a4d60aa03733a8543c1b9101640a5aa7eced7c49
+  test_fedramp:
+    runs-on: ubuntu-24.04
+    steps:
+    - id: checkout
+      name: Checkout repository
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+    - id: setup_java
+      name: Setup Java
+      uses: actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00
+      with:
+        distribution: temurin
+        java-version: 17
+    - id: test
+      name: Validate content with oscal-cli
+      uses: oscal-club/oscal-cli-action@a4d60aa03733a8543c1b9101640a5aa7eced7c49
