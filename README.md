@@ -7,6 +7,13 @@ This repository contains validated and non-validated OSCAL files across multiple
 
 [Link to OSCAL Foundation Open Letter to FedRAMP](https://github.com/FedRAMP/rev5-continuous-monitoring-cwg/discussions/35)
 
+## Tool Identification
+List out the different files tested. Which ones work and which did not. 
+For the ones that did not work, do you know why it failed? 
+
+If Yes, 
+What would be the recommended fix. Please Submit a Github Issue OR Add the information in the readme for each folder type.
+
 ## 📂 Repository Structure
 Each top-level directory represents a distinct OSCAL model:
 ```
