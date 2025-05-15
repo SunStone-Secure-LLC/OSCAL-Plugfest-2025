@@ -1,0 +1,882 @@
+{
+  "system-security-plan": {
+    "uuid": "9bf7bed4-a773-4120-82d0-d08ec94a9add",
+    "metadata": {
+      "title": "Kalvico Entra ID System Security Plan (SSP)",
+      "published": "2024-06-04T12:00:00-04:00",
+      "last-modified": "2024-06-04T12:00:00-04:00",
+      "version": "DRAFT-01",
+      "oscal-version": "1.1.2",
+      "props": [
+        {
+          "name": "marking",
+          "value": "Controlled Unclassified Information"
+        }
+      ],
+      "roles": [
+        {
+          "id": "prepared-by",
+          "title": "Content Author"
+        },
+        {
+          "id": "prepared-for",
+          "title": "Content Owner"
+        },
+        {
+          "id": "system-owner",
+          "title": "System Owner"
+        },
+        {
+          "id": "administrator",
+          "title": "Kalvico Entra ID Administrator"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "fa7317ba-da0b-4db2-93df-f89df94b57fc",
+          "type": "person",
+          "name": "System Owner's Name",
+          "email-addresses": [
+            "entra-id-owner@kalvico.com"
+          ]
+        },
+        {
+          "uuid": "51d7666f-86fc-4a9b-9ee8-fba315ecd39b",
+          "type": "person",
+          "name": "Arnold theAdmin",
+          "email-addresses": [
+            "AtheAdmin@kalvico.com"
+          ]
+        },
+        {
+          "uuid": "de37510b-c011-4df8-b05e-3673662a0b70",
+          "type": "organization",
+          "name": "Easy Dynamics",
+          "email-addresses": [
+            "oscal@easydynamics.com"
+          ]
+        },
+        {
+          "uuid": "4164943f-4b7f-4884-b171-908c7a7c997e",
+          "type": "organization",
+          "name": "United States Department of Agriculture (Kalvico)"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "prepared-by",
+          "party-uuids": [
+            "de37510b-c011-4df8-b05e-3673662a0b70"
+          ]
+        },
+        {
+          "role-id": "prepared-for",
+          "party-uuids": [
+            "4164943f-4b7f-4884-b171-908c7a7c997e"
+          ]
+        },
+        {
+          "role-id": "system-owner",
+          "party-uuids": [
+            "5f12ac90-5527-4006-a1b4-b7382d3da084"
+          ]
+        },
+        {
+          "role-id": "administrator",
+          "party-uuids": [
+            "51d7666f-86fc-4a9b-9ee8-fba315ecd39b"
+          ]
+        }
+      ]
+    },
+    "import-profile": {
+      "href": "#9f8a2ce9-0c06-4e01-98d8-fcc1405c7291"
+    },
+    "system-characteristics": {
+      "system-ids": [
+        {
+          "identifier-type": "https://ietf.org/rfc/rfc4122",
+          "id": "fb8c67f9-6479-4d27-9711-b3f2eac8cd75"
+        }
+      ],
+      "system-name": "Kalvico Enterprise Identity and Credential Access Management",
+      "system-name-short": "Kalvico ICAM",
+      "description": "Serves as the authoritative identity management capability for all Kalvico staff in Kalvico systems and partner systems.",
+      "security-sensitivity-level": "moderate",
+      "system-information": {
+        "information-types": [
+          {
+            "uuid": "472ff18d-01d5-45cc-9e16-32092c39bea7",
+            "title": "Information Type #1",
+            "description": "A description of this information type.",
+            "confidentiality-impact": {
+              "base": "TBD"
+            },
+            "integrity-impact": {
+              "base": "TBD"
+            },
+            "availability-impact": {
+              "base": "TBD"
+            }
+          }
+        ]
+      },
+      "security-impact-level": {
+        "security-objective-confidentiality": "TBD",
+        "security-objective-integrity": "TBD",
+        "security-objective-availability": "TBD"
+      },
+      "status": {
+        "state": "operational"
+      },
+      "authorization-boundary": {
+        "description": "The description of the authorization boundary belongs here."
+      }
+    },
+    "system-implementation": {
+      "users": [
+        {
+          "uuid": "ecc8e51e-56d1-4961-b4f2-cdcb90f4a9c1",
+          "title": "System Owner",
+          "props": [
+            {
+              "name": "type",
+              "value": "internal"
+            }
+          ],
+          "role-ids": [
+            "system-owner"
+          ]
+        },
+        {
+          "uuid": "55f2b8dd-6fb3-473d-a944-8838fede46a6",
+          "title": "Entra ID Administrators",
+          "props": [
+            {
+              "name": "type",
+              "value": "internal"
+            }
+          ],
+          "role-ids": [
+            "administrator"
+          ]
+        }
+      ],
+      "components": [
+        {
+          "uuid": "b811060d-4a89-4b04-a42c-28a7079d2ac2",
+          "type": "this-system",
+          "title": "Kalvico Entra ID",
+          "description": "An Entra ID instance managed and operated by Kalvico",
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "6b2d567d-bd93-4b12-9e38-31b6fbdb1aa4",
+          "type": "policy",
+          "title": "MS.AAD.1.1",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "6a9c63ab-f13c-4374-8d93-286d99fe402e",
+          "type": "policy",
+          "title": "MS.AAD.3.1",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "0661e169-d07e-40e9-8064-b5b36c5abd30",
+          "type": "policy",
+          "title": "MS.AAD.3.6",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "618c8714-ff29-460d-9bb6-fbd1857cba6f",
+          "type": "policy",
+          "title": "MS.AAD.2.1",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "6f8d53c8-60f0-42dc-8157-bff4a37fc227",
+          "type": "policy",
+          "title": "MS.AAD.2.2",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "f3d3b4f9-44d2-4f4a-9b8f-735043b6fa72",
+          "type": "policy",
+          "title": "MS.AAD.2.3",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "f52f9d65-66d3-47e4-a473-680436c54a68",
+          "type": "policy",
+          "title": "MS.AAD.3.2",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "2355f727-e132-458d-8cf1-c7a096ede161",
+          "type": "policy",
+          "title": "MS.AAD.3.3",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "db504ede-5edf-4f85-9d9b-687562a4dcd0",
+          "type": "policy",
+          "title": "MS.AAD.3.4",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "be3de9a1-7cf5-4788-82dc-10d197d7d854",
+          "type": "policy",
+          "title": "MS.AAD.3.5",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "240d9d4f-8c81-4625-a67f-0df4b35a71e2",
+          "type": "policy",
+          "title": "MS.AAD.3.7",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "ad6943d5-08c5-4da9-9d8c-971a1fffaa06",
+          "type": "policy",
+          "title": "MS.AAD.3.8",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "6c10dfa4-0405-46e3-afb3-3b18f8927bf7",
+          "type": "policy",
+          "title": "MS.AAD.4.1",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "6bef82f1-f3cf-469c-8653-a24470ef69f0",
+          "type": "policy",
+          "title": "MS.AAD.5.1",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "e3fd31c9-715f-4f90-97f7-0bc9716a7d84",
+          "type": "policy",
+          "title": "MS.AAD.5.2",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "c227aca2-a39f-4e43-a57c-0e53886aadba",
+          "type": "policy",
+          "title": "MS.AAD.5.3",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "307d89a4-3f64-4e9f-a473-69e41a67fccf",
+          "type": "policy",
+          "title": "MS.AAD.5.4",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "90f785a2-8b20-4074-9973-ceb25f4615f5",
+          "type": "policy",
+          "title": "MS.AAD.6.1",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "e18004f0-0bc2-441c-857a-e466ceb8d6ed",
+          "type": "policy",
+          "title": "MS.AAD.7.1",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "f3963866-0cf1-49b7-844d-b1bc3f651bea",
+          "type": "policy",
+          "title": "MS.AAD.7.2",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "2ae051a2-1c08-4860-9abc-49955378f3bf",
+          "type": "policy",
+          "title": "MS.AAD.7.3",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "96a4bf42-d393-4762-9688-968e26132782",
+          "type": "policy",
+          "title": "MS.AAD.7.4",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "ac23e2c0-9df6-457d-ba66-afbce46b0ef9",
+          "type": "policy",
+          "title": "MS.AAD.7.5",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "51e218b0-810b-44ae-a0dc-560febb2d7c5",
+          "type": "policy",
+          "title": "MS.AAD.7.6",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "79cbb3f4-3313-4fa3-be63-12e0b83bedc2",
+          "type": "policy",
+          "title": "MS.AAD.7.7",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "da7a67c1-ca46-4ec8-b19f-c1c48a1cb52f",
+          "type": "policy",
+          "title": "MS.AAD.7.8",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "5b07eb15-8b40-4f69-89f6-22267d866b40",
+          "type": "policy",
+          "title": "MS.AAD.7.9",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "d892c321-a412-4ab5-8cb0-17485851ae89",
+          "type": "policy",
+          "title": "MS.AAD.8.1",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "fe426e6a-64d9-45d9-a7d0-d925198a39e8",
+          "type": "policy",
+          "title": "MS.AAD.8.2",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "79442c90-3495-4407-9b92-cf1d75413a78",
+          "type": "policy",
+          "title": "MS.AAD.8.3",
+          "description": "",
+          "props": [
+            {
+              "name": "version",
+              "value": "v1",
+              "ns": "http://csrc.nist.gov/ns/oscal"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        }
+      ],
+      "inventory-items": [
+        {
+          "uuid": "691778c1-234b-4e30-8490-07ad2e6fec91",
+          "description": "Configured Entra ID instance",
+          "props": [
+            {
+              "name": "tenant-id",
+              "ns": "http://comply0.com/ns/oscal",
+              "value": "a0b2b6c5-7da4-4e40-b110-8257ccfeed1c"
+            },
+            {
+              "name": "vendor-name",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Microsoft"
+            },
+            {
+              "name": "asset-type",
+              "ns": "http://csrc.nist.gov/ns/oscal",
+              "value": "appliance"
+            },
+            {
+              "name": "allows-authenticated-scan",
+              "ns": "http://csrc.nist.gov/ns/oscal",
+              "value": "yes"
+            }
+          ],
+          "implemented-components": [
+            {
+              "component-uuid": "b811060d-4a89-4b04-a42c-28a7079d2ac2"
+            },
+            {
+              "component-uuid": "6b2d567d-bd93-4b12-9e38-31b6fbdb1aa4"
+            },
+            {
+              "component-uuid": "6a9c63ab-f13c-4374-8d93-286d99fe402e"
+            },
+            {
+              "component-uuid": "0661e169-d07e-40e9-8064-b5b36c5abd30"
+            },
+            {
+              "component-uuid": "618c8714-ff29-460d-9bb6-fbd1857cba6f"
+            },
+            {
+              "component-uuid": "6f8d53c8-60f0-42dc-8157-bff4a37fc227"
+            },
+            {
+              "component-uuid": "f3d3b4f9-44d2-4f4a-9b8f-735043b6fa72"
+            },
+            {
+              "component-uuid": "f52f9d65-66d3-47e4-a473-680436c54a68"
+            },
+            {
+              "component-uuid": "2355f727-e132-458d-8cf1-c7a096ede161"
+            },
+            {
+              "component-uuid": "db504ede-5edf-4f85-9d9b-687562a4dcd0"
+            },
+            {
+              "component-uuid": "be3de9a1-7cf5-4788-82dc-10d197d7d854"
+            },
+            {
+              "component-uuid": "240d9d4f-8c81-4625-a67f-0df4b35a71e2"
+            },
+            {
+              "component-uuid": "ad6943d5-08c5-4da9-9d8c-971a1fffaa06"
+            },
+            {
+              "component-uuid": "6c10dfa4-0405-46e3-afb3-3b18f8927bf7"
+            },
+            {
+              "component-uuid": "6bef82f1-f3cf-469c-8653-a24470ef69f0"
+            },
+            {
+              "component-uuid": "e3fd31c9-715f-4f90-97f7-0bc9716a7d84"
+            },
+            {
+              "component-uuid": "c227aca2-a39f-4e43-a57c-0e53886aadba"
+            },
+            {
+              "component-uuid": "307d89a4-3f64-4e9f-a473-69e41a67fccf"
+            },
+            {
+              "component-uuid": "90f785a2-8b20-4074-9973-ceb25f4615f5"
+            },
+            {
+              "component-uuid": "e18004f0-0bc2-441c-857a-e466ceb8d6ed"
+            },
+            {
+              "component-uuid": "f3963866-0cf1-49b7-844d-b1bc3f651bea"
+            },
+            {
+              "component-uuid": "2ae051a2-1c08-4860-9abc-49955378f3bf"
+            },
+            {
+              "component-uuid": "96a4bf42-d393-4762-9688-968e26132782"
+            },
+            {
+              "component-uuid": "ac23e2c0-9df6-457d-ba66-afbce46b0ef9"
+            },
+            {
+              "component-uuid": "51e218b0-810b-44ae-a0dc-560febb2d7c5"
+            },
+            {
+              "component-uuid": "79cbb3f4-3313-4fa3-be63-12e0b83bedc2"
+            },
+            {
+              "component-uuid": "da7a67c1-ca46-4ec8-b19f-c1c48a1cb52f"
+            },
+            {
+              "component-uuid": "5b07eb15-8b40-4f69-89f6-22267d866b40"
+            },
+            {
+              "component-uuid": "d892c321-a412-4ab5-8cb0-17485851ae89"
+            },
+            {
+              "component-uuid": "fe426e6a-64d9-45d9-a7d0-d925198a39e8"
+            },
+            {
+              "component-uuid": "79442c90-3495-4407-9b92-cf1d75413a78"
+            }
+          ]
+        }
+      ]
+    },
+    "control-implementation": {
+      "description": "This is the control implementation for the system.",
+      "implemented-requirements": [
+        {
+          "uuid": "c02c2a04-8922-40c1-ae50-2fae252fd99c",
+          "control-id": "ia-2.8",
+          "set-parameters": [
+            {
+              "param-id": "ia-02.08_odp",
+              "values": [
+                "privileged accounts"
+              ]
+            }
+          ],
+          "statements": [
+            {
+              "statement-id": "ia-2.8_stm",
+              "uuid": "e0eee8bd-3acc-4176-b53e-d71e89ae9a03",
+              "by-components": [
+                {
+                  "uuid": "c0779ec1-421a-4481-b560-edb75e81bd5f",
+                  "component-uuid": "b811060d-4a89-4b04-a42c-28a7079d2ac2",
+                  "description": "The Entra ID instance that is managed by Kalvico's operators using least privilege.",
+                  "implementation-status": {
+                    "state": "implemented"
+                  }
+                },
+                {
+                  "uuid": "54972b73-11c5-442e-bcc8-f2deea157ea8",
+                  "component-uuid": "6b2d567d-bd93-4b12-9e38-31b6fbdb1aa4",
+                  "description": "A conditional access policy has been configured to block legacy authentication.",
+                  "implementation-status": {
+                    "state": "implemented"
+                  }
+                },
+                {
+                  "uuid": "089e943c-305e-444b-a5ed-982ea600d580",
+                  "component-uuid": "6a9c63ab-f13c-4374-8d93-286d99fe402e",
+                  "description": "A conditional access policy has been configured to allow only phishing-resistant authentication for all users and all cloud apps.",
+                  "implementation-status": {
+                    "state": "implemented"
+                  }
+                },
+                {
+                  "uuid": "bfecb915-214a-4cf3-b0e4-2640fd799c55",
+                  "component-uuid": "0cb88bb2-4539-4ad0-ac6e-eea0224cd771",
+                  "description": "Microsoft Authenticator has be configured to display context information to users when they log in.",
+                  "implementation-status": {
+                    "state": "implemented"
+                  }
+                },
+                {
+                  "uuid": "86cc6957-12bd-45a8-913a-80a16f9a8181",
+                  "component-uuid": "890a905d-cc2d-4d1a-bf43-11ba43d20a3e",
+                  "description": "Authentication methods have been configured to disable SMS, Voice call and Email OTP.",
+                  "implementation-status": {
+                    "state": "implemented"
+                  }
+                },
+                {
+                  "uuid": "a6619966-61fb-4a57-8c74-e0c0d9b13562",
+                  "component-uuid": "0661e169-d07e-40e9-8064-b5b36c5abd30",
+                  "description": "A conditional access policy is configured to enforce pishing-resistant MFA for highly privileged roles.",
+                  "implementation-status": {
+                    "state": "implemented"
+                  }
+                },
+                {
+                  "uuid": "7d709d8a-94e6-4e0d-bf54-5450fa730259",
+                  "component-uuid": "ecc7869d-2962-47e5-94ca-b275a916f22e",
+                  "description": "A conditional access policy is configured to allow MFA registration only from devices that are Microsoft Entra hybrid joined and are compliant.",
+                  "implementation-status": {
+                    "state": "implemented"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "9f8a2ce9-0c06-4e01-98d8-fcc1405c7291",
+          "title": "cATO MODERATE Baseline",
+          "props": [
+            {
+              "name": "type",
+              "value": "oscal-profile"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "profile.json",
+              "media-type": "application/oscal.catalog+json"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

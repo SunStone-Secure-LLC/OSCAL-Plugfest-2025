@@ -1,0 +1,670 @@
+{
+  "assessment-results": {
+    "uuid": "ec0dad37-54e0-40fd-a925-6d0bdea94c0d",
+    "metadata": {
+      "title": "CISA SCuBA Assessment Results for February 2024",
+      "last-modified": "2025-02-08T13:57:28.355446-04:00",
+      "version": "202306-002",
+      "oscal-version": "1.1.2",
+      "roles": [
+        {
+          "id": "assessor",
+          "title": "Assessor"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "ecf84661-ed96-4b36-bdb1-8fac3aca02f1",
+          "type": "organization",
+          "name": "Easy Dynamics",
+          "email-addresses": [
+            "oscal@easydynamics.com"
+          ]
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "assessor",
+          "party-uuids": [
+            "ecf84661-ed96-4b36-bdb1-8fac3aca02f1"
+          ]
+        }
+      ]
+    },
+    "import-ap": {
+      "href": "./ap.oscal.xml"
+    },
+    "results": [
+      {
+        "end": "2025-02-12T14:16:25.2596472-05:00",
+        "uuid": "4509ba78-8e17-4d95-962c-fd593ca5210f",
+        "risks": [
+          {
+            "uuid": "9589ff26-8685-4231-882f-95e962633ff6",
+            "title": "Test MS.AAD.3.5: The authentication methods SMS, Voice Call, and Email One-Time Passcode (OTP) SHALL be disabled. failed",
+            "status": "open",
+            "statement": "#### MS.AAD.3.5v1\nThe authentication methods SMS, Voice Call, and Email One-Time Passcode (OTP) SHALL be disabled.\n\n<!--Policy: MS.AAD.3.5v1; Criticality: SHALL -->\n- _Rationale:_ SMS, voice call, and email OTP are the weakest authenticators. This policy forces users to use stronger MFA methods.\n- _Last modified:_ June 2023\n- _Note:_ This policy is only applicable if the tenant has their Manage Migration feature set to Migration Complete.",
+            "description": "#### MS.AAD.3.5v1\nThe authentication methods SMS, Voice Call, and Email One-Time Passcode (OTP) SHALL be disabled.\n\n<!--Policy: MS.AAD.3.5v1; Criticality: SHALL -->\n- _Rationale:_ SMS, voice call, and email OTP are the weakest authenticators. This policy forces users to use stronger MFA methods.\n- _Last modified:_ June 2023\n- _Note:_ This policy is only applicable if the tenant has their Manage Migration feature set to Migration Complete.",
+            "related-observations": [
+              {
+                "observation-uuid": "fd3a7927-9c39-40e8-b1cb-c76c6c8a4cc3"
+              }
+            ]
+          }
+        ],
+        "start": "2025-02-12T14:16:13.9324616-05:00",
+        "title": "CISA Scuba Test for MS.AAD.3.5v1",
+        "description": "Compliance tests that were run against the Kalvico tenant.\nThe tests were run with the following parameters:\n- Included test tags: MS.AAD.3.5\n- Excluded test tags: \nMore information about the tests themselves can be found in the [Maester documentation](https://maester.dev/)",
+        "observations": [
+          {
+            "uuid": "fd3a7927-9c39-40e8-b1cb-c76c6c8a4cc3",
+            "title": "MS.AAD.3.5: The authentication methods SMS, Voice Call, and Email One-Time Passcode (OTP) SHALL be disabled.",
+            "types": [
+              "finding"
+            ],
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2025-02-12T14:16:25.2422563-05:00",
+            "description": "The authentication methods SMS, Voice Call, and Email One-Time Passcode (OTP) SHALL be disabled."
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-controls": [
+                {
+                  "control-id": "ia-2.8"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "end": "2025-02-12T14:16:25.6534682-05:00",
+        "uuid": "876baaed-9773-409b-b582-804706e64279",
+        "risks": [
+          {
+            "uuid": "8a632569-fab8-4fa2-8bb0-a34baaf68a12",
+            "title": "Test MS.AAD.3.6: Phishing-resistant MFA SHALL be required for highly privileged roles. failed",
+            "status": "open",
+            "statement": "#### MS.AAD.3.6v1\nPhishing-resistant MFA SHALL be required for highly privileged roles.\n\n<!--Policy: MS.AAD.3.6v1; Criticality: SHALL -->\n- _Rationale:_ This is a backup security policy to help protect privileged access to the tenant if the conditional access policy, which requires MFA for all users, is disabled or misconfigured.\n- _Last modified:_ June 2023\n- _Note:_ Refer to the Highly Privileged Roles section at the top of this document for a reference list of roles considered highly privileged.",
+            "description": "#### MS.AAD.3.6v1\nPhishing-resistant MFA SHALL be required for highly privileged roles.\n\n<!--Policy: MS.AAD.3.6v1; Criticality: SHALL -->\n- _Rationale:_ This is a backup security policy to help protect privileged access to the tenant if the conditional access policy, which requires MFA for all users, is disabled or misconfigured.\n- _Last modified:_ June 2023\n- _Note:_ Refer to the Highly Privileged Roles section at the top of this document for a reference list of roles considered highly privileged.",
+            "related-observations": [
+              {
+                "observation-uuid": "f8a6d182-ac19-4777-acb3-93e73aab6a09"
+              }
+            ]
+          }
+        ],
+        "start": "2025-02-12T14:16:14.0730007-05:00",
+        "title": "CISA Scuba Test for MS.AAD.3.6v1",
+        "description": "Compliance tests that were run against the Kalvico tenant.\nThe tests were run with the following parameters:\n- Included test tags: MS.AAD.3.6\n- Excluded test tags: \nMore information about the tests themselves can be found in the [Maester documentation](https://maester.dev/)",
+        "observations": [
+          {
+            "uuid": "f8a6d182-ac19-4777-acb3-93e73aab6a09",
+            "title": "MS.AAD.3.6: Phishing-resistant MFA SHALL be required for highly privileged roles.",
+            "types": [
+              "finding"
+            ],
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2025-02-12T14:16:25.6532869-05:00",
+            "description": "Phishing-resistant MFA SHALL be required for highly privileged roles."
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-controls": [
+                {
+                  "control-id": "ia-2.8"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "end": "2025-02-12T14:16:25.7592875-05:00",
+        "uuid": "6fecdc43-ac93-4f6e-be4a-6952d8e2139f",
+        "risks": [
+          {
+            "uuid": "46953a3f-d650-4d72-9e6a-2ef3617213a2",
+            "title": "Test MS.AAD.2.1: Users detected as high risk SHALL be blocked. failed",
+            "status": "open",
+            "statement": "#### MS.AAD.2.1v1\nUsers detected as high risk SHALL be blocked.\n\n<!--Policy: MS.AAD.2.1v1; Criticality: SHALL -->\n- _Rationale:_ Blocking high-risk users may prevent compromised accounts from accessing the tenant.\n- _Last modified:_ June 2023\n- _Note:_ Users identified as high risk by Azure AD Identity Protection can be blocked from accessing the system via an Azure AD Conditional Access policy. A high-risk user will be blocked until an administrator remediates their account.",
+            "description": "#### MS.AAD.2.1v1\nUsers detected as high risk SHALL be blocked.\n\n<!--Policy: MS.AAD.2.1v1; Criticality: SHALL -->\n- _Rationale:_ Blocking high-risk users may prevent compromised accounts from accessing the tenant.\n- _Last modified:_ June 2023\n- _Note:_ Users identified as high risk by Azure AD Identity Protection can be blocked from accessing the system via an Azure AD Conditional Access policy. A high-risk user will be blocked until an administrator remediates their account.",
+            "related-observations": [
+              {
+                "observation-uuid": "8276b4a3-5b4f-43de-bb0a-7a238e75da69"
+              }
+            ]
+          }
+        ],
+        "start": "2025-02-12T14:16:14.0171782-05:00",
+        "title": "CISA Scuba Test for MS.AAD.2.3v1",
+        "description": "Compliance tests that were run against the Kalvico tenant.\nThe tests were run with the following parameters:\n- Included test tags: MS.AAD.2.1\n- Excluded test tags: \nMore information about the tests themselves can be found in the [Maester documentation](https://maester.dev/)",
+        "observations": [
+          {
+            "uuid": "8276b4a3-5b4f-43de-bb0a-7a238e75da69",
+            "title": "MS.AAD.2.1: Users detected as high risk SHALL be blocked.",
+            "types": [
+              "finding"
+            ],
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2025-02-12T14:16:25.7591831-05:00",
+            "description": "Users detected as high risk SHALL be blocked."
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-controls": [
+                {
+                  "control-id": "ac-2.3"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "end": "2025-02-12T14:16:26.1865788-05:00",
+        "uuid": "29cb85a9-7ff2-452a-b016-b4de44911cdb",
+        "risks": [
+          {
+            "uuid": "662ee7a7-8825-4b60-be8b-d560f41e78ed",
+            "title": "Test MS.AAD.3.8: Managed Devices SHOULD be required to register MFA. failed",
+            "status": "open",
+            "statement": "#### MS.AAD.3.8v1\nManaged Devices SHOULD be required to register MFA.\n\n<!--Policy: MS.AAD.3.8v1; Criticality: SHOULD -->\n- _Rationale:_ Reduce risk of an adversary using stolen user credentials and then registering their own MFA device to access the tenant by requiring a managed device provisioned and controlled by the agency to perform registration actions. This prevents the adversary from using their own unmanaged device to perform the registration.\n- _Last modified:_ June 2023",
+            "description": "#### MS.AAD.3.8v1\nManaged Devices SHOULD be required to register MFA.\n\n<!--Policy: MS.AAD.3.8v1; Criticality: SHOULD -->\n- _Rationale:_ Reduce risk of an adversary using stolen user credentials and then registering their own MFA device to access the tenant by requiring a managed device provisioned and controlled by the agency to perform registration actions. This prevents the adversary from using their own unmanaged device to perform the registration.\n- _Last modified:_ June 2023",
+            "related-observations": [
+              {
+                "observation-uuid": "f38dc9e9-0575-4f66-9ff0-875371b48908"
+              }
+            ]
+          }
+        ],
+        "start": "2025-02-12T14:16:14.0818616-05:00",
+        "title": "CISA Scuba Test for MS.AAD.3.8v1",
+        "description": "Compliance tests that were run against the Kalvico tenant.\nThe tests were run with the following parameters:\n- Included test tags: MS.AAD.3.8\n- Excluded test tags: \nMore information about the tests themselves can be found in the [Maester documentation](https://maester.dev/)",
+        "observations": [
+          {
+            "uuid": "f38dc9e9-0575-4f66-9ff0-875371b48908",
+            "title": "MS.AAD.3.8: Managed Devices SHOULD be required to register MFA.",
+            "types": [
+              "finding"
+            ],
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2025-02-12T14:16:26.1864632-05:00",
+            "description": "Managed Devices SHOULD be required to register MFA."
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-controls": [
+                {
+                  "control-id": "ia-2.8"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "end": "2025-02-12T14:16:26.2300585-05:00",
+        "uuid": "8b34a816-0048-40fa-b85b-b56bf6cf3dde",
+        "risks": [
+          {
+            "uuid": "c17af881-e8c9-42a9-83af-557656a67cc9",
+            "title": "Test MS.AAD.3.3: If phishing-resistant MFA has not been enforced and Microsoft Authenticator is enabled, it SHALL be configured to show login context information. failed",
+            "status": "open",
+            "statement": "#### MS.AAD.3.4v1\nThe Authentication Methods Manage Migration feature SHALL be set to Migration Complete.\n\n<!--Policy: MS.AAD.3.4v1; Criticality: SHALL -->\n- _Rationale:_ To disable the legacy authentication methods screen for the tenant, configure the Manage Migration feature to Migration Complete. The MFA and Self-Service Password Reset (SSPR) authentication methods are both managed from a central admin page, thereby reducing administrative complexity and potential security misconfigurations.\n- _Last modified:_ June 2023",
+            "description": "#### MS.AAD.3.4v1\nThe Authentication Methods Manage Migration feature SHALL be set to Migration Complete.\n\n<!--Policy: MS.AAD.3.4v1; Criticality: SHALL -->\n- _Rationale:_ To disable the legacy authentication methods screen for the tenant, configure the Manage Migration feature to Migration Complete. The MFA and Self-Service Password Reset (SSPR) authentication methods are both managed from a central admin page, thereby reducing administrative complexity and potential security misconfigurations.\n- _Last modified:_ June 2023",
+            "related-observations": [
+              {
+                "observation-uuid": "17345fbc-0699-43c9-b791-4cb7b8af3c5a"
+              }
+            ]
+          }
+        ],
+        "start": "2025-02-12T14:16:13.8694084-05:00",
+        "title": "CISA Scuba Test for MS.AAD.3.3v1",
+        "description": "Compliance tests that were run against the Kalvico tenant.\nThe tests were run with the following parameters:\n- Included test tags: MS.AAD.3.3\n- Excluded test tags: \nMore information about the tests themselves can be found in the [Maester documentation](https://maester.dev/)",
+        "observations": [
+          {
+            "uuid": "17345fbc-0699-43c9-b791-4cb7b8af3c5a",
+            "title": "MS.AAD.3.3: If phishing-resistant MFA has not been enforced and Microsoft Authenticator is enabled, it SHALL be configured to show login context information.",
+            "types": [
+              "finding"
+            ],
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2025-02-12T14:16:26.2299611-05:00",
+            "description": "If phishing-resistant MFA has not been enforced and Microsoft Authenticator is enabled, it SHALL be configured to show login context information."
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-controls": [
+                {
+                  "control-id": "ia-2.8"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "end": "2025-02-12T14:16:27.2298733-05:00",
+        "uuid": "8c780b81-5d23-413d-b788-c4a8e029aa17",
+        "risks": [
+          {
+            "uuid": "815a8724-8b79-4448-a55b-fcf2fbf3f8fd",
+            "title": "Test MS.AAD.3.1: Phishing-resistant MFA SHALL be enforced for all users. failed",
+            "status": "open",
+            "statement": "#### MS.AAD.3.1v1\nPhishing-resistant MFA SHALL be enforced for all users.\n\nThe phishing-resistant methods **Azure AD Certificate-Based Authentication (CBA)**, **FIDO2 Security Key** and **Windows Hello for Business** are the recommended authentication options since they offer forms of MFA with the least weaknesses. For federal agencies, Azure AD CBA supports federal PIV card authentication directly to Azure AD.\n\nIf on-premises PIV authentication and federation to Azure AD is used, [enforce PIV logon via AD group policy](https://www.idmanagement.gov/implement/scl-windows/).\n\n<!--Policy: MS.AAD.3.1v1; Criticality: SHALL -->\n- _Rationale:_ Weaker forms of MFA do not protect against sophisticated phishing attacks. By enforcing methods resistant to phishing, those risks are minimized.\n- _Last modified:_ June 2023\n",
+            "description": "#### MS.AAD.3.1v1\nPhishing-resistant MFA SHALL be enforced for all users.\n\nThe phishing-resistant methods **Azure AD Certificate-Based Authentication (CBA)**, **FIDO2 Security Key** and **Windows Hello for Business** are the recommended authentication options since they offer forms of MFA with the least weaknesses. For federal agencies, Azure AD CBA supports federal PIV card authentication directly to Azure AD.\n\nIf on-premises PIV authentication and federation to Azure AD is used, [enforce PIV logon via AD group policy](https://www.idmanagement.gov/implement/scl-windows/).\n\n<!--Policy: MS.AAD.3.1v1; Criticality: SHALL -->\n- _Rationale:_ Weaker forms of MFA do not protect against sophisticated phishing attacks. By enforcing methods resistant to phishing, those risks are minimized.\n- _Last modified:_ June 2023\n",
+            "related-observations": [
+              {
+                "observation-uuid": "4a4aafe2-6592-4b0e-aab4-a11ceaea66cd"
+              }
+            ]
+          }
+        ],
+        "start": "2025-02-12T14:16:14.2836543-05:00",
+        "title": "CISA Scuba Test for MS.AAD.3.1v1",
+        "description": "Compliance tests that were run against the Kalvico tenant.\nThe tests were run with the following parameters:\n- Included test tags: MS.AAD.3.1\n- Excluded test tags: \nMore information about the tests themselves can be found in the [Maester documentation](https://maester.dev/)",
+        "observations": [
+          {
+            "uuid": "4a4aafe2-6592-4b0e-aab4-a11ceaea66cd",
+            "title": "MS.AAD.3.1: Phishing-resistant MFA SHALL be enforced for all users.",
+            "types": [
+              "finding"
+            ],
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2025-02-12T14:16:27.2295213-05:00",
+            "description": "Phishing-resistant MFA SHALL be enforced for all users."
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-controls": [
+                {
+                  "control-id": "ia-2.8"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "end": "2025-02-12T14:16:27.6066116-05:00",
+        "uuid": "05aae45d-7fee-4db3-baf6-428b3d934eed",
+        "risks": [
+          {
+            "uuid": "4daf57a1-c7b2-481d-856c-58f332d11f09",
+            "title": "Test MS.AAD.2.1: Users detected as high risk SHALL be blocked. failed",
+            "status": "open",
+            "statement": "#### MS.AAD.2.1v1\nUsers detected as high risk SHALL be blocked.\n\n<!--Policy: MS.AAD.2.1v1; Criticality: SHALL -->\n- _Rationale:_ Blocking high-risk users may prevent compromised accounts from accessing the tenant.\n- _Last modified:_ June 2023\n- _Note:_ Users identified as high risk by Azure AD Identity Protection can be blocked from accessing the system via an Azure AD Conditional Access policy. A high-risk user will be blocked until an administrator remediates their account.",
+            "description": "#### MS.AAD.2.1v1\nUsers detected as high risk SHALL be blocked.\n\n<!--Policy: MS.AAD.2.1v1; Criticality: SHALL -->\n- _Rationale:_ Blocking high-risk users may prevent compromised accounts from accessing the tenant.\n- _Last modified:_ June 2023\n- _Note:_ Users identified as high risk by Azure AD Identity Protection can be blocked from accessing the system via an Azure AD Conditional Access policy. A high-risk user will be blocked until an administrator remediates their account.",
+            "related-observations": [
+              {
+                "observation-uuid": "052e9158-73b0-4e13-969c-21fd325990e8"
+              }
+            ]
+          }
+        ],
+        "start": "2025-02-12T14:16:13.8836939-05:00",
+        "title": "CISA Scuba Test for MS.AAD.2.1v1",
+        "description": "Compliance tests that were run against the Kalvico tenant.\nThe tests were run with the following parameters:\n- Included test tags: MS.AAD.2.1\n- Excluded test tags: \nMore information about the tests themselves can be found in the [Maester documentation](https://maester.dev/)",
+        "observations": [
+          {
+            "uuid": "052e9158-73b0-4e13-969c-21fd325990e8",
+            "title": "MS.AAD.2.1: Users detected as high risk SHALL be blocked.",
+            "types": [
+              "finding"
+            ],
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2025-02-12T14:16:27.6065429-05:00",
+            "description": "Users detected as high risk SHALL be blocked."
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-controls": [
+                {
+                  "control-id": "ac-2.3"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "end": "2025-02-12T14:16:29.1679134-05:00",
+        "uuid": "7359bc82-069e-4593-95b7-2e49a5459874",
+        "start": "2025-02-12T14:16:14.1411664-05:00",
+        "title": "CISA Scuba Test for MS.AAD.1.1v1",
+        "description": "Compliance tests that were run against the Kalvico tenant.\nThe tests were run with the following parameters:\n- Included test tags: MS.AAD.1.1\n- Excluded test tags: \nMore information about the tests themselves can be found in the [Maester documentation](https://maester.dev/)",
+        "observations": [
+          {
+            "uuid": "2b61c51c-587f-44b9-a901-c793b51c389d",
+            "title": "MS.AAD.1.1: Legacy authentication SHALL be blocked.",
+            "types": [
+              "finding"
+            ],
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2025-02-12T14:16:29.1678787-05:00",
+            "description": "Legacy authentication SHALL be blocked."
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-controls": [
+                {
+                  "control-id": "ia-2.8"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "end": "2025-02-12T14:16:44.4307273-05:00",
+        "uuid": "a41d15ef-2abc-4c9c-8b7c-da51c71c3b32",
+        "risks": [
+          {
+            "uuid": "bcead281-c18d-43ae-9517-3fa3be629414",
+            "title": "Test MS.AAD.2.1: Users detected as high risk SHALL be blocked. failed",
+            "status": "open",
+            "statement": "#### MS.AAD.2.1v1\nUsers detected as high risk SHALL be blocked.\n\n<!--Policy: MS.AAD.2.1v1; Criticality: SHALL -->\n- _Rationale:_ Blocking high-risk users may prevent compromised accounts from accessing the tenant.\n- _Last modified:_ June 2023\n- _Note:_ Users identified as high risk by Azure AD Identity Protection can be blocked from accessing the system via an Azure AD Conditional Access policy. A high-risk user will be blocked until an administrator remediates their account.",
+            "description": "#### MS.AAD.2.1v1\nUsers detected as high risk SHALL be blocked.\n\n<!--Policy: MS.AAD.2.1v1; Criticality: SHALL -->\n- _Rationale:_ Blocking high-risk users may prevent compromised accounts from accessing the tenant.\n- _Last modified:_ June 2023\n- _Note:_ Users identified as high risk by Azure AD Identity Protection can be blocked from accessing the system via an Azure AD Conditional Access policy. A high-risk user will be blocked until an administrator remediates their account.",
+            "related-observations": [
+              {
+                "observation-uuid": "b554665a-9732-4c94-b70f-533a76214334"
+              }
+            ]
+          }
+        ],
+        "start": "2025-02-12T14:16:32.1337521-05:00",
+        "title": "CISA Scuba Test for MS.AAD.2.3v1",
+        "description": "Compliance tests that were run against the Kalvico tenant.\nThe tests were run with the following parameters:\n- Included test tags: MS.AAD.2.1\n- Excluded test tags: \nMore information about the tests themselves can be found in the [Maester documentation](https://maester.dev/)",
+        "observations": [
+          {
+            "uuid": "b554665a-9732-4c94-b70f-533a76214334",
+            "title": "MS.AAD.2.1: Users detected as high risk SHALL be blocked.",
+            "types": [
+              "finding"
+            ],
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2025-02-12T14:16:44.4306642-05:00",
+            "description": "Users detected as high risk SHALL be blocked."
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-controls": [
+                {
+                  "control-id": "ac-2.3"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "end": "2025-02-12T14:16:44.7096285-05:00",
+        "uuid": "4e9c3655-87e5-45c5-93ba-cebda1181ef7",
+        "risks": [
+          {
+            "uuid": "d65c8949-6c37-4a5d-ad82-1ac1a7ffe236",
+            "title": "Test MS.AAD.3.6: Phishing-resistant MFA SHALL be required for highly privileged roles. failed",
+            "status": "open",
+            "statement": "#### MS.AAD.3.6v1\nPhishing-resistant MFA SHALL be required for highly privileged roles.\n\n<!--Policy: MS.AAD.3.6v1; Criticality: SHALL -->\n- _Rationale:_ This is a backup security policy to help protect privileged access to the tenant if the conditional access policy, which requires MFA for all users, is disabled or misconfigured.\n- _Last modified:_ June 2023\n- _Note:_ Refer to the Highly Privileged Roles section at the top of this document for a reference list of roles considered highly privileged.",
+            "description": "#### MS.AAD.3.6v1\nPhishing-resistant MFA SHALL be required for highly privileged roles.\n\n<!--Policy: MS.AAD.3.6v1; Criticality: SHALL -->\n- _Rationale:_ This is a backup security policy to help protect privileged access to the tenant if the conditional access policy, which requires MFA for all users, is disabled or misconfigured.\n- _Last modified:_ June 2023\n- _Note:_ Refer to the Highly Privileged Roles section at the top of this document for a reference list of roles considered highly privileged.",
+            "related-observations": [
+              {
+                "observation-uuid": "832d1209-5aec-4367-9fde-7a4f7342be51"
+              }
+            ]
+          }
+        ],
+        "start": "2025-02-12T14:16:31.9909327-05:00",
+        "title": "CISA Scuba Test for MS.AAD.3.6v1",
+        "description": "Compliance tests that were run against the Kalvico tenant.\nThe tests were run with the following parameters:\n- Included test tags: MS.AAD.3.6\n- Excluded test tags: \nMore information about the tests themselves can be found in the [Maester documentation](https://maester.dev/)",
+        "observations": [
+          {
+            "uuid": "832d1209-5aec-4367-9fde-7a4f7342be51",
+            "title": "MS.AAD.3.6: Phishing-resistant MFA SHALL be required for highly privileged roles.",
+            "types": [
+              "finding"
+            ],
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2025-02-12T14:16:44.709562-05:00",
+            "description": "Phishing-resistant MFA SHALL be required for highly privileged roles."
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-controls": [
+                {
+                  "control-id": "ia-2.8"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "end": "2025-02-12T14:16:45.0762784-05:00",
+        "uuid": "96240be0-6eba-4c86-b5d5-8e6d70a6ea3f",
+        "risks": [
+          {
+            "uuid": "a6419bd8-129a-45af-aa4a-02970adb3ffe",
+            "title": "Test MS.AAD.3.1: Phishing-resistant MFA SHALL be enforced for all users. failed",
+            "status": "open",
+            "statement": "#### MS.AAD.3.1v1\nPhishing-resistant MFA SHALL be enforced for all users.\n\nThe phishing-resistant methods **Azure AD Certificate-Based Authentication (CBA)**, **FIDO2 Security Key** and **Windows Hello for Business** are the recommended authentication options since they offer forms of MFA with the least weaknesses. For federal agencies, Azure AD CBA supports federal PIV card authentication directly to Azure AD.\n\nIf on-premises PIV authentication and federation to Azure AD is used, [enforce PIV logon via AD group policy](https://www.idmanagement.gov/implement/scl-windows/).\n\n<!--Policy: MS.AAD.3.1v1; Criticality: SHALL -->\n- _Rationale:_ Weaker forms of MFA do not protect against sophisticated phishing attacks. By enforcing methods resistant to phishing, those risks are minimized.\n- _Last modified:_ June 2023\n",
+            "description": "#### MS.AAD.3.1v1\nPhishing-resistant MFA SHALL be enforced for all users.\n\nThe phishing-resistant methods **Azure AD Certificate-Based Authentication (CBA)**, **FIDO2 Security Key** and **Windows Hello for Business** are the recommended authentication options since they offer forms of MFA with the least weaknesses. For federal agencies, Azure AD CBA supports federal PIV card authentication directly to Azure AD.\n\nIf on-premises PIV authentication and federation to Azure AD is used, [enforce PIV logon via AD group policy](https://www.idmanagement.gov/implement/scl-windows/).\n\n<!--Policy: MS.AAD.3.1v1; Criticality: SHALL -->\n- _Rationale:_ Weaker forms of MFA do not protect against sophisticated phishing attacks. By enforcing methods resistant to phishing, those risks are minimized.\n- _Last modified:_ June 2023\n",
+            "related-observations": [
+              {
+                "observation-uuid": "f61322d0-deb4-4864-81ba-1071ffe3fcc4"
+              }
+            ]
+          }
+        ],
+        "start": "2025-02-12T14:16:33.7116802-05:00",
+        "title": "CISA Scuba Test for MS.AAD.3.1v1",
+        "description": "Compliance tests that were run against the Kalvico tenant.\nThe tests were run with the following parameters:\n- Included test tags: MS.AAD.3.1\n- Excluded test tags: \nMore information about the tests themselves can be found in the [Maester documentation](https://maester.dev/)",
+        "observations": [
+          {
+            "uuid": "f61322d0-deb4-4864-81ba-1071ffe3fcc4",
+            "title": "MS.AAD.3.1: Phishing-resistant MFA SHALL be enforced for all users.",
+            "types": [
+              "finding"
+            ],
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2025-02-12T14:16:45.0762145-05:00",
+            "description": "Phishing-resistant MFA SHALL be enforced for all users."
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-controls": [
+                {
+                  "control-id": "ia-2.8"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "end": "2025-02-12T14:16:46.2804636-05:00",
+        "uuid": "7efc826c-cec9-4c0a-89f4-b076c9424d2d",
+        "risks": [
+          {
+            "uuid": "c78f1e09-8a85-40b6-882c-9c78bda87bf1",
+            "title": "Test MS.AAD.2.1: Users detected as high risk SHALL be blocked. failed",
+            "status": "open",
+            "statement": "#### MS.AAD.2.1v1\nUsers detected as high risk SHALL be blocked.\n\n<!--Policy: MS.AAD.2.1v1; Criticality: SHALL -->\n- _Rationale:_ Blocking high-risk users may prevent compromised accounts from accessing the tenant.\n- _Last modified:_ June 2023\n- _Note:_ Users identified as high risk by Azure AD Identity Protection can be blocked from accessing the system via an Azure AD Conditional Access policy. A high-risk user will be blocked until an administrator remediates their account.",
+            "description": "#### MS.AAD.2.1v1\nUsers detected as high risk SHALL be blocked.\n\n<!--Policy: MS.AAD.2.1v1; Criticality: SHALL -->\n- _Rationale:_ Blocking high-risk users may prevent compromised accounts from accessing the tenant.\n- _Last modified:_ June 2023\n- _Note:_ Users identified as high risk by Azure AD Identity Protection can be blocked from accessing the system via an Azure AD Conditional Access policy. A high-risk user will be blocked until an administrator remediates their account.",
+            "related-observations": [
+              {
+                "observation-uuid": "75b49c3d-795b-4cf1-8bc3-e5d7676d590b"
+              }
+            ]
+          }
+        ],
+        "start": "2025-02-12T14:16:34.0017143-05:00",
+        "title": "CISA Scuba Test for MS.AAD.2.1v1",
+        "description": "Compliance tests that were run against the Kalvico tenant.\nThe tests were run with the following parameters:\n- Included test tags: MS.AAD.2.1\n- Excluded test tags: \nMore information about the tests themselves can be found in the [Maester documentation](https://maester.dev/)",
+        "observations": [
+          {
+            "uuid": "75b49c3d-795b-4cf1-8bc3-e5d7676d590b",
+            "title": "MS.AAD.2.1: Users detected as high risk SHALL be blocked.",
+            "types": [
+              "finding"
+            ],
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2025-02-12T14:16:46.280401-05:00",
+            "description": "Users detected as high risk SHALL be blocked."
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-controls": [
+                {
+                  "control-id": "ac-2.3"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "end": "2025-02-12T14:16:46.3665436-05:00",
+        "uuid": "d8956581-3bae-44d0-b4bc-edeea380235b",
+        "risks": [
+          {
+            "uuid": "fb631e66-d010-450f-9b36-f1873b7b0aed",
+            "title": "Test MS.AAD.3.8: Managed Devices SHOULD be required to register MFA. failed",
+            "status": "open",
+            "statement": "#### MS.AAD.3.8v1\nManaged Devices SHOULD be required to register MFA.\n\n<!--Policy: MS.AAD.3.8v1; Criticality: SHOULD -->\n- _Rationale:_ Reduce risk of an adversary using stolen user credentials and then registering their own MFA device to access the tenant by requiring a managed device provisioned and controlled by the agency to perform registration actions. This prevents the adversary from using their own unmanaged device to perform the registration.\n- _Last modified:_ June 2023",
+            "description": "#### MS.AAD.3.8v1\nManaged Devices SHOULD be required to register MFA.\n\n<!--Policy: MS.AAD.3.8v1; Criticality: SHOULD -->\n- _Rationale:_ Reduce risk of an adversary using stolen user credentials and then registering their own MFA device to access the tenant by requiring a managed device provisioned and controlled by the agency to perform registration actions. This prevents the adversary from using their own unmanaged device to perform the registration.\n- _Last modified:_ June 2023",
+            "related-observations": [
+              {
+                "observation-uuid": "2c8d61ef-067e-4921-a703-6f41694d5e0d"
+              }
+            ]
+          }
+        ],
+        "start": "2025-02-12T14:16:32.9282329-05:00",
+        "title": "CISA Scuba Test for MS.AAD.3.8v1",
+        "description": "Compliance tests that were run against the Kalvico tenant.\nThe tests were run with the following parameters:\n- Included test tags: MS.AAD.3.8\n- Excluded test tags: \nMore information about the tests themselves can be found in the [Maester documentation](https://maester.dev/)",
+        "observations": [
+          {
+            "uuid": "2c8d61ef-067e-4921-a703-6f41694d5e0d",
+            "title": "MS.AAD.3.8: Managed Devices SHOULD be required to register MFA.",
+            "types": [
+              "finding"
+            ],
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2025-02-12T14:16:46.3664718-05:00",
+            "description": "Managed Devices SHOULD be required to register MFA."
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-controls": [
+                {
+                  "control-id": "ia-2.8"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "end": "2025-02-12T14:16:46.5859176-05:00",
+        "uuid": "d6795947-027b-4db8-b32e-3136bc91cc82",
+        "risks": [
+          {
+            "uuid": "f9944ce4-5d58-4a3a-8312-428ce7720905",
+            "title": "Test MS.AAD.3.5: The authentication methods SMS, Voice Call, and Email One-Time Passcode (OTP) SHALL be disabled. failed",
+            "status": "open",
+            "statement": "#### MS.AAD.3.5v1\nThe authentication methods SMS, Voice Call, and Email One-Time Passcode (OTP) SHALL be disabled.\n\n<!--Policy: MS.AAD.3.5v1; Criticality: SHALL -->\n- _Rationale:_ SMS, voice call, and email OTP are the weakest authenticators. This policy forces users to use stronger MFA methods.\n- _Last modified:_ June 2023\n- _Note:_ This policy is only applicable if the tenant has their Manage Migration feature set to Migration Complete.",
+            "description": "#### MS.AAD.3.5v1\nThe authentication methods SMS, Voice Call, and Email One-Time Passcode (OTP) SHALL be disabled.\n\n<!--Policy: MS.AAD.3.5v1; Criticality: SHALL -->\n- _Rationale:_ SMS, voice call, and email OTP are the weakest authenticators. This policy forces users to use stronger MFA methods.\n- _Last modified:_ June 2023\n- _Note:_ This policy is only applicable if the tenant has their Manage Migration feature set to Migration Complete.",
+            "related-observations": [
+              {
+                "observation-uuid": "70c51097-e425-4066-9c9d-bbbecbcb15c9"
+              }
+            ]
+          }
+        ],
+        "start": "2025-02-12T14:16:31.5769226-05:00",
+        "title": "CISA Scuba Test for MS.AAD.3.5v1",
+        "description": "Compliance tests that were run against the Kalvico tenant.\nThe tests were run with the following parameters:\n- Included test tags: MS.AAD.3.5\n- Excluded test tags: \nMore information about the tests themselves can be found in the [Maester documentation](https://maester.dev/)",
+        "observations": [
+          {
+            "uuid": "70c51097-e425-4066-9c9d-bbbecbcb15c9",
+            "title": "MS.AAD.3.5: The authentication methods SMS, Voice Call, and Email One-Time Passcode (OTP) SHALL be disabled.",
+            "types": [
+              "finding"
+            ],
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2025-02-12T14:16:46.5858387-05:00",
+            "description": "The authentication methods SMS, Voice Call, and Email One-Time Passcode (OTP) SHALL be disabled."
+          }
+        ],
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-controls": [
+                {
+                  "control-id": "ia-2.8"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
