@@ -9,13 +9,11 @@ Each top-level directory represents a distinct OSCAL model:
 📁 SAP/
    ├── 📁 Valid/
    └── 📁 Not_Valid/
-📁 SAR/
+📁 SSP/
    ├── 📁 Valid/
    └── 📁 Not_Valid/
-📁 SSP/
 📁 POAM/
 📁 Component_Definition/
-📁 Catalog/
 📁 Profile/
 ```
 Each model folder contains:
