@@ -37,7 +37,7 @@ All files in the Valid/ subfolders were tested using the oscal-cli as follows:
 
 ```oscal-cli validate (File)```
 
-For SSP:
+For SSP (FedRAMP Contraints in SSP Folder):
 
 ```oscal-cli validate (File) -c (Constraint File 1) -c (Constraint File 2)```
 
