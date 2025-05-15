@@ -1,0 +1,1155 @@
+{
+  "plan-of-action-and-milestones": {
+    "uuid": "9a5d2b84-25ec-4e04-945a-c86186d3c1e7",
+    "metadata": {
+      "title": "[System Name] FedRAMP Plan of Action and Milestones (POA&M)",
+      "published": "2023-07-06T00:00:00Z",
+      "last-modified": "2023-07-06T00:00:00Z",
+      "version": "fedramp2.0.0-oscal1.0.4",
+      "oscal-version": "1.0.4",
+      "props": [
+        {
+          "name": "marking",
+          "value": "Controlled Unclassified Information"
+        },
+        {
+          "name": "resolution-resource",
+          "ns": "https://fedramp.gov/ns/oscal",
+          "value": "d4b3f0a1-f12b-43e1-b1a9-6c4a5e556899"
+        }
+      ],
+      "roles": [
+        {
+          "id": "cloud-service-provider",
+          "title": "Cloud Service Provider",
+          "short-name": "CSP"
+        },
+        {
+          "id": "fedramp-pmo",
+          "title": "The FedRAMP Program Management Office (PMO)",
+          "short-name": "CSP"
+        },
+        {
+          "id": "fedramp-jab",
+          "title": "The FedRAMP Joint Authorization Board (JAB)",
+          "short-name": "CSP"
+        },
+        {
+          "id": "prepared-by",
+          "title": "Prepared By",
+          "description": "The primary individual responsible for maintaining the POA&M for this system. Typically the CSP's ISSO."
+        },
+        {
+          "id": "prepared-for",
+          "title": "Prepared For",
+          "description": "The organization for which this POA&M was prepared. Typically the CSP."
+        },
+        {
+          "id": "information-system-security-officer",
+          "title": "System Information System Security Officer (or Equivalent)",
+          "description": "The individual accountable for the security posture of the system on behalf of the system owner."
+        }
+      ],
+      "locations": [
+        {
+          "uuid": "0de6a5c9-b2f2-4f38-aac3-13e681cb9b9f",
+          "address": {
+            "addr-lines": [
+              "1234 Main Street"
+            ],
+            "city": "Arlington",
+            "state": "VA"
+          },
+          "remarks": "EXAMPLE - REPLACE"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "e9e5a9b1-33f1-4c4c-a4d0-9d279cdf3b95",
+          "type": "organization",
+          "name": "Cloud Service Provider (CSP) Name",
+          "short-name": "CSP Acronym/Short Name",
+          "location-uuids": [
+            "0de6a5c9-b2f2-4f38-aac3-13e681cb9b9f"
+          ],
+          "remarks": "Replace sample CSP information."
+        },
+        {
+          "uuid": "4a9d5e7b-2dfb-4c45-b52e-5138c44f10d0",
+          "type": "organization",
+          "name": "Federal Risk and Authorization Management Program: Program Management Office",
+          "short-name": "FedRAMP PMO",
+          "links": [
+            {
+              "href": "https://fedramp.gov",
+              "rel": "homepage"
+            },
+            {
+              "href": "#a2381e87-3d04-4108-a30b-b4d2f36d001f",
+              "rel": "logo"
+            },
+            {
+              "href": "#985475ee-d4d6-4581-8fdf-d84d3d8caa48",
+              "rel": "reference"
+            },
+            {
+              "href": "#1a23a771-d481-4594-9a1a-71d584fa4123",
+              "rel": "reference"
+            }
+          ],
+          "email-addresses": [
+            "info@fedramp.gov"
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "addr-lines": [
+                "1800 F St. NW"
+              ],
+              "city": "Washington",
+              "state": "DC",
+              "postal-code": "20006",
+              "country": "US"
+            }
+          ],
+          "remarks": "This party entry must be present in a FedRAMP POAM.\n\nThe uuid may be different; however, the uuid must be associated with the \\\"fedramp-pmo\\\" role in the responsible-party assemblies."
+        },
+        {
+          "uuid": "6f2b3ce8-42c0-4b90-a5ff-32f54ccde97a",
+          "type": "organization",
+          "name": "Federal Risk and Authorization Management Program: Joint Authorization Board",
+          "short-name": "FedRAMP JAB"
+        },
+        {
+          "uuid": "b7e94e84-4297-4685-9512-b7d1b8333e62",
+          "type": "person",
+          "name": "[SAMPLE]Person Name 1",
+          "props": [
+            {
+              "name": "job-title",
+              "value": "Individual's Title"
+            }
+          ],
+          "email-addresses": [
+            "name@example.com"
+          ],
+          "telephone-numbers": [
+            {
+              "number": "2020000001"
+            }
+          ],
+          "addresses": [
+            {
+              "type": "work",
+              "addr-lines": [
+                "Address Line"
+              ],
+              "city": "City",
+              "state": "ST",
+              "postal-code": "00000",
+              "country": "US"
+            }
+          ],
+          "member-of-organizations": [
+            "e9e5a9b1-33f1-4c4c-a4d0-9d279cdf3b95"
+          ]
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "cloud-service-provider",
+          "party-uuids": [
+            "e9e5a9b1-33f1-4c4c-a4d0-9d279cdf3b95"
+          ]
+        },
+        {
+          "role-id": "fedramp-pmo",
+          "party-uuids": [
+            "4a9d5e7b-2dfb-4c45-b52e-5138c44f10d0"
+          ]
+        },
+        {
+          "role-id": "fedramp-jab",
+          "party-uuids": [
+            "6f2b3ce8-42c0-4b90-a5ff-32f54ccde97a"
+          ]
+        },
+        {
+          "role-id": "prepared-by",
+          "party-uuids": [
+            "e9e5a9b1-33f1-4c4c-a4d0-9d279cdf3b95"
+          ]
+        },
+        {
+          "role-id": "prepared-for",
+          "party-uuids": [
+            "e9e5a9b1-33f1-4c4c-a4d0-9d279cdf3b95"
+          ]
+        },
+        {
+          "role-id": "information-system-security-officer",
+          "party-uuids": [
+            "b7e94e84-4297-4685-9512-b7d1b8333e62"
+          ]
+        }
+      ]
+    },
+    "system-id": {
+      "identifier-type": "https://fedramp.gov",
+      "id": "F00000000"
+    },
+    "local-definitions": {
+      "components": [
+        {
+          "uuid": "9cb8e263-c7e2-474f-8b31-8e2e6ae5e458",
+          "type": "software",
+          "title": "XYZ Vulnerability Scanning Tool",
+          "description": "Provide description",
+          "props": [
+            {
+              "name": "vendor-name",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Vendor Name"
+            },
+            {
+              "name": "name",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Tool Name"
+            },
+            {
+              "name": "version",
+              "value": "1.2.3"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          },
+          "remarks": "This is a scanning tool referenced as a source by a POA&M entry."
+        },
+        {
+          "uuid": "0a6cc206-4d29-403b-9475-2b2de8e0fcaf",
+          "type": "virtual",
+          "title": "Component Definition",
+          "description": "A virtual component.",
+          "props": [
+            {
+              "name": "allows-authenticated-scan",
+              "value": "yes"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          },
+          "remarks": "Uses the same syntax as SSP components."
+        }
+      ],
+      "inventory-items": [
+        {
+          "uuid": "deb26a75-6d97-4811-ae0e-ae1c710366c1",
+          "description": "An instance of the above component.",
+          "props": [
+            {
+              "name": "asset-id",
+              "value": "org-asset-id"
+            },
+            {
+              "name": "ipv4-address",
+              "value": "10.10.10.10"
+            },
+            {
+              "name": "fqdn",
+              "value": "host.domain.cloud"
+            }
+          ],
+          "implemented-components": [
+            {
+              "component-uuid": "0a6cc206-4d29-403b-9475-2b2de8e0fcaf"
+            }
+          ],
+          "remarks": "Uses the same syntax as SSP inventory-items."
+        }
+      ],
+      "remarks": "Define one component for each scanning tool referenced by a POA&M entry.\n\nDefine components or inventory-items when no OSCAL-based SSP exists, or is not delivered with the POA&M.\n\n# FOR MONTHLY CONMON DELIVERIES\n\nThe CSP may import all SSP components and inventory items into the POA&M's `local-definitions` section to satisfy the system inventory delivery requirement."
+    },
+    "observations": [
+      {
+        "uuid": "f46ad8ef-d02e-437f-b5d6-02c284bc136b",
+        "description": "The remote Apache Tomcat server is affected by a file read and inclusion vulnerability.",
+        "methods": [
+          "TEST"
+        ],
+        "types": [
+          "finding"
+        ],
+        "origins": [
+          {
+            "actors": [
+              {
+                "type": "tool",
+                "actor-uuid": "9cb8e263-c7e2-474f-8b31-8e2e6ae5e458"
+              }
+            ]
+          }
+        ],
+        "relevant-evidence": [
+          {
+            "description": "Evidence collected during Tenable scan.",
+            "href": "tenable_scan.csv"
+          }
+        ],
+        "collected": "2025-05-12T22:06:48.058333Z",
+        "remarks": "Collected by Tenable tool."
+      },
+      {
+        "uuid": "945a5d83-90ea-4317-8fc5-1008ee8997cd",
+        "description": "The remote SSL/TLS service supports the use of RC4 ciphers.",
+        "methods": [
+          "TEST"
+        ],
+        "types": [
+          "finding"
+        ],
+        "origins": [
+          {
+            "actors": [
+              {
+                "type": "tool",
+                "actor-uuid": "9cb8e263-c7e2-474f-8b31-8e2e6ae5e458"
+              }
+            ]
+          }
+        ],
+        "relevant-evidence": [
+          {
+            "description": "Evidence collected during Tenable scan.",
+            "href": "tenable_scan.csv"
+          }
+        ],
+        "collected": "2025-05-12T22:06:48.058333Z",
+        "remarks": "Collected by Tenable tool."
+      },
+      {
+        "uuid": "f9a4e47c-2109-4085-9281-1dd933ba83f8",
+        "description": "A component used by the web application is potentially vulnerable to Denial of Service.",
+        "methods": [
+          "TEST"
+        ],
+        "types": [
+          "finding"
+        ],
+        "origins": [
+          {
+            "actors": [
+              {
+                "type": "tool",
+                "actor-uuid": "9cb8e263-c7e2-474f-8b31-8e2e6ae5e458"
+              }
+            ]
+          }
+        ],
+        "relevant-evidence": [
+          {
+            "description": "Evidence collected during Tenable scan.",
+            "href": "tenable_scan.csv"
+          }
+        ],
+        "collected": "2025-05-12T22:06:48.058333Z",
+        "remarks": "Collected by Tenable tool."
+      },
+      {
+        "uuid": "5fb5e1ea-6ac3-4fd3-aeae-1ab4e3cfab8c",
+        "description": "The remote MySQL server is not running the latest patch release for its major version.",
+        "methods": [
+          "TEST"
+        ],
+        "types": [
+          "finding"
+        ],
+        "origins": [
+          {
+            "actors": [
+              {
+                "type": "tool",
+                "actor-uuid": "9cb8e263-c7e2-474f-8b31-8e2e6ae5e458"
+              }
+            ]
+          }
+        ],
+        "relevant-evidence": [
+          {
+            "description": "Evidence collected during Tenable scan.",
+            "href": "tenable_scan.csv"
+          }
+        ],
+        "collected": "2025-05-12T22:06:48.058333Z",
+        "remarks": "Collected by Tenable tool."
+      },
+      {
+        "uuid": "37719ee4-f0ed-478a-8686-204ebb99d8b0",
+        "description": "The remote web server discloses its version number in the HTTP response headers.",
+        "methods": [
+          "TEST"
+        ],
+        "types": [
+          "finding"
+        ],
+        "origins": [
+          {
+            "actors": [
+              {
+                "type": "tool",
+                "actor-uuid": "9cb8e263-c7e2-474f-8b31-8e2e6ae5e458"
+              }
+            ]
+          }
+        ],
+        "relevant-evidence": [
+          {
+            "description": "Evidence collected during Tenable scan.",
+            "href": "tenable_scan.csv"
+          }
+        ],
+        "collected": "2025-05-12T22:06:48.058333Z",
+        "remarks": "Collected by Tenable tool."
+      },
+      {
+        "uuid": "049b96ae-f109-4699-9bc1-1b449951e46b",
+        "description": "The remote web server does not send the HTTP Strict-Transport-Security header.",
+        "methods": [
+          "TEST"
+        ],
+        "types": [
+          "finding"
+        ],
+        "origins": [
+          {
+            "actors": [
+              {
+                "type": "tool",
+                "actor-uuid": "9cb8e263-c7e2-474f-8b31-8e2e6ae5e458"
+              }
+            ]
+          }
+        ],
+        "relevant-evidence": [
+          {
+            "description": "Evidence collected during Tenable scan.",
+            "href": "tenable_scan.csv"
+          }
+        ],
+        "collected": "2025-05-12T22:06:48.058333Z",
+        "remarks": "Collected by Tenable tool."
+      }
+    ],
+    "risks": [
+      {
+        "uuid": "ce0bcca9-9988-4b30-bac6-b2625c6e8f97",
+        "title": "Apache Tomcat AJP 'Ghostcat' File Read / Inclusion (CVE-2020-1938)",
+        "description": "Based on its configuration, the Apache Tomcat AJP connector running on the remote host is vulnerable to the 'Ghostcat' vulnerability (CVE-2020-1938). An unauthenticated, remote attacker can exploit this, via a specially crafted AJP request, to read arbitrary files from the web application directories. If file uploads are enabled within the webroot, this could potentially lead to remote code execut",
+        "statement": "The remote Apache Tomcat server is affected by a file read and inclusion vulnerability.",
+        "props": [
+          {
+            "name": "impacted-control-id",
+            "ns": "https://fedramp.gov/ns/oscal",
+            "value": "ra-5"
+          }
+        ],
+        "status": "open",
+        "characterizations": [
+          {
+            "origin": {
+              "actors": [
+                {
+                  "type": "tool",
+                  "actor-uuid": "9cb8e263-c7e2-474f-8b31-8e2e6ae5e458"
+                }
+              ]
+            },
+            "facets": [
+              {
+                "name": "risk",
+                "system": "https://fedramp.gov/ns/oscal",
+                "value": "critical",
+                "props": [
+                  {
+                    "name": "state",
+                    "value": "initial"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "deadline": "2025-12-31T00:00:00Z",
+        "remediations": [
+          {
+            "uuid": "94411843-725f-41da-909c-8522faa1a7f3",
+            "lifecycle": "planned",
+            "title": "Planned Remediation",
+            "description": "Upgrade Apache Tomcat to version 7.0.100, 8.5.51, 9.0.31 or later. \\nAlternatively, if the AJP connector is not needed, disable it in the server.xml configuration file. \\nIf AJP is required, ensure the port is firewalled from untrusted networks and configure a strong secret using the 'requiredSecret' or 'secret' attribute in the AJP Connector directive.",
+            "tasks": [
+              {
+                "uuid": "84d87d96-c5aa-41ac-897e-0b6b4172c04f",
+                "type": "milestone",
+                "title": "Identify solution strategy",
+                "description": "Initial planning milestone.",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2025-06-01T00:00:00Z",
+                    "end": "2025-06-10T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "49bbf0e6-2ae7-43a4-b763-c2d57e9e7c24",
+                "type": "milestone",
+                "title": "Implement mitigation",
+                "description": "Execution of solution.",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2025-06-11T00:00:00Z",
+                    "end": "2025-07-01T00:00:00Z"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "8fc4a2f4-5fbc-426a-8260-34c7e69a89dd",
+        "title": "SSL/TLS Server Supports RC4 Cipher Algorithms (CVE-2013-2566, CVE-2015-2808)",
+        "description": "The remote host's SSL/TLS service supports connections using the RC4 cipher suite. RC4 is known to have cryptographic weaknesses, including susceptibility to the Bar Mitzvah attack (CVE-2015-2808) and other biases (CVE-2013-2566), which could potentially allow an attacker to recover plaintext from encrypted sessions under certain conditions. RC4 ciphers should be disabled.",
+        "statement": "The remote SSL/TLS service supports the use of RC4 ciphers.",
+        "props": [
+          {
+            "name": "impacted-control-id",
+            "ns": "https://fedramp.gov/ns/oscal",
+            "value": "ra-5"
+          }
+        ],
+        "status": "open",
+        "characterizations": [
+          {
+            "origin": {
+              "actors": [
+                {
+                  "type": "tool",
+                  "actor-uuid": "9cb8e263-c7e2-474f-8b31-8e2e6ae5e458"
+                }
+              ]
+            },
+            "facets": [
+              {
+                "name": "risk",
+                "system": "https://fedramp.gov/ns/oscal",
+                "value": "medium",
+                "props": [
+                  {
+                    "name": "state",
+                    "value": "initial"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "deadline": "2025-12-31T00:00:00Z",
+        "remediations": [
+          {
+            "uuid": "90024904-e159-4e61-8588-c1d4fd18eeb4",
+            "lifecycle": "planned",
+            "title": "Planned Remediation",
+            "description": "Reconfigure the affected application or operating system (Windows Schannel) to disable support for RC4 cipher suites. Prioritize the use of strong, modern cipher suites such as AES-GCM or ChaCha20-Poly1305.",
+            "tasks": [
+              {
+                "uuid": "5210686d-8e97-4eaa-b70d-a41119340cd0",
+                "type": "milestone",
+                "title": "Identify solution strategy",
+                "description": "Initial planning milestone.",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2025-06-01T00:00:00Z",
+                    "end": "2025-06-10T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "85b499e8-07e4-410d-ab1c-5c20942c6396",
+                "type": "milestone",
+                "title": "Implement mitigation",
+                "description": "Execution of solution.",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2025-06-11T00:00:00Z",
+                    "end": "2025-07-01T00:00:00Z"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "8336c98b-24a8-4ac9-a44e-cc0ed0917719",
+        "title": "Web Application Component Vulnerability - Newtonsoft.Json DoS (CVE-2020-8203)",
+        "description": "The web application running on the target host appears to utilize a version of the Newtonsoft.Json library prior to 12.0.3. This library is susceptible to a Denial of Service (DoS) vulnerability (CVE-2020-8203) when deserializing specially crafted JSON input if insecure TypeNameHandling settings (such as 'All', 'Objects', or 'Arrays') are enabled. Exploitation can lead to a stack overflow, crashin",
+        "statement": "A component used by the web application is potentially vulnerable to Denial of Service.",
+        "props": [
+          {
+            "name": "impacted-control-id",
+            "ns": "https://fedramp.gov/ns/oscal",
+            "value": "ra-5"
+          }
+        ],
+        "status": "open",
+        "characterizations": [
+          {
+            "origin": {
+              "actors": [
+                {
+                  "type": "tool",
+                  "actor-uuid": "9cb8e263-c7e2-474f-8b31-8e2e6ae5e458"
+                }
+              ]
+            },
+            "facets": [
+              {
+                "name": "risk",
+                "system": "https://fedramp.gov/ns/oscal",
+                "value": "medium",
+                "props": [
+                  {
+                    "name": "state",
+                    "value": "initial"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "deadline": "2025-12-31T00:00:00Z",
+        "remediations": [
+          {
+            "uuid": "4528fd9b-84e9-4fff-89f4-5c94c768fd62",
+            "lifecycle": "planned",
+            "title": "Planned Remediation",
+            "description": "Update the Newtonsoft.Json library dependency to version 12.0.3 or later within the server-side .NET application. Review and avoid insecure TypeNameHandling settings where possible, or implement a custom SerializationBinder for stricter type validation. Redeploy the application with the updated library.",
+            "tasks": [
+              {
+                "uuid": "d475ba4f-1563-4a0f-a870-6a2e5f193613",
+                "type": "milestone",
+                "title": "Identify solution strategy",
+                "description": "Initial planning milestone.",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2025-06-01T00:00:00Z",
+                    "end": "2025-06-10T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "034cca6f-3958-498c-8545-50f15ada81fa",
+                "type": "milestone",
+                "title": "Implement mitigation",
+                "description": "Execution of solution.",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2025-06-11T00:00:00Z",
+                    "end": "2025-07-01T00:00:00Z"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "660dd017-97d6-4788-8b73-bba69c378ae8",
+        "title": "MySQL Server Outdated Patch Level",
+        "description": "The MySQL server running on the remote host reported its version as 8.0.28. According to Tenable's database, the latest available patch release within the 8.0 series is newer (e.g., 8.0.35 or later). Running software that is not fully patched increases the risk of exposure to vulnerabilities fixed in subsequent patch releases.",
+        "statement": "The remote MySQL server is not running the latest patch release for its major version.",
+        "props": [
+          {
+            "name": "impacted-control-id",
+            "ns": "https://fedramp.gov/ns/oscal",
+            "value": "ra-5"
+          }
+        ],
+        "status": "open",
+        "characterizations": [
+          {
+            "origin": {
+              "actors": [
+                {
+                  "type": "tool",
+                  "actor-uuid": "9cb8e263-c7e2-474f-8b31-8e2e6ae5e458"
+                }
+              ]
+            },
+            "facets": [
+              {
+                "name": "risk",
+                "system": "https://fedramp.gov/ns/oscal",
+                "value": "low",
+                "props": [
+                  {
+                    "name": "state",
+                    "value": "initial"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "deadline": "2025-12-31T00:00:00Z",
+        "remediations": [
+          {
+            "uuid": "431c40ff-45dd-4c1f-bfeb-477bdc745114",
+            "lifecycle": "planned",
+            "title": "Planned Remediation",
+            "description": "Consult the vendor's documentation (MySQL release notes and AWS RDS updates) and apply the latest available patch update for the MySQL 8.0 series through the AWS RDS management interface.",
+            "tasks": [
+              {
+                "uuid": "ad092650-2982-43d2-bab1-f7a6aca54f2d",
+                "type": "milestone",
+                "title": "Identify solution strategy",
+                "description": "Initial planning milestone.",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2025-06-01T00:00:00Z",
+                    "end": "2025-06-10T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "13a62f61-4d77-45ce-90da-68a62c84711e",
+                "type": "milestone",
+                "title": "Implement mitigation",
+                "description": "Execution of solution.",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2025-06-11T00:00:00Z",
+                    "end": "2025-07-01T00:00:00Z"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "c0823993-6f78-4e7b-b2f5-742326a71a5a",
+        "title": "HTTP Server Version Disclosure",
+        "description": "The web server running on the remote host reveals its software type and version in the 'Server' HTTP header (e.g., 'Apache-Coyote/1.1'). While not a vulnerability in itself, this information leakage simplifies reconnaissance for attackers seeking to exploit known vulnerabilities in specific server versions.",
+        "statement": "The remote web server discloses its version number in the HTTP response headers.",
+        "props": [
+          {
+            "name": "impacted-control-id",
+            "ns": "https://fedramp.gov/ns/oscal",
+            "value": "ra-5"
+          }
+        ],
+        "status": "open",
+        "characterizations": [
+          {
+            "origin": {
+              "actors": [
+                {
+                  "type": "tool",
+                  "actor-uuid": "9cb8e263-c7e2-474f-8b31-8e2e6ae5e458"
+                }
+              ]
+            },
+            "facets": [
+              {
+                "name": "risk",
+                "system": "https://fedramp.gov/ns/oscal",
+                "value": "low",
+                "props": [
+                  {
+                    "name": "state",
+                    "value": "initial"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "deadline": "2025-12-31T00:00:00Z",
+        "remediations": [
+          {
+            "uuid": "efc32032-debd-42d3-870f-219be964e3ea",
+            "lifecycle": "planned",
+            "title": "Planned Remediation",
+            "description": "Configure the web server (Apache Tomcat) to avoid disclosing its version information. This can often be achieved by modifying the 'server' attribute within the relevant Connector directive(s) in the 'server.xml' file to a generic value or removing it entirely.",
+            "tasks": [
+              {
+                "uuid": "8a28658e-5277-4137-bbeb-dc0ae618fede",
+                "type": "milestone",
+                "title": "Identify solution strategy",
+                "description": "Initial planning milestone.",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2025-06-01T00:00:00Z",
+                    "end": "2025-06-10T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "ddead05a-3c4a-4c5b-aba8-23e3430a9e9b",
+                "type": "milestone",
+                "title": "Implement mitigation",
+                "description": "Execution of solution.",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2025-06-11T00:00:00Z",
+                    "end": "2025-07-01T00:00:00Z"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "f473da5f-121b-4cb4-97cf-7e10cb236dc8",
+        "title": "HTTP Strict Transport Security (HSTS) Missing",
+        "description": "The web server does not send the 'Strict-Transport-Security' HTTP header. This security feature helps protect websites against protocol downgrade attacks and cookie hijacking by instructing browsers to only access the domain using HTTPS. Without HSTS, users may be vulnerable to Man-in-the-Middle (MitM) attacks like SSL stripping.",
+        "statement": "The remote web server does not send the HTTP Strict-Transport-Security header.",
+        "props": [
+          {
+            "name": "impacted-control-id",
+            "ns": "https://fedramp.gov/ns/oscal",
+            "value": "ra-5"
+          }
+        ],
+        "status": "open",
+        "characterizations": [
+          {
+            "origin": {
+              "actors": [
+                {
+                  "type": "tool",
+                  "actor-uuid": "9cb8e263-c7e2-474f-8b31-8e2e6ae5e458"
+                }
+              ]
+            },
+            "facets": [
+              {
+                "name": "risk",
+                "system": "https://fedramp.gov/ns/oscal",
+                "value": "low",
+                "props": [
+                  {
+                    "name": "state",
+                    "value": "initial"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "deadline": "2025-12-31T00:00:00Z",
+        "remediations": [
+          {
+            "uuid": "a8d7b5ea-33bd-4dcf-8d37-0f5f917410b9",
+            "lifecycle": "planned",
+            "title": "Planned Remediation",
+            "description": "Configure the web server or web application framework to send the 'Strict-Transport-Security' header for all HTTPS responses. Include a suitable 'max-age' value (e.g., 31536000 seconds for one year) and consider adding the 'includeSubDomains' and 'preload' directives if applicable.",
+            "tasks": [
+              {
+                "uuid": "703e9b31-df31-4797-bc49-60e11161a656",
+                "type": "milestone",
+                "title": "Identify solution strategy",
+                "description": "Initial planning milestone.",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2025-06-01T00:00:00Z",
+                    "end": "2025-06-10T00:00:00Z"
+                  }
+                }
+              },
+              {
+                "uuid": "9624ca82-9395-45d2-9f95-443f7dbb6b18",
+                "type": "milestone",
+                "title": "Implement mitigation",
+                "description": "Execution of solution.",
+                "timing": {
+                  "within-date-range": {
+                    "start": "2025-06-11T00:00:00Z",
+                    "end": "2025-07-01T00:00:00Z"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "poam-items": [
+      {
+        "uuid": "ed44bba9-e5d1-443c-b8a4-4b67a30d0709",
+        "title": "Tenable Risk: Apache Tomcat AJP 'Ghostcat' File Read / Inclusion (CVE-2020-1938)",
+        "description": "Based on its configuration, the Apache Tomcat AJP connector running on the remote host is vulnerable to the 'Ghostcat' vulnerability (CVE-2020-1938). An unauthenticated, remote attacker can exploit this, via a specially crafted AJP request, to read arbitrary files from the web application directorie",
+        "props": [
+          {
+            "name": "POAM-ID",
+            "ns": "https://fedramp.gov/ns/oscal",
+            "value": "TENABLE-134878"
+          }
+        ],
+        "related-observations": [
+          {
+            "observation-uuid": "f46ad8ef-d02e-437f-b5d6-02c284bc136b"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "ce0bcca9-9988-4b30-bac6-b2625c6e8f97"
+          }
+        ],
+        "remarks": "Auto-generated from Tenable findings"
+      },
+      {
+        "uuid": "b483e005-80fc-4338-a0d0-f6084dab6d41",
+        "title": "Tenable Risk: SSL/TLS Server Supports RC4 Cipher Algorithms (CVE-2013-2566, CVE-2015-2808)",
+        "description": "The remote host's SSL/TLS service supports connections using the RC4 cipher suite. RC4 is known to have cryptographic weaknesses, including susceptibility to the Bar Mitzvah attack (CVE-2015-2808) and other biases (CVE-2013-2566), which could potentially allow an attacker to recover plaintext from e",
+        "props": [
+          {
+            "name": "POAM-ID",
+            "ns": "https://fedramp.gov/ns/oscal",
+            "value": "TENABLE-70658"
+          }
+        ],
+        "related-observations": [
+          {
+            "observation-uuid": "945a5d83-90ea-4317-8fc5-1008ee8997cd"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "8fc4a2f4-5fbc-426a-8260-34c7e69a89dd"
+          }
+        ],
+        "remarks": "Auto-generated from Tenable findings"
+      },
+      {
+        "uuid": "13f57a52-4f17-4ee5-96d7-a772172bd667",
+        "title": "Tenable Risk: Web Application Component Vulnerability - Newtonsoft.Json DoS (CVE-2020-8203)",
+        "description": "The web application running on the target host appears to utilize a version of the Newtonsoft.Json library prior to 12.0.3. This library is susceptible to a Denial of Service (DoS) vulnerability (CVE-2020-8203) when deserializing specially crafted JSON input if insecure TypeNameHandling settings (su",
+        "props": [
+          {
+            "name": "POAM-ID",
+            "ns": "https://fedramp.gov/ns/oscal",
+            "value": "TENABLE-150123"
+          }
+        ],
+        "related-observations": [
+          {
+            "observation-uuid": "f9a4e47c-2109-4085-9281-1dd933ba83f8"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "8336c98b-24a8-4ac9-a44e-cc0ed0917719"
+          }
+        ],
+        "remarks": "Auto-generated from Tenable findings"
+      },
+      {
+        "uuid": "25871a54-7187-46c8-95b2-dc937feef541",
+        "title": "Tenable Risk: MySQL Server Outdated Patch Level",
+        "description": "The MySQL server running on the remote host reported its version as 8.0.28. According to Tenable's database, the latest available patch release within the 8.0 series is newer (e.g., 8.0.35 or later). Running software that is not fully patched increases the risk of exposure to vulnerabilities fixed i",
+        "props": [
+          {
+            "name": "POAM-ID",
+            "ns": "https://fedramp.gov/ns/oscal",
+            "value": "TENABLE-73110"
+          }
+        ],
+        "related-observations": [
+          {
+            "observation-uuid": "5fb5e1ea-6ac3-4fd3-aeae-1ab4e3cfab8c"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "660dd017-97d6-4788-8b73-bba69c378ae8"
+          }
+        ],
+        "remarks": "Auto-generated from Tenable findings"
+      },
+      {
+        "uuid": "a0c2a18c-4d79-4cc7-a161-29b471f56720",
+        "title": "Tenable Risk: HTTP Server Version Disclosure",
+        "description": "The web server running on the remote host reveals its software type and version in the 'Server' HTTP header (e.g., 'Apache-Coyote/1.1'). While not a vulnerability in itself, this information leakage simplifies reconnaissance for attackers seeking to exploit known vulnerabilities in specific server v",
+        "props": [
+          {
+            "name": "POAM-ID",
+            "ns": "https://fedramp.gov/ns/oscal",
+            "value": "TENABLE-10551"
+          }
+        ],
+        "related-observations": [
+          {
+            "observation-uuid": "37719ee4-f0ed-478a-8686-204ebb99d8b0"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "c0823993-6f78-4e7b-b2f5-742326a71a5a"
+          }
+        ],
+        "remarks": "Auto-generated from Tenable findings"
+      },
+      {
+        "uuid": "0e9fe32d-c0be-4ad0-811d-b63b426bf760",
+        "title": "Tenable Risk: HTTP Strict Transport Security (HSTS) Missing",
+        "description": "The web server does not send the 'Strict-Transport-Security' HTTP header. This security feature helps protect websites against protocol downgrade attacks and cookie hijacking by instructing browsers to only access the domain using HTTPS. Without HSTS, users may be vulnerable to Man-in-the-Middle (Mi",
+        "props": [
+          {
+            "name": "POAM-ID",
+            "ns": "https://fedramp.gov/ns/oscal",
+            "value": "TENABLE-62755"
+          }
+        ],
+        "related-observations": [
+          {
+            "observation-uuid": "049b96ae-f109-4699-9bc1-1b449951e46b"
+          }
+        ],
+        "related-risks": [
+          {
+            "risk-uuid": "f473da5f-121b-4cb4-97cf-7e10cb236dc8"
+          }
+        ],
+        "remarks": "Auto-generated from Tenable findings"
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "d4b3f0a1-f12b-43e1-b1a9-6c4a5e556899",
+          "title": "Resolution Resource",
+          "props": [
+            {
+              "name": "type",
+              "value": "standard",
+              "class": "collection"
+            },
+            {
+              "name": "version",
+              "value": "5.0.2",
+              "class": "version"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://gov.nist.csrc",
+              "media-type": "text/html"
+            }
+          ],
+          "remarks": "Dataset: 800-53, from gov.nist.csrc"
+        },
+        {
+          "uuid": "a78f7e4c-a27a-4b1e-901b-ebfecf2b0301",
+          "title": "System's Full Name",
+          "description": "# ONLY USE THIS RESOURCE WHEN NO OSCAL-BASED SSP EXISTS. Briefly describe the system. This will appear in the SAR.",
+          "props": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "no-oscal-ssp"
+            },
+            {
+              "name": "title-short",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "SFN"
+            },
+            {
+              "name": "system-id",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "FR00000000"
+            },
+            {
+              "name": "import-profile",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "#890170c3-d4fa-4d25-ab96-8e4bf7cc237c"
+            },
+            {
+              "name": "purpose",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "Briefly state the system's purpose. This will appear in the SAR."
+            },
+            {
+              "name": "authorization-date",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "2017-01-23T00:00:00Z"
+            }
+          ],
+          "remarks": "Only include this resource if no OSCAL-based SSP is available.\n\nDelete it otherwise."
+        },
+        {
+          "uuid": "985475ee-d4d6-4581-8fdf-d84d3d8caa48",
+          "title": "FedRAMP Applicable Laws and Regulations",
+          "props": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "fedramp-citations"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://www.fedramp.gov/assets/resources/templates/SSP-A12-FedRAMP-Laws-and-Regulations-Template.xlsx"
+            }
+          ],
+          "base64": {
+            "filename": "SSP-A12-FedRAMP-Laws-and-Regulations-Template.xlsx",
+            "media-type": "application/vnd.ms-excel",
+            "value": "00000000"
+          },
+          "remarks": "Must be present in a FedRAMP POA&M."
+        },
+        {
+          "uuid": "1a23a771-d481-4594-9a1a-71d584fa4123",
+          "title": "FedRAMP Master Acronym and Glossary",
+          "props": [
+            {
+              "name": "type",
+              "ns": "https://fedramp.gov/ns/oscal",
+              "value": "fedramp-acronyms"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://www.fedramp.gov/assets/resources/documents/FedRAMP_Master_Acronym_and_Glossary.pdf"
+            }
+          ],
+          "base64": {
+            "filename": "FedRAMP_Master_Acronym_and_Glossary.pdf",
+            "media-type": "application/pdf",
+            "value": "00000000"
+          },
+          "remarks": "Must be present in a FedRAMP POA&M."
+        },
+        {
+          "uuid": "031a32be-f9ef-45a0-994e-20eb58456dee",
+          "description": "FedRAMP Logo",
+          "props": [
+            {
+              "name": "type",
+              "value": "logo"
+            }
+          ],
+          "rlinks": [
+            {
+              "href": "https://github.com/GSA/fedramp-automation/raw/master/assets/FedRAMP_LOGO.png"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
