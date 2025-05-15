@@ -1,0 +1,324 @@
+{
+  "component-definition": {
+    "uuid": "4ebd0208-8328-5d69-8c44-ec50939c0967",
+    "metadata": {
+      "title": "Customer Component Definition for LCPTracker",
+      "last-modified": "2023-10-06T00:00:00Z",
+      "version": "0.0.0",
+      "oscal-version": "1.1.2",
+      "roles": [
+        {
+          "id": "implemented-requirement-responsible-role",
+          "title": "Implemented Control Responsibility Role"
+        },
+        {
+          "id": "fedramp-pmo",
+          "title": "FedRAMP Program Management Office",
+          "description": "The FedRAMP PMO resides within GSA and supports agencies and cloud service providers through the FedRAMP authorization process and maintains a secure repository of FedRAMP authorizations to enable reuse of security packages"
+        },
+        {
+          "id": "fedramp-jab",
+          "title": "FedRAMP Program Management Office",
+          "description": "Members of the JAB include the chief information officers (CIOs) from the Department of Defense, Department of Homeland Security, and General Services Administration. The JAB serves as the primary governance and decision-making body for FedRAMP."
+        },
+        {
+          "id": "content-approver",
+          "title": "System Security Plan Approval",
+          "description": "he individual or individuals accountable for the accuracy of this SSP."
+        },
+        {
+          "id": "system-owner",
+          "title": "Information System Owner",
+          "description": "The individual within the CSP who is ultimately accountable for everything related to this system."
+        },
+        {
+          "id": "asset-owner",
+          "title": "asset owner",
+          "description": "asset owner"
+        },
+        {
+          "id": "asset-administrator",
+          "title": "asset administrator",
+          "description": "administrator"
+        },
+        {
+          "id": "authorizing-official",
+          "title": "Authorizing Official",
+          "description": "The individual or individuals who must grant this system an authorization to operate."
+        },
+        {
+          "id": "authorizing-official-poc",
+          "title": "Authorizing Official's Point of Contact",
+          "description": "The individual representing the authorizing official."
+        },
+        {
+          "id": "system-poc-management",
+          "title": "Information System Management Point of Contact (POC)",
+          "description": "The highest level manager who responsible for system operation on behalf of the System Owner."
+        },
+        {
+          "id": "system-poc-technical",
+          "title": "Information System Technical Point of Contact",
+          "description": "The individual or individuals leading the technical operation of the system."
+        },
+        {
+          "id": "information-system-security-officer",
+          "title": "System Information System Security Officer (or Equivalent)",
+          "description": "The individual accountable for the security posture of the system on behalf of the system owner."
+        },
+        {
+          "id": "privacy-poc",
+          "title": "Privacy Official's Point of Contact",
+          "description": "The individual responsible for the privacy threshold analysis and if necessary the privacy impact assessment."
+        },
+        {
+          "id": "system-poc-other",
+          "title": "General Point of Contact (POC)",
+          "description": "A general point of contact for the system, designated by the system owner."
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "4f2d5484-b46f-5b7a-bdd3-312dfabae655",
+          "type": "organization",
+          "name": "LCPTracker, Inc.",
+          "location-uuids": [
+            "4ebd0208-8328-5d69-8c44-ec50939c0967"
+          ]
+        },
+        {
+          "uuid": "78b23dff-3531-59c4-86b0-bf70ff045c10",
+          "type": "person",
+          "name": "Patrick Conlin",
+          "email-addresses": [
+            "pconlin@LCPtracker.com"
+          ],
+          "telephone-numbers": [
+            {
+              "type": "office",
+              "number": "7146690052"
+            }
+          ],
+          "member-of-organizations": [
+            "4f2d5484-b46f-5b7a-bdd3-312dfabae655"
+          ],
+          "location-uuids": [
+            "4ebd0208-8328-5d69-8c44-ec50939c0967"
+          ]
+        },
+        {
+          "uuid": "436c62b6-973b-5ac6-9772-98aeff99324f",
+          "type": "person",
+          "name": "Jules Panopoulos",
+          "member-of-organizations": [
+            "4f2d5484-b46f-5b7a-bdd3-312dfabae655"
+          ],
+          "location-uuids": [
+            "4ebd0208-8328-5d69-8c44-ec50939c0967"
+          ]
+        },
+        {
+          "uuid": "0e421e1d-37d3-5bb9-bbc0-85c8836939a4",
+          "type": "person",
+          "name": "Kayla Elliott",
+          "email-addresses": [
+            "kelliott@lcptracker.com"
+          ],
+          "telephone-numbers": [
+            {
+              "type": "office",
+              "number": "7146690052"
+            }
+          ],
+          "member-of-organizations": [
+            "4f2d5484-b46f-5b7a-bdd3-312dfabae655"
+          ],
+          "location-uuids": [
+            "4ebd0208-8328-5d69-8c44-ec50939c0967"
+          ]
+        },
+        {
+          "uuid": "eac64014-b33f-5997-9038-7b9d2873824a",
+          "type": "person",
+          "name": "Privacy Official's Point of Contact"
+        },
+        {
+          "uuid": "4ebd0208-8328-5d69-8c44-ec50939c0967",
+          "type": "organization",
+          "name": "Fortify Resource Group Provider"
+        }
+      ],
+      "locations": {
+        "uuid": "4ebd0208-8328-5d69-8c44-ec50939c0967",
+        "title": "LCPTracker",
+        "address": {
+          "type": "work",
+          "city": "Orange",
+          "state": "CA",
+          "postal-code": "92866",
+          "country": "US",
+          "addr-lines": [
+            "117 E Chapman Ave"
+          ]
+        }
+      },
+      "responsible-parties": {
+        "implemented-requirement-responsible-role": {
+          "party-uuids": [
+            "78b23dff-3531-59c4-86b0-bf70ff045c10"
+          ]
+        },
+        "fedramp-pmo": {
+          "party-uuids": [
+            "4f2d5484-b46f-5b7a-bdd3-312dfabae655"
+          ]
+        },
+        "fedramp-jab": {
+          "party-uuids": [
+            "4f2d5484-b46f-5b7a-bdd3-312dfabae655"
+          ]
+        },
+        "content-approver": {
+          "party-uuids": [
+            "78b23dff-3531-59c4-86b0-bf70ff045c10"
+          ]
+        },
+        "system-owner": {
+          "party-uuids": [
+            "0e421e1d-37d3-5bb9-bbc0-85c8836939a4"
+          ]
+        },
+        "asset-owner": {
+          "party-uuids": [
+            "0e421e1d-37d3-5bb9-bbc0-85c8836939a4"
+          ]
+        },
+        "asset-administrator": {
+          "party-uuids": [
+            "0e421e1d-37d3-5bb9-bbc0-85c8836939a4"
+          ]
+        },
+        "authorizing-official": {
+          "party-uuids": [
+            "4f2d5484-b46f-5b7a-bdd3-312dfabae655"
+          ]
+        },
+        "authorizing-official-poc": {
+          "party-uuids": [
+            "78b23dff-3531-59c4-86b0-bf70ff045c10"
+          ]
+        },
+        "system-poc-management": {
+          "party-uuids": [
+            "0e421e1d-37d3-5bb9-bbc0-85c8836939a4"
+          ]
+        },
+        "system-poc-technical": {
+          "party-uuids": [
+            "78b23dff-3531-59c4-86b0-bf70ff045c10"
+          ]
+        },
+        "information-system-security-officer": {
+          "party-uuids": [
+            "78b23dff-3531-59c4-86b0-bf70ff045c10"
+          ]
+        },
+        "privacy-poc": {
+          "party-uuids": [
+            "eac64014-b33f-5997-9038-7b9d2873824a"
+          ]
+        },
+        "system-poc-other": {
+          "party-uuids": [
+            "436c62b6-973b-5ac6-9772-98aeff99324f"
+          ]
+        }
+      }
+    },
+    "components": [
+      {
+        "uuid": "78c9f89b-586d-4bc5-99f7-ab4acd5a0d3b",
+        "type": "service",
+        "title": "Fortify Resource Group",
+        "description": "The Fortify Resource Group is a central hub within the LCPtracker Pro system responsible for managing security and compliance measures. It ensures that all access and operations within the system are authorized and monitored. Its main purpose is to enforce security policies, manage access, and monitor system operations to maintain a secure and compliant environment within the LCPtracker Pro system.",
+        "props": [
+          {
+            "name": "asset-type",
+            "value": "Compliance"
+          },
+          {
+            "name": "function",
+            "value": "functional"
+          },
+          {
+            "name": "function",
+            "value": "security"
+          },
+          {
+            "name": "implementation-point",
+            "value": "internal"
+          },
+          {
+            "ns": "http://fedramp.gov/ns/oscal",
+            "name": "information-type",
+            "value": "C.2.3.1",
+            "class": "incoming"
+          },
+          {
+            "ns": "http://fedramp.gov/ns/oscal",
+            "name": "information-type",
+            "value": "C.2.3.1",
+            "class": "outgoing"
+          }
+        ],
+        "status": {
+          "state": "operational"
+        },
+        "responsible-roles": [
+          {
+            "role-id": "asset-administrator",
+            "props": [
+              {
+                "ns": "http://fedramp.gov/ns/oscal",
+                "name": "privilege-uuid",
+                "value": "8033c53a-f5a6-5f24-8212-1b17f32cc8df"
+              }
+            ]
+          },
+          {
+            "role-id": "provider",
+            "party-uuids": [
+              "4ebd0208-8328-5d69-8c44-ec50939c0967"
+            ]
+          }
+        ],
+        "protocols": [
+          {
+            "name": "https",
+            "port-ranges": [
+              {
+                "start": 443,
+                "end": 443,
+                "transport": "TCP"
+              }
+            ],
+            "uuid": "df554aed-3aaa-49bd-b4fc-9810a82e94a3"
+          }
+        ]
+      }
+    ],
+    "capabilities": [
+      {
+        "uuid": "4ebd0208-8328-5d69-8c44-ec50939c0967",
+        "name": "AccessPolicy",
+        "description": "This capability supports key system functionality.",
+        "incorporates-components": [
+          {
+            "component-uuid": "78c9f89b-586d-4bc5-99f7-ab4acd5a0d3b",
+            "description": "The Fortify Resource Group is a central hub within the LCPtracker Pro system responsible for managing security and compliance measures. It ensures that all access and operations within the system are authorized and monitored. Its main purpose is to enforce security policies, manage access, and monitor system operations to maintain a secure and compliant environment within the LCPtracker Pro system."
+          }
+        ]
+      }
+    ]
+  }
+}
