@@ -1,0 +1,3973 @@
+{
+  "results": [
+    {
+      "uuid": "d2000dcb-e9c5-42a4-b620-6e3eb5641fc8",
+      "title": "Ubuntu OpenScap Assessment Results",
+      "description": "Ubuntu OpenScap Assessment Results",
+      "start": "2025-03-18T14:06:07+00:00",
+      "local-definitions": {
+        "components": [
+          {
+            "uuid": "2b528746-4b01-44b2-a937-4d848ba393bc",
+            "type": "Service",
+            "title": "scap_comp_ssg",
+            "description": "scap_comp_ssg",
+            "status": {
+              "state": "operational"
+            }
+          }
+        ],
+        "inventory-items": [
+          {
+            "uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+            "description": "inventory",
+            "props": [
+              {
+                "name": "target",
+                "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+                "value": "vagrant"
+              },
+              {
+                "name": "host_name",
+                "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+                "value": "vagrant"
+              },
+              {
+                "name": "target_type",
+                "value": "#scap_org.open-scap_comp_ssg-ubuntu2404-xccdf"
+              }
+            ],
+            "implemented-components": [
+              {
+                "component-uuid": "2b528746-4b01-44b2-a937-4d848ba393bc"
+              }
+            ]
+          }
+        ],
+        "assessment-assets": {
+          "components": [
+            {
+              "uuid": "79547b3d-33d6-46d9-9312-4efb0a839a6d",
+              "type": "Validator",
+              "title": "OpenSCAP",
+              "description": "OpenSCAP",
+              "props": [
+                {
+                  "name": "scanner_name",
+                  "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+                  "value": "OpenSCAP"
+                },
+                {
+                  "name": "scanner_version",
+                  "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+                  "value": "1.3.9"
+                },
+                {
+                  "name": "version",
+                  "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP"
+                },
+                {
+                  "name": "weight",
+                  "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+                  "value": "1.000000"
+                },
+                {
+                  "name": "benchmark_id",
+                  "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+                  "value": "xccdf_org.ssgproject.content_benchmark_UBUNTU_24-04"
+                },
+                {
+                  "name": "benchmark_href",
+                  "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+                  "value": "#scap_org.open-scap_comp_ssg-ubuntu2404-xccdf.xml"
+                },
+                {
+                  "name": "id",
+                  "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+                  "value": "xccdf_org.open-scap_testresult_xccdf_org.ssgproject.content_profile_cis_level2_workstation"
+                }
+              ],
+              "status": {
+                "state": "operational"
+              }
+            }
+          ],
+          "assessment-platforms": [
+            {
+              "uuid": "7df879af-7fa6-4e21-b6df-8d0f9b87369e"
+            }
+          ]
+        }
+      },
+      "reviewed-controls": {
+        "control-selections": []
+      },
+      "observations": [
+        {
+          "uuid": "639ca0d6-e55a-49ee-939b-905e122cf95f",
+          "title": "xccdf_org.ssgproject.content_rule_package_sudo_installed",
+          "description": "xccdf_org.ssgproject.content_rule_package_sudo_installed",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "package_sudo_installed"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_package_sudo_installed"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "pass"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_package_sudo_installed"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "6603110a-02a3-4ad4-8ef5-eaaa6d284b01",
+          "title": "xccdf_org.ssgproject.content_rule_sudo_add_use_pty",
+          "description": "xccdf_org.ssgproject.content_rule_sudo_add_use_pty",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "sudo_add_use_pty"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_sudo_add_use_pty"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "error"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_sudo_add_use_pty"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "4cb2ad4a-24b6-4b16-9ffc-709c144982b0",
+          "title": "xccdf_org.ssgproject.content_rule_sudo_custom_logfile",
+          "description": "xccdf_org.ssgproject.content_rule_sudo_custom_logfile",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "sudo_custom_logfile"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_sudo_custom_logfile"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "error"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "low"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_sudo_custom_logfile"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "4866f60d-b07b-44e1-95a0-3b86a7f993a6",
+          "title": "xccdf_org.ssgproject.content_rule_sudo_remove_no_authenticate",
+          "description": "xccdf_org.ssgproject.content_rule_sudo_remove_no_authenticate",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "sudo_remove_no_authenticate"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_sudo_remove_no_authenticate"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "error"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_sudo_remove_no_authenticate"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "5d2d4598-97fe-41b6-9e08-a76345767b5f",
+          "title": "xccdf_org.ssgproject.content_rule_sudo_require_authentication",
+          "description": "xccdf_org.ssgproject.content_rule_sudo_require_authentication",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "sudo_require_authentication"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_sudo_require_authentication"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "error"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_sudo_require_authentication"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "56ff5b9f-75be-40cd-98ad-75d19392238d",
+          "title": "xccdf_org.ssgproject.content_rule_sudo_require_reauthentication",
+          "description": "xccdf_org.ssgproject.content_rule_sudo_require_reauthentication",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "sudo_require_reauthentication"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_sudo_require_reauthentication"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "error"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_sudo_require_reauthentication"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "a3881cc9-19e8-4fb8-bcd5-db10bf31ef8d",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_unix_enabled",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_unix_enabled",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_unix_enabled"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_unix_enabled"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "pass"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_unix_enabled"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "f1a5fa97-e65d-4c7c-b767-30d81aa47ed0",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_enabled",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_enabled",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_pwhistory_enabled"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_enabled"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_enabled"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "a508c7de-be40-48ca-b0f8-f440cc34120e",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_enforce_root",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_enforce_root",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_pwhistory_enforce_root"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_enforce_root"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_enforce_root"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "aa0abe30-e9e0-43af-a0bb-52fab3642ec2",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_remember",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_remember",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_pwhistory_remember"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_remember"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_remember"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "959cdef9-306b-4ae8-bcf4-96bd8d5f6320",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_use_authtok",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_use_authtok",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_pwhistory_use_authtok"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_use_authtok"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwhistory_use_authtok"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "30b99592-0323-457d-be10-cccbabbe203f",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_unix_authtok",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_unix_authtok",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_unix_authtok"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_unix_authtok"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "pass"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_unix_authtok"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "e51a01ab-04f0-4b16-b2ad-aa601364661c",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_deny",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_deny",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_passwords_pam_faillock_deny"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_deny"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_deny"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "8172ba91-e4a6-47bf-bd9e-a1d811b3a7b5",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_enabled",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_enabled",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_passwords_pam_faillock_enabled"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_enabled"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_enabled"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "40b0b165-7af3-4c6e-8d98-119ffbff238a",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_root_unlock_time",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_root_unlock_time",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_passwords_pam_faillock_root_unlock_time"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_root_unlock_time"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_root_unlock_time"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "3ce43ed6-3f0a-4ac9-9c08-79ab7cda279a",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_unlock_time",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_unlock_time",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_passwords_pam_faillock_unlock_time"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_unlock_time"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_passwords_pam_faillock_unlock_time"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "f5431164-6618-4d9e-bb3a-c6dd1260be4a",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_dcredit",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_dcredit",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_dcredit"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_dcredit"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_dcredit"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "67ce0993-1068-42e3-9d27-7952e4ba9eac",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_dictcheck",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_dictcheck",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_dictcheck"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_dictcheck"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_dictcheck"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "3cca6c32-d7e1-401c-a8b0-f5701fd97017",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_difok",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_difok",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_difok"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_difok"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_difok"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "0457bacf-caf5-47ac-b166-724057a1f752",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_enforce_root",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_enforce_root",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_enforce_root"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_enforce_root"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_enforce_root"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "e53be4d5-e0da-4dfe-bf7b-86b3a2e329db",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_enforcing",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_enforcing",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_enforcing"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_enforcing"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_enforcing"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "fafafff5-a2b4-4658-99af-d45c39cfb078",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_lcredit",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_lcredit",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_lcredit"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_lcredit"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_lcredit"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "d942f36d-8839-4947-85fe-4f2515d0d828",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_maxrepeat",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_maxrepeat",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_maxrepeat"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_maxrepeat"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_maxrepeat"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "b8a576f1-9184-4c18-8f74-193375b036d1",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_maxsequence",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_maxsequence",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_maxsequence"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_maxsequence"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_maxsequence"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "842d665b-de63-447c-8118-9f71f805e849",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_minclass",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_minclass",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_minclass"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_minclass"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_minclass"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "9779c86d-8c2a-4000-8265-e18ce9ede0ef",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_minlen",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_minlen",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_minlen"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_minlen"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_minlen"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "46297dd3-7065-49ff-be1a-7e5b52255e3c",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_ocredit",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_ocredit",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_ocredit"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_ocredit"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_ocredit"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "1092693f-ec2e-4604-9c23-53fef591436b",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwquality_enabled",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwquality_enabled",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_pwquality_enabled"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwquality_enabled"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_pwquality_enabled"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "e9699851-b4d9-432c-8303-2793b7fbaf61",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_ucredit",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_ucredit",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_ucredit"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_ucredit"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_ucredit"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "7dffa8e3-c9ea-4bb6-b4c6-0f319100c295",
+          "title": "xccdf_org.ssgproject.content_rule_set_password_hashing_algorithm_logindefs",
+          "description": "xccdf_org.ssgproject.content_rule_set_password_hashing_algorithm_logindefs",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "set_password_hashing_algorithm_logindefs"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_set_password_hashing_algorithm_logindefs"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "pass"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_set_password_hashing_algorithm_logindefs"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "f65dec6c-15ce-4f64-8cd4-d71cb00d84e0",
+          "title": "xccdf_org.ssgproject.content_rule_set_password_hashing_algorithm_systemauth",
+          "description": "xccdf_org.ssgproject.content_rule_set_password_hashing_algorithm_systemauth",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "set_password_hashing_algorithm_systemauth"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_set_password_hashing_algorithm_systemauth"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "pass"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_set_password_hashing_algorithm_systemauth"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "fe8e0107-f20f-4d76-90a5-f3e72a126ef2",
+          "title": "xccdf_org.ssgproject.content_rule_account_disable_post_pw_expiration",
+          "description": "xccdf_org.ssgproject.content_rule_account_disable_post_pw_expiration",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "account_disable_post_pw_expiration"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_account_disable_post_pw_expiration"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_account_disable_post_pw_expiration"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "80f722e1-df09-4c19-8bde-626abc6a5b8f",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_maximum_age_login_defs",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_maximum_age_login_defs",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_maximum_age_login_defs"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_maximum_age_login_defs"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_maximum_age_login_defs"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "a0f64f3c-23ac-4745-a15c-46792540a697",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_minimum_age_login_defs",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_minimum_age_login_defs",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_minimum_age_login_defs"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_minimum_age_login_defs"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_minimum_age_login_defs"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "667c192b-213a-4459-a0ff-09ebeafd021d",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_set_max_life_existing",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_set_max_life_existing",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_set_max_life_existing"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_set_max_life_existing"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "error"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_set_max_life_existing"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "efbb63b9-2a2a-443e-8dbd-69d8217884c3",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_set_min_life_existing",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_set_min_life_existing",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_set_min_life_existing"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_set_min_life_existing"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "error"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_set_min_life_existing"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "9eb6f0b0-eac1-4792-86d3-c46a87cea02d",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_warn_age_login_defs",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_warn_age_login_defs",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_warn_age_login_defs"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_warn_age_login_defs"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "pass"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_warn_age_login_defs"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "852c1f1a-3036-4b4f-90e6-4748be885b54",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_last_change_is_in_past",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_last_change_is_in_past",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_last_change_is_in_past"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_last_change_is_in_past"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "pass"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_last_change_is_in_past"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "035938ac-fc88-4e64-9fe7-6b6dedac2153",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_password_pam_unix_no_remember",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_password_pam_unix_no_remember",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_password_pam_unix_no_remember"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_unix_no_remember"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "pass"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:22+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_password_pam_unix_no_remember"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "a32f6454-6a59-4a68-95dd-f7298b748bbf",
+          "title": "xccdf_org.ssgproject.content_rule_no_empty_passwords_unix",
+          "description": "xccdf_org.ssgproject.content_rule_no_empty_passwords_unix",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "no_empty_passwords_unix"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_no_empty_passwords_unix"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:23+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "high"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_no_empty_passwords_unix"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "8c406f8f-2c32-4422-a300-5e57cae6affe",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_root_gid_zero",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_root_gid_zero",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_root_gid_zero"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_root_gid_zero"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "pass"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:23+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "high"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_root_gid_zero"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "075af83d-f5cd-4a44-bd49-57d8e9008975",
+          "title": "xccdf_org.ssgproject.content_rule_ensure_pam_wheel_group_empty",
+          "description": "xccdf_org.ssgproject.content_rule_ensure_pam_wheel_group_empty",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "ensure_pam_wheel_group_empty"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_ensure_pam_wheel_group_empty"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:23+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_ensure_pam_wheel_group_empty"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "ab11dd14-210f-4ed0-8a58-b90d467c9c6d",
+          "title": "xccdf_org.ssgproject.content_rule_ensure_root_access_controlled",
+          "description": "xccdf_org.ssgproject.content_rule_ensure_root_access_controlled",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "ensure_root_access_controlled"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_ensure_root_access_controlled"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "error"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:23+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_ensure_root_access_controlled"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "ff608599-312f-42b9-84dc-cb24660808e9",
+          "title": "xccdf_org.ssgproject.content_rule_groups_no_zero_gid_except_root",
+          "description": "xccdf_org.ssgproject.content_rule_groups_no_zero_gid_except_root",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "groups_no_zero_gid_except_root"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_groups_no_zero_gid_except_root"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "pass"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:23+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "high"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_groups_no_zero_gid_except_root"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "5ea06d16-c00b-43c2-aebf-7f82ade4c315",
+          "title": "xccdf_org.ssgproject.content_rule_no_invalid_shell_accounts_unlocked",
+          "description": "xccdf_org.ssgproject.content_rule_no_invalid_shell_accounts_unlocked",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "no_invalid_shell_accounts_unlocked"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_no_invalid_shell_accounts_unlocked"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "pass"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:23+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_no_invalid_shell_accounts_unlocked"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "47fff3b3-af6c-42ad-a4ab-873086c184b0",
+          "title": "xccdf_org.ssgproject.content_rule_no_shelllogin_for_systemaccounts",
+          "description": "xccdf_org.ssgproject.content_rule_no_shelllogin_for_systemaccounts",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "no_shelllogin_for_systemaccounts"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_no_shelllogin_for_systemaccounts"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "pass"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:23+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_no_shelllogin_for_systemaccounts"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "652db6b9-5f73-42d5-9587-c35101dd60c4",
+          "title": "xccdf_org.ssgproject.content_rule_use_pam_wheel_group_for_su",
+          "description": "xccdf_org.ssgproject.content_rule_use_pam_wheel_group_for_su",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "use_pam_wheel_group_for_su"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_use_pam_wheel_group_for_su"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:23+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_use_pam_wheel_group_for_su"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "d4b51063-e0f4-462b-b538-0fd86079ba7a",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_tmout",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_tmout",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_tmout"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_tmout"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:23+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_tmout"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "2b4123d6-9083-4c9f-bf8a-83522d2e7da1",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_umask_etc_bashrc",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_umask_etc_bashrc",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_umask_etc_bashrc"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_umask_etc_bashrc"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:23+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_umask_etc_bashrc"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "a2ee8f88-b937-456b-8b0b-c462bbb4791d",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_umask_etc_login_defs",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_umask_etc_login_defs",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_umask_etc_login_defs"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_umask_etc_login_defs"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:23+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_umask_etc_login_defs"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "b19e788d-ce82-4420-b83e-ede1f3c5dfa9",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_umask_etc_profile",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_umask_etc_profile",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_umask_etc_profile"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_umask_etc_profile"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:23+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_umask_etc_profile"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "9d969e72-8f59-4fb4-885f-a19b30e57303",
+          "title": "xccdf_org.ssgproject.content_rule_accounts_umask_root",
+          "description": "xccdf_org.ssgproject.content_rule_accounts_umask_root",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "accounts_umask_root"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_accounts_umask_root"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "pass"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:05:23+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_accounts_umask_root"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "efb2861c-cc16-4584-ae22-64991233df8a",
+          "title": "xccdf_org.ssgproject.content_rule_file_groupowner_sshd_config",
+          "description": "xccdf_org.ssgproject.content_rule_file_groupowner_sshd_config",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "file_groupowner_sshd_config"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_file_groupowner_sshd_config"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "pass"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:06:00+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_file_groupowner_sshd_config"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "10655f94-bd36-4a5e-a6ab-ca102e2b36b0",
+          "title": "xccdf_org.ssgproject.content_rule_file_owner_sshd_config",
+          "description": "xccdf_org.ssgproject.content_rule_file_owner_sshd_config",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "file_owner_sshd_config"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_file_owner_sshd_config"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "pass"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:06:00+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_file_owner_sshd_config"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "a99fc9a1-1365-4591-8985-4b9360cfc859",
+          "title": "xccdf_org.ssgproject.content_rule_file_permissions_sshd_config",
+          "description": "xccdf_org.ssgproject.content_rule_file_permissions_sshd_config",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "file_permissions_sshd_config"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_file_permissions_sshd_config"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:06:00+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_file_permissions_sshd_config"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "ba4509d6-9874-4713-baba-d6f00072f411",
+          "title": "xccdf_org.ssgproject.content_rule_file_permissions_sshd_private_key",
+          "description": "xccdf_org.ssgproject.content_rule_file_permissions_sshd_private_key",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "file_permissions_sshd_private_key"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_file_permissions_sshd_private_key"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "pass"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:06:00+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_file_permissions_sshd_private_key"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "2afaeb3a-c8c8-436f-bb53-0f96d71275d7",
+          "title": "xccdf_org.ssgproject.content_rule_file_permissions_sshd_pub_key",
+          "description": "xccdf_org.ssgproject.content_rule_file_permissions_sshd_pub_key",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "file_permissions_sshd_pub_key"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_file_permissions_sshd_pub_key"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "pass"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:06:00+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_file_permissions_sshd_pub_key"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "9d5fe146-a585-4432-88be-376756895526",
+          "title": "xccdf_org.ssgproject.content_rule_sshd_disable_empty_passwords",
+          "description": "xccdf_org.ssgproject.content_rule_sshd_disable_empty_passwords",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "sshd_disable_empty_passwords"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_sshd_disable_empty_passwords"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "error"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:06:00+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "high"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_sshd_disable_empty_passwords"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "640139b8-e433-485d-a2ca-7acf25cf3b93",
+          "title": "xccdf_org.ssgproject.content_rule_sshd_disable_forwarding",
+          "description": "xccdf_org.ssgproject.content_rule_sshd_disable_forwarding",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "sshd_disable_forwarding"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_sshd_disable_forwarding"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "error"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:06:00+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_sshd_disable_forwarding"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "a3c05969-f38a-4aa1-861f-85c387beea71",
+          "title": "xccdf_org.ssgproject.content_rule_sshd_disable_gssapi_auth",
+          "description": "xccdf_org.ssgproject.content_rule_sshd_disable_gssapi_auth",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "sshd_disable_gssapi_auth"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_sshd_disable_gssapi_auth"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "error"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:06:00+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_sshd_disable_gssapi_auth"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "509ed3d7-8c38-4e25-8ae9-928bc8d3491c",
+          "title": "xccdf_org.ssgproject.content_rule_sshd_disable_rhosts",
+          "description": "xccdf_org.ssgproject.content_rule_sshd_disable_rhosts",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "sshd_disable_rhosts"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_sshd_disable_rhosts"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "error"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:06:00+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_sshd_disable_rhosts"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "a87292c5-7454-4d4b-8930-d74fdf024248",
+          "title": "xccdf_org.ssgproject.content_rule_sshd_disable_root_login",
+          "description": "xccdf_org.ssgproject.content_rule_sshd_disable_root_login",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "sshd_disable_root_login"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_sshd_disable_root_login"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "error"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:06:00+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_sshd_disable_root_login"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "1bb67f2b-1c35-4f4a-b2ef-2bc45b089a53",
+          "title": "xccdf_org.ssgproject.content_rule_sshd_enable_pam",
+          "description": "xccdf_org.ssgproject.content_rule_sshd_enable_pam",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "sshd_enable_pam"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_sshd_enable_pam"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "error"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:06:00+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_sshd_enable_pam"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "d19664a7-6f08-4894-9324-df35518f0623",
+          "title": "xccdf_org.ssgproject.content_rule_sshd_limit_user_access",
+          "description": "xccdf_org.ssgproject.content_rule_sshd_limit_user_access",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "sshd_limit_user_access"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_sshd_limit_user_access"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "error"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:06:00+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "unknown"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_sshd_limit_user_access"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "0e0b7955-1c75-468b-bf5d-9eedb0eab9f0",
+          "title": "xccdf_org.ssgproject.content_rule_sshd_set_loglevel_info",
+          "description": "xccdf_org.ssgproject.content_rule_sshd_set_loglevel_info",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "sshd_set_loglevel_info"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_sshd_set_loglevel_info"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "error"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:06:00+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "low"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_sshd_set_loglevel_info"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "5ddb7f0c-846c-4030-8111-9b9d93f854a8",
+          "title": "xccdf_org.ssgproject.content_rule_sshd_set_max_auth_tries",
+          "description": "xccdf_org.ssgproject.content_rule_sshd_set_max_auth_tries",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "sshd_set_max_auth_tries"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_sshd_set_max_auth_tries"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "error"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:06:00+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_sshd_set_max_auth_tries"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "2487a306-3c48-4efa-839d-b8a96c9c0af9",
+          "title": "xccdf_org.ssgproject.content_rule_sshd_use_strong_ciphers",
+          "description": "xccdf_org.ssgproject.content_rule_sshd_use_strong_ciphers",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "sshd_use_strong_ciphers"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_sshd_use_strong_ciphers"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:06:00+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_sshd_use_strong_ciphers"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "986a43c8-c2f4-4cc2-ba5b-2b27acfe9c36",
+          "title": "xccdf_org.ssgproject.content_rule_sshd_use_strong_kex",
+          "description": "xccdf_org.ssgproject.content_rule_sshd_use_strong_kex",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "sshd_use_strong_kex"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_sshd_use_strong_kex"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:06:00+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_sshd_use_strong_kex"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        },
+        {
+          "uuid": "4013d3f5-415a-44dd-be01-b2dacf7e2e75",
+          "title": "xccdf_org.ssgproject.content_rule_sshd_use_strong_macs",
+          "description": "xccdf_org.ssgproject.content_rule_sshd_use_strong_macs",
+          "props": [
+            {
+              "name": "assessment-rule-id",
+              "value": "sshd_use_strong_macs"
+            },
+            {
+              "name": "idref",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "xccdf_org.ssgproject.content_rule_sshd_use_strong_macs"
+            },
+            {
+              "name": "result",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "fail"
+            },
+            {
+              "name": "time",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "2025-03-18T14:06:00+00:00"
+            },
+            {
+              "name": "severity",
+              "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/ar/OpenSCAP",
+              "value": "medium"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "subjects": [
+            {
+              "subject-uuid": "49e2fc75-dada-4bbc-9a6c-5836ff3aef27",
+              "type": "inventory-item",
+              "title": "vagrant",
+              "props": [
+                {
+                  "name": "resource-id",
+                  "value": "xccdf_org.ssgproject.content_rule_sshd_use_strong_macs"
+                },
+                {
+                  "name": "result",
+                  "value": "error"
+                },
+                {
+                  "name": "evaluated-on",
+                  "value": "2025-03-18T14:05:22+00:00"
+                }
+              ]
+            }
+          ],
+          "collected": "2025-03-18T14:05:22+00:00"
+        }
+      ]
+    }
+  ]
+}

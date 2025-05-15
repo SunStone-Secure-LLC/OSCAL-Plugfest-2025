@@ -1,0 +1,2600 @@
+{
+  "system-security-plan": {
+    "uuid": "7550c0c0-31f9-46fd-b022-3a7ae0f3896f",
+    "metadata": {
+      "title": "REPLACE_ME",
+      "last-modified": "2025-03-19T11:11:04.451761-04:00",
+      "version": "REPLACE_ME",
+      "oscal-version": "1.1.3"
+    },
+    "import-profile": {
+      "href": "trestle://profiles/NIST_800-53_rev5_selected/profile.json"
+    },
+    "system-characteristics": {
+      "system-ids": [
+        {
+          "id": "REPLACE_ME"
+        }
+      ],
+      "system-name": "REPLACE_ME",
+      "description": "REPLACE_ME",
+      "system-information": {
+        "information-types": [
+          {
+            "title": "REPLACE_ME",
+            "description": "REPLACE_ME"
+          }
+        ]
+      },
+      "status": {
+        "state": "operational"
+      },
+      "authorization-boundary": {
+        "description": "REPLACE_ME"
+      }
+    },
+    "system-implementation": {
+      "users": [
+        {
+          "uuid": "d63eef7b-ab34-45ff-b110-887b4833de90"
+        }
+      ],
+      "components": [
+        {
+          "uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+          "type": "software",
+          "title": "Ubuntu_Linux_24.04_LTS",
+          "description": "Ubuntu Linux 24.04 LTS",
+          "props": [
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_unix_enabled",
+              "remarks": "rule_set_00"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_unix_enabled",
+              "remarks": "rule_set_00"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_root_gid_zero",
+              "remarks": "rule_set_01"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_root_gid_zero",
+              "remarks": "rule_set_01"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_umask_etc_bashrc",
+              "remarks": "rule_set_02"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_umask_etc_bashrc",
+              "remarks": "rule_set_02"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_umask_etc_login_defs",
+              "remarks": "rule_set_03"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_umask_etc_login_defs",
+              "remarks": "rule_set_03"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_umask_etc_profile",
+              "remarks": "rule_set_04"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_umask_etc_profile",
+              "remarks": "rule_set_04"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_umask_root",
+              "remarks": "rule_set_05"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_umask_root",
+              "remarks": "rule_set_05"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "ensure_pam_wheel_group_empty",
+              "remarks": "rule_set_06"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "ensure_pam_wheel_group_empty",
+              "remarks": "rule_set_06"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "ensure_root_access_controlled",
+              "remarks": "rule_set_07"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "ensure_root_access_controlled",
+              "remarks": "rule_set_07"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "file_groupowner_sshd_config",
+              "remarks": "rule_set_08"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "file_groupowner_sshd_config",
+              "remarks": "rule_set_08"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "file_owner_sshd_config",
+              "remarks": "rule_set_09"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "file_owner_sshd_config",
+              "remarks": "rule_set_09"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "file_permissions_sshd_config",
+              "remarks": "rule_set_10"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "file_permissions_sshd_config",
+              "remarks": "rule_set_10"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "file_permissions_sshd_private_key",
+              "remarks": "rule_set_11"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "file_permissions_sshd_private_key",
+              "remarks": "rule_set_11"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "file_permissions_sshd_pub_key",
+              "remarks": "rule_set_12"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "file_permissions_sshd_pub_key",
+              "remarks": "rule_set_12"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "groups_no_zero_gid_except_root",
+              "remarks": "rule_set_13"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "groups_no_zero_gid_except_root",
+              "remarks": "rule_set_13"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "no_invalid_shell_accounts_unlocked",
+              "remarks": "rule_set_14"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "no_invalid_shell_accounts_unlocked",
+              "remarks": "rule_set_14"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "no_shelllogin_for_systemaccounts",
+              "remarks": "rule_set_15"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "no_shelllogin_for_systemaccounts",
+              "remarks": "rule_set_15"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_limit_user_access",
+              "remarks": "rule_set_16"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_limit_user_access",
+              "remarks": "rule_set_16"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "use_pam_wheel_group_for_su",
+              "remarks": "rule_set_17"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "use_pam_wheel_group_for_su",
+              "remarks": "rule_set_17"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_use_strong_ciphers",
+              "remarks": "rule_set_18"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_use_strong_ciphers",
+              "remarks": "rule_set_18"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_use_strong_kex",
+              "remarks": "rule_set_19"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_use_strong_kex",
+              "remarks": "rule_set_19"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_use_strong_macs",
+              "remarks": "rule_set_20"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_use_strong_macs",
+              "remarks": "rule_set_20"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_pwhistory_use_authtok",
+              "remarks": "rule_set_21"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_pwhistory_use_authtok",
+              "remarks": "rule_set_21"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_unix_authtok",
+              "remarks": "rule_set_22"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_unix_authtok",
+              "remarks": "rule_set_22"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "set_password_hashing_algorithm_logindefs",
+              "remarks": "rule_set_23"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "set_password_hashing_algorithm_logindefs",
+              "remarks": "rule_set_23"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "set_password_hashing_algorithm_systemauth",
+              "remarks": "rule_set_24"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "set_password_hashing_algorithm_systemauth",
+              "remarks": "rule_set_24"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "account_disable_post_pw_expiration",
+              "remarks": "rule_set_25"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "account_disable_post_pw_expiration",
+              "remarks": "rule_set_25"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_maximum_age_login_defs",
+              "remarks": "rule_set_26"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_maximum_age_login_defs",
+              "remarks": "rule_set_26"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_minimum_age_login_defs",
+              "remarks": "rule_set_27"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_minimum_age_login_defs",
+              "remarks": "rule_set_27"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_last_change_is_in_past",
+              "remarks": "rule_set_28"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_last_change_is_in_past",
+              "remarks": "rule_set_28"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_dcredit",
+              "remarks": "rule_set_29"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_dcredit",
+              "remarks": "rule_set_29"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_dictcheck",
+              "remarks": "rule_set_30"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_dictcheck",
+              "remarks": "rule_set_30"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_difok",
+              "remarks": "rule_set_31"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_difok",
+              "remarks": "rule_set_31"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_enforce_root",
+              "remarks": "rule_set_32"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_enforce_root",
+              "remarks": "rule_set_32"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_enforcing",
+              "remarks": "rule_set_33"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_enforcing",
+              "remarks": "rule_set_33"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_lcredit",
+              "remarks": "rule_set_34"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_lcredit",
+              "remarks": "rule_set_34"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_maxrepeat",
+              "remarks": "rule_set_35"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_maxrepeat",
+              "remarks": "rule_set_35"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_maxsequence",
+              "remarks": "rule_set_36"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_maxsequence",
+              "remarks": "rule_set_36"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_minclass",
+              "remarks": "rule_set_37"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_minclass",
+              "remarks": "rule_set_37"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_minlen",
+              "remarks": "rule_set_38"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_minlen",
+              "remarks": "rule_set_38"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_ocredit",
+              "remarks": "rule_set_39"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_ocredit",
+              "remarks": "rule_set_39"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_pwhistory_enabled",
+              "remarks": "rule_set_40"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_pwhistory_enabled",
+              "remarks": "rule_set_40"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_pwhistory_enforce_root",
+              "remarks": "rule_set_41"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_pwhistory_enforce_root",
+              "remarks": "rule_set_41"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_pwhistory_remember",
+              "remarks": "rule_set_42"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_pwhistory_remember",
+              "remarks": "rule_set_42"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_pwquality_enabled",
+              "remarks": "rule_set_43"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_pwquality_enabled",
+              "remarks": "rule_set_43"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_ucredit",
+              "remarks": "rule_set_44"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_ucredit",
+              "remarks": "rule_set_44"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_unix_no_remember",
+              "remarks": "rule_set_45"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_pam_unix_no_remember",
+              "remarks": "rule_set_45"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_set_max_life_existing",
+              "remarks": "rule_set_46"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_set_max_life_existing",
+              "remarks": "rule_set_46"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_set_min_life_existing",
+              "remarks": "rule_set_47"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_set_min_life_existing",
+              "remarks": "rule_set_47"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "no_empty_passwords_unix",
+              "remarks": "rule_set_48"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "no_empty_passwords_unix",
+              "remarks": "rule_set_48"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_disable_empty_passwords",
+              "remarks": "rule_set_49"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_disable_empty_passwords",
+              "remarks": "rule_set_49"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_disable_gssapi_auth",
+              "remarks": "rule_set_50"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_disable_gssapi_auth",
+              "remarks": "rule_set_50"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_disable_rhosts",
+              "remarks": "rule_set_51"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_disable_rhosts",
+              "remarks": "rule_set_51"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_enable_pam",
+              "remarks": "rule_set_52"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_enable_pam",
+              "remarks": "rule_set_52"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_warn_age_login_defs",
+              "remarks": "rule_set_53"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_password_warn_age_login_defs",
+              "remarks": "rule_set_53"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_disable_forwarding",
+              "remarks": "rule_set_54"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_disable_forwarding",
+              "remarks": "rule_set_54"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_tmout",
+              "remarks": "rule_set_55"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_tmout",
+              "remarks": "rule_set_55"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "package_sudo_installed",
+              "remarks": "rule_set_56"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "package_sudo_installed",
+              "remarks": "rule_set_56"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_disable_root_login",
+              "remarks": "rule_set_57"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_disable_root_login",
+              "remarks": "rule_set_57"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sudo_add_use_pty",
+              "remarks": "rule_set_58"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sudo_add_use_pty",
+              "remarks": "rule_set_58"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sudo_remove_no_authenticate",
+              "remarks": "rule_set_59"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sudo_remove_no_authenticate",
+              "remarks": "rule_set_59"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sudo_require_authentication",
+              "remarks": "rule_set_60"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sudo_require_authentication",
+              "remarks": "rule_set_60"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sudo_require_reauthentication",
+              "remarks": "rule_set_61"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sudo_require_reauthentication",
+              "remarks": "rule_set_61"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_passwords_pam_faillock_deny",
+              "remarks": "rule_set_62"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_passwords_pam_faillock_deny",
+              "remarks": "rule_set_62"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_passwords_pam_faillock_enabled",
+              "remarks": "rule_set_63"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_passwords_pam_faillock_enabled",
+              "remarks": "rule_set_63"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_passwords_pam_faillock_root_unlock_time",
+              "remarks": "rule_set_64"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_passwords_pam_faillock_root_unlock_time",
+              "remarks": "rule_set_64"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_passwords_pam_faillock_unlock_time",
+              "remarks": "rule_set_65"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "accounts_passwords_pam_faillock_unlock_time",
+              "remarks": "rule_set_65"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_set_loglevel_info",
+              "remarks": "rule_set_66"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_set_loglevel_info",
+              "remarks": "rule_set_66"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_set_max_auth_tries",
+              "remarks": "rule_set_67"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sshd_set_max_auth_tries",
+              "remarks": "rule_set_67"
+            },
+            {
+              "name": "Rule_Id",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sudo_custom_logfile",
+              "remarks": "rule_set_68"
+            },
+            {
+              "name": "Rule_Description",
+              "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+              "value": "sudo_custom_logfile",
+              "remarks": "rule_set_68"
+            }
+          ],
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+          "type": "this-system",
+          "title": "This System",
+          "description": "",
+          "status": {
+            "state": "operational"
+          }
+        }
+      ]
+    },
+    "control-implementation": {
+      "description": "This is the control implementation for the system.",
+      "implemented-requirements": [
+        {
+          "uuid": "7ec5da9d-b53a-4030-802d-ad88a49d69d5",
+          "control-id": "ac-3",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "265e556d-f7c9-4e0d-acdd-48f1e30331ee",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_unix_enabled"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_root_gid_zero"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_umask_etc_bashrc"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_umask_etc_login_defs"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_umask_etc_profile"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_umask_root"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "ensure_pam_wheel_group_empty"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "ensure_root_access_controlled"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_groupowner_sshd_config"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_owner_sshd_config"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_permissions_sshd_config"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_permissions_sshd_private_key"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_permissions_sshd_pub_key"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "groups_no_zero_gid_except_root"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "no_invalid_shell_accounts_unlocked"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "no_shelllogin_for_systemaccounts"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_limit_user_access"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "use_pam_wheel_group_for_su"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "a7a24faf-9109-4c84-930b-7ef9e7a3d67f",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "34a2fe75-df29-402a-ae4f-7eccfd819119",
+          "control-id": "ac-5",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "6502ea8f-b042-4350-9df6-481bfc3d70bb",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_unix_enabled"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_root_gid_zero"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_umask_etc_bashrc"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_umask_etc_login_defs"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_umask_etc_profile"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_umask_root"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "ensure_pam_wheel_group_empty"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "ensure_root_access_controlled"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_groupowner_sshd_config"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_owner_sshd_config"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_permissions_sshd_config"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_permissions_sshd_private_key"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_permissions_sshd_pub_key"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "groups_no_zero_gid_except_root"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "no_invalid_shell_accounts_unlocked"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "no_shelllogin_for_systemaccounts"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_limit_user_access"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "use_pam_wheel_group_for_su"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "83fbb24c-dc8e-4c87-aa2f-d7fc94bc0562",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "4b81ec70-6b9a-491a-8cc5-71602d306949",
+          "control-id": "ac-6",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "a4bebb20-c042-477a-8e43-f44e8b38ca1d",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_unix_enabled"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_root_gid_zero"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_umask_etc_bashrc"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_umask_etc_login_defs"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_umask_etc_profile"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_umask_root"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "ensure_pam_wheel_group_empty"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "ensure_root_access_controlled"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_groupowner_sshd_config"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_owner_sshd_config"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_permissions_sshd_config"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_permissions_sshd_private_key"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_permissions_sshd_pub_key"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "groups_no_zero_gid_except_root"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "no_invalid_shell_accounts_unlocked"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "no_shelllogin_for_systemaccounts"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_limit_user_access"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "use_pam_wheel_group_for_su"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "0ebca83f-b57c-498d-9775-001361faae0b",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "8ca1b181-3ba5-4d92-b9cb-4e3f14c65b2c",
+          "control-id": "mp-2",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "be6c8a2f-c2da-45c8-8d0a-5da6041c1e16",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_unix_enabled"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_root_gid_zero"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_umask_etc_bashrc"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_umask_etc_login_defs"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_umask_etc_profile"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_umask_root"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "ensure_pam_wheel_group_empty"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "ensure_root_access_controlled"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_groupowner_sshd_config"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_owner_sshd_config"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_permissions_sshd_config"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_permissions_sshd_private_key"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "file_permissions_sshd_pub_key"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "groups_no_zero_gid_except_root"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "no_invalid_shell_accounts_unlocked"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "no_shelllogin_for_systemaccounts"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_limit_user_access"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "use_pam_wheel_group_for_su"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "877daebe-4018-43a4-b569-cbb643a79f6c",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "09356b44-b112-439e-9585-2bf6f02d5dc4",
+          "control-id": "ac-17.2",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "f2b90627-c73e-40d4-8ef9-2ece6ff54584",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_use_strong_ciphers"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_use_strong_kex"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_use_strong_macs"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "6730fd96-a0f0-4e16-b589-75643d6fc09d",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "903206e5-6830-4f7c-9cee-f590de147f1a",
+          "control-id": "ia-5",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "96b6c2d6-4192-4fe3-88e4-d63e8c338543",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_use_strong_ciphers"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_use_strong_kex"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_use_strong_macs"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "224c2a16-4416-4447-b05c-b6e6730e9860",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "8854f568-6a4c-42b7-a089-a8f089fe18de",
+          "control-id": "ia-5.1",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "b301b355-fd20-4be7-997c-370b686f5a2f",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_use_strong_ciphers"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_use_strong_kex"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_use_strong_macs"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_pwhistory_use_authtok"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_unix_authtok"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "set_password_hashing_algorithm_logindefs"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "set_password_hashing_algorithm_systemauth"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "account_disable_post_pw_expiration"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_maximum_age_login_defs"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_minimum_age_login_defs"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_last_change_is_in_past"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_dcredit"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_dictcheck"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_difok"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_enforce_root"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_enforcing"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_lcredit"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_maxrepeat"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_maxsequence"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_minclass"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_minlen"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_ocredit"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_pwhistory_enabled"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_pwhistory_enforce_root"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_pwhistory_remember"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_pwquality_enabled"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_ucredit"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_unix_no_remember"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_set_max_life_existing"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_set_min_life_existing"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "no_empty_passwords_unix"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_disable_empty_passwords"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_disable_gssapi_auth"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_disable_rhosts"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_enable_pam"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "42233c9f-a113-4f52-9789-ca386bf7f16c",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "5d56a439-f5e0-434b-aa07-d45e3894983f",
+          "control-id": "sc-8",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "ee0166a9-d5b9-4049-84c6-79f57ee19b03",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_use_strong_ciphers"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_use_strong_kex"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_use_strong_macs"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "d9dd5bcb-14bf-4fe6-be92-dcd874bd6e13",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "d4166c60-b1e7-4c58-ba94-d45fbcd53d57",
+          "control-id": "sc-8.1",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "c4fa43c1-f46f-427b-9e2f-461f16fe3a71",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_use_strong_ciphers"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_use_strong_kex"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_use_strong_macs"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "fa209a27-ca91-4ee2-b6e1-54f09e89f2fd",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "9452f1d8-e4b2-42c9-a8c4-e08c472fac17",
+          "control-id": "sc-28",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "c867d728-89c5-411a-b42b-5564d0d12188",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_pwhistory_use_authtok"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_unix_authtok"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "set_password_hashing_algorithm_logindefs"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "set_password_hashing_algorithm_systemauth"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "3120a6e0-5f5d-4380-b6ad-331b6970d2aa",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "d46db54e-c8c5-453a-8029-11bfca900fce",
+          "control-id": "sc-28.1",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "8581713d-73f3-4c0f-b658-b56ff36e66b8",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_pwhistory_use_authtok"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_pam_unix_authtok"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "set_password_hashing_algorithm_logindefs"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "set_password_hashing_algorithm_systemauth"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "d7b47b5a-864a-4325-a555-a6a442a34af0",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "1f609755-e04f-440b-a478-b371ecd5c49c",
+          "control-id": "cm-1",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "ef989ceb-caeb-4c36-996b-9d87ce3cb72f",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_warn_age_login_defs"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "1e7bf105-425e-4ebb-a9ed-f4b42e52a81c",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "76af849a-2051-4645-90f8-54bcdb0b419d",
+          "control-id": "cm-2",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "cd1cf249-793f-403b-b2c3-2e7a0f8fb9eb",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_warn_age_login_defs"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "96488d5c-d814-4864-9804-d1c42e9db264",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "56262360-24b6-426c-aaaa-c3aec129fd14",
+          "control-id": "cm-6",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "c56ce9e0-447a-4673-ae01-76235e986b32",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_warn_age_login_defs"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_disable_forwarding"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "0acf5b5f-ffa2-4865-987d-32bfc4c4b205",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "e43ef6c8-b683-4c45-b0be-acaa5cd74526",
+          "control-id": "cm-7",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "462b5be5-cce1-431c-ac5d-75c3d8025015",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_warn_age_login_defs"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_disable_forwarding"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "bc56ef76-2aba-495c-a430-54d8f1050550",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "900add56-4d8a-4a41-bbad-f259a65f1fa4",
+          "control-id": "cm-7.1",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "55a554d6-dffa-4feb-93e6-c8a224861271",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_warn_age_login_defs"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "fe2f11ba-541a-4750-a3c6-c327042e7f06",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "e6a0465f-f7e0-4e86-8278-9ee9a945d5e8",
+          "control-id": "cm-9",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "901d7ef1-790c-4b2c-b322-5def4ae6f6c2",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_warn_age_login_defs"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "ef296ea6-32b4-4e7c-b148-1b9ee2dd0d70",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "d2c81a76-b407-40ef-978f-c94e2cf9a78d",
+          "control-id": "sa-3",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "b5a8bdd0-6ec5-449b-a303-2fb1668fab34",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_warn_age_login_defs"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "240438d8-038f-4e7c-be03-c85ec2db9851",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "be5c754e-f8f2-40eb-bc1a-7dc9dd688483",
+          "control-id": "sa-8",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "48e1d0cc-afc2-45c5-af18-532b4b15d0c1",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_warn_age_login_defs"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "98260919-6cd7-47a6-afb8-90a0011ef168",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "05dd2ba1-07f3-4ab1-b951-99720ecbee72",
+          "control-id": "sa-10",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "a787ae47-77e8-4960-bb38-2d34412be3bc",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_password_warn_age_login_defs"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "3d13797a-5a3f-4ec5-b01d-c2908bc37e28",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "c07781fc-8a35-430b-8664-e75d731722e9",
+          "control-id": "ac-2.5",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "dba596a0-a307-4d56-b5e0-592b0a2ed50e",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_tmout"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "eab0ac62-9318-4768-bfd7-6145918b1ec0",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "db3f83c7-bcc6-44db-b233-6d6ba5978bb0",
+          "control-id": "ac-11",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "bb1a5c9e-6d3d-4f12-90c4-112fa822bc31",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_tmout"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "b97e45c2-bdf4-4e1f-bfd3-926ac844c0a5",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "e99d0601-d1df-4bf0-a44a-e226aa5ea80c",
+          "control-id": "ac-11.1",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "ea091702-b305-4c70-8e85-cddcaf0fa526",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_tmout"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "c47f31d2-6615-4de4-a948-0fe5d476a96f",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "a3b3ef07-e417-46ee-a0b5-59ac11e010de",
+          "control-id": "ac-12",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "7cbbf40a-6503-472b-b266-64901e7edf28",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_tmout"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "4f0ec5e8-eee5-4648-a3a7-2a2f9054af89",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "9ebd276e-f3f0-455a-b46a-4fa508866612",
+          "control-id": "ac-6.2",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "a733d4b6-248f-410f-8a10-b76ccd53f3f4",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "package_sudo_installed"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_disable_root_login"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sudo_add_use_pty"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sudo_remove_no_authenticate"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sudo_require_authentication"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sudo_require_reauthentication"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "20e2597b-c33d-49c4-87af-38da102e9bb8",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "55433c54-f26d-4850-a756-c72d2cba190e",
+          "control-id": "ac-6.5",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "cd6e1042-aa17-47ad-8a4c-4f88cf3dd56c",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "package_sudo_installed"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_disable_root_login"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sudo_add_use_pty"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sudo_remove_no_authenticate"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sudo_require_authentication"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sudo_require_reauthentication"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "463c54ca-344f-427e-8f56-8025ed4bc2a7",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "bdb56c2b-a847-44b6-a854-43cea70bff53",
+          "control-id": "ac-1",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "9364d6ed-81c9-4d28-bfb3-a3f98f428f9e",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_passwords_pam_faillock_deny"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_passwords_pam_faillock_enabled"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_passwords_pam_faillock_root_unlock_time"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_passwords_pam_faillock_unlock_time"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "d29f64bf-3279-4835-a668-aae43ea4323d",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "475bef27-ceb2-49f6-9dfa-ae5f94a667d6",
+          "control-id": "ac-2",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "da276844-898f-472b-812d-65108bc61086",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_passwords_pam_faillock_deny"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_passwords_pam_faillock_enabled"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_passwords_pam_faillock_root_unlock_time"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_passwords_pam_faillock_unlock_time"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "918ce071-37d6-4cf4-a3f5-f150a34cd529",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "97a3cbbf-02c6-4fb3-8dc3-dae9acd80866",
+          "control-id": "ac-2.1",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "13e44df5-ec41-43f2-9124-a5ceb80172b6",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_passwords_pam_faillock_deny"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_passwords_pam_faillock_enabled"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_passwords_pam_faillock_root_unlock_time"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "accounts_passwords_pam_faillock_unlock_time"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "46872d35-9a24-4f7e-85ff-a9e6cc00eb18",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "94b1a620-9b81-4534-94bf-721d2057cb21",
+          "control-id": "au-2",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "3783856b-eac4-40b2-a968-5ca70f3c2212",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_set_loglevel_info"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "603498c9-cc56-4c78-b48f-4f340029c41f",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "eaf44412-f8f5-4415-b3b3-2c69e64f99a6",
+          "control-id": "au-7",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "a79b3a9d-f5ad-4d9a-9952-bfa63e3027a5",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_set_loglevel_info"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_set_max_auth_tries"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sudo_custom_logfile"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "3f77a3ce-6680-4b9b-81b7-9901ede027ae",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "209b872e-bc95-43e5-b6e0-dab42afd7b97",
+          "control-id": "au-12",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "8464f3fd-d2b9-4d7c-8ccc-df7822624144",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_set_loglevel_info"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_set_max_auth_tries"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sudo_custom_logfile"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "5d9983ba-e711-460c-ae12-dd47bf48fde1",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "30af5c46-bf3c-4740-9501-ac319850c61e",
+          "control-id": "au-3",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "57b83a50-bda1-49a4-baa9-1b62917584be",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_set_max_auth_tries"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sudo_custom_logfile"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "1f68b8d2-5405-4ba4-ab37-c78bec9c7d4e",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        },
+        {
+          "uuid": "807eb901-f9fa-424d-bbfb-dfe4873f541f",
+          "control-id": "au-3.1",
+          "by-components": [
+            {
+              "component-uuid": "a25b6e88-4177-44fa-a126-2f01443a0eb4",
+              "uuid": "b640f386-9bdb-4929-a265-54a91512ddfa",
+              "description": "",
+              "props": [
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sshd_set_max_auth_tries"
+                },
+                {
+                  "name": "Rule_Id",
+                  "ns": "https://oscal-compass/compliance-trestle/schemas/oscal/cd",
+                  "value": "sudo_custom_logfile"
+                }
+              ],
+              "implementation-status": {
+                "state": "planned"
+              }
+            },
+            {
+              "component-uuid": "acac150e-a4f1-46be-b607-943cb5d37839",
+              "uuid": "3b0add79-c3f3-415e-9dbc-de0781b4dece",
+              "description": "",
+              "implementation-status": {
+                "state": "planned"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
