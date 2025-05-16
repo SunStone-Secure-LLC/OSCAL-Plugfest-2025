@@ -1,0 +1,83 @@
+name: "CI Tests"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test_core:
+    runs-on: ubuntu-24.04
+    steps:
+    - id: checkout
+      name: Checkout repository
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+    - id: setup_java
+      name: Setup Java
+      uses: actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00
+      with:
+        distribution: temurin
+        java-version: 17
+    - id: setup_cli
+      name: Setup oscal-cli
+      uses: oscal-club/oscal-cli-action@a4d60aa03733a8543c1b9101640a5aa7eced7c49
+    - id: exec
+      name: Test files
+      run: |
+        find '.' \( -name '*.json' -o -name '*.xml' -o -name '*.yaml' \) \
+          -exec oscal-cli validate "{}" -o "{}.core.sarif" \
+          --sarif-include-pass \; || true
+    - id: analyze_sarif
+      name: Analyze SARIF results
+      uses: github/codeql-action/upload-sarif@15bce5bb14748fcfd6fe32738ca1cba36e5f218f
+      with:
+        category: cli_validate_core
+        sarif_file: ${{ github.workspace }}
+    - id: upload
+      if: always()
+      name: Upload workspace files
+      uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+      with:
+        name: results_core
+        path: ${{ github.workspace }}
+        if-no-files-found: error
+  test_fedramp:
+    runs-on: ubuntu-24.04
+    steps:
+    - id: checkout
+      name: Checkout repository
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+    - id: setup_java
+      name: Setup Java
+      uses: actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00
+      with:
+        distribution: temurin
+        java-version: 17
+    - id: setup_cli
+      name: Setup oscal-cli
+      uses: oscal-club/oscal-cli-action@a4d60aa03733a8543c1b9101640a5aa7eced7c49
+    - id: exec
+      name: Test files
+      run: |
+        find '.' \( -name '*.json' -o -name '*.xml' -o -name '*.yaml' \) \
+          -exec oscal-cli validate \
+          "{}" -o "{}.fedramp.sarif" \
+          -c "./SSP/FedRAMP Constraints/fedramp-external-allowed-values.xml" \
+          -c "./SSP/FedRAMP Constraints/fedramp-external-constraints.xml" \
+          --sarif-include-pass \; || true
+    - id: analyze_sarif
+      name: Analyze SARIF results
+      uses: github/codeql-action/upload-sarif@15bce5bb14748fcfd6fe32738ca1cba36e5f218f
+      with:
+        category: cli_validate_fedramp
+        sarif_file: ${{ github.workspace }}
+    - id: upload
+      if: always()
+      name: Upload workspace files
+      uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+      with:
+        name: results_fedramp
+        path: ${{ github.workspace }}
+        if-no-files-found: error
+
