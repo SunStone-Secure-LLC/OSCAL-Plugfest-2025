@@ -19,9 +19,19 @@ jobs:
       with:
         distribution: temurin
         java-version: 17
-    - id: test
-      name: Validate content with oscal-cli
+    - id: setup_cli
+      name: Setup oscal-cli
       uses: oscal-club/oscal-cli-action@a4d60aa03733a8543c1b9101640a5aa7eced7c49
+    - id: exec
+      name: Test files
+      run: |
+        find '.' \( -name '*.json' -o -name '*.xml' -o -name '*.yaml' \) \
+          -exec oscal-cli validate "{}" -o "{}.sarif" \; || true
+    - id: upload
+      name: Upload SARIF results
+      uses: github/codeql-action/upload-sarif@15bce5bb14748fcfd6fe32738ca1cba36e5f218f
+      with:
+        sarif_file: ${{ github.workspace }}    
   test_fedramp:
     runs-on: ubuntu-24.04
     steps:
@@ -34,6 +44,6 @@ jobs:
       with:
         distribution: temurin
         java-version: 17
-    - id: test
-      name: Validate content with oscal-cli
+    - id: setup_cli
+      name: Setup oscal-cli
       uses: oscal-club/oscal-cli-action@a4d60aa03733a8543c1b9101640a5aa7eced7c49
