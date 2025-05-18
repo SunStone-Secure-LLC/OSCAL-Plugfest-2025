@@ -1,901 +1,1354 @@
 {
-  "assessment-plan": {
-    "uuid": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
-    "metadata": {
-      "title": "Cloud Security Continuous Measurement Assessment Plan",
-      "last-modified": "2025-05-18T16:47:07.000Z",
-      "version": "1.2.0",
-      "oscal-version": "1.1.3",
-      "roles": [
-        {
-          "id": "assessor",
-          "title": "Assessor"
-        },
-        {
-          "id": "csp-contact",
-          "title": "Cloud Service Provider Contact"
-        }
-      ],
-      "parties": [
-        {
-          "uuid": "p1-assessor-org-uuid",
-          "type": "organization",
-          "name": "Independent Assessor Organization"
-        },
-        {
-          "uuid": "p2-csp-org-uuid",
-          "type": "organization",
-          "name": "Cloud Service Provider Inc."
-        }
-      ],
-      "responsible-parties": [
-        {
-          "role-id": "assessor",
-          "party-uuids": [
-            "p1-assessor-org-uuid"
-          ]
-        },
-        {
-          "role-id": "csp-contact",
-          "party-uuids": [
-            "p2-csp-org-uuid"
-          ]
-        }
-      ]
-    },
-    "import-ssp": {
-      "href": "https://example.com/oscal/ssp.json",
-      "remarks": "Link to the System Security Plan that this assessment plan is for. Control definitions are referenced from the FedRAMP Low Baseline Profile (conceptually) or defined locally for custom metrics."
-    },
-    "local-definitions": {
-      "components": [
-        {
-          "uuid": "comp-dos-mitigation-uuid",
-          "type": "service",
-          "title": "DoS Mitigation Service",
-          "description": "Cloud-native or third-party service configured for Denial of Service protection.",
-          "status": { "state": "operational" }
-        },
-        {
-          "uuid": "comp-firewall-proxy-uuid",
-          "type": "service",
-          "title": "Firewall and Proxy Services",
-          "description": "Network security services for traffic filtering.",
-          "status": { "state": "operational" }
-        },
-        {
-          "uuid": "comp-container-platform-uuid",
-          "type": "service",
-          "title": "Container Platform",
-          "description": "Platform for deploying and managing immutable containers and microservices.",
-          "status": { "state": "operational" }
-        },
-        {
-          "uuid": "comp-serverless-platform-uuid",
-          "type": "service",
-          "title": "Serverless Compute Platform",
-          "description": "Platform for executing serverless functions.",
-          "status": { "state": "operational" }
-        },
-        {
-          "uuid": "comp-virtual-network-uuid",
-          "type": "service",
-          "title": "Cloud Native Virtual Network",
-          "description": "Virtual networking components and services supporting microservice segmentation and traffic flow control.",
-          "status": { "state": "operational" }
-        },
-        {
-          "uuid": "comp-scanning-tools-uuid",
-          "type": "software",
-          "title": "Continuous Scanning Tools",
-          "description": "Tools used for continuous scanning of cloud components.",
-          "status": { "state": "operational" }
-        },
-        {
-          "uuid": "comp-ha-infrastructure-uuid",
-          "type": "hardware",
-          "title": "High Availability Infrastructure",
-          "description": "Infrastructure components supporting high availability.",
-          "status": { "state": "operational" }
-        },
-        {
-          "uuid": "comp-key-management-system-uuid",
-          "type": "service",
-          "title": "Key Management System (KMS)",
-          "description": "Service for managing cryptographic keys.",
-          "status": { "state": "operational" }
-        },
-        {
-          "uuid": "comp-disposal-service-uuid",
-          "type": "process-procedure",
-          "title": "Component Disposal Service/Process",
-          "description": "Process and tools for secure component disposal.",
-          "status": { "state": "operational" }
-        }
-      ],
-      "inventory-items": [
-        {
-          "uuid": "inv-item-dos-service-uuid",
-          "description": "The deployed DoS Mitigation Service instance.",
-          "props": [
-            {"name": "asset-type", "value": "service"}
-          ],
-          "implemented-components": [
-            {"component-uuid": "comp-dos-mitigation-uuid"}
-          ]
-        },
-        {
-          "uuid": "inv-item-firewall-uuid",
-          "description": "The deployed Firewall/Proxy Service instance.",
-          "props": [
-            {"name": "asset-type", "value": "service"}
-          ],
-          "implemented-components": [
-            {"component-uuid": "comp-firewall-proxy-uuid"}
-          ]
-        },
-        {
-            "uuid": "inv-item-container-platform-uuid",
-            "description": "The deployed Container Platform instance.",
-            "props": [
-              {"name": "asset-type", "value": "service"}
-            ],
-            "implemented-components": [
-              {"component-uuid": "comp-container-platform-uuid"}
-            ]
-          },
-          {
-            "uuid": "inv-item-serverless-platform-uuid",
-            "description": "The deployed Serverless Compute Platform instance.",
-            "props": [
-              {"name": "asset-type", "value": "service"}
-            ],
-            "implemented-components": [
-              {"component-uuid": "comp-serverless-platform-uuid"}
-            ]
-          },
-          {
-            "uuid": "inv-item-virtual-network-uuid",
-            "description": "The deployed Cloud Native Virtual Network components.",
-            "props": [
-              {"name": "asset-type", "value": "service"}
-            ],
-            "implemented-components": [
-              {"component-uuid": "comp-virtual-network-uuid"}
-            ]
-          },
-          {
-            "uuid": "inv-item-scanning-tools-uuid",
-            "description": "The deployed Continuous Scanning Tools.",
-            "props": [
-                {"name": "asset-type", "value": "software"}
-            ],
-            "implemented-components": [
-                {"component-uuid": "comp-scanning-tools-uuid"}
-            ]
-          },
-          {
-            "uuid": "inv-item-ha-infrastructure-uuid",
-            "description": "The deployed High Availability Infrastructure components.",
-            "props": [
-                {"name": "asset-type", "value": "hardware"}
-            ],
-            "implemented-components": [
-                {"component-uuid": "comp-ha-infrastructure-uuid"}
-            ]
-          }
-      ],
-      "users": [
-        {
-          "uuid": "user-csp-security-team-uuid",
-          "title": "CSP Security Team",
-          "role-ids": ["csp-contact"]
-        }
-      ],
-      "activities": [
-        {
-          "uuid": "activity-measure-sc-5-uuid",
-          "title": "Measure Denial of Service Protection (SC-5)",
-          "description": "Activity to measure the effectiveness of DoS protection mechanisms related to NIST SP 800-53 Control SC-5.",
-          "steps": [
-            {
-              "uuid": "step-measure-sc-5-dos-events-uuid",
-              "title": "Measure DoS Event Handling Efficacy",
-              "description": "Metric: Percentage of detected malicious DoS events successfully mitigated by automated protection mechanisms within defined thresholds.\nExpression: (Number of successfully mitigated DoS events / Total number of detected malicious DoS events) * 100%.\nData Sources: DoS mitigation service logs (e.g., AWS Shield, Azure DDoS Protection logs), network flow logs, incident response system records.\nMeasurement Process: Collect data over the sampling period (e.g., last 30 days). Identify all detected malicious DoS events. For each event, verify if automated mitigation was triggered and if the impact was kept below pre-defined thresholds (e.g., latency, error rate). \nSLO Recommendation: >= 99.9% successful mitigation of detected volumetric and protocol attacks targeting defined critical services.",
-              "props": [
-                {"name": "method", "value": "MEASURE", "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"}
-              ],
-              "reviewed-controls": {
-                "description": "Assesses specific statements of SC-5.",
-                "control-selections": [
-                  {
-                    "control-id": "sc-5",
-                    "statement-ids": ["sc-5_smt.a"]
-                  }
-                ]
-              }
-            },
-            {
-              "uuid": "step-measure-sc-5-config-uuid",
-              "title": "Measure DoS Protection Configuration Coverage",
-              "description": "Metric: Percentage of public-facing critical system components covered by active, appropriately configured DoS protection services.\nExpression: (Number of critical components with active and correctly configured DoS protection / Total number of public-facing critical system components) * 100%.\nData Sources: Cloud provider console/API for DoS service configurations (e.g., WAF rules, rate limits, Shield advanced protections), asset inventory (CMDB), network architecture diagrams.\nMeasurement Process: Identify all public-facing critical components. Verify that each is associated with a DoS protection service and that the service configuration (e.g., rule sets for common attacks like ICMP floods, SYN floods, as per sc-5_prm_1; protective actions as per sc-5_prm_3) aligns with organizational policy and vendor best practices.\nSLO Recommendation: 100% coverage.",
-              "props": [
-                {"name": "method", "value": "MEASURE", "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"}
-              ],
-              "reviewed-controls": {
-                "description": "Assesses specific statements of SC-5.",
-                "control-selections": [
-                  {
-                    "control-id": "sc-5",
-                    "statement-ids": ["sc-5_smt.b"]
-                  }
-                ]
-              }
-            }
-          ],
-          "responsible-roles": [{"role-id": "assessor"}]
-        },
-        {
-          "uuid": "activity-measure-cna-dos-m1-uuid",
-          "title": "Measure Custom DoS Metric (CNA-DOS-M1)",
-          "description": "Activity to measure the custom Denial of Service metric CNA-DOS-M1. This activity directly assesses the custom control CNA-DOS-M1 based on its defined metric structure.",
-          "steps": [
-            {
-              "uuid": "step-measure-cna-dos-m1-metric-uuid",
-              "title": "Assess CNA-DOS-M1 Metric",
-              "description": "Control ID: CNA-DOS-M1\nControl Description: This metric measures the effectiveness of DoS protection mechanisms by tracking the system's ability to withstand simulated or actual DoS events and the proper configuration of preventative controls.\n\nPart: metric-expression\nTitle: Metric Expression\nProse: Percentage of DoS resilience = `(1 - (Total minutes of service degradation due to DoS events / Total minutes in reporting period)) * 100` AND Percentage of DoS control conformance = `(Number of DoS protection controls configured per policy / Total number of DoS protection controls required by policy) * 100`\n\nPart: metric-rules-data-sources\nTitle: Rules/Data Sources\nProse: Service degradation data sourced from availability monitoring tools, incident response logs, and DoS testing reports. 'Degradation' must be defined. DoS protection control configurations sourced from WAF logs, network device configurations, cloud provider DoS protection service dashboards. Organizational policy defining required DoS protection controls. Evidence that effects of defined DoS events are limited.\n\nPart: slo-recommendations\nTitle: SLO Recommendations\nProse: DoS Resilience: > 99.99%; DoS Control Conformance: 100%\n\nRemarks: This objective corresponds to the CNA-DOS-M1 metric.",
-              "props": [
-                {"name": "method", "value": "MEASURE", "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"}
-              ],
-              "reviewed-controls": {
-                "description": "Assesses custom control CNA-DOS-M1.",
-                "control-selections": [
-                  {
-                    "control-id": "CNA-DOS-M1"
-                  }
-                ]
-              }
-            }
-          ],
-          "responsible-roles": [{"role-id": "assessor"}]
-        },
-        {
-          "uuid": "activity-measure-cna-btc-m1-uuid",
-          "title": "Measure Custom Boundary Traffic Control Metric (CNA-BTC-M1)",
-          "description": "Activity to measure the custom Boundary Traffic Control metric CNA-BTC-M1. This activity directly assesses the custom control CNA-BTC-M1 based on its defined metric structure.",
-           "steps": [
-            {
-              "uuid": "step-measure-cna-btc-m1-metric-uuid",
-              "title": "Assess CNA-BTC-M1 Metric",
-              "description": "Control ID: CNA-BTC-M1\nControl Description: This metric measures the percentage of network traffic (inbound and outbound) that adheres to the defined firewall and proxy server policies, ensuring that only authorized traffic is permitted.\n\nPart: metric-expression\nTitle: Metric Expression\nProse: Percentage of compliant traffic flows = `(Number of traffic flows compliant with firewall/proxy rules / Total number of observed traffic flows) * 100` AND Percentage of policy-defined interfaces = `(Number of managed interfaces with established traffic flow policies / Total number of external telecommunication service interfaces) * 100`\n\nPart: metric-rules-data-sources\nTitle: Rules/Data Sources\nProse: Firewall logs, proxy server logs, cloud native network security group logs, service mesh traffic logs. Network traffic monitoring tools. Defined traffic flow policies. Documentation of exceptions. Regular review of policy exceptions.\n\nPart: slo-recommendations\nTitle: SLO Recommendations\nProse: Compliant Traffic Flows: > 99.9%; Policy-Defined Interfaces: 100%\n\nRemarks: This objective corresponds to the CNA-BTC-M1 metric.",
-              "props": [
-                {"name": "method", "value": "MEASURE", "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"}
-              ],
-              "reviewed-controls": {
-                "description": "Assesses custom control CNA-BTC-M1.",
-                "control-selections": [
-                  {
-                    "control-id": "CNA-BTC-M1"
-                  }
-                ]
-              }
-            }
-          ],
-          "responsible-roles": [{"role-id": "assessor"}]
-        },
-        {
-          "uuid": "activity-measure-cna-ilp-m1-uuid",
-          "title": "Measure Custom Immutability and Least Privilege Metric (CNA-ILP-M1)",
-          "description": "Activity to measure the custom Immutability and Least Privilege metric CNA-ILP-M1, with enhanced details for verifying strictly defined functionality.",
-          "steps": [
-            {
-              "uuid": "step-measure-cna-ilp-m1-metric-uuid",
-              "title": "Assess CNA-ILP-M1 Metric",
-              "description": "Control ID: CNA-ILP-M1\nControl Description: This metric measures the adherence to immutability for containers and serverless functions, and the extent to which these components operate with the minimum necessary privileges and strictly defined functionality.\n\nPart: metric-expression\nTitle: Metric Expression\nProse: Percentage of immutable deployments = `(Number of container/serverless deployments without runtime modifications / Total number of container/serverless deployments) * 100` AND Percentage of least-privilege compliant functions/containers = `(Number of functions/containers adhering to defined minimal privilege set / Total number of functions/containers) * 100`\n\nPart: metric-rules-data-sources\nTitle: Rules/Data Sources\nProse: Container registry records, deployment manifests, runtime security monitoring tools, IAM policies, static/dynamic analysis of permissions and code. Evidence of separate execution domains. Results from SAST tools verifying absence of unauthorized/unnecessary code modules. Attestation of code reviews confirming functional scope adherence. Linkage to defined functional specifications.\n\nPart: slo-recommendations\nTitle: SLO Recommendations\nProse: Immutable Deployments: 100%; Least-Privilege Compliant Functions/Containers: > 98%\n\nRemarks: This objective corresponds to the CNA-ILP-M1 metric and includes verification of strictly defined functionality through code validation practices.",
-              "props": [
-                {"name": "method", "value": "MEASURE", "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"}
-              ],
-              "reviewed-controls": {
-                "description": "Assesses custom control CNA-ILP-M1.",
-                "control-selections": [
-                  {
-                    "control-id": "CNA-ILP-M1"
-                  }
-                ]
-              }
-            }
-          ],
-          "responsible-roles": [{"role-id": "assessor"}]
-        },
-        {
-          "uuid": "activity-measure-cna-mse-m1-uuid",
-          "title": "Measure Custom Microservice Segmentation Metric (CNA-MSE-M1)",
-          "description": "Activity to measure the custom Microservice Segmentation metric CNA-MSE-M1.",
-          "steps": [
-            {
-              "uuid": "step-measure-cna-mse-m1-metric-uuid",
-              "title": "Assess CNA-MSE-M1 Metric",
-              "description": "Control ID: CNA-MSE-M1\nControl Description: This metric measures the effectiveness of logical segmentation between microservices by verifying that network traffic flows only occur through defined and authorized communication paths.\n\nPart: metric-expression\nTitle: Metric Expression\nProse: Percentage of compliant inter-service communication = `(Number of observed inter-service network flows adhering to defined segmentation policies / Total number of observed inter-service network flows) * 100`\n\nPart: metric-rules-data-sources\nTitle: Rules/Data Sources\nProse: Network security policies in cloud virtual networks, service mesh configurations, network traffic logs, IDS/IPS alerts, microservice architecture documentation.\n\nPart: slo-recommendations\nTitle: SLO Recommendations\nProse: > 99.5%\n\nRemarks: This objective corresponds to the CNA-MSE-M1 metric.",
-              "props": [
-                {"name": "method", "value": "MEASURE", "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"}
-              ],
-              "reviewed-controls": {
-                "description": "Assesses custom control CNA-MSE-M1.",
-                "control-selections": [
-                  {
-                    "control-id": "CNA-MSE-M1"
-                  }
-                ]
-              }
-            }
-          ],
-          "responsible-roles": [{"role-id": "assessor"}]
-        },
-        {
-          "uuid": "activity-measure-cna-nce-m1-uuid",
-          "title": "Measure Custom Cloud Native Enforcement Metric (CNA-NCE-M1)",
-          "description": "Activity to measure the custom Cloud Native Enforcement metric CNA-NCE-M1.",
-          "steps": [
-            {
-              "uuid": "step-measure-cna-nce-m1-metric-uuid",
-              "title": "Assess CNA-NCE-M1 Metric",
-              "description": "Control ID: CNA-NCE-M1\nControl Description: This metric measures the extent to which cloud-native virtual networking capabilities (e.g., security groups, NACLs, private links, VPC endpoints, transit gateway configurations, network firewalls, service mesh policies) are utilized and correctly configured to enforce defined logical traffic flow controls.\n\nPart: metric-expression\nTitle: Metric Expression\nProse: Percentage of network segments with enforced flow control = `(Number of network segments/VPCs/subnets with correctly configured cloud-native flow controls / Total number of network segments/VPCs/subnets) * 100`\n\nPart: metric-rules-data-sources\nTitle: Rules/Data Sources\nProse: Cloud provider configuration data for virtual networks (security groups, NACLs, route tables, private links, VPC endpoints, transit gateways, etc.), network architecture diagrams, configuration audit tools, CSPM tools, automated validation of network configurations, service mesh policy configurations.\n\nPart: slo-recommendations\nTitle: SLO Recommendations\nProse: 100%\n\nRemarks: This objective corresponds to the CNA-NCE-M1 metric.",
-              "props": [
-                {"name": "method", "value": "MEASURE", "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"}
-              ],
-              "reviewed-controls": {
-                "description": "Assesses custom control CNA-NCE-M1.",
-                "control-selections": [
-                  {
-                    "control-id": "CNA-NCE-M1"
-                  }
-                ]
-              }
-            }
-          ],
-          "responsible-roles": [{"role-id": "assessor"}]
-        },
-        {
-          "uuid": "activity-measure-cna-csc-m1-uuid",
-          "title": "Measure Custom Continuous Scanning Coverage Metric (CNA-CSC-M1)",
-          "description": "Activity to measure the custom Continuous Scanning Coverage metric CNA-CSC-M1.",
-          "steps": [
-            {
-              "uuid": "step-measure-cna-csc-m1-metric-uuid",
-              "title": "Assess CNA-CSC-M1 Metric",
-              "description": "Control ID: CNA-CSC-M1\nControl Description: This metric measures the coverage of continuous scanning across all defined cloud-native system components and the timeliness of remediating identified vulnerabilities or misconfigurations.\n\nPart: metric-expression\nTitle: Metric Expression\nProse: Percentage of components scanned = `(Number of cloud-native components scanned within the defined frequency / Total number of defined cloud-native components) * 100` AND Percentage of critical/high findings remediated on time = `(Number of critical/high findings remediated within policy timeframe / Total number of critical/high findings identified) * 100`\n\nPart: metric-rules-data-sources\nTitle: Rules/Data Sources\nProse: Inventory of cloud-native components, scanning tool dashboards and reports, defined scanning frequency, vulnerability management system data, organizational policy for remediation timeframes.\n\nPart: slo-recommendations\nTitle: SLO Recommendations\nProse: Components Scanned: > 99%; Critical/High Findings Remediated on Time: > 95%\n\nRemarks: This objective corresponds to the CNA-CSC-M1 metric.",
-              "props": [
-                {"name": "method", "value": "MEASURE", "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"}
-              ],
-              "reviewed-controls": {
-                "description": "Assesses custom control CNA-CSC-M1.",
-                "control-selections": [
-                  {
-                    "control-id": "CNA-CSC-M1"
-                  }
-                ]
-              }
-            }
-          ],
-          "responsible-roles": [{"role-id": "assessor"}]
-        },
-        {
-          "uuid": "activity-measure-cna-har-m1-uuid",
-          "title": "Measure Custom High Availability and Resilience Metric (CNA-HAR-M1)",
-          "description": "Activity to measure the custom High Availability and Resilience metric CNA-HAR-M1, including verification of underlying HA design configurations.",
-          "steps": [
-            {
-              "uuid": "step-measure-cna-har-m1-metric-uuid",
-              "title": "Assess CNA-HAR-M1 Metric",
-              "description": "Control ID: CNA-HAR-M1\nControl Description: This metric measures the actual uptime of the cloud-native system against its target and the successful execution of failover/recovery mechanisms during testing or actual incidents, including verification of underlying HA design configurations.\n\nPart: metric-expression\nTitle: Metric Expression\nProse: System Uptime Percentage = `((Total time in reporting period - Total downtime in reporting period) / Total time in reporting period) * 100` AND Failover Test Success Rate = `(Number of successful automated/manual failover tests / Total number of failover tests conducted) * 100`\n\nPart: metric-rules-data-sources\nTitle: Rules/Data Sources\nProse: Availability monitoring tools, incident management records, cloud provider service health dashboards, results from disaster recovery and high availability tests, defined RTO/RPO, evidence of information availability. Further includes: Verification of N+X redundancy configurations for critical components; Confirmation of automated scaling policies and their effectiveness; Audit of data backup and replication configurations against RPO; Review of service discovery and load balancing configurations; Evidence of DR plan testing.\n\nPart: slo-recommendations\nTitle: SLO Recommendations\nProse: System Uptime Percentage: Target based on business criticality (e.g., 99.9%, 99.99%); Failover Test Success Rate: 100%\n\nRemarks: This objective corresponds to the CNA-HAR-M1 metric, with an expanded scope to verify specific HA design elements.",
-              "props": [
-                {"name": "method", "value": "MEASURE", "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"}
-              ],
-              "reviewed-controls": {
-                "description": "Assesses custom control CNA-HAR-M1.",
-                "control-selections": [
-                  {
-                    "control-id": "CNA-HAR-M1"
-                  }
-                ]
-              }
-            }
-          ],
-          "responsible-roles": [{"role-id": "assessor"}]
-        },
-        {
-          "uuid": "activity-measure-ksi-cna-aggregate-uuid",
-          "title": "Measure Aggregate KSI for Cloud Native Architecture (KSI-CNA-AGGREGATE)",
-          "description": "Activity to calculate the aggregate Key Security Indicator (KSI) for Cloud Native Architecture based on constituent CNA metrics.",
-          "steps": [
-            {
-              "uuid": "step-measure-ksi-cna-aggregate-metric-uuid",
-              "title": "Calculate KSI-CNA-AGGREGATE Score",
-              "description": "Control ID: KSI-CNA-AGGREGATE\nControl Description: This aggregate objective assesses the overall adherence to the Key Security Indicators for Cloud Native Architecture by evaluating a set of specific underlying metrics.\n\nPart: constituent-metrics\nTitle: Constituent Metrics\nProse: This aggregate objective is composed of the following metrics: CNA-DOS-M1, CNA-BTC-M1, CNA-ILP-M1, CNA-MSE-M1, CNA-NCE-M1, CNA-CSC-M1, CNA-HAR-M1. Each of these metrics should be assessed individually according to their respective plans.\n\nPart: metric-expression (Calculation Method)\nTitle: Aggregate Metric Expression\nProse: 1. Each constituent CNA metric (CNA-DOS-M1, CNA-BTC-M1, CNA-ILP-M1, CNA-MSE-M1, CNA-NCE-M1, CNA-CSC-M1, CNA-HAR-M1) must first yield a single normalized score from 0-100. For metrics with multiple expressions (e.g., an 'AND' condition), the lower of the calculated scores for that metric will be used as its single score for this aggregation, unless otherwise specified in that metric's detailed assessment resulting in a single value. 2. The KSI-CNA-AGGREGATE score is the simple arithmetic mean of the single normalized scores (0-100) from each of the 7 constituent metrics. KSI Score = (Score_CNA-DOS-M1 + Score_CNA-BTC-M1 + ... + Score_CNA-HAR-M1) / 7.\n\nPart: metric-rules-data-sources\nTitle: Rules/Data Sources\nProse: The data sources for this aggregate metric are the final, normalized (0-100) scores obtained from the assessment of each constituent CNA metric (CNA-DOS-M1 through CNA-HAR-M1).\n\nPart: slo-recommendations\nTitle: SLO Recommendations\nProse: Overall KSI-CNA-AGGREGATE score target > 75 for SUCCESS. Individual constituent metrics maintain their own SLOs.\n\nRemarks: Overall objective for KSI-CNA.",
-              "props": [
-                {"name": "method", "value": "MEASURE", "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"},
-                {"name": "acceptance-value-success", "value": "75", "ns": "http://example.com/ksi-cna-props"}
-              ],
-              "reviewed-controls": {
-                "description": "Assesses custom aggregate control KSI-CNA-AGGREGATE.",
-                "control-selections": [
-                  {
-                    "control-id": "KSI-CNA-AGGREGATE"
-                  }
-                ]
-              }
-            }
-          ],
-          "responsible-roles": [{"role-id": "assessor"}]
-        },
-        {
-          "uuid": "activity-measure-sc-7-uuid",
-          "title": "Measure Boundary Protection (SC-7)",
-          "description": "Activity to measure the effectiveness of boundary protection mechanisms related to NIST SP 800-53 Control SC-7.",
-          "steps": [
-            {
-              "uuid": "step-measure-sc-7-traffic-filter-uuid",
-              "title": "Measure Firewall/Proxy Traffic Filtering Effectiveness",
-              "description": "Metric: Percentage of unauthorized inbound and outbound traffic attempts blocked by firewalls/proxies at key network boundaries.\nExpression: (Number of blocked unauthorized traffic attempts / Total number of detected unauthorized traffic attempts) * 100%.\nData Sources: Firewall logs, proxy logs, IDS/IPS logs, network flow logs.\nMeasurement Process: Collect logs over the sampling period (e.g., last 7 days). Analyze logs for traffic attempts violating defined policies (e.g., access to/from prohibited IP ranges, unapproved services/ports). Correlate denied traffic with policy violations.\nSLO Recommendation: >= 99.99% of known unauthorized attempts blocked.",
-              "props": [
-                {"name": "method", "value": "MEASURE", "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"}
-              ],
-              "reviewed-controls": {
-                "description": "Assesses specific statements of SC-7.",
-                "control-selections": [
-                  {
-                    "control-id": "sc-7",
-                    "statement-ids": ["sc-7_smt.a", "sc-7_smt.c"]
-                  }
-                ]
-              }
-            },
-            {
-              "uuid": "step-measure-sc-7-segmentation-uuid",
-              "title": "Measure Network Segmentation Enforcement",
-              "description": "Metric: Percentage of defined logical network segments (e.g., micro-services, DMZs for publicly accessible components) correctly isolated by cloud-native virtual network controls.\nExpression: (Number of segments with verified isolation / Total number of defined logical network segments) * 100%.\nData Sources: Cloud provider network configuration (VPCs, subnets, security groups, NACLs, route tables), network architecture diagrams, automated configuration compliance scan results.\nMeasurement Process: Enumerate all defined logical segments. For each segment, verify that network controls (security groups, NACLs) enforce the documented traffic flow policies (ingress/egress rules) and prevent unauthorized lateral movement, in line with sc-7_smt.b. This can involve automated checks against baseline configurations and penetration testing results.\nSLO Recommendation: 100% correct isolation as per design.",
-              "props": [
-                {"name": "method", "value": "MEASURE", "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"}
-              ],
-              "reviewed-controls": {
-                "description": "Assesses specific statements of SC-7.",
-                "control-selections": [
-                  {
-                    "control-id": "sc-7",
-                    "statement-ids": ["sc-7_smt.b"]
-                  }
-                ]
-              }
-            }
-          ],
-          "responsible-roles": [{"role-id": "assessor"}]
-        },
-        {
-            "uuid": "activity-measure-sc-39-uuid",
-            "title": "Measure Process Isolation (SC-39)",
-            "description": "Activity to measure the implementation of process isolation, particularly for immutable containers and serverless functions, related to NIST SP 800-53 Control SC-39.",
-            "steps": [
-              {
-                "uuid": "step-measure-sc-39-container-immutability-uuid",
-                "title": "Measure Container Immutability Adherence",
-                "description": "Metric: Percentage of containerized workloads deployed from approved, version-controlled, immutable images where runtime modifications are prohibited and detected.\nExpression: (Number of compliant immutable container deployments / Total number of container deployments) * 100%.\nData Sources: Container registry (image metadata, vulnerability scan reports), deployment manifests (e.g., Kubernetes YAMLs), runtime security monitoring tools (e.g., Falco), configuration management database (CMDB).\nMeasurement Process: Identify all deployed container instances. Verify that images are sourced from an approved registry and have no critical vulnerabilities. Check deployment configurations to ensure read-only root filesystems where applicable. Monitor for and alert on any runtime changes to container filesystems or running processes not part of the original image. Correlate with SC-39's requirement for separate execution domains, ensuring containers act as such domains.\nSLO Recommendation: 100% of production workloads.",
-                "props": [
-                  {"name": "method", "value": "MEASURE", "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"}
-                ],
-                "reviewed-controls": {
-                  "description": "Assesses SC-39 in the context of immutable containers.",
-                  "control-selections": [
-                    {"control-id": "sc-39"}
-                  ]
+    "assessment-plan": {
+        "uuid": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+        "metadata": {
+            "title": "Cloud Security Continuous Measurement Assessment Plan",
+            "last-modified": "2025-05-18T16:47:07.000Z",
+            "version": "1.2.0",
+            "oscal-version": "1.1.3",
+            "roles": [
+                {
+                    "id": "assessor",
+                    "title": "Assessor"
+                },
+                {
+                    "id": "csp-contact",
+                    "title": "Cloud Service Provider Contact"
                 }
-              },
-              {
-                "uuid": "step-measure-sc-39-serverless-privileges-uuid",
-                "title": "Measure Serverless Function Least Privilege",
-                "description": "Metric: Percentage of serverless functions with execution roles adhering to the principle of least privilege, granting only necessary permissions.\nExpression: (Number of serverless functions with least privilege roles / Total number of serverless functions) * 100%.\nData Sources: Cloud provider IAM configurations (roles, policies for serverless functions like AWS Lambda, Azure Functions), function code repositories (for understanding resource needs), automated IAM policy analysis tools.\nMeasurement Process: Enumerate all serverless functions. Review the IAM execution role associated with each function. Analyze permissions to ensure they are narrowly scoped to only the resources and actions required by the function. Use tools to identify overly permissive roles. Relate to SC-39 by ensuring each function invocation operates in a restricted, isolated execution environment defined by these minimal privileges.\nSLO Recommendation: 95% adherence, with a plan for 100%.",
-                "props": [
-                  {"name": "method", "value": "MEASURE", "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"}
-                ],
-                "reviewed-controls": {
-                  "description": "Assesses SC-39 in the context of serverless function privileges.",
-                  "control-selections": [
-                    {"control-id": "sc-39"}
-                  ]
+            ],
+            "parties": [
+                {
+                    "uuid": "p1-assessor-org-uuid",
+                    "type": "organization",
+                    "name": "Independent Assessor Organization"
+                },
+                {
+                    "uuid": "p2-csp-org-uuid",
+                    "type": "organization",
+                    "name": "Cloud Service Provider Inc."
                 }
-              }
             ],
-            "responsible-roles": [{"role-id": "assessor"}]
-          },
-        {
-          "uuid": "activity-placeholder-sc-12-uuid",
-          "title": "Measure Cryptographic Key Management (SC-12) - Placeholder",
-          "description": "This activity will detail MEASURE steps for SC-12 concerning key establishment and management for cloud-native services. Example metrics: Percentage of cryptographic keys managed by an approved KMS, Frequency of automated key rotation for sensitive data encryption keys. Data Sources: KMS logs, configuration data, security policies.",
-          "steps": [
-            {
-                "uuid": "step-placeholder-sc-12-uuid",
-                "title": "Placeholder for SC-12 MEASURE method",
-                "description": "Detailed MEASURE method to be defined here.",
-                "props": [
-                  {"name": "method", "value": "MEASURE", "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"}
-                ],
-                 "reviewed-controls": {
-                    "description": "Placeholder for SC-12 assessment.",
-                    "control-selections": [{"control-id": "sc-12"}]
-                 }
-            }
-          ],
-           "responsible-roles": [{"role-id": "assessor"}]
-        },
-        {
-            "uuid": "activity-placeholder-sr-12-uuid",
-            "title": "Measure Component Disposal (SR-12) - Placeholder",
-            "description": "This activity will detail MEASURE steps for SR-12 concerning secure disposal of cloud components, including continuous scanning aspects that identify components for disposal. Example metrics: Percentage of decommissioned cloud resources (VMs, storage volumes, serverless functions) whose data is verifiably sanitized according to policy, Average time to deprovision and sanitize resources after EOL notification from continuous scanning. Data Sources: Asset inventory, disposal logs, scan reports identifying EOL/vulnerable components, cloud provider audit logs.",
-            "steps": [
-              {
-                  "uuid": "step-placeholder-sr-12-uuid",
-                  "title": "Placeholder for SR-12 MEASURE method",
-                  "description": "Detailed MEASURE method to be defined here.",
-                  "props": [
-                    {"name": "method", "value": "MEASURE", "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"}
-                  ],
-                  "reviewed-controls": {
-                    "description": "Placeholder for SR-12 assessment.",
-                    "control-selections": [{"control-id": "sr-12"}]
-                  }
-              }
-            ],
-            "responsible-roles": [{"role-id": "assessor"}]
-        }
-      ]
-    },
-    "reviewed-controls": {
-      "description": "This assessment plan covers selected NIST SP 800-53 controls relevant to cloud security requirements and custom CNA metrics, including an aggregate Key Security Indicator.",
-      "control-selections": [
-        {
-          "description": "Controls related to Denial of Service Protection and Network Traffic Control.",
-          "include-controls": [
-            { "control-id": "sc-5" },
-            { "control-id": "sc-7" }
-          ]
-        },
-        {
-          "description": "Controls related to Cryptographic Key Management and Process Isolation supporting container/serverless security and micro-segmentation.",
-          "include-controls": [
-            { "control-id": "sc-12" },
-            { "control-id": "sc-39" }
-          ]
-        },
-        {
-            "description": "Controls related to Component Disposal, potentially informed by continuous scanning identifying components for end-of-life.",
-            "include-controls": [
-              { "control-id": "sr-12" }
+            "responsible-parties": [
+                {
+                    "role-id": "assessor",
+                    "party-uuids": [
+                        "p1-assessor-org-uuid"
+                    ]
+                },
+                {
+                    "role-id": "csp-contact",
+                    "party-uuids": [
+                        "p2-csp-org-uuid"
+                    ]
+                }
             ]
         },
-        {
-            "description": "Custom Cloud Native Audit (CNA) individual metrics.",
-            "include-controls": [
-              { "control-id": "CNA-DOS-M1" },
-              { "control-id": "CNA-BTC-M1" },
-              { "control-id": "CNA-ILP-M1" },
-              { "control-id": "CNA-MSE-M1" },
-              { "control-id": "CNA-NCE-M1" },
-              { "control-id": "CNA-CSC-M1" },
-              { "control-id": "CNA-HAR-M1" }
+        "import-ssp": {
+            "href": "https://example.com/oscal/ssp.json",
+            "remarks": "Link to the System Security Plan that this assessment plan is for. Control definitions are referenced from the FedRAMP Low Baseline Profile (conceptually) or defined locally for custom metrics."
+        },
+        "local-definitions": {
+            "components": [
+                {
+                    "uuid": "comp-dos-mitigation-uuid",
+                    "type": "service",
+                    "title": "DoS Mitigation Service",
+                    "description": "Cloud-native or third-party service configured for Denial of Service protection.",
+                    "status": {
+                        "state": "operational"
+                    }
+                },
+                {
+                    "uuid": "comp-firewall-proxy-uuid",
+                    "type": "service",
+                    "title": "Firewall and Proxy Services",
+                    "description": "Network security services for traffic filtering.",
+                    "status": {
+                        "state": "operational"
+                    }
+                },
+                {
+                    "uuid": "comp-container-platform-uuid",
+                    "type": "service",
+                    "title": "Container Platform",
+                    "description": "Platform for deploying and managing immutable containers and microservices.",
+                    "status": {
+                        "state": "operational"
+                    }
+                },
+                {
+                    "uuid": "comp-serverless-platform-uuid",
+                    "type": "service",
+                    "title": "Serverless Compute Platform",
+                    "description": "Platform for executing serverless functions.",
+                    "status": {
+                        "state": "operational"
+                    }
+                },
+                {
+                    "uuid": "comp-virtual-network-uuid",
+                    "type": "service",
+                    "title": "Cloud Native Virtual Network",
+                    "description": "Virtual networking components and services supporting microservice segmentation and traffic flow control.",
+                    "status": {
+                        "state": "operational"
+                    }
+                },
+                {
+                    "uuid": "comp-scanning-tools-uuid",
+                    "type": "software",
+                    "title": "Continuous Scanning Tools",
+                    "description": "Tools used for continuous scanning of cloud components.",
+                    "status": {
+                        "state": "operational"
+                    }
+                },
+                {
+                    "uuid": "comp-ha-infrastructure-uuid",
+                    "type": "hardware",
+                    "title": "High Availability Infrastructure",
+                    "description": "Infrastructure components supporting high availability.",
+                    "status": {
+                        "state": "operational"
+                    }
+                },
+                {
+                    "uuid": "comp-key-management-system-uuid",
+                    "type": "service",
+                    "title": "Key Management System (KMS)",
+                    "description": "Service for managing cryptographic keys.",
+                    "status": {
+                        "state": "operational"
+                    }
+                },
+                {
+                    "uuid": "comp-disposal-service-uuid",
+                    "type": "process-procedure",
+                    "title": "Component Disposal Service/Process",
+                    "description": "Process and tools for secure component disposal.",
+                    "status": {
+                        "state": "operational"
+                    }
+                }
+            ],
+            "inventory-items": [
+                {
+                    "uuid": "inv-item-dos-service-uuid",
+                    "description": "The deployed DoS Mitigation Service instance.",
+                    "props": [
+                        {
+                            "name": "asset-type",
+                            "value": "service"
+                        }
+                    ],
+                    "implemented-components": [
+                        {
+                            "component-uuid": "comp-dos-mitigation-uuid"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "inv-item-firewall-uuid",
+                    "description": "The deployed Firewall/Proxy Service instance.",
+                    "props": [
+                        {
+                            "name": "asset-type",
+                            "value": "service"
+                        }
+                    ],
+                    "implemented-components": [
+                        {
+                            "component-uuid": "comp-firewall-proxy-uuid"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "inv-item-container-platform-uuid",
+                    "description": "The deployed Container Platform instance.",
+                    "props": [
+                        {
+                            "name": "asset-type",
+                            "value": "service"
+                        }
+                    ],
+                    "implemented-components": [
+                        {
+                            "component-uuid": "comp-container-platform-uuid"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "inv-item-serverless-platform-uuid",
+                    "description": "The deployed Serverless Compute Platform instance.",
+                    "props": [
+                        {
+                            "name": "asset-type",
+                            "value": "service"
+                        }
+                    ],
+                    "implemented-components": [
+                        {
+                            "component-uuid": "comp-serverless-platform-uuid"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "inv-item-virtual-network-uuid",
+                    "description": "The deployed Cloud Native Virtual Network components.",
+                    "props": [
+                        {
+                            "name": "asset-type",
+                            "value": "service"
+                        }
+                    ],
+                    "implemented-components": [
+                        {
+                            "component-uuid": "comp-virtual-network-uuid"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "inv-item-scanning-tools-uuid",
+                    "description": "The deployed Continuous Scanning Tools.",
+                    "props": [
+                        {
+                            "name": "asset-type",
+                            "value": "software"
+                        }
+                    ],
+                    "implemented-components": [
+                        {
+                            "component-uuid": "comp-scanning-tools-uuid"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "inv-item-ha-infrastructure-uuid",
+                    "description": "The deployed High Availability Infrastructure components.",
+                    "props": [
+                        {
+                            "name": "asset-type",
+                            "value": "hardware"
+                        }
+                    ],
+                    "implemented-components": [
+                        {
+                            "component-uuid": "comp-ha-infrastructure-uuid"
+                        }
+                    ]
+                }
+            ],
+            "users": [
+                {
+                    "uuid": "user-csp-security-team-uuid",
+                    "title": "CSP Security Team",
+                    "role-ids": [
+                        "csp-contact"
+                    ]
+                }
+            ],
+            "activities": [
+                {
+                    "uuid": "activity-measure-sc-5-uuid",
+                    "title": "Measure Denial of Service Protection (SC-5)",
+                    "description": "Activity to measure the effectiveness of DoS protection mechanisms related to NIST SP 800-53 Control SC-5.",
+                    "steps": [
+                        {
+                            "uuid": "step-measure-sc-5-dos-events-uuid",
+                            "title": "Measure DoS Event Handling Efficacy",
+                            "description": "Metric: Percentage of detected malicious DoS events successfully mitigated by automated protection mechanisms within defined thresholds.\nExpression: (Number of successfully mitigated DoS events / Total number of detected malicious DoS events) * 100%.\nData Sources: DoS mitigation service logs (e.g., AWS Shield, Azure DDoS Protection logs), network flow logs, incident response system records.\nMeasurement Process: Collect data over the sampling period (e.g., last 30 days). Identify all detected malicious DoS events. For each event, verify if automated mitigation was triggered and if the impact was kept below pre-defined thresholds (e.g., latency, error rate). \nSLO Recommendation: >= 99.9% successful mitigation of detected volumetric and protocol attacks targeting defined critical services.",
+                            "props": [
+                                {
+                                    "name": "method",
+                                    "value": "MEASURE",
+                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                }
+                            ],
+                            "reviewed-controls": {
+                                "description": "Assesses specific statements of SC-5.",
+                                "control-selections": [
+                                    {
+                                        "control-id": "sc-5",
+                                        "statement-ids": [
+                                            "sc-5_smt.a"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "uuid": "step-measure-sc-5-config-uuid",
+                            "title": "Measure DoS Protection Configuration Coverage",
+                            "description": "Metric: Percentage of public-facing critical system components covered by active, appropriately configured DoS protection services.\nExpression: (Number of critical components with active and correctly configured DoS protection / Total number of public-facing critical system components) * 100%.\nData Sources: Cloud provider console/API for DoS service configurations (e.g., WAF rules, rate limits, Shield advanced protections), asset inventory (CMDB), network architecture diagrams.\nMeasurement Process: Identify all public-facing critical components. Verify that each is associated with a DoS protection service and that the service configuration (e.g., rule sets for common attacks like ICMP floods, SYN floods, as per sc-5_prm_1; protective actions as per sc-5_prm_3) aligns with organizational policy and vendor best practices.\nSLO Recommendation: 100% coverage.",
+                            "props": [
+                                {
+                                    "name": "method",
+                                    "value": "MEASURE",
+                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                }
+                            ],
+                            "reviewed-controls": {
+                                "description": "Assesses specific statements of SC-5.",
+                                "control-selections": [
+                                    {
+                                        "control-id": "sc-5",
+                                        "statement-ids": [
+                                            "sc-5_smt.b"
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "responsible-roles": [
+                        {
+                            "role-id": "assessor"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "activity-measure-cna-dos-m1-uuid",
+                    "title": "Measure Custom DoS Metric (CNA-DOS-M1)",
+                    "description": "Activity to measure the custom Denial of Service metric CNA-DOS-M1. This activity directly assesses the custom control CNA-DOS-M1 based on its defined metric structure.",
+                    "steps": [
+                        {
+                            "uuid": "step-measure-cna-dos-m1-metric-uuid",
+                            "title": "Assess CNA-DOS-M1 Metric",
+                            "description": "Control ID: CNA-DOS-M1\nControl Description: This metric measures the effectiveness of DoS protection mechanisms by tracking the system's ability to withstand simulated or actual DoS events and the proper configuration of preventative controls.\n\nPart: metric-expression\nTitle: Metric Expression\nProse: Percentage of DoS resilience = `(1 - (Total minutes of service degradation due to DoS events / Total minutes in reporting period)) * 100` AND Percentage of DoS control conformance = `(Number of DoS protection controls configured per policy / Total number of DoS protection controls required by policy) * 100`\n\nPart: metric-rules-data-sources\nTitle: Rules/Data Sources\nProse: Service degradation data sourced from availability monitoring tools, incident response logs, and DoS testing reports. 'Degradation' must be defined. DoS protection control configurations sourced from WAF logs, network device configurations, cloud provider DoS protection service dashboards. Organizational policy defining required DoS protection controls. Evidence that effects of defined DoS events are limited.\n\nPart: slo-recommendations\nTitle: SLO Recommendations\nProse: DoS Resilience: > 99.99%; DoS Control Conformance: 100%\n\nRemarks: This objective corresponds to the CNA-DOS-M1 metric.",
+                            "props": [
+                                {
+                                    "name": "method",
+                                    "value": "MEASURE",
+                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                }
+                            ],
+                            "reviewed-controls": {
+                                "description": "Assesses custom control CNA-DOS-M1.",
+                                "control-selections": [
+                                    {
+                                        "control-id": "CNA-DOS-M1"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "responsible-roles": [
+                        {
+                            "role-id": "assessor"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "activity-measure-cna-btc-m1-uuid",
+                    "title": "Measure Custom Boundary Traffic Control Metric (CNA-BTC-M1)",
+                    "description": "Activity to measure the custom Boundary Traffic Control metric CNA-BTC-M1. This activity directly assesses the custom control CNA-BTC-M1 based on its defined metric structure.",
+                    "steps": [
+                        {
+                            "uuid": "step-measure-cna-btc-m1-metric-uuid",
+                            "title": "Assess CNA-BTC-M1 Metric",
+                            "description": "Control ID: CNA-BTC-M1\nControl Description: This metric measures the percentage of network traffic (inbound and outbound) that adheres to the defined firewall and proxy server policies, ensuring that only authorized traffic is permitted.\n\nPart: metric-expression\nTitle: Metric Expression\nProse: Percentage of compliant traffic flows = `(Number of traffic flows compliant with firewall/proxy rules / Total number of observed traffic flows) * 100` AND Percentage of policy-defined interfaces = `(Number of managed interfaces with established traffic flow policies / Total number of external telecommunication service interfaces) * 100`\n\nPart: metric-rules-data-sources\nTitle: Rules/Data Sources\nProse: Firewall logs, proxy server logs, cloud native network security group logs, service mesh traffic logs. Network traffic monitoring tools. Defined traffic flow policies. Documentation of exceptions. Regular review of policy exceptions.\n\nPart: slo-recommendations\nTitle: SLO Recommendations\nProse: Compliant Traffic Flows: > 99.9%; Policy-Defined Interfaces: 100%\n\nRemarks: This objective corresponds to the CNA-BTC-M1 metric.",
+                            "props": [
+                                {
+                                    "name": "method",
+                                    "value": "MEASURE",
+                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                }
+                            ],
+                            "reviewed-controls": {
+                                "description": "Assesses custom control CNA-BTC-M1.",
+                                "control-selections": [
+                                    {
+                                        "control-id": "CNA-BTC-M1"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "responsible-roles": [
+                        {
+                            "role-id": "assessor"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "activity-measure-cna-ilp-m1-uuid",
+                    "title": "Measure Custom Immutability and Least Privilege Metric (CNA-ILP-M1)",
+                    "description": "Activity to measure the custom Immutability and Least Privilege metric CNA-ILP-M1, with enhanced details for verifying strictly defined functionality.",
+                    "steps": [
+                        {
+                            "uuid": "step-measure-cna-ilp-m1-metric-uuid",
+                            "title": "Assess CNA-ILP-M1 Metric",
+                            "description": "Control ID: CNA-ILP-M1\nControl Description: This metric measures the adherence to immutability for containers and serverless functions, and the extent to which these components operate with the minimum necessary privileges and strictly defined functionality.\n\nPart: metric-expression\nTitle: Metric Expression\nProse: Percentage of immutable deployments = `(Number of container/serverless deployments without runtime modifications / Total number of container/serverless deployments) * 100` AND Percentage of least-privilege compliant functions/containers = `(Number of functions/containers adhering to defined minimal privilege set / Total number of functions/containers) * 100`\n\nPart: metric-rules-data-sources\nTitle: Rules/Data Sources\nProse: Container registry records, deployment manifests, runtime security monitoring tools, IAM policies, static/dynamic analysis of permissions and code. Evidence of separate execution domains. Results from SAST tools verifying absence of unauthorized/unnecessary code modules. Attestation of code reviews confirming functional scope adherence. Linkage to defined functional specifications.\n\nPart: slo-recommendations\nTitle: SLO Recommendations\nProse: Immutable Deployments: 100%; Least-Privilege Compliant Functions/Containers: > 98%\n\nRemarks: This objective corresponds to the CNA-ILP-M1 metric and includes verification of strictly defined functionality through code validation practices.",
+                            "props": [
+                                {
+                                    "name": "method",
+                                    "value": "MEASURE",
+                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                }
+                            ],
+                            "reviewed-controls": {
+                                "description": "Assesses custom control CNA-ILP-M1.",
+                                "control-selections": [
+                                    {
+                                        "control-id": "CNA-ILP-M1"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "responsible-roles": [
+                        {
+                            "role-id": "assessor"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "activity-measure-cna-mse-m1-uuid",
+                    "title": "Measure Custom Microservice Segmentation Metric (CNA-MSE-M1)",
+                    "description": "Activity to measure the custom Microservice Segmentation metric CNA-MSE-M1.",
+                    "steps": [
+                        {
+                            "uuid": "step-measure-cna-mse-m1-metric-uuid",
+                            "title": "Assess CNA-MSE-M1 Metric",
+                            "description": "Control ID: CNA-MSE-M1\nControl Description: This metric measures the effectiveness of logical segmentation between microservices by verifying that network traffic flows only occur through defined and authorized communication paths.\n\nPart: metric-expression\nTitle: Metric Expression\nProse: Percentage of compliant inter-service communication = `(Number of observed inter-service network flows adhering to defined segmentation policies / Total number of observed inter-service network flows) * 100`\n\nPart: metric-rules-data-sources\nTitle: Rules/Data Sources\nProse: Network security policies in cloud virtual networks, service mesh configurations, network traffic logs, IDS/IPS alerts, microservice architecture documentation.\n\nPart: slo-recommendations\nTitle: SLO Recommendations\nProse: > 99.5%\n\nRemarks: This objective corresponds to the CNA-MSE-M1 metric.",
+                            "props": [
+                                {
+                                    "name": "method",
+                                    "value": "MEASURE",
+                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                }
+                            ],
+                            "reviewed-controls": {
+                                "description": "Assesses custom control CNA-MSE-M1.",
+                                "control-selections": [
+                                    {
+                                        "control-id": "CNA-MSE-M1"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "responsible-roles": [
+                        {
+                            "role-id": "assessor"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "activity-measure-cna-nce-m1-uuid",
+                    "title": "Measure Custom Cloud Native Enforcement Metric (CNA-NCE-M1)",
+                    "description": "Activity to measure the custom Cloud Native Enforcement metric CNA-NCE-M1.",
+                    "steps": [
+                        {
+                            "uuid": "step-measure-cna-nce-m1-metric-uuid",
+                            "title": "Assess CNA-NCE-M1 Metric",
+                            "description": "Control ID: CNA-NCE-M1\nControl Description: This metric measures the extent to which cloud-native virtual networking capabilities (e.g., security groups, NACLs, private links, VPC endpoints, transit gateway configurations, network firewalls, service mesh policies) are utilized and correctly configured to enforce defined logical traffic flow controls.\n\nPart: metric-expression\nTitle: Metric Expression\nProse: Percentage of network segments with enforced flow control = `(Number of network segments/VPCs/subnets with correctly configured cloud-native flow controls / Total number of network segments/VPCs/subnets) * 100`\n\nPart: metric-rules-data-sources\nTitle: Rules/Data Sources\nProse: Cloud provider configuration data for virtual networks (security groups, NACLs, route tables, private links, VPC endpoints, transit gateways, etc.), network architecture diagrams, configuration audit tools, CSPM tools, automated validation of network configurations, service mesh policy configurations.\n\nPart: slo-recommendations\nTitle: SLO Recommendations\nProse: 100%\n\nRemarks: This objective corresponds to the CNA-NCE-M1 metric.",
+                            "props": [
+                                {
+                                    "name": "method",
+                                    "value": "MEASURE",
+                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                }
+                            ],
+                            "reviewed-controls": {
+                                "description": "Assesses custom control CNA-NCE-M1.",
+                                "control-selections": [
+                                    {
+                                        "control-id": "CNA-NCE-M1"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "responsible-roles": [
+                        {
+                            "role-id": "assessor"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "activity-measure-cna-csc-m1-uuid",
+                    "title": "Measure Custom Continuous Scanning Coverage Metric (CNA-CSC-M1)",
+                    "description": "Activity to measure the custom Continuous Scanning Coverage metric CNA-CSC-M1.",
+                    "steps": [
+                        {
+                            "uuid": "step-measure-cna-csc-m1-metric-uuid",
+                            "title": "Assess CNA-CSC-M1 Metric",
+                            "description": "Control ID: CNA-CSC-M1\nControl Description: This metric measures the coverage of continuous scanning across all defined cloud-native system components and the timeliness of remediating identified vulnerabilities or misconfigurations.\n\nPart: metric-expression\nTitle: Metric Expression\nProse: Percentage of components scanned = `(Number of cloud-native components scanned within the defined frequency / Total number of defined cloud-native components) * 100` AND Percentage of critical/high findings remediated on time = `(Number of critical/high findings remediated within policy timeframe / Total number of critical/high findings identified) * 100`\n\nPart: metric-rules-data-sources\nTitle: Rules/Data Sources\nProse: Inventory of cloud-native components, scanning tool dashboards and reports, defined scanning frequency, vulnerability management system data, organizational policy for remediation timeframes.\n\nPart: slo-recommendations\nTitle: SLO Recommendations\nProse: Components Scanned: > 99%; Critical/High Findings Remediated on Time: > 95%\n\nRemarks: This objective corresponds to the CNA-CSC-M1 metric.",
+                            "props": [
+                                {
+                                    "name": "method",
+                                    "value": "MEASURE",
+                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                }
+                            ],
+                            "reviewed-controls": {
+                                "description": "Assesses custom control CNA-CSC-M1.",
+                                "control-selections": [
+                                    {
+                                        "control-id": "CNA-CSC-M1"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "responsible-roles": [
+                        {
+                            "role-id": "assessor"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "activity-measure-cna-har-m1-uuid",
+                    "title": "Measure Custom High Availability and Resilience Metric (CNA-HAR-M1)",
+                    "description": "Activity to measure the custom High Availability and Resilience metric CNA-HAR-M1, including verification of underlying HA design configurations.",
+                    "steps": [
+                        {
+                            "uuid": "step-measure-cna-har-m1-metric-uuid",
+                            "title": "Assess CNA-HAR-M1 Metric",
+                            "description": "Control ID: CNA-HAR-M1\nControl Description: This metric measures the actual uptime of the cloud-native system against its target and the successful execution of failover/recovery mechanisms during testing or actual incidents, including verification of underlying HA design configurations.\n\nPart: metric-expression\nTitle: Metric Expression\nProse: System Uptime Percentage = `((Total time in reporting period - Total downtime in reporting period) / Total time in reporting period) * 100` AND Failover Test Success Rate = `(Number of successful automated/manual failover tests / Total number of failover tests conducted) * 100`\n\nPart: metric-rules-data-sources\nTitle: Rules/Data Sources\nProse: Availability monitoring tools, incident management records, cloud provider service health dashboards, results from disaster recovery and high availability tests, defined RTO/RPO, evidence of information availability. Further includes: Verification of N+X redundancy configurations for critical components; Confirmation of automated scaling policies and their effectiveness; Audit of data backup and replication configurations against RPO; Review of service discovery and load balancing configurations; Evidence of DR plan testing.\n\nPart: slo-recommendations\nTitle: SLO Recommendations\nProse: System Uptime Percentage: Target based on business criticality (e.g., 99.9%, 99.99%); Failover Test Success Rate: 100%\n\nRemarks: This objective corresponds to the CNA-HAR-M1 metric, with an expanded scope to verify specific HA design elements.",
+                            "props": [
+                                {
+                                    "name": "method",
+                                    "value": "MEASURE",
+                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                }
+                            ],
+                            "reviewed-controls": {
+                                "description": "Assesses custom control CNA-HAR-M1.",
+                                "control-selections": [
+                                    {
+                                        "control-id": "CNA-HAR-M1"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "responsible-roles": [
+                        {
+                            "role-id": "assessor"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "activity-measure-ksi-cna-aggregate-uuid",
+                    "title": "Measure Aggregate KSI for Cloud Native Architecture (KSI-CNA-AGGREGATE)",
+                    "description": "Activity to calculate the aggregate Key Security Indicator (KSI) for Cloud Native Architecture based on constituent CNA metrics.",
+                    "steps": [
+                        {
+                            "uuid": "step-measure-ksi-cna-aggregate-metric-uuid",
+                            "title": "Calculate KSI-CNA-AGGREGATE Score",
+                            "description": "Control ID: KSI-CNA-AGGREGATE\nControl Description: This aggregate objective assesses the overall adherence to the Key Security Indicators for Cloud Native Architecture by evaluating a set of specific underlying metrics.\n\nPart: constituent-metrics\nTitle: Constituent Metrics\nProse: This aggregate objective is composed of the following metrics: CNA-DOS-M1, CNA-BTC-M1, CNA-ILP-M1, CNA-MSE-M1, CNA-NCE-M1, CNA-CSC-M1, CNA-HAR-M1. Each of these metrics should be assessed individually according to their respective plans.\n\nPart: metric-expression (Calculation Method)\nTitle: Aggregate Metric Expression\nProse: 1. Each constituent CNA metric (CNA-DOS-M1, CNA-BTC-M1, CNA-ILP-M1, CNA-MSE-M1, CNA-NCE-M1, CNA-CSC-M1, CNA-HAR-M1) must first yield a single normalized score from 0-100. For metrics with multiple expressions (e.g., an 'AND' condition), the lower of the calculated scores for that metric will be used as its single score for this aggregation, unless otherwise specified in that metric's detailed assessment resulting in a single value. 2. The KSI-CNA-AGGREGATE score is the simple arithmetic mean of the single normalized scores (0-100) from each of the 7 constituent metrics. KSI Score = (Score_CNA-DOS-M1 + Score_CNA-BTC-M1 + ... + Score_CNA-HAR-M1) / 7.\n\nPart: metric-rules-data-sources\nTitle: Rules/Data Sources\nProse: The data sources for this aggregate metric are the final, normalized (0-100) scores obtained from the assessment of each constituent CNA metric (CNA-DOS-M1 through CNA-HAR-M1).\n\nPart: slo-recommendations\nTitle: SLO Recommendations\nProse: Overall KSI-CNA-AGGREGATE score target > 75 for SUCCESS. Individual constituent metrics maintain their own SLOs.\n\nRemarks: Overall objective for KSI-CNA.",
+                            "props": [
+                                {
+                                    "name": "method",
+                                    "value": "MEASURE",
+                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                },
+                                {
+                                    "name": "acceptance-value-success",
+                                    "value": "75",
+                                    "ns": "http://example.com/ksi-cna-props"
+                                }
+                            ],
+                            "reviewed-controls": {
+                                "description": "Assesses custom aggregate control KSI-CNA-AGGREGATE.",
+                                "control-selections": [
+                                    {
+                                        "control-id": "KSI-CNA-AGGREGATE"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "responsible-roles": [
+                        {
+                            "role-id": "assessor"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "activity-measure-sc-7-uuid",
+                    "title": "Measure Boundary Protection (SC-7)",
+                    "description": "Activity to measure the effectiveness of boundary protection mechanisms related to NIST SP 800-53 Control SC-7.",
+                    "steps": [
+                        {
+                            "uuid": "step-measure-sc-7-traffic-filter-uuid",
+                            "title": "Measure Firewall/Proxy Traffic Filtering Effectiveness",
+                            "description": "Metric: Percentage of unauthorized inbound and outbound traffic attempts blocked by firewalls/proxies at key network boundaries.\nExpression: (Number of blocked unauthorized traffic attempts / Total number of detected unauthorized traffic attempts) * 100%.\nData Sources: Firewall logs, proxy logs, IDS/IPS logs, network flow logs.\nMeasurement Process: Collect logs over the sampling period (e.g., last 7 days). Analyze logs for traffic attempts violating defined policies (e.g., access to/from prohibited IP ranges, unapproved services/ports). Correlate denied traffic with policy violations.\nSLO Recommendation: >= 99.99% of known unauthorized attempts blocked.",
+                            "props": [
+                                {
+                                    "name": "method",
+                                    "value": "MEASURE",
+                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                }
+                            ],
+                            "reviewed-controls": {
+                                "description": "Assesses specific statements of SC-7.",
+                                "control-selections": [
+                                    {
+                                        "control-id": "sc-7",
+                                        "statement-ids": [
+                                            "sc-7_smt.a",
+                                            "sc-7_smt.c"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "uuid": "step-measure-sc-7-segmentation-uuid",
+                            "title": "Measure Network Segmentation Enforcement",
+                            "description": "Metric: Percentage of defined logical network segments (e.g., micro-services, DMZs for publicly accessible components) correctly isolated by cloud-native virtual network controls.\nExpression: (Number of segments with verified isolation / Total number of defined logical network segments) * 100%.\nData Sources: Cloud provider network configuration (VPCs, subnets, security groups, NACLs, route tables), network architecture diagrams, automated configuration compliance scan results.\nMeasurement Process: Enumerate all defined logical segments. For each segment, verify that network controls (security groups, NACLs) enforce the documented traffic flow policies (ingress/egress rules) and prevent unauthorized lateral movement, in line with sc-7_smt.b. This can involve automated checks against baseline configurations and penetration testing results.\nSLO Recommendation: 100% correct isolation as per design.",
+                            "props": [
+                                {
+                                    "name": "method",
+                                    "value": "MEASURE",
+                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                }
+                            ],
+                            "reviewed-controls": {
+                                "description": "Assesses specific statements of SC-7.",
+                                "control-selections": [
+                                    {
+                                        "control-id": "sc-7",
+                                        "statement-ids": [
+                                            "sc-7_smt.b"
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "responsible-roles": [
+                        {
+                            "role-id": "assessor"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "activity-measure-sc-39-uuid",
+                    "title": "Measure Process Isolation (SC-39)",
+                    "description": "Activity to measure the implementation of process isolation, particularly for immutable containers and serverless functions, related to NIST SP 800-53 Control SC-39.",
+                    "steps": [
+                        {
+                            "uuid": "step-measure-sc-39-container-immutability-uuid",
+                            "title": "Measure Container Immutability Adherence",
+                            "description": "Metric: Percentage of containerized workloads deployed from approved, version-controlled, immutable images where runtime modifications are prohibited and detected.\nExpression: (Number of compliant immutable container deployments / Total number of container deployments) * 100%.\nData Sources: Container registry (image metadata, vulnerability scan reports), deployment manifests (e.g., Kubernetes YAMLs), runtime security monitoring tools (e.g., Falco), configuration management database (CMDB).\nMeasurement Process: Identify all deployed container instances. Verify that images are sourced from an approved registry and have no critical vulnerabilities. Check deployment configurations to ensure read-only root filesystems where applicable. Monitor for and alert on any runtime changes to container filesystems or running processes not part of the original image. Correlate with SC-39's requirement for separate execution domains, ensuring containers act as such domains.\nSLO Recommendation: 100% of production workloads.",
+                            "props": [
+                                {
+                                    "name": "method",
+                                    "value": "MEASURE",
+                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                }
+                            ],
+                            "reviewed-controls": {
+                                "description": "Assesses SC-39 in the context of immutable containers.",
+                                "control-selections": [
+                                    {
+                                        "control-id": "sc-39"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "uuid": "step-measure-sc-39-serverless-privileges-uuid",
+                            "title": "Measure Serverless Function Least Privilege",
+                            "description": "Metric: Percentage of serverless functions with execution roles adhering to the principle of least privilege, granting only necessary permissions.\nExpression: (Number of serverless functions with least privilege roles / Total number of serverless functions) * 100%.\nData Sources: Cloud provider IAM configurations (roles, policies for serverless functions like AWS Lambda, Azure Functions), function code repositories (for understanding resource needs), automated IAM policy analysis tools.\nMeasurement Process: Enumerate all serverless functions. Review the IAM execution role associated with each function. Analyze permissions to ensure they are narrowly scoped to only the resources and actions required by the function. Use tools to identify overly permissive roles. Relate to SC-39 by ensuring each function invocation operates in a restricted, isolated execution environment defined by these minimal privileges.\nSLO Recommendation: 95% adherence, with a plan for 100%.",
+                            "props": [
+                                {
+                                    "name": "method",
+                                    "value": "MEASURE",
+                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                }
+                            ],
+                            "reviewed-controls": {
+                                "description": "Assesses SC-39 in the context of serverless function privileges.",
+                                "control-selections": [
+                                    {
+                                        "control-id": "sc-39"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "responsible-roles": [
+                        {
+                            "role-id": "assessor"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "activity-placeholder-sc-12-uuid",
+                    "title": "Measure Cryptographic Key Management (SC-12) - Placeholder",
+                    "description": "This activity will detail MEASURE steps for SC-12 concerning key establishment and management for cloud-native services. Example metrics: Percentage of cryptographic keys managed by an approved KMS, Frequency of automated key rotation for sensitive data encryption keys. Data Sources: KMS logs, configuration data, security policies.",
+                    "steps": [
+                        {
+                            "uuid": "step-placeholder-sc-12-uuid",
+                            "title": "Placeholder for SC-12 MEASURE method",
+                            "description": "Detailed MEASURE method to be defined here.",
+                            "props": [
+                                {
+                                    "name": "method",
+                                    "value": "MEASURE",
+                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                }
+                            ],
+                            "reviewed-controls": {
+                                "description": "Placeholder for SC-12 assessment.",
+                                "control-selections": [
+                                    {
+                                        "control-id": "sc-12"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "responsible-roles": [
+                        {
+                            "role-id": "assessor"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "activity-placeholder-sr-12-uuid",
+                    "title": "Measure Component Disposal (SR-12) - Placeholder",
+                    "description": "This activity will detail MEASURE steps for SR-12 concerning secure disposal of cloud components, including continuous scanning aspects that identify components for disposal. Example metrics: Percentage of decommissioned cloud resources (VMs, storage volumes, serverless functions) whose data is verifiably sanitized according to policy, Average time to deprovision and sanitize resources after EOL notification from continuous scanning. Data Sources: Asset inventory, disposal logs, scan reports identifying EOL/vulnerable components, cloud provider audit logs.",
+                    "steps": [
+                        {
+                            "uuid": "step-placeholder-sr-12-uuid",
+                            "title": "Placeholder for SR-12 MEASURE method",
+                            "description": "Detailed MEASURE method to be defined here.",
+                            "props": [
+                                {
+                                    "name": "method",
+                                    "value": "MEASURE",
+                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                }
+                            ],
+                            "reviewed-controls": {
+                                "description": "Placeholder for SR-12 assessment.",
+                                "control-selections": [
+                                    {
+                                        "control-id": "sr-12"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "responsible-roles": [
+                        {
+                            "role-id": "assessor"
+                        }
+                    ]
+                }
             ]
         },
-        {
-            "description": "Custom Cloud Native Audit (CNA) aggregate Key Security Indicator.",
-            "include-controls": [
-                { "control-id": "KSI-CNA-AGGREGATE" }
+        "reviewed-controls": {
+            "description": "This assessment plan covers selected NIST SP 800-53 controls relevant to cloud security requirements and custom CNA metrics, including an aggregate Key Security Indicator.",
+            "control-selections": [
+                {
+                    "description": "Controls related to Denial of Service Protection and Network Traffic Control.",
+                    "include-controls": [
+                        {
+                            "control-id": "sc-5"
+                        },
+                        {
+                            "control-id": "sc-7"
+                        }
+                    ]
+                },
+                {
+                    "description": "Controls related to Cryptographic Key Management and Process Isolation supporting container/serverless security and micro-segmentation.",
+                    "include-controls": [
+                        {
+                            "control-id": "sc-12"
+                        },
+                        {
+                            "control-id": "sc-39"
+                        }
+                    ]
+                },
+                {
+                    "description": "Controls related to Component Disposal, potentially informed by continuous scanning identifying components for end-of-life.",
+                    "include-controls": [
+                        {
+                            "control-id": "sr-12"
+                        }
+                    ]
+                },
+                {
+                    "description": "Custom Cloud Native Audit (CNA) individual metrics.",
+                    "include-controls": [
+                        {
+                            "control-id": "CNA-DOS-M1"
+                        },
+                        {
+                            "control-id": "CNA-BTC-M1"
+                        },
+                        {
+                            "control-id": "CNA-ILP-M1"
+                        },
+                        {
+                            "control-id": "CNA-MSE-M1"
+                        },
+                        {
+                            "control-id": "CNA-NCE-M1"
+                        },
+                        {
+                            "control-id": "CNA-CSC-M1"
+                        },
+                        {
+                            "control-id": "CNA-HAR-M1"
+                        }
+                    ]
+                },
+                {
+                    "description": "Custom Cloud Native Audit (CNA) aggregate Key Security Indicator.",
+                    "include-controls": [
+                        {
+                            "control-id": "KSI-CNA-AGGREGATE"
+                        }
+                    ]
+                }
+            ]
+        },
+        "assessment-subjects": [
+            {
+                "type": "component",
+                "description": "All cloud service provider infrastructure components supporting the service offering.",
+                "include-all": {}
+            },
+            {
+                "type": "inventory-item",
+                "description": "Specific deployed services and tools relevant to the controls.",
+                "include-subjects": [
+                    {
+                        "subject-uuid": "inv-item-dos-service-uuid",
+                        "type": "inventory-item"
+                    },
+                    {
+                        "subject-uuid": "inv-item-firewall-uuid",
+                        "type": "inventory-item"
+                    },
+                    {
+                        "subject-uuid": "inv-item-container-platform-uuid",
+                        "type": "inventory-item"
+                    },
+                    {
+                        "subject-uuid": "inv-item-serverless-platform-uuid",
+                        "type": "inventory-item"
+                    },
+                    {
+                        "subject-uuid": "inv-item-virtual-network-uuid",
+                        "type": "inventory-item"
+                    },
+                    {
+                        "subject-uuid": "inv-item-scanning-tools-uuid",
+                        "type": "inventory-item"
+                    },
+                    {
+                        "subject-uuid": "inv-item-ha-infrastructure-uuid",
+                        "type": "inventory-item"
+                    }
+                ]
+            }
+        ],
+        "assessment-assets": {
+            "components": [
+                {
+                    "uuid": "asset-assessment-tool-1-uuid",
+                    "type": "software",
+                    "title": "Automated Configuration Analyzer",
+                    "description": "Tool for analyzing cloud configurations against baselines.",
+                    "status": {
+                        "state": "operational"
+                    }
+                },
+                {
+                    "uuid": "asset-log-analysis-platform-uuid",
+                    "type": "service",
+                    "title": "Log Aggregation and Analysis Platform",
+                    "description": "Platform for collecting and analyzing security logs.",
+                    "status": {
+                        "state": "operational"
+                    }
+                }
+            ],
+            "assessment-platforms": [
+                {
+                    "uuid": "platform-csp-monitoring-uuid",
+                    "title": "CSP Internal Monitoring Platform",
+                    "uses-components": [
+                        {
+                            "component-uuid": "asset-log-analysis-platform-uuid"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tasks": [
+            {
+                "uuid": "task-assess-dos-protection-sc5-uuid",
+                "type": "action",
+                "title": "Assess NIST SC-5 Denial of Service (DoS) Protection",
+                "description": "Assess the implementation and effectiveness of DoS protection mechanisms based on NIST SP 800-53 SC-5.",
+                "associated-activities": [
+                    {
+                        "activity-uuid": "activity-measure-sc-5-uuid",
+                        "subjects": [
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-dos-mitigation-uuid"
+                            }
+                        ],
+                        "responsible-roles": [
+                            {
+                                "role-id": "assessor"
+                            }
+                        ]
+                    }
+                ],
+                "responsible-roles": [
+                    {
+                        "role-id": "assessor"
+                    }
+                ]
+            },
+            {
+                "uuid": "task-assess-custom-cna-dos-m1-uuid",
+                "type": "action",
+                "title": "Assess Custom DoS Metric CNA-DOS-M1",
+                "description": "Assess the custom Denial of Service metric CNA-DOS-M1.",
+                "associated-activities": [
+                    {
+                        "activity-uuid": "activity-measure-cna-dos-m1-uuid",
+                        "subjects": [
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-dos-mitigation-uuid"
+                            }
+                        ],
+                        "responsible-roles": [
+                            {
+                                "role-id": "assessor"
+                            }
+                        ]
+                    }
+                ],
+                "responsible-roles": [
+                    {
+                        "role-id": "assessor"
+                    }
+                ]
+            },
+            {
+                "uuid": "task-assess-firewall-proxy-sc7-uuid",
+                "type": "action",
+                "title": "Assess Firewall/Proxy Config (SC-7 & CNA-BTC-M1)",
+                "description": "Assess configuration of firewalls/proxies for traffic limiting and network segmentation (NIST SC-7), and custom metric CNA-BTC-M1.",
+                "associated-activities": [
+                    {
+                        "activity-uuid": "activity-measure-sc-7-uuid",
+                        "subjects": [
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-firewall-proxy-uuid"
+                            },
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-virtual-network-uuid"
+                            }
+                        ],
+                        "responsible-roles": [
+                            {
+                                "role-id": "assessor"
+                            }
+                        ]
+                    },
+                    {
+                        "activity-uuid": "activity-measure-cna-btc-m1-uuid",
+                        "subjects": [
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-firewall-proxy-uuid"
+                            },
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-virtual-network-uuid"
+                            }
+                        ],
+                        "responsible-roles": [
+                            {
+                                "role-id": "assessor"
+                            }
+                        ]
+                    }
+                ],
+                "responsible-roles": [
+                    {
+                        "role-id": "assessor"
+                    }
+                ]
+            },
+            {
+                "uuid": "task-assess-immutable-serverless-sc39-uuid",
+                "type": "action",
+                "title": "Assess Immutability & Least Privilege (SC-39 & CNA-ILP-M1)",
+                "description": "Assess immutable containers/serverless functions and least privilege (NIST SC-39), and custom metric CNA-ILP-M1 including verification of strictly defined functionality.",
+                "associated-activities": [
+                    {
+                        "activity-uuid": "activity-measure-sc-39-uuid",
+                        "subjects": [
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-container-platform-uuid"
+                            },
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-serverless-platform-uuid"
+                            }
+                        ],
+                        "responsible-roles": [
+                            {
+                                "role-id": "assessor"
+                            }
+                        ]
+                    },
+                    {
+                        "activity-uuid": "activity-measure-cna-ilp-m1-uuid",
+                        "subjects": [
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-container-platform-uuid"
+                            },
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-serverless-platform-uuid"
+                            }
+                        ],
+                        "responsible-roles": [
+                            {
+                                "role-id": "assessor"
+                            }
+                        ]
+                    }
+                ],
+                "responsible-roles": [
+                    {
+                        "role-id": "assessor"
+                    }
+                ]
+            },
+            {
+                "uuid": "task-assess-microservice-segmentation-cna-mse-m1-uuid",
+                "type": "action",
+                "title": "Assess Micro-service Segmentation (SC-7, SC-39 & CNA-MSE-M1)",
+                "description": "Assess logical segmentation of micro-services, cloud-native virtual network traffic controls (NIST SC-7, SC-39), and custom metric CNA-MSE-M1.",
+                "associated-activities": [
+                    {
+                        "activity-uuid": "activity-measure-sc-7-uuid",
+                        "subjects": [
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-virtual-network-uuid"
+                            }
+                        ],
+                        "responsible-roles": [
+                            {
+                                "role-id": "assessor"
+                            }
+                        ]
+                    },
+                    {
+                        "activity-uuid": "activity-measure-sc-39-uuid",
+                        "subjects": [
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-container-platform-uuid"
+                            }
+                        ],
+                        "responsible-roles": [
+                            {
+                                "role-id": "assessor"
+                            }
+                        ]
+                    },
+                    {
+                        "activity-uuid": "activity-measure-cna-mse-m1-uuid",
+                        "subjects": [
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-virtual-network-uuid"
+                            },
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-container-platform-uuid"
+                            }
+                        ],
+                        "responsible-roles": [
+                            {
+                                "role-id": "assessor"
+                            }
+                        ]
+                    }
+                ],
+                "responsible-roles": [
+                    {
+                        "role-id": "assessor"
+                    }
+                ]
+            },
+            {
+                "uuid": "task-assess-cna-nce-m1-uuid",
+                "type": "action",
+                "title": "Assess Custom Cloud Native Enforcement Metric (CNA-NCE-M1)",
+                "description": "Assess the custom Cloud Native Enforcement metric CNA-NCE-M1 for virtual networking capabilities.",
+                "associated-activities": [
+                    {
+                        "activity-uuid": "activity-measure-cna-nce-m1-uuid",
+                        "subjects": [
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-virtual-network-uuid"
+                            }
+                        ],
+                        "responsible-roles": [
+                            {
+                                "role-id": "assessor"
+                            }
+                        ]
+                    }
+                ],
+                "responsible-roles": [
+                    {
+                        "role-id": "assessor"
+                    }
+                ]
+            },
+            {
+                "uuid": "task-assess-cna-csc-m1-uuid",
+                "type": "action",
+                "title": "Assess Custom Continuous Scanning Coverage Metric (CNA-CSC-M1)",
+                "description": "Assess the custom Continuous Scanning Coverage metric CNA-CSC-M1.",
+                "associated-activities": [
+                    {
+                        "activity-uuid": "activity-measure-cna-csc-m1-uuid",
+                        "subjects": [
+                            {
+                                "type": "inventory-item",
+                                "subject-uuid": "inv-item-scanning-tools-uuid"
+                            },
+                            {
+                                "type": "component",
+                                "description": "All defined cloud-native system components",
+                                "include-all": {}
+                            }
+                        ],
+                        "responsible-roles": [
+                            {
+                                "role-id": "assessor"
+                            }
+                        ]
+                    }
+                ],
+                "responsible-roles": [
+                    {
+                        "role-id": "assessor"
+                    }
+                ]
+            },
+            {
+                "uuid": "task-assess-continuous-scanning-and-disposal-sr12-uuid",
+                "type": "action",
+                "title": "Assess NIST SR-12 Component Disposal (informed by scanning)",
+                "description": "Assess continuous scanning of cloud native system components and the related secure disposal of components identified (NIST SP 800-53 SR-12). This task focuses on the SR-12 aspects which can be informed by outputs of CNA-CSC-M1.",
+                "associated-activities": [
+                    {
+                        "activity-uuid": "activity-placeholder-sr-12-uuid",
+                        "subjects": [
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-scanning-tools-uuid"
+                            },
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-disposal-service-uuid"
+                            }
+                        ],
+                        "responsible-roles": [
+                            {
+                                "role-id": "assessor"
+                            }
+                        ]
+                    }
+                ],
+                "responsible-roles": [
+                    {
+                        "role-id": "assessor"
+                    }
+                ]
+            },
+            {
+                "uuid": "task-assess-cna-har-m1-uuid",
+                "type": "action",
+                "title": "Assess Custom High Availability and Resilience Metric (CNA-HAR-M1)",
+                "description": "Assess the custom High Availability and Resilience metric CNA-HAR-M1, including verification of underlying HA design configurations.",
+                "associated-activities": [
+                    {
+                        "activity-uuid": "activity-measure-cna-har-m1-uuid",
+                        "subjects": [
+                            {
+                                "type": "inventory-item",
+                                "subject-uuid": "inv-item-ha-infrastructure-uuid"
+                            },
+                            {
+                                "type": "component",
+                                "description": "Overall cloud-native system availability",
+                                "include-all": {}
+                            }
+                        ],
+                        "responsible-roles": [
+                            {
+                                "role-id": "assessor"
+                            }
+                        ]
+                    }
+                ],
+                "responsible-roles": [
+                    {
+                        "role-id": "assessor"
+                    }
+                ]
+            },
+            {
+                "uuid": "task-assess-high-availability-nist-uuid",
+                "type": "action",
+                "title": "Assess High Availability Design Principles (NIST SC-5, SC-12, SC-39)",
+                "description": "Assess use of high availability design principles (NIST SP 800-53 SC-5, SC-12, SC-39) contributing to overall system resilience.",
+                "associated-activities": [
+                    {
+                        "activity-uuid": "activity-measure-sc-5-uuid",
+                        "subjects": [
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-ha-infrastructure-uuid"
+                            }
+                        ],
+                        "responsible-roles": [
+                            {
+                                "role-id": "assessor"
+                            }
+                        ]
+                    },
+                    {
+                        "activity-uuid": "activity-placeholder-sc-12-uuid",
+                        "subjects": [
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-key-management-system-uuid"
+                            }
+                        ],
+                        "responsible-roles": [
+                            {
+                                "role-id": "assessor"
+                            }
+                        ]
+                    },
+                    {
+                        "activity-uuid": "activity-measure-sc-39-uuid",
+                        "subjects": [
+                            {
+                                "type": "component",
+                                "subject-uuid": "comp-ha-infrastructure-uuid"
+                            }
+                        ],
+                        "responsible-roles": [
+                            {
+                                "role-id": "assessor"
+                            }
+                        ]
+                    }
+                ],
+                "responsible-roles": [
+                    {
+                        "role-id": "assessor"
+                    }
+                ]
+            },
+            {
+                "uuid": "task-assess-ksi-cna-aggregate-uuid",
+                "type": "action",
+                "title": "Assess Aggregate KSI for Cloud Native Architecture (KSI-CNA-AGGREGATE)",
+                "description": "Calculate and assess the aggregate Key Security Indicator for Cloud Native Architecture based on the results of individual CNA metrics.",
+                "depends-on": [
+                    {
+                        "task-uuid": "task-assess-custom-cna-dos-m1-uuid"
+                    },
+                    {
+                        "task-uuid": "task-assess-firewall-proxy-sc7-uuid"
+                    },
+                    {
+                        "task-uuid": "task-assess-immutable-serverless-sc39-uuid"
+                    },
+                    {
+                        "task-uuid": "task-assess-microservice-segmentation-cna-mse-m1-uuid"
+                    },
+                    {
+                        "task-uuid": "task-assess-cna-nce-m1-uuid"
+                    },
+                    {
+                        "task-uuid": "task-assess-cna-csc-m1-uuid"
+                    },
+                    {
+                        "task-uuid": "task-assess-cna-har-m1-uuid"
+                    }
+                ],
+                "associated-activities": [
+                    {
+                        "activity-uuid": "activity-measure-ksi-cna-aggregate-uuid",
+                        "subjects": [
+                            {
+                                "type": "component",
+                                "description": "Overall Cloud Native Architecture Security Posture",
+                                "include-all": {}
+                            }
+                        ],
+                        "responsible-roles": [
+                            {
+                                "role-id": "assessor"
+                            }
+                        ]
+                    }
+                ],
+                "responsible-roles": [
+                    {
+                        "role-id": "assessor"
+                    }
+                ]
+            }
+        ],
+        "back-matter": {
+            "resources": [
+                {
+                    "uuid": "resource-csa-metrics-catalog-uuid",
+                    "title": "CSA Continuous Audit Metrics Catalog v1.0",
+                    "rlinks": [
+                        {
+                            "href": "https://cloudsecurityalliance.org/research/working-groups/continuous-audit-metrics/"
+                        }
+                    ]
+                },
+                {
+                    "uuid": "resource-fedramp-low-profile-uuid",
+                    "title": "FedRAMP Rev 5 Low Baseline Profile Catalog (Source for Control Definitions)",
+                    "rlinks": [
+                        {
+                            "href": "urn:uuid:97bf2d6d-1907-4e51-8c5e-2a8776c39820"
+                        }
+                    ]
+                }
             ]
         }
-      ]
-    },
-    "assessment-subjects": [
-      {
-        "type": "component",
-        "description": "All cloud service provider infrastructure components supporting the service offering.",
-        "include-all": {}
-      },
-      {
-        "type": "inventory-item",
-        "description": "Specific deployed services and tools relevant to the controls.",
-        "include-subjects": [
-            {"subject-uuid": "inv-item-dos-service-uuid", "type": "inventory-item"},
-            {"subject-uuid": "inv-item-firewall-uuid", "type": "inventory-item"},
-            {"subject-uuid": "inv-item-container-platform-uuid", "type": "inventory-item"},
-            {"subject-uuid": "inv-item-serverless-platform-uuid", "type": "inventory-item"},
-            {"subject-uuid": "inv-item-virtual-network-uuid", "type": "inventory-item"},
-            {"subject-uuid": "inv-item-scanning-tools-uuid", "type": "inventory-item"},
-            {"subject-uuid": "inv-item-ha-infrastructure-uuid", "type": "inventory-item"}
-        ]
-      }
-    ],
-    "assessment-assets": {
-      "components": [
-        {
-          "uuid": "asset-assessment-tool-1-uuid",
-          "type": "software",
-          "title": "Automated Configuration Analyzer",
-          "description": "Tool for analyzing cloud configurations against baselines.",
-          "status": {"state": "operational"}
-        },
-        {
-            "uuid": "asset-log-analysis-platform-uuid",
-            "type": "service",
-            "title": "Log Aggregation and Analysis Platform",
-            "description": "Platform for collecting and analyzing security logs.",
-            "status": {"state": "operational"}
-        }
-      ],
-      "assessment-platforms": [
-        {
-            "uuid": "platform-csp-monitoring-uuid",
-            "title": "CSP Internal Monitoring Platform",
-            "uses-components": [
-                {"component-uuid": "asset-log-analysis-platform-uuid"}
-            ]
-        }
-      ]
-    },
-    "tasks": [
-      {
-        "uuid": "task-assess-dos-protection-sc5-uuid",
-        "type": "action",
-        "title": "Assess NIST SC-5 Denial of Service (DoS) Protection",
-        "description": "Assess the implementation and effectiveness of DoS protection mechanisms based on NIST SP 800-53 SC-5.",
-        "associated-activities": [
-          {
-            "activity-uuid": "activity-measure-sc-5-uuid",
-            "subjects": [
-              {"type": "component", "subject-uuid": "comp-dos-mitigation-uuid"}
-            ],
-            "responsible-roles": [{"role-id": "assessor"}]
-          }
-        ],
-        "responsible-roles": [{"role-id": "assessor"}]
-      },
-      {
-        "uuid": "task-assess-custom-cna-dos-m1-uuid",
-        "type": "action",
-        "title": "Assess Custom DoS Metric CNA-DOS-M1",
-        "description": "Assess the custom Denial of Service metric CNA-DOS-M1.",
-        "associated-activities": [
-          {
-            "activity-uuid": "activity-measure-cna-dos-m1-uuid",
-            "subjects": [
-              {"type": "component", "subject-uuid": "comp-dos-mitigation-uuid"}
-            ],
-            "responsible-roles": [{"role-id": "assessor"}]
-          }
-        ],
-        "responsible-roles": [{"role-id": "assessor"}]
-      },
-      {
-        "uuid": "task-assess-firewall-proxy-sc7-uuid",
-        "type": "action",
-        "title": "Assess Firewall/Proxy Config (SC-7 & CNA-BTC-M1)",
-        "description": "Assess configuration of firewalls/proxies for traffic limiting and network segmentation (NIST SC-7), and custom metric CNA-BTC-M1.",
-         "associated-activities": [
-          {
-            "activity-uuid": "activity-measure-sc-7-uuid",
-            "subjects": [
-              {"type": "component", "subject-uuid": "comp-firewall-proxy-uuid"},
-              {"type": "component", "subject-uuid": "comp-virtual-network-uuid"}
-            ],
-            "responsible-roles": [{"role-id": "assessor"}]
-          },
-          {
-            "activity-uuid": "activity-measure-cna-btc-m1-uuid",
-            "subjects": [
-              {"type": "component", "subject-uuid": "comp-firewall-proxy-uuid"},
-              {"type": "component", "subject-uuid": "comp-virtual-network-uuid"}
-            ],
-            "responsible-roles": [{"role-id": "assessor"}]
-          }
-        ],
-        "responsible-roles": [{"role-id": "assessor"}]
-      },
-      {
-        "uuid": "task-assess-immutable-serverless-sc39-uuid",
-        "type": "action",
-        "title": "Assess Immutability & Least Privilege (SC-39 & CNA-ILP-M1)",
-        "description": "Assess immutable containers/serverless functions and least privilege (NIST SC-39), and custom metric CNA-ILP-M1 including verification of strictly defined functionality.",
-        "associated-activities": [
-            {
-              "activity-uuid": "activity-measure-sc-39-uuid",
-              "subjects": [
-                {"type": "component", "subject-uuid": "comp-container-platform-uuid"},
-                {"type": "component", "subject-uuid": "comp-serverless-platform-uuid"}
-              ],
-              "responsible-roles": [{"role-id": "assessor"}]
-            },
-            {
-              "activity-uuid": "activity-measure-cna-ilp-m1-uuid",
-              "subjects": [
-                {"type": "component", "subject-uuid": "comp-container-platform-uuid"},
-                {"type": "component", "subject-uuid": "comp-serverless-platform-uuid"}
-              ],
-              "responsible-roles": [{"role-id": "assessor"}]
-            }
-          ],
-        "responsible-roles": [{"role-id": "assessor"}]
-      },
-      {
-        "uuid": "task-assess-microservice-segmentation-cna-mse-m1-uuid",
-        "type": "action",
-        "title": "Assess Micro-service Segmentation (SC-7, SC-39 & CNA-MSE-M1)",
-        "description": "Assess logical segmentation of micro-services, cloud-native virtual network traffic controls (NIST SC-7, SC-39), and custom metric CNA-MSE-M1.",
-        "associated-activities": [
-            {
-              "activity-uuid": "activity-measure-sc-7-uuid", 
-              "subjects": [
-                {"type": "component", "subject-uuid": "comp-virtual-network-uuid"}
-              ],
-              "responsible-roles": [{"role-id": "assessor"}]
-            },
-            {
-                "activity-uuid": "activity-measure-sc-39-uuid", 
-                "subjects": [
-                  {"type": "component", "subject-uuid": "comp-container-platform-uuid"} 
-                ],
-                "responsible-roles": [{"role-id": "assessor"}]
-            },
-            {
-                "activity-uuid": "activity-measure-cna-mse-m1-uuid",
-                "subjects": [
-                    {"type": "component", "subject-uuid": "comp-virtual-network-uuid"},
-                    {"type": "component", "subject-uuid": "comp-container-platform-uuid"}
-                ],
-                "responsible-roles": [{"role-id": "assessor"}]
-            }
-          ],
-        "responsible-roles": [{"role-id": "assessor"}]
-      },
-       {
-        "uuid": "task-assess-cna-nce-m1-uuid",
-        "type": "action",
-        "title": "Assess Custom Cloud Native Enforcement Metric (CNA-NCE-M1)",
-        "description": "Assess the custom Cloud Native Enforcement metric CNA-NCE-M1 for virtual networking capabilities.",
-        "associated-activities": [
-          {
-            "activity-uuid": "activity-measure-cna-nce-m1-uuid",
-            "subjects": [
-              {"type": "component", "subject-uuid": "comp-virtual-network-uuid"}
-            ],
-            "responsible-roles": [{"role-id": "assessor"}]
-          }
-        ],
-        "responsible-roles": [{"role-id": "assessor"}]
-      },
-      {
-        "uuid": "task-assess-cna-csc-m1-uuid",
-        "type": "action",
-        "title": "Assess Custom Continuous Scanning Coverage Metric (CNA-CSC-M1)",
-        "description": "Assess the custom Continuous Scanning Coverage metric CNA-CSC-M1.",
-        "associated-activities": [
-          {
-            "activity-uuid": "activity-measure-cna-csc-m1-uuid",
-            "subjects": [
-              {"type": "inventory-item", "subject-uuid": "inv-item-scanning-tools-uuid"},
-              {"type": "component", "description": "All defined cloud-native system components", "include-all": {}}
-            ],
-            "responsible-roles": [{"role-id": "assessor"}]
-          }
-        ],
-        "responsible-roles": [{"role-id": "assessor"}]
-      },
-      {
-        "uuid": "task-assess-continuous-scanning-and-disposal-sr12-uuid",
-        "type": "action",
-        "title": "Assess NIST SR-12 Component Disposal (informed by scanning)",
-        "description": "Assess continuous scanning of cloud native system components and the related secure disposal of components identified (NIST SP 800-53 SR-12). This task focuses on the SR-12 aspects which can be informed by outputs of CNA-CSC-M1.",
-        "associated-activities": [
-            {
-              "activity-uuid": "activity-placeholder-sr-12-uuid", 
-              "subjects": [
-                {"type": "component", "subject-uuid": "comp-scanning-tools-uuid"},
-                {"type": "component", "subject-uuid": "comp-disposal-service-uuid"}
-              ],
-              "responsible-roles": [{"role-id": "assessor"}]
-            }
-          ],
-        "responsible-roles": [{"role-id": "assessor"}]
-      },
-      {
-        "uuid": "task-assess-cna-har-m1-uuid",
-        "type": "action",
-        "title": "Assess Custom High Availability and Resilience Metric (CNA-HAR-M1)",
-        "description": "Assess the custom High Availability and Resilience metric CNA-HAR-M1, including verification of underlying HA design configurations.",
-        "associated-activities": [
-          {
-            "activity-uuid": "activity-measure-cna-har-m1-uuid",
-            "subjects": [
-              {"type": "inventory-item", "subject-uuid": "inv-item-ha-infrastructure-uuid"},
-              {"type": "component", "description": "Overall cloud-native system availability", "include-all": {}}
-            ],
-            "responsible-roles": [{"role-id": "assessor"}]
-          }
-        ],
-        "responsible-roles": [{"role-id": "assessor"}]
-      },
-      {
-        "uuid": "task-assess-high-availability-nist-uuid",
-        "type": "action",
-        "title": "Assess High Availability Design Principles (NIST SC-5, SC-12, SC-39)",
-        "description": "Assess use of high availability design principles (NIST SP 800-53 SC-5, SC-12, SC-39) contributing to overall system resilience.",
-        "associated-activities": [
-            {
-              "activity-uuid": "activity-measure-sc-5-uuid", 
-              "subjects": [
-                {"type": "component", "subject-uuid": "comp-ha-infrastructure-uuid"}
-              ],
-              "responsible-roles": [{"role-id": "assessor"}]
-            },
-            {
-                "activity-uuid": "activity-placeholder-sc-12-uuid", 
-                "subjects": [
-                  {"type": "component", "subject-uuid": "comp-key-management-system-uuid"}
-                ],
-                "responsible-roles": [{"role-id": "assessor"}]
-            },
-            {
-                "activity-uuid": "activity-measure-sc-39-uuid", 
-                "subjects": [
-                  {"type": "component", "subject-uuid": "comp-ha-infrastructure-uuid"}
-                ],
-                "responsible-roles": [{"role-id": "assessor"}]
-            }
-          ],
-        "responsible-roles": [{"role-id": "assessor"}]
-      },
-      {
-        "uuid": "task-assess-ksi-cna-aggregate-uuid",
-        "type": "action",
-        "title": "Assess Aggregate KSI for Cloud Native Architecture (KSI-CNA-AGGREGATE)",
-        "description": "Calculate and assess the aggregate Key Security Indicator for Cloud Native Architecture based on the results of individual CNA metrics.",
-        "depends-on": [
-            {"task-uuid": "task-assess-custom-cna-dos-m1-uuid"},
-            {"task-uuid": "task-assess-firewall-proxy-sc7-uuid"}, 
-            {"task-uuid": "task-assess-immutable-serverless-sc39-uuid"},
-            {"task-uuid": "task-assess-microservice-segmentation-cna-mse-m1-uuid"},
-            {"task-uuid": "task-assess-cna-nce-m1-uuid"},
-            {"task-uuid": "task-assess-cna-csc-m1-uuid"},
-            {"task-uuid": "task-assess-cna-har-m1-uuid"}
-        ],
-        "associated-activities": [
-          {
-            "activity-uuid": "activity-measure-ksi-cna-aggregate-uuid",
-            "subjects": [
-              {"type": "component", "description": "Overall Cloud Native Architecture Security Posture", "include-all": {}}
-            ],
-            "responsible-roles": [{"role-id": "assessor"}]
-          }
-        ],
-        "responsible-roles": [{"role-id": "assessor"}]
-      }
-    ],
-    "back-matter": {
-      "resources": [
-        {
-          "uuid": "resource-csa-metrics-catalog-uuid",
-          "title": "CSA Continuous Audit Metrics Catalog v1.0",
-          "rlinks": [
-            {
-              "href": "https://cloudsecurityalliance.org/research/working-groups/continuous-audit-metrics/"
-            }
-          ]
-        },
-        {
-          "uuid": "resource-fedramp-low-profile-uuid",
-          "title": "FedRAMP Rev 5 Low Baseline Profile Catalog (Source for Control Definitions)",
-          "rlinks": [
-            {
-              "href": "urn:uuid:97bf2d6d-1907-4e51-8c5e-2a8776c39820" 
-            }
-          ]
-        }
-      ]
     }
-  }
 }
