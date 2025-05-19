@@ -1,0 +1,634 @@
+{
+  "assessment-plan": {
+    "uuid": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+    "metadata": {
+      "title": "Assessment Plan for Cloud Service Provider Service Configuration Requirements based on KSI-SC Catalog",
+      "last-modified": "2025-05-19T12:00:00Z",
+      "version": "1.0.0",
+      "oscal-version": "1.1.3",
+      "remarks": "This assessment plan outlines the methodology for assessing cloud service provider adherence to key service configuration security requirements, as defined by the KSI-SC: Service Configuration Metrics Catalog.",
+      "roles": [
+        {
+          "id": "assessor",
+          "title": "Assessor"
+        },
+        {
+          "id": "provider-contact",
+          "title": "Cloud Service Provider Contact"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "p1a2b3c4-d5e6-f789-0123-456789abcdef",
+          "type": "organization",
+          "name": "Independent Assessor Organization"
+        },
+        {
+          "uuid": "p7c8d9e0-f1a2-b3c4-d5e6-f78901234567",
+          "type": "organization",
+          "name": "Cloud Service Provider Inc."
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "assessor",
+          "party-uuids": [
+            "p1a2b3c4-d5e6-f789-0123-456789abcdef"
+          ]
+        },
+        {
+          "role-id": "provider-contact",
+          "party-uuids": [
+            "p7c8d9e0-f1a2-b3c4-d5e6-f78901234567"
+          ]
+        }
+      ]
+    },
+    "import-ssp": {
+      "href": "placeholder-ssp.json",
+      "remarks": "A reference to the System Security Plan of the cloud service being assessed."
+    },
+    "local-definitions": {
+      "activities": [
+        {
+          "uuid": "act-ksi-sc-m1",
+          "title": "Measure Configuration Hardening and Review",
+          "description": "Measure the percentage of production network devices and systems whose configurations are validated against an organizationally defined and maintained hardening baseline, and for which reviews and impact analyses for changes are conducted as per policy.",
+          "steps": [
+            {
+              "uuid": "step-ksi-sc-m1-1",
+              "description": "Identify all production network devices and systems within the defined scope (constituting Denominator B)."
+            },
+            {
+              "uuid": "step-ksi-sc-m1-2",
+              "description": "For each system/device, verify its current configuration against the documented organizational hardening baseline."
+            },
+            {
+              "uuid": "step-ksi-sc-m1-3",
+              "description": "For each system/device, verify that configuration reviews have been conducted at the policy-defined frequency."
+            },
+            {
+              "uuid": "step-ksi-sc-m1-4",
+              "description": "For each system/device, examine change records to confirm that security impact analyses were performed for all configuration changes from the baseline *prior* to their implementation."
+            },
+            {
+              "uuid": "step-ksi-sc-m1-5",
+              "description": "A system/device is counted towards Numerator 'A' if it meets all above criteria: baseline adherence, timely reviews, and pre-implementation impact analysis for changes."
+            },
+            {
+              "uuid": "step-ksi-sc-m1-6",
+              "description": "Compile a list and count the total number of production network devices and systems in the defined scope (Denominator B)."
+            },
+            {
+              "uuid": "step-ksi-sc-m1-7",
+              "description": "Calculate the metric: Percentage = 100 * (A/B)."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "ksi-sc-m1"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act-ksi-sc-m2",
+          "title": "Measure Network Traffic Encryption Coverage",
+          "description": "Measure the percentage of observed network traffic segments (internal and external, especially those transmitting sensitive or federal information) protected using FIPS-validated or NSA-approved cryptographic mechanisms ensuring both confidentiality and integrity.",
+          "steps": [
+            {
+              "uuid": "step-ksi-sc-m2-1",
+              "description": "Identify all network segments/flows in scope that require cryptographic protection as per organizational policy (constituting Denominator B)."
+            },
+            {
+              "uuid": "step-ksi-sc-m2-2",
+              "description": "For each segment/flow, or a representative sample, determine if it is encrypted using approved cryptographic protocols (e.g., TLS 1.2+, FIPS-validated modules). This can be done via network traffic analysis tools, configuration review of network devices/endpoints, or inspection of service provider capabilities."
+            },
+            {
+              "uuid": "step-ksi-sc-m2-3",
+              "description": "Quantify the volume or count of segments/flows confirmed to be using approved encryption (Numerator A)."
+            },
+            {
+              "uuid": "step-ksi-sc-m2-4",
+              "description": "Calculate the metric: Percentage = 100 * (A/B)."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "ksi-sc-m2"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act-ksi-sc-m3",
+          "title": "Measure Data-at-Rest Encryption for Sensitive Information",
+          "description": "Measure the percentage of data stores and media containing federal or other designated sensitive information that are encrypted at rest using FIPS-validated or NSA-approved cryptographic mechanisms.",
+          "steps": [
+            {
+              "uuid": "step-ksi-sc-m3-1",
+              "description": "Maintain an inventory of all data stores/media containing federal or sensitive information, as per the organization's data classification policy. Count the total number or quantify the total volume (constituting Denominator B)."
+            },
+            {
+              "uuid": "step-ksi-sc-m3-2",
+              "description": "For each data store/medium, verify that encryption at rest is enabled using approved cryptographic algorithms and key management practices (e.g., AES-256, FIPS 140 validated modules). This can be done via configuration audits of storage systems, databases, and cloud provider settings."
+            },
+            {
+              "uuid": "step-ksi-sc-m3-3",
+              "description": "Count the number or quantify the volume of data stores/media confirmed to be encrypted (Numerator A)."
+            },
+            {
+              "uuid": "step-ksi-sc-m3-4",
+              "description": "Calculate the metric: Percentage = 100 * (A/B)."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "ksi-sc-m3"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act-ksi-sc-m4",
+          "title": "Measure Centralized Configuration Management Adoption",
+          "description": "Measure the percentage of production systems and services whose configurations are actively managed, enforced, and inventoried by an approved centralized configuration management system.",
+          "steps": [
+            {
+              "uuid": "step-ksi-sc-m4-1",
+              "description": "Count the total number of production systems/services identified as in scope for centralized configuration management (constituting Denominator B)."
+            },
+            {
+              "uuid": "step-ksi-sc-m4-2",
+              "description": "For each system/service, verify it is registered and actively managed by the organization's approved centralized configuration management tool(s) (e.g., Ansible, Chef, Puppet, Kubernetes ConfigMaps/Secrets)."
+            },
+            {
+              "uuid": "step-ksi-sc-m4-3",
+              "description": "For each system/service, verify that it is accurately reflected in the central component inventory."
+            },
+            {
+              "uuid": "step-ksi-sc-m4-4",
+              "description": "A system/service is counted towards Numerator 'A' if it meets both registration/active management and accurate inventory criteria."
+            },
+            {
+              "uuid": "step-ksi-sc-m4-5",
+              "description": "Calculate the metric: Percentage = 100 * (A/B)."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "ksi-sc-m4"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act-ksi-sc-m5",
+          "title": "Measure Cryptographic Integrity Enforcement",
+          "description": "Measure the percentage of critical systems and software components where cryptographic mechanisms are actively used to verify their integrity and detect unauthorized modifications.",
+          "steps": [
+            {
+              "uuid": "step-ksi-sc-m5-1",
+              "description": "Identify all critical systems and software components as per the organization's risk assessment (constituting Denominator B)."
+            },
+            {
+              "uuid": "step-ksi-sc-m5-2",
+              "description": "For each critical system/component, verify that cryptographic integrity verification mechanisms (e.g., secure boot, signed code/containers, file integrity monitoring with cryptographic hashes) are enabled and active."
+            },
+            {
+              "uuid": "step-ksi-sc-m5-3",
+              "description": "Verify that these mechanisms are regularly checked (automatically or manually) and that procedures are in place to investigate and respond to detected integrity violations/alerts."
+            },
+            {
+              "uuid": "step-ksi-sc-m5-4",
+              "description": "A system/component is counted towards Numerator 'A' if it meets these criteria."
+            },
+            {
+              "uuid": "step-ksi-sc-m5-5",
+              "description": "Calculate the metric: Percentage = 100 * (A/B)."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "ksi-sc-m5"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act-ksi-sc-m6",
+          "title": "Measure Key Rotation Compliance",
+          "description": "Measure the percentage of cryptographic keys (used for data-at-rest encryption, traffic encryption, integrity verification) that are managed by an approved key management capability and rotated within the policy-defined lifecycle.",
+          "steps": [
+            {
+              "uuid": "step-ksi-sc-m6-1",
+              "description": "Maintain an inventory of all cryptographic keys subject to the organization's rotation policy. This inventory should include key type, purpose, creation date, last rotation date, and the policy-defined rotation frequency/maximum lifetime. Count the total number of such keys (constituting Denominator B)."
+            },
+            {
+              "uuid": "step-ksi-sc-m6-2",
+              "description": "For each key in the inventory, verify if it has been rotated within its policy-defined lifecycle (i.e., the time since its last rotation or creation does not exceed the maximum allowed lifetime)."
+            },
+            {
+              "uuid": "step-ksi-sc-m6-3",
+              "description": "Verify that these keys are managed by an approved and authenticated key management system."
+            },
+            {
+              "uuid": "step-ksi-sc-m6-4",
+              "description": "A key is counted towards Numerator 'A' if it meets these criteria."
+            },
+            {
+              "uuid": "step-ksi-sc-m6-5",
+              "description": "Calculate the metric: Percentage = 100 * (A/B)."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "ksi-sc-m6"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act-ksi-sc-m7",
+          "title": "Measure Risk-Informed Patch Management Effectiveness",
+          "description": "Measure the percentage of identified and applicable security patches that are deployed within the timeframe defined by a documented, risk-informed patching policy, which itself aligns with the organization's risk tolerance.",
+          "steps": [
+            {
+              "uuid": "step-ksi-sc-m7-1",
+              "description": "Identify all applicable security vulnerabilities/patches identified during the sampling period (or carried over and still open) that require remediation (constituting Denominator B)."
+            },
+            {
+              "uuid": "step-ksi-sc-m7-2",
+              "description": "For each vulnerability/patch, determine its assigned severity (e.g., critical, high) and the corresponding maximum remediation timeframe as defined in the risk-informed patching policy."
+            },
+            {
+              "uuid": "step-ksi-sc-m7-3",
+              "description": "Verify the actual date of deployment/remediation for each vulnerability/patch."
+            },
+            {
+              "uuid": "step-ksi-sc-m7-4",
+              "description": "A vulnerability/patch is counted towards Numerator 'A' if it was remediated within its policy-defined timeframe."
+            },
+            {
+              "uuid": "step-ksi-sc-m7-5",
+              "description": "Calculate the metric: Percentage = 100 * (A/B)."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "ksi-sc-m7"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        }
+      ]
+    },
+    "reviewed-controls": {
+      "description": "This assessment plan covers the controls defined in the KSI-SC: Service Configuration Metrics Catalog.",
+      "control-selections": [
+        {
+          "description": "All specific metrics within the KSI-SC aggregate metric.",
+          "include-controls": [
+            {
+              "control-id": "ksi-sc-m1"
+            },
+            {
+              "control-id": "ksi-sc-m2"
+            },
+            {
+              "control-id": "ksi-sc-m3"
+            },
+            {
+              "control-id": "ksi-sc-m4"
+            },
+            {
+              "control-id": "ksi-sc-m5"
+            },
+            {
+              "control-id": "ksi-sc-m6"
+            },
+            {
+              "control-id": "ksi-sc-m7"
+            }
+          ]
+        }
+      ]
+    },
+    "assessment-subjects": [
+      {
+        "type": "component",
+        "description": "The cloud service provider's platform and its constituent services and infrastructure components.",
+        "include-all": {}
+      }
+    ],
+    "assessment-assets": {
+      "components": [
+        {
+          "uuid": "comp-scanner-001",
+          "type": "software",
+          "title": "Network Vulnerability Scanner",
+          "description": "Tool used for scanning network traffic and configurations.",
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "comp-auditor-001",
+          "type": "software",
+          "title": "Configuration Audit Tool",
+          "description": "Tool used for auditing system and component configurations against baselines.",
+          "status": {
+            "state": "operational"
+          }
+        },
+        {
+          "uuid": "comp-kms-auditor-001",
+          "type": "software",
+          "title": "Key Management System Auditor",
+          "description": "Tool or process used to audit key management and rotation practices.",
+          "status": {
+            "state": "operational"
+          }
+        }
+      ],
+      "assessment-platforms": [
+        {
+          "uuid": "platform-assessor-001",
+          "title": "Assessor's Standard Toolkit",
+          "uses-components": [
+            {
+              "component-uuid": "comp-scanner-001"
+            },
+            {
+              "component-uuid": "comp-auditor-001"
+            },
+            {
+              "component-uuid": "comp-kms-auditor-001"
+            }
+          ]
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "uuid": "task-ksi-sc-m1",
+        "type": "action",
+        "title": "Assess KSI-SC-M1: Configuration Hardening and Review",
+        "description": "Assess the adherence to documented hardening baselines and the execution of configuration reviews and impact analyses.",
+        "associated-activities": [
+          {
+            "activity-uuid": "act-ksi-sc-m1",
+            "subjects": [
+              {
+                "type": "component",
+                "include-all": {}
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessor"
+          }
+        ]
+      },
+      {
+        "uuid": "task-ksi-sc-m2",
+        "type": "action",
+        "title": "Assess KSI-SC-M2: Network Traffic Encryption Coverage",
+        "description": "Assess the percentage of network traffic segments protected by approved cryptographic mechanisms.",
+        "associated-activities": [
+          {
+            "activity-uuid": "act-ksi-sc-m2",
+            "subjects": [
+              {
+                "type": "component",
+                "description": "Network infrastructure components and communication pathways.",
+                "include-all": {}
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessor"
+          }
+        ]
+      },
+      {
+        "uuid": "task-ksi-sc-m3",
+        "type": "action",
+        "title": "Assess KSI-SC-M3: Data-at-Rest Encryption for Sensitive Information",
+        "description": "Assess the percentage of data stores and media with sensitive information that are encrypted at rest.",
+        "associated-activities": [
+          {
+            "activity-uuid": "act-ksi-sc-m3",
+            "subjects": [
+              {
+                "type": "inventory-item",
+                "description": "Storage systems, databases, and media containing federal or sensitive information.",
+                "include-all": {}
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessor"
+          }
+        ]
+      },
+      {
+        "uuid": "task-ksi-sc-m4",
+        "type": "action",
+        "title": "Assess KSI-SC-M4: Centralized Configuration Management Adoption",
+        "description": "Assess the percentage of systems and services managed by an approved centralized configuration management system.",
+        "associated-activities": [
+          {
+            "activity-uuid": "act-ksi-sc-m4",
+            "subjects": [
+              {
+                "type": "component",
+                "description": "All production systems and services in scope for centralized configuration management.",
+                "include-all": {}
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessor"
+          }
+        ]
+      },
+      {
+        "uuid": "task-ksi-sc-m5",
+        "type": "action",
+        "title": "Assess KSI-SC-M5: Cryptographic Integrity Enforcement",
+        "description": "Assess the percentage of critical systems and components with active cryptographic integrity verification.",
+        "associated-activities": [
+          {
+            "activity-uuid": "act-ksi-sc-m5",
+            "subjects": [
+              {
+                "type": "component",
+                "description": "Critical systems and software components as identified by risk assessment.",
+                "include-all": {}
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessor"
+          }
+        ]
+      },
+      {
+        "uuid": "task-ksi-sc-m6",
+        "type": "action",
+        "title": "Assess KSI-SC-M6: Key Rotation Compliance",
+        "description": "Assess the percentage of cryptographic keys managed by an approved capability and rotated per policy.",
+        "associated-activities": [
+          {
+            "activity-uuid": "act-ksi-sc-m6",
+            "subjects": [
+              {
+                "type": "component",
+                "description": "Key management systems and cryptographic key inventories.",
+                "include-all": {}
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessor"
+          }
+        ]
+      },
+      {
+        "uuid": "task-ksi-sc-m7",
+        "type": "action",
+        "title": "Assess KSI-SC-M7: Risk-Informed Patch Management Effectiveness",
+        "description": "Assess the percentage of applicable security patches deployed within risk-informed timeframes.",
+        "associated-activities": [
+          {
+            "activity-uuid": "act-ksi-sc-m7",
+            "subjects": [
+              {
+                "type": "component",
+                "description": "All systems and software components subject to patch management.",
+                "include-all": {}
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessor"
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "rsc-ksi-sc-catalog-ref",
+          "title": "KSI-SC: Service Configuration Metrics Catalog with Assessment Measures",
+          "description": "The source catalog defining the metrics being assessed in this plan.",
+          "rlinks": [
+            {
+              "href": "placeholder-ksi-sc-catalog.json",
+              "media-type": "application/oscal.catalog+json"
+            }
+          ]
+        },
+        {
+          "uuid": "rsc-nist-sp800-53r5",
+          "title": "NIST Special Publication 800-53 Revision 5",
+          "description": "Security and Privacy Controls for Information Systems and Organizations.",
+          "rlinks": [
+            {
+              "href": "[https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)",
+              "media-type": "text/html"
+            }
+          ],
+          "citation": {
+            "text": "National Institute of Standards and Technology (2020) Security and Privacy Controls for Information Systems and Organizations. (U.S. Department of Commerce, Washington, D.C.), NIST Special Publication 800-53, Rev. 5."
+          }
+        }
+      ]
+    }
+  }
+}
