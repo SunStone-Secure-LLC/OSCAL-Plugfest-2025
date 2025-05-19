@@ -30,3 +30,17 @@ The main technical approaches reduce to effectiveley be:
   - use the mappings model to map NIST 800-53, SOC2 or others to the KSIs
   - use the component definition groupings to define security "capabilities" and use these in the SSP, optionally mapping the "provided" controls using the mappings
   - add a novel "MEASURE" control-objective (eg add to NIST 800-53A types: INTERVIEW, TEST, EXAMINE) and report that on the Result for the dummy or mapped controls.
+
+## Draft Submission OSCAL Assessment Plans
+
+The OSCAL assessment plans for each of the KSIs is included here for review. This uses the Assessment Plan and "dummy" controls - NOT using the mapping model currently - but to be considered.  
+
+These do not contain system (or even cloud) specific measurements and is meant for the DRAFT submission only.
+Real tests and real metrics will need to be defined for each cloud and possibly specific to each system given a bespoke set of components. As such,
+the component model capabilties are not used - but to be considered for specific systems, eg. SunStone's own Artemis platform submission.
+
+## Colab Notebook
+
+Finally a simple colab notebook is added for those who can use Google Colab.  This allows you to simply upload any of the plan JSON files and 
+will optionally convert it to yaml and then create either a simple mermaid diagram (you can use a local or online viewer) or in-notebook 
+GraphViz visualization.
