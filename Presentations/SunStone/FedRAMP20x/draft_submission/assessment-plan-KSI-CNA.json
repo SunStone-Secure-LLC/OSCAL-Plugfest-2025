@@ -261,7 +261,7 @@
                                 {
                                     "name": "method",
                                     "value": "MEASURE",
-                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                    "ns": "http://sunstonesecure.com/metrics/assessment-method"
                                 }
                             ],
                             "reviewed-controls": {
@@ -284,7 +284,7 @@
                                 {
                                     "name": "method",
                                     "value": "MEASURE",
-                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                    "ns": "http://sunstonesecure.com/metrics/assessment-method"
                                 }
                             ],
                             "reviewed-controls": {
@@ -319,7 +319,7 @@
                                 {
                                     "name": "method",
                                     "value": "MEASURE",
-                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                    "ns": "http://sunstonesecure.com/metrics/assessment-method"
                                 }
                             ],
                             "reviewed-controls": {
@@ -351,7 +351,7 @@
                                 {
                                     "name": "method",
                                     "value": "MEASURE",
-                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                    "ns": "http://sunstonesecure.com/metrics/assessment-method"
                                 }
                             ],
                             "reviewed-controls": {
@@ -383,7 +383,7 @@
                                 {
                                     "name": "method",
                                     "value": "MEASURE",
-                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                    "ns": "http://sunstonesecure.com/metrics/assessment-method"
                                 }
                             ],
                             "reviewed-controls": {
@@ -415,7 +415,7 @@
                                 {
                                     "name": "method",
                                     "value": "MEASURE",
-                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                    "ns": "http://sunstonesecure.com/metrics/assessment-method"
                                 }
                             ],
                             "reviewed-controls": {
@@ -447,7 +447,7 @@
                                 {
                                     "name": "method",
                                     "value": "MEASURE",
-                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                    "ns": "http://sunstonesecure.com/metrics/assessment-method"
                                 }
                             ],
                             "reviewed-controls": {
@@ -479,7 +479,7 @@
                                 {
                                     "name": "method",
                                     "value": "MEASURE",
-                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                    "ns": "http://sunstonesecure.com/metrics/assessment-method"
                                 }
                             ],
                             "reviewed-controls": {
@@ -511,7 +511,7 @@
                                 {
                                     "name": "method",
                                     "value": "MEASURE",
-                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                    "ns": "http://sunstonesecure.com/metrics/assessment-method"
                                 }
                             ],
                             "reviewed-controls": {
@@ -543,7 +543,7 @@
                                 {
                                     "name": "method",
                                     "value": "MEASURE",
-                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                    "ns": "http://sunstonesecure.com/metrics/assessment-method"
                                 },
                                 {
                                     "name": "acceptance-value-success",
@@ -580,7 +580,7 @@
                                 {
                                     "name": "method",
                                     "value": "MEASURE",
-                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                    "ns": "http://sunstonesecure.com/metrics/assessment-method"
                                 }
                             ],
                             "reviewed-controls": {
@@ -604,7 +604,7 @@
                                 {
                                     "name": "method",
                                     "value": "MEASURE",
-                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                    "ns": "http://sunstonesecure.com/metrics/assessment-method"
                                 }
                             ],
                             "reviewed-controls": {
@@ -639,7 +639,7 @@
                                 {
                                     "name": "method",
                                     "value": "MEASURE",
-                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                    "ns": "http://sunstonesecure.com/metrics/assessment-method"
                                 }
                             ],
                             "reviewed-controls": {
@@ -659,7 +659,7 @@
                                 {
                                     "name": "method",
                                     "value": "MEASURE",
-                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                    "ns": "http://sunstonesecure.com/metrics/assessment-method"
                                 }
                             ],
                             "reviewed-controls": {
@@ -691,7 +691,7 @@
                                 {
                                     "name": "method",
                                     "value": "MEASURE",
-                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                    "ns": "http://sunstonesecure.com/metrics/assessment-method"
                                 }
                             ],
                             "reviewed-controls": {
@@ -723,7 +723,7 @@
                                 {
                                     "name": "method",
                                     "value": "MEASURE",
-                                    "ns": "http://cloudsecurityalliance.org/csa/metrics/assessment-method"
+                                    "ns": "http://sunstonesecure.com/metrics/assessment-method"
                                 }
                             ],
                             "reviewed-controls": {
