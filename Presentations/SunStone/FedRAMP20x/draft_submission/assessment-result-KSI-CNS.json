@@ -1,0 +1,967 @@
+{
+  "assessment-results": {
+    "uuid": "6726f839-0b57-4799-8acd-98d3899a75d3",
+    "metadata": {
+      "title": "Assessment Results for Cloud Security Continuous Measurement - KSI-CNA based on AWS LZA Deployment",
+      "last-modified": "2025-05-20T14:30:00.000Z",
+      "version": "1.0.0",
+      "oscal-version": "1.1.3",
+      "roles": [
+        {
+          "id": "assessor",
+          "title": "Assessor"
+        },
+        {
+          "id": "lead-assessor",
+          "title": "Lead Assessor"
+        },
+        {
+          "id": "csp-contact",
+          "title": "Cloud Service Provider Contact"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "p1-assessor-org-uuid",
+          "type": "organization",
+          "name": "Independent Assessor Organization"
+        },
+        {
+          "uuid": "p2-csp-org-uuid",
+          "type": "organization",
+          "name": "Cloud Service Provider Inc. (System Owner - AWS LZA Deployment)"
+        },
+        {
+          "uuid": "p3-lead-assessor-uuid",
+          "type": "person",
+          "name": "Jane Doe, Lead Assessor"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "assessor",
+          "party-uuids": [
+            "p1-assessor-org-uuid"
+          ]
+        },
+        {
+          "role-id": "lead-assessor",
+          "party-uuids": [
+            "p3-lead-assessor-uuid"
+          ]
+        },
+        {
+          "role-id": "csp-contact",
+          "party-uuids": [
+            "p2-csp-org-uuid"
+          ]
+        }
+      ],
+      "remarks": "Assessment results for the system deployed using Landing Zone Accelerator on AWS, focusing on Key Security Indicators for Cloud Native Architecture (KSI-CNA)."
+    },
+    "import-ap": {
+      "href": "#a1b2c3d4-e5f6-7890-1234-567890abcdef",
+      "remarks": "Imports the Cloud Security Continuous Measurement Assessment Plan. UUID refers to 'assessment-plan.uuid' from the source assessment-plan-KSI-CNA.json."
+    },
+    "local-definitions": {
+      "remarks": "No additional local definitions beyond those in the imported assessment plan and individual results were needed for this assessment."
+    },
+    "results": [
+      {
+        "uuid": "res-uuid-ksi-cna-aggregate-01",
+        "title": "Assessment Results for KSI-CNA-AGGREGATE",
+        "description": "This result set details the assessment of the Key Security Indicator for Cloud Native Architecture (KSI-CNA-AGGREGATE), including observations and findings for its constituent CNA metrics. The assessed system is built upon the Landing Zone Accelerator on AWS foundation, which is architected to align with AWS best practices and multiple global compliance frameworks. [cite: 17]",
+        "start": "2025-05-20T09:00:00.000Z",
+        "end": "2025-05-24T17:00:00.000Z",
+        "reviewed-controls": {
+          "description": "Controls reviewed as part of the KSI-CNA-AGGREGATE assessment, referencing the assessment plan.",
+          "control-selections": [
+            {
+              "description": "Aggregate Key Security Indicator for Cloud Native Architecture.",
+              "include-controls": [
+                {
+                  "control-id": "KSI-CNA-AGGREGATE"
+                }
+              ]
+            },
+            {
+              "description": "Constituent Custom Cloud Native Audit (CNA) metrics.",
+              "include-controls": [
+                {
+                  "control-id": "CNA-DOS-M1"
+                },
+                {
+                  "control-id": "CNA-BTC-M1"
+                },
+                {
+                  "control-id": "CNA-ILP-M1"
+                },
+                {
+                  "control-id": "CNA-MSE-M1"
+                },
+                {
+                  "control-id": "CNA-NCE-M1"
+                },
+                {
+                  "control-id": "CNA-CSC-M1"
+                },
+                {
+                  "control-id": "CNA-HAR-M1"
+                }
+              ]
+            }
+          ]
+        },
+        "observations": [
+          {
+            "uuid": "obs-uuid-cna-dos-m1-01",
+            "title": "Observation for CNA-DOS-M1 (Denial of Service Resilience and Control Conformance)",
+            "description": "Reviewed AWS Shield Advanced logs, AWS WAF configurations, and network flow logs for the period May 1-15, 2025. The system, leveraging LZA-provisioned DoS mitigation capabilities[cite: 23, 24], demonstrated 100% DoS resilience against simulated volumetric and protocol-based attack vectors targeting critical API endpoints. 100% of defined DoS protection controls (e.g., rate limits, geo-blocking, known bad IP lists) were found to be configured and active per organizational policy. This aligns with LZA's objective to provide a secure foundation. [cite: 20]",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding-related"
+            ],
+            "origins": [
+              {
+                "actors": [
+                  {
+                    "type": "assessment-platform",
+                    "actor-uuid": "platform-csp-monitoring-uuid"
+                  },
+                  {
+                    "type": "party",
+                    "actor-uuid": "p1-assessor-org-uuid",
+                    "role-id": "assessor"
+                  }
+                ]
+              }
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "inv-item-dos-service-uuid",
+                "type": "inventory-item",
+                "title": "DoS Mitigation Service Instance"
+              },
+              {
+                "subject-uuid": "comp-dos-mitigation-uuid",
+                "type": "component",
+                "title": "DoS Mitigation Service (LZA Component)"
+              }
+            ],
+            "relevant-evidence": [
+              {
+                "href": "evidence://assessment-acme/cna-dos-m1/shield-logs-summary.pdf",
+                "description": "Summary of AWS Shield Advanced logs and WAF rule effectiveness."
+              },
+              {
+                "href": "evidence://assessment-acme/cna-dos-m1/dos-test-report-q2-2025.pdf",
+                "description": "Q2 2025 DoS Simulation Test Report."
+              }
+            ],
+            "collected": "2025-05-21T10:00:00.000Z"
+          },
+          {
+            "uuid": "obs-uuid-cna-btc-m1-01",
+            "title": "Observation for CNA-BTC-M1 (Boundary Traffic Control)",
+            "description": "Examined firewall logs (AWS Network Firewall deployed via LZA [cite: 24]), proxy server logs, and cloud-native network security group (NSG) configurations for May 1-15, 2025. 99.95% of observed traffic flows were compliant with firewall/proxy rules. 100% of external telecommunication service interfaces had established traffic flow policies. LZA's structured network deployment facilitates this. [cite: 24, 155, 156]",
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding-related"
+            ],
+            "origins": [
+              {
+                "actors": [
+                  {
+                    "type": "party",
+                    "actor-uuid": "p1-assessor-org-uuid",
+                    "role-id": "assessor"
+                  }
+                ]
+              }
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "inv-item-firewall-uuid",
+                "type": "inventory-item",
+                "title": "Firewall/Proxy Service Instance"
+              },
+              {
+                "subject-uuid": "comp-firewall-proxy-uuid",
+                "type": "component",
+                "title": "Firewall and Proxy Services (LZA Component)"
+              },
+              {
+                "subject-uuid": "comp-virtual-network-uuid",
+                "type": "component",
+                "title": "Cloud Native Virtual Network (LZA Component)"
+              }
+            ],
+            "relevant-evidence": [
+              {
+                "href": "evidence://assessment-acme/cna-btc-m1/firewall-log-analysis.xlsx",
+                "description": "Analysis of firewall and NSG logs."
+              }
+            ],
+            "collected": "2025-05-21T14:00:00.000Z"
+          },
+          {
+            "uuid": "obs-uuid-cna-ilp-m1-01",
+            "title": "Observation for CNA-ILP-M1 (Immutability and Least Privilege)",
+            "description": "Deployment manifests for containerized applications (on LZA-managed container platform) and IAM policies for serverless functions were reviewed. 100% of production container deployments utilized immutable images from approved registries without runtime modifications. 99% of serverless functions adhered to defined minimal privilege sets. LZA's account structure and IAM guidelines support least privilege. [cite: 254, 296]",
+            "methods": [
+              "EXAMINE",
+              "INTERVIEW"
+            ],
+            "types": [
+              "finding-related"
+            ],
+            "origins": [
+              {
+                "actors": [
+                  {
+                    "type": "party",
+                    "actor-uuid": "p1-assessor-org-uuid",
+                    "role-id": "assessor"
+                  }
+                ]
+              }
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "inv-item-container-platform-uuid",
+                "type": "inventory-item",
+                "title": "Container Platform Instance"
+              },
+              {
+                "subject-uuid": "inv-item-serverless-platform-uuid",
+                "type": "inventory-item",
+                "title": "Serverless Compute Platform Instance"
+              }
+            ],
+            "relevant-evidence": [
+              {
+                "href": "evidence://assessment-acme/cna-ilp-m1/iam-policy-review.docx",
+                "description": "Review notes on IAM policies for serverless functions."
+              }
+            ],
+            "collected": "2025-05-22T11:00:00.000Z"
+          },
+          {
+            "uuid": "obs-uuid-cna-mse-m1-01",
+            "title": "Observation for CNA-MSE-M1 (Microservice Segmentation)",
+            "description": "Network traffic logs from the LZA-managed virtual network and service mesh configurations were analyzed for May 1-15, 2025. 99.8% of observed inter-service network flows adhered to defined segmentation policies, utilizing capabilities like security groups and NACLs configured by LZA. [cite: 24, 160]",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding-related"
+            ],
+            "origins": [
+              {
+                "actors": [
+                  {
+                    "type": "party",
+                    "actor-uuid": "p1-assessor-org-uuid",
+                    "role-id": "assessor"
+                  }
+                ]
+              }
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "comp-virtual-network-uuid",
+                "type": "component",
+                "title": "Cloud Native Virtual Network (LZA Component)"
+              },
+              {
+                "subject-uuid": "comp-container-platform-uuid",
+                "type": "component",
+                "title": "Container Platform (LZA Component)"
+              }
+            ],
+            "relevant-evidence": [
+              {
+                "href": "evidence://assessment-acme/cna-mse-m1/segmentation-test-results.pdf",
+                "description": "Results from network segmentation verification tests."
+              }
+            ],
+            "collected": "2025-05-22T15:00:00.000Z"
+          },
+          {
+            "uuid": "obs-uuid-cna-nce-m1-01",
+            "title": "Observation for CNA-NCE-M1 (Cloud Native Enforcement)",
+            "description": "Cloud provider configurations for virtual networks (VPCs, security groups, NACLs, VPC endpoints) were audited. 100% of network segments/VPCs/subnets had correctly configured cloud-native flow controls as per LZA design patterns and organizational policies. LZA extensively uses these native services for network architecture. [cite: 24, 155, 156, 160, 161, 925, 926]",
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding-related"
+            ],
+            "origins": [
+              {
+                "actors": [
+                  {
+                    "type": "party",
+                    "actor-uuid": "p1-assessor-org-uuid",
+                    "role-id": "assessor"
+                  }
+                ]
+              }
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "comp-virtual-network-uuid",
+                "type": "component",
+                "title": "Cloud Native Virtual Network (LZA Component)"
+              }
+            ],
+            "collected": "2025-05-23T09:30:00.000Z"
+          },
+          {
+            "uuid": "obs-uuid-cna-csc-m1-01",
+            "title": "Observation for CNA-CSC-M1 (Continuous Scanning Coverage)",
+            "description": "Reviewed reports from continuous scanning tools (e.g., AWS Security Hub, Amazon GuardDuty, Amazon Macie, which LZA can configure [cite: 23, 154, 218, 908, 912, 913]) and asset inventories. 98% of defined cloud-native components were scanned within the defined frequency (target: >99%). All (100%) critical/high findings were remediated within policy timeframes (target: >95%). The slight dip in scanning coverage was for newly provisioned, non-critical development resources; an automated onboarding process refinement is underway.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "finding-related"
+            ],
+            "origins": [
+              {
+                "actors": [
+                  {
+                    "type": "party",
+                    "actor-uuid": "p1-assessor-org-uuid",
+                    "role-id": "assessor"
+                  }
+                ]
+              }
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "inv-item-scanning-tools-uuid",
+                "type": "inventory-item",
+                "title": "Continuous Scanning Tools Instance"
+              },
+              {
+                "subject-uuid": "comp-scanning-tools-uuid",
+                "type": "component",
+                "title": "Continuous Scanning Tools (LZA Component)"
+              }
+            ],
+            "relevant-evidence": [
+              {
+                "href": "evidence://assessment-acme/cna-csc-m1/scanning-coverage-report.csv",
+                "description": "Monthly scanning coverage and remediation report."
+              }
+            ],
+            "collected": "2025-05-23T11:30:00.000Z"
+          },
+          {
+            "uuid": "obs-uuid-cna-har-m1-01",
+            "title": "Observation for CNA-HAR-M1 (High Availability and Resilience)",
+            "description": "Reviewed system uptime from AWS CloudWatch for April 2025, and failover test results from Q1 2025 DR drill. Achieved system uptime was 99.995% (target >99.99%). All automated failover tests for critical components (multi-AZ EC2, RDS, LZA-managed Transit Gateways [cite: 24, 156]) completed successfully within defined RTOs. Underlying HA design configurations (N+X redundancy, auto-scaling, data backup via AWS Backup managed by LZA [cite: 111]) were verified as correctly implemented.",
+            "methods": [
+              "EXAMINE",
+              "TEST"
+            ],
+            "types": [
+              "finding-related"
+            ],
+            "origins": [
+              {
+                "actors": [
+                  {
+                    "type": "party",
+                    "actor-uuid": "p1-assessor-org-uuid",
+                    "role-id": "assessor"
+                  }
+                ]
+              }
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "inv-item-ha-infrastructure-uuid",
+                "type": "inventory-item",
+                "title": "High Availability Infrastructure Components"
+              },
+              {
+                "subject-uuid": "comp-ha-infrastructure-uuid",
+                "type": "component",
+                "title": "High Availability Infrastructure (LZA Component)"
+              }
+            ],
+            "relevant-evidence": [
+              {
+                "href": "evidence://assessment-acme/cna-har-m1/uptime-report-april-2025.pdf",
+                "description": "System Uptime Report for April 2025."
+              },
+              {
+                "href": "evidence://assessment-acme/cna-har-m1/dr-test-results-q1-2025.docx",
+                "description": "Q1 2025 Disaster Recovery Test Results."
+              }
+            ],
+            "collected": "2025-05-23T16:00:00.000Z"
+          },
+          {
+            "uuid": "obs-uuid-ksi-cna-calc-01",
+            "title": "Observation for KSI-CNA-AGGREGATE Score Calculation",
+            "description": "Calculated the KSI-CNA-AGGREGATE score based on the normalized (0-100) assessment outcomes of the 7 constituent CNA metrics as per the method in 'activity-measure-ksi-cna-aggregate-uuid'. Scores: CNA-DOS-M1 (100), CNA-BTC-M1 (100), CNA-ILP-M1 (99), CNA-MSE-M1 (99), CNA-NCE-M1 (100), CNA-CSC-M1 (95 - normalized due to 98% coverage vs 99% SLO), CNA-HAR-M1 (100). Arithmetic mean: (100+100+99+99+100+95+100) / 7 = 693 / 7 = 99.00.",
+            "methods": [
+              "EXAMINE"
+            ],
+            "types": [
+              "summary"
+            ],
+            "origins": [
+              {
+                "actors": [
+                  {
+                    "type": "party",
+                    "actor-uuid": "p1-assessor-org-uuid",
+                    "role-id": "assessor"
+                  }
+                ]
+              }
+            ],
+            "subjects": [
+              {
+                "subject-uuid": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+                "type": "resource",
+                "title": "Overall Cloud Native Architecture Security Posture based on Assessment Plan"
+              }
+            ],
+            "collected": "2025-05-24T10:00:00.000Z"
+          }
+        ],
+        "findings": [
+          {
+            "uuid": "find-uuid-cna-dos-m1-01",
+            "title": "Finding for CNA-DOS-M1 (Denial of Service)",
+            "description": "Assessment of CNA-DOS-M1 metric related to Denial of Service resilience and control conformance.",
+            "origins": [
+              {
+                "actors": [
+                  {
+                    "type": "party",
+                    "actor-uuid": "p1-assessor-org-uuid",
+                    "role-id": "assessor"
+                  }
+                ]
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "CNA-DOS-M1",
+              "title": "CNA-DOS-M1 Status",
+              "status": {
+                "state": "satisfied",
+                "reason": "pass",
+                "remarks": "DoS resilience (>99.99%) and control conformance (100%) met SLOs. Score: 100/100."
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "obs-uuid-cna-dos-m1-01"
+              }
+            ]
+          },
+          {
+            "uuid": "find-uuid-cna-btc-m1-01",
+            "title": "Finding for CNA-BTC-M1 (Boundary Traffic Control)",
+            "description": "Assessment of CNA-BTC-M1 metric related to compliant traffic flows and policy-defined interfaces.",
+            "origins": [
+              {
+                "actors": [
+                  {
+                    "type": "party",
+                    "actor-uuid": "p1-assessor-org-uuid",
+                    "role-id": "assessor"
+                  }
+                ]
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "CNA-BTC-M1",
+              "title": "CNA-BTC-M1 Status",
+              "status": {
+                "state": "satisfied",
+                "reason": "pass",
+                "remarks": "Compliant traffic flows (>99.9%) and policy-defined interfaces (100%) met SLOs. Score: 100/100."
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "obs-uuid-cna-btc-m1-01"
+              }
+            ]
+          },
+          {
+            "uuid": "find-uuid-cna-ilp-m1-01",
+            "title": "Finding for CNA-ILP-M1 (Immutability and Least Privilege)",
+            "description": "Assessment of CNA-ILP-M1 metric for immutable deployments and least-privilege functions.",
+            "origins": [
+              {
+                "actors": [
+                  {
+                    "type": "party",
+                    "actor-uuid": "p1-assessor-org-uuid",
+                    "role-id": "assessor"
+                  }
+                ]
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "CNA-ILP-M1",
+              "title": "CNA-ILP-M1 Status",
+              "status": {
+                "state": "satisfied",
+                "reason": "pass",
+                "remarks": "Immutable deployments (100%) and Least-Privilege functions (>98%) met SLOs. Score: 99/100 (based on 99% adherence for least privilege)."
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "obs-uuid-cna-ilp-m1-01"
+              }
+            ]
+          },
+          {
+            "uuid": "find-uuid-cna-mse-m1-01",
+            "title": "Finding for CNA-MSE-M1 (Microservice Segmentation)",
+            "description": "Assessment of CNA-MSE-M1 metric for compliant inter-service communication.",
+            "origins": [
+              {
+                "actors": [
+                  {
+                    "type": "party",
+                    "actor-uuid": "p1-assessor-org-uuid",
+                    "role-id": "assessor"
+                  }
+                ]
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "CNA-MSE-M1",
+              "title": "CNA-MSE-M1 Status",
+              "status": {
+                "state": "satisfied",
+                "reason": "pass",
+                "remarks": "Compliant inter-service communication (>99.5%) met SLO. Score: 99/100 (based on 99.8% actual)."
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "obs-uuid-cna-mse-m1-01"
+              }
+            ]
+          },
+          {
+            "uuid": "find-uuid-cna-nce-m1-01",
+            "title": "Finding for CNA-NCE-M1 (Cloud Native Enforcement)",
+            "description": "Assessment of CNA-NCE-M1 metric for enforced flow control in network segments.",
+            "origins": [
+              {
+                "actors": [
+                  {
+                    "type": "party",
+                    "actor-uuid": "p1-assessor-org-uuid",
+                    "role-id": "assessor"
+                  }
+                ]
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "CNA-NCE-M1",
+              "title": "CNA-NCE-M1 Status",
+              "status": {
+                "state": "satisfied",
+                "reason": "pass",
+                "remarks": "Network segments with enforced flow control (100%) met SLO. Score: 100/100."
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "obs-uuid-cna-nce-m1-01"
+              }
+            ]
+          },
+          {
+            "uuid": "find-uuid-cna-csc-m1-01",
+            "title": "Finding for CNA-CSC-M1 (Continuous Scanning Coverage)",
+            "description": "Assessment of CNA-CSC-M1 metric for component scanning coverage and timely remediation.",
+            "origins": [
+              {
+                "actors": [
+                  {
+                    "type": "party",
+                    "actor-uuid": "p1-assessor-org-uuid",
+                    "role-id": "assessor"
+                  }
+                ]
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "CNA-CSC-M1",
+              "title": "CNA-CSC-M1 Status",
+              "status": {
+                "state": "not-satisfied",
+                "reason": "other",
+                "remarks": "Component scanning coverage (98%) was slightly below SLO (>99%). Critical/High finding remediation (100%) met SLO (>95%). Action plan in place for coverage. Normalized Score: 95/100."
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "obs-uuid-cna-csc-m1-01"
+              }
+            ]
+          },
+          {
+            "uuid": "find-uuid-cna-har-m1-01",
+            "title": "Finding for CNA-HAR-M1 (High Availability and Resilience)",
+            "description": "Assessment of CNA-HAR-M1 metric for system uptime and failover success.",
+            "origins": [
+              {
+                "actors": [
+                  {
+                    "type": "party",
+                    "actor-uuid": "p1-assessor-org-uuid",
+                    "role-id": "assessor"
+                  }
+                ]
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "CNA-HAR-M1",
+              "title": "CNA-HAR-M1 Status",
+              "status": {
+                "state": "satisfied",
+                "reason": "pass",
+                "remarks": "System uptime percentage (target >99.99%) and Failover Test Success Rate (100%) met SLOs. Score: 100/100."
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "obs-uuid-cna-har-m1-01"
+              }
+            ]
+          },
+          {
+            "uuid": "find-uuid-ksi-cna-aggregate-01",
+            "title": "Finding for KSI-CNA-AGGREGATE Overall Score",
+            "description": "The overall Key Security Indicator for Cloud Native Architecture (KSI-CNA-AGGREGATE) score is 99.00 based on the arithmetic mean of 7 constituent CNA metrics.",
+            "origins": [
+              {
+                "actors": [
+                  {
+                    "type": "party",
+                    "actor-uuid": "p1-assessor-org-uuid",
+                    "role-id": "assessor"
+                  }
+                ]
+              }
+            ],
+            "target": {
+              "type": "objective-id",
+              "target-id": "KSI-CNA-AGGREGATE",
+              "title": "KSI-CNA-AGGREGATE Status",
+              "status": {
+                "state": "satisfied",
+                "reason": "pass",
+                "remarks": "Aggregate score of 99.00 exceeds the SLO target of >75. One constituent metric (CNA-CSC-M1) noted with minor deviation under remediation."
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "obs-uuid-ksi-cna-calc-01"
+              }
+            ]
+          }
+        ],
+        "risks": [
+          {
+            "uuid": "risk-uuid-csc-coverage-01",
+            "title": "Minor Gap in Continuous Scanning Coverage for Non-Critical Dev Assets",
+            "description": "A small percentage (2%) of newly provisioned non-critical development components were not scanned within the defined frequency of 24 hours, potentially delaying the identification of low-risk vulnerabilities in these specific assets. This was identified during the CNA-CSC-M1 metric assessment.",
+            "statement": "Slightly increased window of exposure for low-impact vulnerabilities on a small subset of non-critical development resources due to a 2% gap in scanning frequency adherence.",
+            "props": [
+              {
+                "name": "likelihood",
+                "value": "Low"
+              },
+              {
+                "name": "impact",
+                "value": "Low"
+              }
+            ],
+            "status": "remediating",
+            "origins": [
+              {
+                "actors": [
+                  {
+                    "type": "party",
+                    "actor-uuid": "p1-assessor-org-uuid",
+                    "role-id": "assessor"
+                  }
+                ],
+                "related-tasks": [
+                  {
+                    "task-uuid": "task-assess-cna-csc-m1-uuid"
+                  }
+                ]
+              }
+            ],
+            "characterizations": [
+              {
+                "origin": {
+                  "actors": [
+                    {
+                      "type": "party",
+                      "actor-uuid": "p1-assessor-org-uuid",
+                      "role-id": "assessor"
+                    }
+                  ]
+                },
+                "facets": [
+                  {
+                    "name": "likelihood-adjustment",
+                    "system": "http://example.com/risk-assessment-methodology",
+                    "value": "Existing compensating controls (e.g., network isolation of dev environments) reduce overall likelihood."
+                  },
+                  {
+                    "name": "cia-impact-confidentiality",
+                    "system": "http://example.com/risk-assessment-methodology",
+                    "value": "Low"
+                  },
+                  {
+                    "name": "cia-impact-integrity",
+                    "system": "http://example.com/risk-assessment-methodology",
+                    "value": "Low"
+                  },
+                  {
+                    "name": "cia-impact-availability",
+                    "system": "http://example.com/risk-assessment-methodology",
+                    "value": "Low"
+                  }
+                ]
+              }
+            ],
+            "mitigating-factors": [
+              {
+                "uuid": "mf-uuid-csc-01",
+                "description": "Affected development assets are network-isolated and do not process production data. Automated onboarding process for new resources to scanning tools is being refined to close the gap.",
+                "subjects": [
+                  {
+                    "subject-uuid": "inv-item-scanning-tools-uuid",
+                    "type": "inventory-item"
+                  }
+                ]
+              }
+            ],
+            "deadline": "2025-06-15T17:00:00.000Z",
+            "remediations": [
+              {
+                "uuid": "rem-uuid-csc-01",
+                "lifecycle": "planned",
+                "title": "Refine Automated Onboarding for Scanning Tools",
+                "description": "Update scripts and processes to ensure all newly provisioned resources, including non-critical dev assets, are automatically added to the continuous scanning tools' scope within 4 hours of provisioning.",
+                "origins": [
+                  {
+                    "actors": [
+                      {
+                        "type": "party",
+                        "actor-uuid": "p2-csp-org-uuid",
+                        "role-id": "csp-contact"
+                      }
+                    ]
+                  }
+                ],
+                "required-assets": [
+                  {
+                    "uuid": "ra-uuid-csc-devops-01",
+                    "description": "DevOps engineering time to update onboarding scripts.",
+                    "subjects": [
+                      {
+                        "subject-uuid": "user-csp-security-team-uuid",
+                        "type": "user"
+                      }
+                    ]
+                  }
+                ],
+                "tasks": [
+                  {
+                    "uuid": "task-uuid-csc-remediation-01",
+                    "type": "action",
+                    "title": "Update Scanning Onboarding Script",
+                    "description": "Modify and test the automated script for adding new resources to scanning.",
+                    "timing": {
+                      "on-date": {
+                        "date": "2025-06-01T17:00:00.000Z"
+                      }
+                    }
+                  }
+                ]
+              }
+            ],
+            "related-observations": [
+              {
+                "observation-uuid": "obs-uuid-cna-csc-m1-01"
+              }
+            ]
+          }
+        ],
+        "attestations": [
+          {
+            "responsible-parties": [
+              {
+                "role-id": "lead-assessor",
+                "party-uuids": [
+                  "p3-lead-assessor-uuid"
+                ]
+              }
+            ],
+            "parts": [
+              {
+                "uuid": "attest-uuid-overall-01",
+                "name": "assessor-conclusion",
+                "title": "Lead Assessor's Conclusion",
+                "prose": "Based on the assessment activities performed from 2025-05-20 to 2025-05-24, the system deployed using AWS Landing Zone Accelerator exhibits a robust security posture concerning the assessed cloud-native architecture controls. The aggregate Key Security Indicator (KSI-CNA-AGGREGATE) score of 99.00 significantly exceeds the success threshold of 75, indicating effective implementation of security principles. A minor deviation in the continuous scanning coverage for non-critical development assets (CNA-CSC-M1) was identified, and a satisfactory remediation plan is in progress by the Cloud Service Provider. All other assessed CNA metrics met or surpassed their defined Service Level Objectives. The LZA framework appears to provide a solid foundation for meeting these security objectives. [cite: 17, 19, 20, 84, 86, 254]"
+              }
+            ]
+          }
+        ],
+        "assessment-log": {
+          "entries": [
+            {
+              "uuid": "log-entry-uuid-001",
+              "title": "Assessment Kick-off Meeting",
+              "description": "Initial meeting held with Cloud Service Provider Inc. representatives to confirm the assessment scope, schedule, and points of contact as outlined in the assessment plan 'task-assess-dos-protection-sc5-uuid'.",
+              "start": "2025-05-20T09:00:00.000Z",
+              "logged-by": [
+                {
+                  "party-uuid": "p3-lead-assessor-uuid",
+                  "role-id": "lead-assessor"
+                }
+              ],
+              "related-tasks": [
+                {
+                  "task-uuid": "task-assess-dos-protection-sc5-uuid",
+                  "remarks": "Corresponds to initial phase of SC-5 DoS assessment task in plan."
+                }
+              ]
+            },
+            {
+              "uuid": "log-entry-uuid-002",
+              "title": "Evidence Collection for CNA-DOS-M1, CNA-BTC-M1",
+              "description": "Collected and began review of AWS Shield logs, WAF configurations, firewall logs, and NSG settings. This relates to tasks 'task-assess-custom-cna-dos-m1-uuid' and 'task-assess-firewall-proxy-sc7-uuid' (for CNA-BTC-M1 part).",
+              "start": "2025-05-21T09:00:00.000Z",
+              "end": "2025-05-21T17:00:00.000Z",
+              "logged-by": [
+                {
+                  "party-uuid": "p1-assessor-org-uuid",
+                  "role-id": "assessor"
+                }
+              ],
+              "related-tasks": [
+                {
+                  "task-uuid": "task-assess-custom-cna-dos-m1-uuid"
+                },
+                {
+                  "task-uuid": "task-assess-firewall-proxy-sc7-uuid"
+                }
+              ]
+            },
+            {
+              "uuid": "log-entry-uuid-003",
+              "title": "Review of LZA HA Configurations for CNA-HAR-M1",
+              "description": "Examined LZA deployment configurations related to High Availability, including multi-AZ setup, AWS Backup configurations, and auto-scaling group settings as per 'task-assess-cna-har-m1-uuid'. [cite: 111, 156, 157, 227]",
+              "start": "2025-05-23T10:00:00.000Z",
+              "end": "2025-05-23T14:00:00.000Z",
+              "logged-by": [
+                {
+                  "party-uuid": "p1-assessor-org-uuid",
+                  "role-id": "assessor"
+                }
+              ],
+              "related-tasks": [
+                {
+                  "task-uuid": "task-assess-cna-har-m1-uuid"
+                }
+              ]
+            },
+            {
+              "uuid": "log-entry-uuid-004",
+              "title": "Final Results Collation and KSI Calculation",
+              "description": "Collated findings from individual CNA metric assessments and calculated the KSI-CNA-AGGREGATE score as per 'task-assess-ksi-cna-aggregate-uuid'.",
+              "start": "2025-05-24T09:00:00.000Z",
+              "end": "2025-05-24T12:00:00.000Z",
+              "logged-by": [
+                {
+                  "party-uuid": "p3-lead-assessor-uuid",
+                  "role-id": "lead-assessor"
+                }
+              ],
+              "related-tasks": [
+                {
+                  "task-uuid": "task-assess-ksi-cna-aggregate-uuid"
+                }
+              ]
+            },
+            {
+              "uuid": "log-entry-uuid-005",
+              "title": "Assessment Results Report Finalized",
+              "description": "The assessment results report was finalized and prepared for delivery.",
+              "start": "2025-05-24T16:00:00.000Z",
+              "logged-by": [
+                {
+                  "party-uuid": "p3-lead-assessor-uuid",
+                  "role-id": "lead-assessor"
+                }
+              ]
+            }
+          ]
+        },
+        "remarks": "This result reflects the assessment of the KSI-CNA-AGGREGATE control and its constituent metrics. The system's deployment on AWS LZA generally showed strong adherence to the assessed security principles."
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "resource-lza-documentation-ref",
+          "title": "Landing Zone Accelerator on AWS - Implementation Guide (Version from PDF)",
+          "description": "Reference to the LZA documentation used to understand system capabilities.",
+          "rlinks": [
+            {
+              "href": "landing-zone-accelerator-on-aws.pdf",
+              "media-type": "application/pdf"
+            }
+          ]
+        },
+        {
+          "uuid": "resource-assessment-plan-source",
+          "title": "Cloud Security Continuous Measurement Assessment Plan (Source)",
+          "description": "The OSCAL assessment plan that governed this assessment execution.",
+          "rlinks": [
+            {
+              "href": "assessment-plan-KSI-CNA.json",
+              "media-type": "application/oscal.assessment-plan+json"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
