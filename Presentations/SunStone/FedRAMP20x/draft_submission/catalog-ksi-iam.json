@@ -1,0 +1,693 @@
+{
+  "catalog": {
+    "uuid": "aadc2898-59A9-4C00-A09A-946C0D4A78F5",
+    "metadata": {
+      "title": "OSCAL Catalog for KSI-IAM Metrics",
+      "last-modified": "2025-05-19T22:10:00.000Z",
+      "version": "1.0.0",
+      "oscal-version": "1.1.3",
+      "remarks": "This catalog defines metrics to measure the effectiveness of Identity and Access Management (IAM) controls aligned with specified cloud native characteristics for KSI-IAM: A secure cloud service offering will protect user data, control access, and implement zero trust practices.",
+      "links": [
+        {
+          "href": "https://www.fedramp.gov/rfcs/0006/",
+          "rel": "source-requirements",
+          "text": "FedRAMP RFC 0006 - Cloud Native Characteristics for IAM"
+        },
+        {
+          "href": "https://github.com/GSA/fedramp-automation/blob/develop/dist/content/rev5/baselines/yaml/FedRAMP_rev5_LOW-baseline-resolved-profile_catalog.yaml",
+          "rel": "source-nist-controls-profile",
+          "text": "FedRAMP Rev 5 Low Baseline Resolved Catalog"
+        }
+      ],
+      "roles": [
+        {
+          "id": "creator",
+          "title": "Metric Definition Team"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "d801126a-4AB8-4780-99A1-2D18C587F799",
+          "type": "organization",
+          "name": "Example Organization",
+          "short-name": "Org"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "creator",
+          "party-uuids": [
+            "d801126a-4AB8-4780-99A1-2D18C587F799"
+          ]
+        }
+      ]
+    },
+    "groups": [
+      {
+        "id": "ksi-group",
+        "class": "ksi",
+        "title": "Key Security Indicator (KSI) Metrics",
+        "controls": [
+          {
+            "id": "ksi-iam",
+            "class": "ksi",
+            "title": "KSI-IAM: Identity and Access Management Effectiveness",
+            "props": [
+              {
+                "name": "metric-description",
+                "value": "Measures the overall effectiveness of Identity and Access Management (IAM) practices in protecting user data, controlling access, and implementing zero trust principles, based on the adherence to defined cloud native characteristics."
+              },
+              {
+                "name": "metric-aggregation-method",
+                "value": "The KSI-IAM score is calculated as a simple average of the achievement scores (0-100%) of its constituent sub-metrics. Score = (SUM of scores of achieved sub-metrics / Total number of applicable sub-metrics). Each sub-metric is scored based on its own expression and rules. For sub-metrics with multiple aspects, each aspect should meet its SLO for the sub-metric to be considered fully achieved, or a pre-defined weighting for aspects can be used."
+              },
+              {
+                "name": "metric-measurement-frequency",
+                "value": "Quarterly"
+              },
+              {
+                "name": "metric-sampling-period",
+                "value": "Last 90 days"
+              },
+              {
+                "name": "metric-slo-recommendations",
+                "value": "Target >= 90%"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ksi-iam-metric-01-mfa-enforcement",
+                "rel": "aggregates"
+              },
+              {
+                "href": "#ksi-iam-metric-02-strong-passwords",
+                "rel": "aggregates"
+              },
+              {
+                "href": "#ksi-iam-metric-03-secure-api-auth",
+                "rel": "aggregates"
+              },
+              {
+                "href": "#ksi-iam-metric-04-least-privilege-rbac-jit",
+                "rel": "aggregates"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ksi-iam-objective",
+                "name": "objective",
+                "prose": "To provide a quantitative measure of the cloud service's adherence to key Identity and Access Management principles, ensuring robust protection of user data, stringent access control, and alignment with zero trust practices."
+              },
+              {
+                "id": "ksi-iam-assessment-method",
+                "name": "assessment-method",
+                "props": [
+                  {
+                    "name": "method-type",
+                    "value": "CALCULATE"
+                  }
+                ],
+                "prose": "Calculated based on the results of constituent sub-metrics as defined in 'metric-aggregation-method'. Review of aggregation formula and data inputs from sub-metrics."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "iam-sub-metrics-group",
+        "class": "metric-group",
+        "title": "Identity and Access Management Sub-Metrics",
+        "controls": [
+          {
+            "id": "ksi-iam-metric-01-mfa-enforcement",
+            "class": "metric",
+            "title": "Effectiveness of Phishing-Resistant MFA Enforcement",
+            "props": [
+              {
+                "name": "metric-description",
+                "value": "Measures the percentage of user authentications (for privileged and non-privileged accounts) and applicable service/API authentications that are correctly configured and successfully enforce approved phishing-resistant Multi-Factor Authentication (MFA) methods, in alignment with NIST SP 800-63B AAL3 capabilities."
+              },
+              {
+                "name": "metric-expression",
+                "value": "Overall Percentage = 100 * ( (A_priv + A_nonpriv + A_api) / (B_priv + B_nonpriv + B_api) ) if (B_priv + B_nonpriv + B_api) > 0, else 100 (or N/A per policy)."
+              },
+              {
+                "name": "metric-rules",
+                "value": "A_priv = Number of privileged accounts successfully enforcing approved phishing-resistant MFA. B_priv = Total privileged accounts requiring MFA. A_nonpriv = Number of non-privileged accounts successfully enforcing approved phishing-resistant MFA. B_nonpriv = Total non-privileged accounts requiring MFA. A_api = Number of API endpoints successfully enforcing approved phishing-resistant MFA for client/user authentication. B_api = Total API endpoints requiring MFA. 'Approved phishing-resistant MFA methods' are those meeting verifier impersonation resistance, such as FIDO2/WebAuthn or PIV/CAC, consistent with NIST SP 800-63B AAL3. 'Successfully enforcing' includes correct configuration and logged successful MFA events for sampled authentications."
+              },
+              {
+                "name": "metric-measurement-frequency",
+                "value": "Monthly"
+              },
+              {
+                "name": "metric-sampling-period",
+                "value": "Last 30 days"
+              },
+              {
+                "name": "metric-slo-recommendations",
+                "value": ">= 99.9% for privileged accounts; >= 99% for non-privileged accounts and API access."
+              }
+            ],
+            "links": [
+              {
+                "href": "#ia-2",
+                "rel": "related",
+                "text": "NIST SP 800-53 IA-2 Identification and Authentication (Organizational Users)"
+              },
+              {
+                "href": "#ia-2.1",
+                "rel": "related",
+                "text": "NIST SP 800-53 IA-2 (1) Multi-factor Authentication to Privileged Accounts"
+              },
+              {
+                "href": "#ia-2.2",
+                "rel": "related",
+                "text": "NIST SP 800-53 IA-2 (2) Multi-factor Authentication to Non-privileged Accounts"
+              },
+              {
+                "href": "#ia-2.8",
+                "rel": "related",
+                "text": "NIST SP 800-53 IA-2 (8) Access to Accounts — Replay Resistant"
+              },
+              {
+                "href": "#ia-2.12",
+                "rel": "related",
+                "text": "NIST SP 800-53 IA-2 (12) Acceptance of PIV Credentials"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ksi-iam-metric-01-main-objective",
+                "name": "objective",
+                "title": "Overall MFA Enforcement Objective",
+                "prose": "To verify that phishing-resistant multi-factor authentication is consistently enforced for all applicable organizational user accounts (privileged and non-privileged) and service/API access, protecting against unauthorized access due to compromised credentials."
+              },
+              {
+                "id": "ksi-iam-metric-01-implementation-guidance",
+                "name": "implementation-guidance",
+                "prose": "Data collection should involve analyzing authentication logs from identity providers, API gateways, and operating systems. Check configurations of IAM systems to ensure MFA policies are correctly applied. Phishing-resistant methods must, at a minimum, verify the endpoint to which the authenticator is presented (verifier impersonation resistance per NIST SP 800-63B). For IA-2(1) and IA-2(2) FedRAMP requirements, MFA must be phishing-resistant. For IA-2(12) PIV/CAC credentials satisfy phishing-resistance. IA-2(8) replay-resistance is a component of strong MFA."
+              },
+              {
+                "id": "ksi-iam-metric-01-obj-priv-mfa",
+                "name": "assessment-objective",
+                "title": "Phishing-Resistant MFA for Privileged Accounts",
+                "prose": "Determine if multi-factor authentication for access to all privileged accounts is implemented, enforced, and is phishing-resistant, in accordance with IA-2(1).",
+                "parts": [
+                  {
+                    "id": "ksi-iam-metric-01-meth-priv-mfa",
+                    "name": "assessment-method",
+                    "props": [
+                      {
+                        "name": "method-type",
+                        "value": "MEASURE"
+                      }
+                    ],
+                    "prose": "Measure as Percentage_Privileged = 100 * (A_priv / B_priv). A_priv: Number of privileged accounts confirmed via configuration review and sample log analysis to be enforcing approved phishing-resistant MFA. B_priv: Total number of privileged accounts identified in the system inventory. Data Sources: IAM system configurations, authentication logs, privileged account inventory. Verification includes confirming authenticator types meet phishing-resistance criteria (e.g., FIDO2, PIV/CAC) and that MFA cannot be bypassed for these accounts through non-approved methods."
+                  }
+                ]
+              },
+              {
+                "id": "ksi-iam-metric-01-obj-nonpriv-mfa",
+                "name": "assessment-objective",
+                "title": "Phishing-Resistant MFA for Non-Privileged Accounts",
+                "prose": "Determine if multi-factor authentication for access to all non-privileged organizational user accounts is implemented, enforced, and is phishing-resistant, in accordance with IA-2(2).",
+                "parts": [
+                  {
+                    "id": "ksi-iam-metric-01-meth-nonpriv-mfa",
+                    "name": "assessment-method",
+                    "props": [
+                      {
+                        "name": "method-type",
+                        "value": "MEASURE"
+                      }
+                    ],
+                    "prose": "Measure as Percentage_NonPrivileged = 100 * (A_nonpriv / B_nonpriv). A_nonpriv: Number of non-privileged accounts confirmed via configuration review and sample log analysis to be enforcing approved phishing-resistant MFA. B_nonpriv: Total number of active non-privileged accounts requiring MFA. Data Sources: IAM system configurations, authentication logs, user account inventory. Verification includes confirming authenticator types against approved phishing-resistant list."
+                  }
+                ]
+              },
+              {
+                "id": "ksi-iam-metric-01-obj-api-mfa",
+                "name": "assessment-objective",
+                "title": "Phishing-Resistant MFA for API Access",
+                "prose": "Determine if API endpoints enforce phishing-resistant MFA for authenticating clients or users, where applicable (e.g., for APIs granting access to sensitive data/functions or privileged operations).",
+                "parts": [
+                  {
+                    "id": "ksi-iam-metric-01-meth-api-mfa",
+                    "name": "assessment-method",
+                    "props": [
+                      {
+                        "name": "method-type",
+                        "value": "MEASURE"
+                      }
+                    ],
+                    "prose": "Measure as Percentage_API_MFA = 100 * (A_api / B_api). A_api: Number of API endpoints requiring MFA that are confirmed via configuration review and test authentications to enforce approved phishing-resistant MFA for client/user authentication. B_api: Total number of API endpoints identified as requiring MFA. Data Sources: API gateway configurations, OAuth/OIDC server configurations, API documentation, authentication logs for API access. Verification includes examining token issuance policies and client authentication methods for phishing-resistance."
+                  }
+                ]
+              },
+              {
+                "id": "ksi-iam-metric-01-obj-replay-resistance",
+                "name": "assessment-objective",
+                "title": "Replay-Resistant Authentication",
+                "prose": "Determine if authentication mechanisms employed for system access (including all required MFA) are replay-resistant, in accordance with IA-2(8).",
+                "parts": [
+                  {
+                    "id": "ksi-iam-metric-01-meth-replay-resistance",
+                    "name": "assessment-method",
+                    "props": [
+                      {
+                        "name": "method-type",
+                        "value": "MEASURE"
+                      }
+                    ],
+                    "prose": "Measure as Percentage_ReplayResistant = 100 * (A_rr / B_rr). A_rr: Number of authentication protocols/mechanisms reviewed that are confirmed to be replay-resistant (e.g., use nonces, challenges, time-synchronous codes; FIDO2 and PIV are inherently replay-resistant). B_rr: Total number of distinct authentication protocols/mechanisms in use for MFA. Data Sources: System design documents, protocol specifications in use, penetration test results focusing on session hijacking and replay attacks, security assessments of authentication services."
+                  }
+                ]
+              },
+              {
+                "id": "ksi-iam-metric-01-obj-piv-acceptance",
+                "name": "assessment-objective",
+                "title": "PIV Credential Acceptance and Verification",
+                "prose": "Determine if Personal Identity Verification (PIV)-compliant credentials are accepted and electronically verified for system access where required or supported, in accordance with IA-2(12).",
+                "parts": [
+                  {
+                    "id": "ksi-iam-metric-01-meth-piv-acceptance",
+                    "name": "assessment-method",
+                    "props": [
+                      {
+                        "name": "method-type",
+                        "value": "MEASURE"
+                      }
+                    ],
+                    "prose": "Measure as Percentage_PIV_Compliance = 100 * (A_piv / B_piv). A_piv: Number of system access points (logical and physical, if applicable) configured to accept and correctly perform electronic verification of PIV-compliant credentials. B_piv: Total number of system access points where PIV-compliant credential use is mandated or supported. Data Sources: IAM and Physical Access Control System (PACS) configurations, PIV reader deployment records, system documentation specifying PIV requirements, logs of PIV authentication events including verification status (e.g., certificate path validation, CRL/OCSP checks)."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ksi-iam-metric-02-strong-passwords",
+            "class": "metric",
+            "title": "Effectiveness of Strong Password Policy Enforcement",
+            "props": [
+              {
+                "name": "metric-description",
+                "value": "Measures the percentage of systems and applications that enforce password policies fully aligned with current NIST SP 800-63B guidelines, including minimum length, checks against breached password databases, secure storage, and appropriate complexity requirements."
+              },
+              {
+                "name": "metric-expression",
+                "value": "Percentage = 100 * (A / B)"
+              },
+              {
+                "name": "metric-rules",
+                "value": "A = Number of systems and applications assessed that are configured to fully enforce password policies compliant with all applicable NIST SP 800-63B requirements for memorized secrets (including appropriate minimum length, support for all printable ASCII characters and spaces in passphrases, mandatory checks against known compromised passwords, no arbitrary complexity or rotation requirements if not beneficial per NIST guidance, and secure salted hashed storage using FIPS-validated or NSA-approved cryptography). B = Total number of systems and applications assessed that utilize password-based authentication. If B is 0, the metric is 100% (or N/A, per organizational policy)."
+              },
+              {
+                "name": "metric-measurement-frequency",
+                "value": "Quarterly"
+              },
+              {
+                "name": "metric-sampling-period",
+                "value": "Current configuration"
+              },
+              {
+                "name": "metric-slo-recommendations",
+                "value": ">= 99%"
+              }
+            ],
+            "links": [
+              {
+                "href": "#ia-5",
+                "rel": "related",
+                "text": "NIST SP 800-53 IA-5 Authenticator Management"
+              },
+              {
+                "href": "#ia-5.1",
+                "rel": "related",
+                "text": "NIST SP 800-53 IA-5 (1) Password-based Authentication"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ksi-iam-metric-02-main-objective",
+                "name": "objective",
+                "title": "Overall Strong Password Policy Enforcement Objective",
+                "prose": "To verify that all password-based authentication mechanisms employ strong password policies consistent with NIST SP 800-63B, thereby reducing the risk of compromise due to weak, common, or breached passwords."
+              },
+              {
+                "id": "ksi-iam-metric-02-implementation-guidance",
+                "name": "implementation-guidance",
+                "prose": "Password policies should be centrally managed where possible. Verification includes checking password length (minimum 8 characters, allowing longer passphrases), enabling use of all printable ASCII characters and spaces, mandating checks for new and changed passwords against a corpus of known compromised passwords, and ensuring passwords are appropriately salted and hashed using FIPS-validated or NSA-approved key derivation functions (KDFs) as per SC-13. Avoid arbitrary password complexity rules (e.g., requiring specific character types if not enhancing strength beyond length and breached checks) and mandatory periodic password changes if strong compensating controls are present. Ensure default authenticators are changed before first use."
+              },
+              {
+                "id": "ksi-iam-metric-02-obj-strength-init",
+                "name": "assessment-objective",
+                "title": "Authenticator Strength and Initial Content",
+                "prose": "Determine if initial password content meets defined strength requirements (per NIST SP 800-63B) and if default authenticators are changed prior to first use, aligning with IA-5(b,c,e).",
+                "parts": [
+                  {
+                    "id": "ksi-iam-metric-02-meth-strength-init",
+                    "name": "assessment-method",
+                    "props": [
+                      {
+                        "name": "method-type",
+                        "value": "MEASURE"
+                      }
+                    ],
+                    "prose": "For a sample of systems/applications (C_sample), measure Percentage_StrengthInit = 100 * (A_si / C_sample). A_si: Number of sampled systems/applications where password policies enforce NIST SP 800-63B strength (e.g., min length, allowance for passphrases) and default passwords are confirmed changed. Data Sources: Password policy configurations, system build scripts, default account checklists, sample account creation tests."
+                  }
+                ]
+              },
+              {
+                "id": "ksi-iam-metric-02-obj-compromised-check",
+                "name": "assessment-objective",
+                "title": "Compromised Password Checks",
+                "prose": "Determine if new and updated passwords are systematically checked against a maintained list of commonly-used, expected, or known compromised passwords, as per IA-5(1)(a-b).",
+                "parts": [
+                  {
+                    "id": "ksi-iam-metric-02-meth-compromised-check",
+                    "name": "assessment-method",
+                    "props": [
+                      {
+                        "name": "method-type",
+                        "value": "MEASURE"
+                      }
+                    ],
+                    "prose": "Measure as Percentage_CompCheck = 100 * (A_cc / B_cc). A_cc: Number of systems/applications employing an active mechanism to check passwords against a current breached password corpus. B_cc: Total number of systems/applications requiring password authentication. Data Sources: System configurations for password validation, documentation of breached password checking service/tool, test attempts to set known breached passwords."
+                  }
+                ]
+              },
+              {
+                "id": "ksi-iam-metric-02-obj-secure-storage-transmit",
+                "name": "assessment-objective",
+                "title": "Secure Password Storage and Transmission",
+                "prose": "Determine if passwords are only transmitted over cryptographically protected channels and are stored using an approved salted key derivation function (e.g., keyed hash), as per IA-5(1)(c-d) and SC-13.",
+                "parts": [
+                  {
+                    "id": "ksi-iam-metric-02-meth-secure-storage-transmit",
+                    "name": "assessment-method",
+                    "props": [
+                      {
+                        "name": "method-type",
+                        "value": "MEASURE"
+                      }
+                    ],
+                    "prose": "Measure as Percentage_SecureStoreTransmit = 100 * (A_st / B_st). A_st: Number of systems/applications confirmed to use TLS for password transmission during authentication/change and employ FIPS-validated or NSA-approved salted hashing for storage. B_st: Total systems/applications handling passwords. Data Sources: Network traffic analysis (sample), password database/storage configurations, cryptographic module validation certificates (for hashing algorithms)."
+                  }
+                ]
+              },
+              {
+                "id": "ksi-iam-metric-02-obj-composition-complexity",
+                "name": "assessment-objective",
+                "title": "Password Composition and Complexity Alignment",
+                "prose": "Determine if password policy allows user selection of long passwords/passphrases (including spaces and all printable ASCII) and enforces composition/complexity rules (e.g., minimum length) consistent with NIST SP 800-63B, avoiding overly restrictive or counterproductive rules, as per IA-5(1)(f,h) and FedRAMP guidance.",
+                "parts": [
+                  {
+                    "id": "ksi-iam-metric-02-meth-composition-complexity",
+                    "name": "assessment-method",
+                    "props": [
+                      {
+                        "name": "method-type",
+                        "value": "MEASURE"
+                      }
+                    ],
+                    "prose": "Measure as Percentage_Composition = 100 * (A_comp / B_comp). A_comp: Number of systems/applications with password composition policies aligned with NIST SP 800-63B (e.g., supporting long passphrases, min length of 14 if MFA not possible, allowing all printable ASCII, not enforcing arbitrary character-type rules). B_comp: Total systems/applications with password auth. Data Sources: Password policy configurations, system documentation, user interface testing for password creation."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ksi-iam-metric-03-secure-api-auth",
+            "class": "metric",
+            "title": "Adherence to Secure API Authentication and Authorization Standards",
+            "props": [
+              {
+                "name": "metric-description",
+                "value": "Measures the percentage of Application Programming Interfaces (APIs) that utilize approved, industry-standard secure authentication protocols (e.g., OAuth 2.0, OpenID Connect) for identifying clients/users, and subsequently enforce appropriate authorization for access to resources. All API traffic must be encrypted in transit."
+              },
+              {
+                "name": "metric-expression",
+                "value": "Percentage = 100 * (A / B)"
+              },
+              {
+                "name": "metric-rules",
+                "value": "A = Number of APIs (internal and external) confirmed to meet all defined assessment objectives for secure authentication (using standard protocols like OAuth 2.0/OIDC with best practices), authorization enforcement, and data-in-transit encryption (TLS 1.2+). B = Total number of APIs inventoried that require authentication and authorization. If B is 0, the metric is 100% (or N/A, per organizational policy)."
+              },
+              {
+                "name": "metric-measurement-frequency",
+                "value": "Quarterly"
+              },
+              {
+                "name": "metric-sampling-period",
+                "value": "Current configuration and activity logs from last 30 days"
+              },
+              {
+                "name": "metric-slo-recommendations",
+                "value": ">= 100% for external-facing APIs; >= 98% for internal APIs."
+              }
+            ],
+            "links": [
+              {
+                "href": "#ia-2",
+                "rel": "related",
+                "text": "NIST SP 800-53 IA-2 Identification and Authentication (Organizational Users)"
+              },
+              {
+                "href": "#ia-8",
+                "rel": "related",
+                "text": "NIST SP 800-53 IA-8 Identification and Authentication (Non-organizational Users)"
+              },
+              {
+                "href": "#ac-3",
+                "rel": "related",
+                "text": "NIST SP 800-53 AC-3 Access Enforcement"
+              },
+              {
+                "href": "#sc-8",
+                "rel": "related",
+                "text": "NIST SP 800-53 SC-8 Transmission Confidentiality and Integrity"
+              },
+              {
+                "href": "#sc-13",
+                "rel": "related",
+                "text": "NIST SP 800-53 SC-13 Cryptographic Protection"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ksi-iam-metric-03-main-objective",
+                "name": "objective",
+                "title": "Overall Secure API Authentication and Authorization Objective",
+                "prose": "To ensure all APIs robustly authenticate the calling entity (user or service) using industry-standard secure protocols, enforce authorizations based on the authenticated identity to protect API-accessible resources, and encrypt all API communications in transit."
+              },
+              {
+                "id": "ksi-iam-metric-03-implementation-guidance",
+                "name": "implementation-guidance",
+                "prose": "Emphasize OAuth 2.0 (with appropriate grant types like Authorization Code with PKCE for public/user-interactive clients, and Client Credentials for machine-to-machine communication) and OpenID Connect for user identity federation. Ensure rigorous token validation practices (signatures, expiration, issuer, audience) are implemented. Authorization should leverage scopes and claims within tokens. All API endpoints must enforce current recommended versions of TLS (e.g., TLS 1.2 or higher). API gateways can be leveraged for centralized policy enforcement."
+              },
+              {
+                "id": "ksi-iam-metric-03-obj-protocol-use",
+                "name": "assessment-objective",
+                "title": "Use of Approved Secure Authentication Protocols",
+                "prose": "Determine if APIs utilize approved, industry-standard secure authentication protocols (e.g., OAuth 2.0, OpenID Connect) for identifying and authenticating organizational and non-organizational clients/users.",
+                "parts": [
+                  {
+                    "id": "ksi-iam-metric-03-meth-protocol-use",
+                    "name": "assessment-method",
+                    "props": [
+                      {
+                        "name": "method-type",
+                        "value": "MEASURE"
+                      }
+                    ],
+                    "prose": "Measure as Percentage_ProtocolAdherence = 100 * (A_proto / B_proto). A_proto: Number of APIs confirmed to use approved protocols (e.g., OAuth 2.0, OIDC) with appropriate grant types and client profiles. B_proto: Total number of APIs requiring authentication. Data Sources: API inventory, API design specifications, API gateway configurations, OAuth/OIDC IdP configurations."
+                  }
+                ]
+              },
+              {
+                "id": "ksi-iam-metric-03-obj-token-security",
+                "name": "assessment-objective",
+                "title": "Secure Token Management and Validation",
+                "prose": "Determine if authentication tokens (e.g., JWTs) are securely generated, managed, transmitted, and validated according to best practices (including signature validation, expiration, audience, issuer checks).",
+                "parts": [
+                  {
+                    "id": "ksi-iam-metric-03-meth-token-security",
+                    "name": "assessment-method",
+                    "props": [
+                      {
+                        "name": "method-type",
+                        "value": "MEASURE"
+                      }
+                    ],
+                    "prose": "Measure as Percentage_TokenSecure = 100 * (A_token / B_token). A_token: Number of APIs/authentication flows where tokens are confirmed to be securely handled and validated (e.g., checking for proper JWT validation, secure storage/handling of client secrets, use of PKCE). B_token: Total number of APIs/authentication flows utilizing tokens. Data Sources: API implementation code review (sample), security testing reports (pentests), IdP and API gateway configurations related to token issuance and validation."
+                  }
+                ]
+              },
+              {
+                "id": "ksi-iam-metric-03-obj-authorization",
+                "name": "assessment-objective",
+                "title": "Effective Authorization Post-Authentication",
+                "prose": "Determine if, after successful authentication, APIs enforce approved authorizations for logical access to resources, based on validated identity, roles, and/or scopes, in accordance with AC-3.",
+                "parts": [
+                  {
+                    "id": "ksi-iam-metric-03-meth-authorization",
+                    "name": "assessment-method",
+                    "props": [
+                      {
+                        "name": "method-type",
+                        "value": "MEASURE"
+                      }
+                    ],
+                    "prose": "Measure as Percentage_AuthZEffective = 100 * (A_authz / B_authz). A_authz: Number of API endpoints where authorization mechanisms (e.g., scope checking, role-based checks based on token claims) are correctly configured and enforced. B_authz: Total number of API endpoints requiring authorization. Data Sources: API gateway configurations, application-level authorization logic review (sample), access control policy documentation, test cases attempting unauthorized resource access with valid tokens."
+                  }
+                ]
+              },
+              {
+                "id": "ksi-iam-metric-03-obj-tls-encryption",
+                "name": "assessment-objective",
+                "title": "Encryption of API Traffic in Transit",
+                "prose": "Determine if all API communications, including the transmission of authentication credentials and data, are protected using strong encryption (e.g., TLS 1.2 or higher), in accordance with SC-8 and SC-13.",
+                "parts": [
+                  {
+                    "id": "ksi-iam-metric-03-meth-tls-encryption",
+                    "name": "assessment-method",
+                    "props": [
+                      {
+                        "name": "method-type",
+                        "value": "MEASURE"
+                      }
+                    ],
+                    "prose": "Measure as Percentage_TLS = 100 * (A_tls / B_tls). A_tls: Number of API endpoints confirmed to enforce a current recommended version of TLS for all communications. B_tls: Total number of API endpoints. Data Sources: Network scanning tool results (e.g., SSL Labs, Qualys), API gateway and web server configurations, load balancer configurations."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ksi-iam-metric-04-least-privilege-rbac-jit",
+            "class": "metric",
+            "title": "Implementation of Least Privilege, RBAC, and Just-in-Time (JIT) Access",
+            "props": [
+              {
+                "name": "metric-description",
+                "value": "Measures the effectiveness of implementing a security model based on the principle of least privilege, role-based access control (RBAC), and the use of just-in-time (JIT) access for privileged operations. It assesses RBAC adoption, the thoroughness of least privilege reviews, and the deployment of JIT mechanisms for critical functions."
+              },
+              {
+                "name": "metric-expression",
+                "value": "Composite Metric reported as: Aspect1_RBAC_Coverage (%); Aspect2_LeastPrivilege_Review_Compliance (%); Aspect3_JIT_Adoption_for_Privileged_Ops (%). Overall assessment considers all three aspects based on organizational risk tolerance."
+              },
+              {
+                "name": "metric-rules",
+                "value": "Aspect1_RBAC_Coverage = 100 * (A / B), where A is the number of active user accounts managed by approved RBAC roles, and B is the total number of active user accounts. Aspect2_LeastPrivilege_Review_Compliance = 100 * (C / D), where C is the number of privileged accounts/roles that successfully passed a least privilege review in the sampling period, and D is the total number of privileged accounts/roles due for review. Aspect3_JIT_Adoption_for_Privileged_Ops = 100 * (E / F), where E is the number of critical privileged operations/access pathways utilizing JIT mechanisms, and F is the total number of critical privileged operations/access pathways identified as candidates for JIT. If any denominator is 0, that aspect is N/A or 100% per policy."
+              },
+              {
+                "name": "metric-measurement-frequency",
+                "value": "Quarterly"
+              },
+              {
+                "name": "metric-sampling-period",
+                "value": "Last 90 days"
+              },
+              {
+                "name": "metric-slo-recommendations",
+                "value": "RBAC Coverage >= 98%; Least Privilege Review Compliance >= 95%; JIT Adoption for Critical Privileged Operations >= 90% (striving for 100%)."
+              }
+            ],
+            "links": [
+              {
+                "href": "#ac-2",
+                "rel": "related",
+                "text": "NIST SP 800-53 AC-2 Account Management"
+              },
+              {
+                "href": "#ac-3",
+                "rel": "related",
+                "text": "NIST SP 800-53 AC-3 Access Enforcement"
+              },
+              {
+                "href": "#ps-2",
+                "rel": "related",
+                "text": "NIST SP 800-53 PS-2 Position Risk Designation"
+              },
+              {
+                "href": "#ps-7",
+                "rel": "related",
+                "text": "NIST SP 800-53 PS-7 External Personnel Security"
+              }
+            ],
+            "parts": [
+              {
+                "id": "ksi-iam-metric-04-main-objective",
+                "name": "objective",
+                "title": "Overall Least Privilege, RBAC, and JIT Implementation Objective",
+                "prose": "To verify that the system consistently applies the principles of least privilege and role-based access control (RBAC) for all user accounts and employs just-in-time (JIT) access mechanisms for privileged operations to minimize standing privileges and reduce the potential impact of compromised accounts."
+              },
+              {
+                "id": "ksi-iam-metric-04-implementation-guidance",
+                "name": "implementation-guidance",
+                "prose": "Role engineering should define roles based on distinct job functions and necessary system permissions. Least privilege reviews should be conducted periodically (e.g., quarterly or annually) and upon role changes or system changes, ensuring users only have permissions essential to their current responsibilities. Identify all privileged accounts and operations suitable for JIT access (e.g., administrative access to critical infrastructure, sensitive data modifications). JIT systems should log requests, approvals, and actual access periods. These principles should extend to external personnel access where applicable."
+              },
+              {
+                "id": "ksi-iam-metric-04-obj-rbac-coverage",
+                "name": "assessment-objective",
+                "title": "RBAC Coverage and Effectiveness",
+                "prose": "Determine the extent to which user access is governed by well-defined and assigned roles, and that accounts are managed in accordance with these roles, per AC-2.",
+                "parts": [
+                  {
+                    "id": "ksi-iam-metric-04-meth-rbac-coverage",
+                    "name": "assessment-method",
+                    "props": [
+                      {
+                        "name": "method-type",
+                        "value": "MEASURE"
+                      }
+                    ],
+                    "prose": "Measure as Percentage_RBAC_Coverage = 100 * (A_rbac / B_rbac). A_rbac: Number of active user accounts (including organizational and external, as applicable per PS-7) whose access permissions are solely determined by assignment to one or more approved, documented roles. B_rbac: Total number of active user accounts. Data Sources: IAM system, role definition documents, user-to-role mapping records, account management procedures (AC-2)."
+                  }
+                ]
+              },
+              {
+                "id": "ksi-iam-metric-04-obj-least-privilege",
+                "name": "assessment-objective",
+                "title": "Least Privilege Adherence and Review",
+                "prose": "Determine if defined roles and individual account privileges (especially for privileged accounts) adhere to the principle of least privilege and are periodically reviewed and validated, per AC-2, AC-3, and PS-2.",
+                "parts": [
+                  {
+                    "id": "ksi-iam-metric-04-meth-least-privilege",
+                    "name": "assessment-method",
+                    "props": [
+                      {
+                        "name": "method-type",
+                        "value": "MEASURE"
+                      }
+                    ],
+                    "prose": "Measure as Percentage_LP_Review_Compliance = 100 * (C_lp / D_lp). C_lp: Number of privileged accounts and roles that have undergone a documented least privilege review within the sampling period, with findings addressed (privileges validated or adjusted). D_lp: Total number of privileged accounts and roles scheduled for review in the sampling period. Data Sources: Access review policies and schedules, completed access review reports, IAM system privilege configurations, position risk designations (PS-2) used to inform privilege levels. Verify that access enforcement (AC-3) aligns with these reviewed privileges."
+                  }
+                ]
+              },
+              {
+                "id": "ksi-iam-metric-04-obj-jit-adoption",
+                "name": "assessment-objective",
+                "title": "Just-in-Time (JIT) Access Adoption for Privileged Operations",
+                "prose": "Determine the extent to which Just-in-Time (JIT) access mechanisms are implemented and used for pre-defined critical or privileged administrative operations to minimize standing high-level permissions.",
+                "parts": [
+                  {
+                    "id": "ksi-iam-metric-04-meth-jit-adoption",
+                    "name": "assessment-method",
+                    "props": [
+                      {
+                        "name": "method-type",
+                        "value": "MEASURE"
+                      }
+                    ],
+                    "prose": "Measure as Percentage_JIT_Adoption = 100 * (E_jit / F_jit). E_jit: Number of defined critical/privileged administrative operations or access pathways where JIT mechanisms (requiring explicit, time-bound activation) are implemented and demonstrably utilized. F_jit: Total number of defined critical/privileged administrative operations or access pathways identified as candidates for JIT implementation. Data Sources: Inventory of privileged operations, JIT system configurations, JIT request and approval logs, audit trails of privileged sessions initiated via JIT."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
