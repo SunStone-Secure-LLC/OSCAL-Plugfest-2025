@@ -1,0 +1,2059 @@
+{
+  "assessment-plan": {
+    "uuid": "a1b2c3d4-1234-5678-90ab-cdef12345678",
+    "metadata": {
+      "title": "OSCAL Assessment Plan for Key Security Indicator (KSI-MLA) Metrics Controls",
+      "last-modified": "2025-05-20T04:36:00Z",
+      "version": "1.0.0",
+      "oscal-version": "1.1.3",
+      "roles": [
+        {
+          "id": "assessor",
+          "title": "Assessor"
+        },
+        {
+          "id": "csp-contact",
+          "title": "Cloud Service Provider Contact"
+        },
+        {
+          "id": "assessment-lead",
+          "title": "Assessment Lead"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "p1a2b3c4-party-uuid-0001",
+          "type": "organization",
+          "name": "Example Assessor Organization",
+          "email-addresses": [
+            "contact@assessor.example.com"
+          ],
+          "addresses": [
+            {
+              "addr-lines": [
+                "123 Assessment Drive"
+              ],
+              "city": "Assessville",
+              "state": "AS",
+              "postal-code": "12345"
+            }
+          ]
+        },
+        {
+          "uuid": "p2a2b3c4-party-uuid-0002",
+          "type": "organization",
+          "name": "Example Cloud Service Provider",
+          "email-addresses": [
+            "contact@csp.example.com"
+          ],
+          "addresses": [
+            {
+              "addr-lines": [
+                "456 Cloud Way"
+              ],
+              "city": "Serviceton",
+              "state": "SV",
+              "postal-code": "67890"
+            }
+          ]
+        },
+        {
+          "uuid": "p3a2b3c4-party-uuid-0003",
+          "type": "person",
+          "name": "Dr. Eval U. Ator",
+          "short-name": "evaluator",
+          "member-of-organizations": [
+            "p1a2b3c4-party-uuid-0001"
+          ]
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "assessment-lead",
+          "party-uuids": [
+            "p3a2b3c4-party-uuid-0003"
+          ]
+        },
+        {
+          "role-id": "assessor",
+          "party-uuids": [
+            "p1a2b3c4-party-uuid-0001"
+          ]
+        },
+        {
+          "role-id": "csp-contact",
+          "party-uuids": [
+            "p2a2b3c4-party-uuid-0002"
+          ]
+        }
+      ],
+      "remarks": "This assessment plan outlines the automated activities and tasks for assessing the Key Security Indicator for Monitoring, Logging, and Auditing (KSI-MLA) and its individual metric controls. It focuses on examining MEASURE metric data and testing its accuracy, precision, repeatability, reliability, and explainability."
+    },
+    "import-ssp": {
+      "href": "#ssp-placeholder-uuid",
+      "remarks": "A placeholder link to the System Security Plan (SSP) of the cloud native system under assessment. The actual SSP UUID will be provided later."
+    },
+    "local-definitions": {
+      "activities": [
+        {
+          "uuid": "act_ksi-mla-001_examine_uuid",
+          "title": "Examine KSI-MLA-001 Aggregation Methodology and Data Sources",
+          "description": "Examine the defined aggregation methodology for KSI-MLA-001, the normalization process for sub-metric scores, and the availability and definition of the constituent sub-metric results from 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "examine"
+            },
+            {
+              "name": "target-control-id",
+              "value": "ksi-mla-001"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_ksi-mla-001_examine_step1_uuid",
+              "description": "Review the documented aggregation methodology for KSI-MLA-001 (expected: weighted average of normalized sub-metric scores) as specified in the 'aggregation-methodology' part (uuid: b2c3d4e5-f6a7-8901-2345-67890abcdef0) of control ksi-mla-001 in 'catalog-ksi-mla.json'."
+            },
+            {
+              "uuid": "act_ksi-mla-001_examine_step2_uuid",
+              "description": "Verify the documented procedure for normalizing sub-metric scores (e.g., to a 0-100 scale) before aggregation, as referenced in 'catalog-ksi-mla.json'."
+            },
+            {
+              "uuid": "act_ksi-mla-001_examine_step3_uuid",
+              "description": "Confirm that a process exists for defining or assigning weights for each constituent sub-metric (metric-mla-001-01 through metric-mla-001-06), even if specific weights are to be determined by the implementing organization."
+            },
+            {
+              "uuid": "act_ksi-mla-001_examine_step4_uuid",
+              "description": "Identify the sources and collection methods for the measurement results of each constituent sub-metric (metric-mla-001-01 through metric-mla-001-06) as defined in their respective 'MEASURE' assessment methods in 'catalog-ksi-mla.json'."
+            },
+            {
+              "uuid": "act_ksi-mla-001_examine_step5_uuid",
+              "description": "Verify documentation of the data sources (sub-metrics), normalization process, and aggregation formula, ensuring they are clearly defined to support explainability of the KSI score."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "ksi-mla-001"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_ksi-mla-001_test_uuid",
+          "title": "Test KSI-MLA-001 Aggregation Calculation and Result",
+          "description": "Test the accuracy, precision, repeatability, reliability, and explainability of the KSI-MLA-001 aggregated score calculation as defined in 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "test"
+            },
+            {
+              "name": "target-control-id",
+              "value": "ksi-mla-001"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_ksi-mla-001_test_step1_uuid",
+              "description": "Obtain a sample set of reported normalized scores for each constituent sub-metric (metric-mla-001-01 through metric-mla-001-06)."
+            },
+            {
+              "uuid": "act_ksi-mla-001_test_step2_uuid",
+              "description": "Using example or placeholder weights (if actual weights are not yet defined by the implementer), manually or via a trusted calculation tool, compute the aggregate KSI score based on the defined weighted average formula."
+            },
+            {
+              "uuid": "act_ksi-mla-001_test_step3_uuid",
+              "description": "If an automated KSI calculation mechanism exists, compare the independently computed score with the score reported by the mechanism to test accuracy."
+            },
+            {
+              "uuid": "act_ksi-mla-001_test_step4_uuid",
+              "description": "Test repeatability: Ensure that given the same set of sub-metric scores and weights, the aggregation calculation (manual or automated) consistently produces the same KSI score."
+            },
+            {
+              "uuid": "act_ksi-mla-001_test_step5_uuid",
+              "description": "Test reliability: Assess if the aggregation process documentation is robust and if the inputs (normalized sub-metric scores) are consistently derived. (Detailed system-specific reliability testing may depend on implementation)."
+            },
+            {
+              "uuid": "act_ksi-mla-001_test_step6_uuid",
+              "description": "Test explainability: Verify that the calculation steps, normalization method for sub-metrics, and application of weights are clearly documented, traceable, and understandable. The data sources (sub-metrics) and transformation steps (normalization, weighting, averaging) should be logged or documented."
+            },
+            {
+              "uuid": "act_ksi-mla-001_test_step7_uuid",
+              "description": "Consider edge cases: Document the expected behavior if one or more sub-metric scores are unavailable (null). Does the methodology specify how to handle this (e.g., treat as zero, exclude from average, re-distribute weights)? What is the output if all sub-metrics score 0 or 100?"
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "ksi-mla-001"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-01_obj1_examine_uuid",
+          "title": "Examine Data Sources for SIEM Centralized Logging and Alerting Metric (MLA-001-01 Obj1)",
+          "description": "Examine the inventory of critical log sources, SIEM integration status, and alert configuration definitions used to calculate metric MLA-001-01 Objective 1, as defined in the 'assessment-method' part (uuid: 3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f) of control metric-mla-001-01 in 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "examine"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-01"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-01_obj1_examine_step1_uuid",
+              "description": "Review the maintained inventory of critical log sources, which forms the basis for variable 'B' (Total number of critical log sources identified)."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj1_examine_step2_uuid",
+              "description": "Inspect documented criteria defining 'integrated into the SIEM' and 'configured with security alerts' for critical log sources."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj1_examine_step3_uuid",
+              "description": "Examine SIEM configuration, system documentation, or operational reports to identify which log sources are claimed to be integrated and configured with alerts, forming the basis for variable 'A' (Number of critical log sources integrated and configured with security alerts)."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj1_examine_step4_uuid",
+              "description": "Verify that the processes for counting 'A' and 'B' are documented to ensure explainability."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-01"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-01_obj1_test_uuid",
+          "title": "Test Accuracy and Reliability of SIEM Centralized Logging and Alerting Metric (MLA-001-01 Obj1)",
+          "description": "Test the accuracy, precision, repeatability, reliability, and explainability of the reported metric for SIEM centralized logging and alert generation (MLA-001-01 Objective 1) based on 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "test"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-01"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-01_obj1_test_step1_uuid",
+              "description": "Select a representative sample of identified critical log sources from the inventory (variable 'B' population)."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj1_test_step2_uuid",
+              "description": "For each sampled source, verify its actual integration status in the SIEM and its alert configuration against the defined criteria to validate its contribution to variable 'A'."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj1_test_step3_uuid",
+              "description": "Recalculate variables 'A' and 'B' based on the sample findings. Compare these with the reported values to assess accuracy and precision."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj1_test_step4_uuid",
+              "description": "Verify the calculation of the metric: Percentage = $100 * (A/B)$."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj1_test_step5_uuid",
+              "description": "Assess handling of the B=0 case: If B=0, the metric should be N/A. Note if a minimum set of critical log sources is defined and whether this minimum is met, as per Rule 3 in the MEASURE method prose for MLA-001-01 Objective 1."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj1_test_step6_uuid",
+              "description": "Test repeatability: Determine if re-querying source data for 'A' and 'B' (if performed on a static data snapshot or through consistent query logic) yields consistent counts."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj1_test_step7_uuid",
+              "description": "Test reliability: Assess if the counting method for 'A' and 'B' and the criteria for 'configured with security alerts' are robust and consistently applied."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj1_test_step8_uuid",
+              "description": "Test explainability: Verify that the sources for determining 'A' and 'B' are clearly logged/documented and the calculation is transparent."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-01"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-01_obj2_examine_uuid",
+          "title": "Examine Data Sources for Log Tamper-Resistance Metric (MLA-001-01 Obj2)",
+          "description": "Examine the inventory of critical log storage repositories, definitions of tamper-resistance mechanisms, and validation procedures/records used for metric MLA-001-01 Objective 2, as defined in the 'assessment-method' part (uuid: 5e6f7a8b-9c0d-1e2f-3a4b5c6d7e8f9g0h) of control metric-mla-001-01 in 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "examine"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-01"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9g"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-01_obj2_examine_step1_uuid",
+              "description": "Review the maintained inventory of critical log storage repositories utilized by or for the SIEM (basis for variable 'Y')."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj2_examine_step2_uuid",
+              "description": "Inspect organizational policies defining acceptable tamper-resistance mechanisms (e.g., write-once storage, cryptographic hashing/chaining, integrity validation checks, access controls) and associated validation procedures and frequency, referencing NIST SP 800-92 if applicable."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj2_examine_step3_uuid",
+              "description": "Examine records and evidence for each critical log storage repository to determine if tamper-resistance mechanisms are implemented AND if these mechanisms are periodically tested and validated for effectiveness (basis for variable 'X')."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj2_examine_step4_uuid",
+              "description": "Verify that the processes for counting 'X' and 'Y' and the criteria for 'validated tamper-resistance' are documented to ensure explainability."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-01"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-01_obj2_test_uuid",
+          "title": "Test Accuracy and Reliability of Log Tamper-Resistance Metric (MLA-001-01 Obj2)",
+          "description": "Test the accuracy, precision, repeatability, reliability, and explainability of the reported metric for log tamper-resistance (MLA-001-01 Objective 2) based on 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "test"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-01"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9g"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-01_obj2_test_step1_uuid",
+              "description": "Select a representative sample of identified critical log storage repositories (variable 'Y' population)."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj2_test_step2_uuid",
+              "description": "For each sampled repository, verify the implementation of defined tamper-resistance mechanisms and review evidence (e.g., reports, logs) of periodic validation tests and their success to validate its contribution to variable 'X'."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj2_test_step3_uuid",
+              "description": "Recalculate variables 'X' and 'Y' based on the sample findings. Compare these with the reported values to assess accuracy and precision."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj2_test_step4_uuid",
+              "description": "Verify the calculation of the metric: Percentage = $100 * (X/Y)$."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj2_test_step5_uuid",
+              "description": "Assess handling of the Y=0 case: If Y=0, the metric should be N/A. Note if a minimum functional repository is assumed, as per Rule in the MEASURE method prose for MLA-001-01 Objective 2."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj2_test_step6_uuid",
+              "description": "Test repeatability: Determine if re-evaluation of repository status for 'X' and 'Y' (if performed on a static data snapshot or through consistent query logic) yields consistent counts."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj2_test_step7_uuid",
+              "description": "Test reliability: Assess if the criteria for 'implemented tamper-resistance mechanisms' and 'periodically tested and validated' are consistently applied."
+            },
+            {
+              "uuid": "act_metric-mla-001-01_obj2_test_step8_uuid",
+              "description": "Test explainability: Verify that the sources for determining 'X' and 'Y', the types of mechanisms, and validation records are clearly logged/documented and the calculation is transparent."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-01"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-02_obj1_examine_uuid",
+          "title": "Examine Data Sources for Log Review and Anomaly Response Metric (MLA-001-02 Obj1)",
+          "description": "Examine definitions of anomalies, policy timelines, and tracking systems for detected security events/anomalies used for metric MLA-001-02 Objective 1, as defined in the 'assessment-method' part (uuid: 8b9c0d1e-2f3a-4b5c-6d7e-8f9g0h1i2j3k) of control metric-mla-001-02 in 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "examine"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-02"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "7a8b9c0d-1e2f-3a4b-5c6d-7e8f9g0h1i2j"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-02_obj1_examine_step1_uuid",
+              "description": "Review the organizational definition of an 'anomaly' or 'significant security event' requiring review and action (Rule 1)."
+            },
+            {
+              "uuid": "act_metric-mla-001-02_obj1_examine_step2_uuid",
+              "description": "Inspect documented organizational policies defining the required timelines for review, analysis, and resolution/disposition of different classes of anomalies or events (Rule 2)."
+            },
+            {
+              "uuid": "act_metric-mla-001-02_obj1_examine_step3_uuid",
+              "description": "Examine the system or process in place for tracking the lifecycle of anomaly review and response (Rule 4)."
+            },
+            {
+              "uuid": "act_metric-mla-001-02_obj1_examine_step4_uuid",
+              "description": "Identify how variable 'B' (Total number of anomalies or significant security events detected from log reviews during the sampling period requiring action) is determined and counted from the tracking system or log review process."
+            },
+            {
+              "uuid": "act_metric-mla-001-02_obj1_examine_step5_uuid",
+              "description": "Identify how variable 'A' (Number of anomalies/events reviewed, analyzed, and resolved/dispositioned within policy timeframe) is determined and counted, considering Rule 3 regarding events not yet resolved by period end."
+            },
+            {
+              "uuid": "act_metric-mla-001-02_obj1_examine_step6_uuid",
+              "description": "Verify documentation of how 'A' and 'B' are counted and how the 'resolved in compliance with policy' criterion is applied, ensuring sources and transformation steps support explainability."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-02"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-02_obj1_test_uuid",
+          "title": "Test Accuracy and Reliability of Log Review and Anomaly Response Metric (MLA-001-02 Obj1)",
+          "description": "Test the accuracy, precision, repeatability, reliability, and explainability of the reported metric for log review and anomaly response (MLA-001-02 Objective 1) based on 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "test"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-02"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "7a8b9c0d-1e2f-3a4b-5c6d-7e8f9g0h1i2j"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-02_obj1_test_step1_uuid",
+              "description": "From the tracking system or log review records, select a representative sample of anomalies/events identified during the sampling period (variable 'B' population)."
+            },
+            {
+              "uuid": "act_metric-mla-001-02_obj1_test_step2_uuid",
+              "description": "For each sampled item, verify its detection date, the policy-defined resolution timeframe, and its actual review, analysis, and resolution/disposition date and status to validate its contribution to variable 'A'."
+            },
+            {
+              "uuid": "act_metric-mla-001-02_obj1_test_step3_uuid",
+              "description": "Recalculate variables 'A' and 'B' based on the sample findings. Compare these with the reported values to assess accuracy and precision."
+            },
+            {
+              "uuid": "act_metric-mla-001-02_obj1_test_step4_uuid",
+              "description": "Verify the calculation of the metric: Percentage = $100 * (A/B)$, and specifically test the rule: 'if B is not 0, or 100 when B is 0'. Ensure that if B=0, the metric result is 100%."
+            },
+            {
+              "uuid": "act_metric-mla-001-02_obj1_test_step5_uuid",
+              "description": "Test repeatability: Determine if re-evaluating the sample from the tracking system for 'A' and 'B' (if performed on a static data snapshot or through consistent query logic) yields consistent counts."
+            },
+            {
+              "uuid": "act_metric-mla-001-02_obj1_test_step6_uuid",
+              "description": "Test reliability: Assess if the criteria for 'anomaly/significant event', 'requiring action', 'resolved', and 'within policy timeframe' are consistently applied."
+            },
+            {
+              "uuid": "act_metric-mla-001-02_obj1_test_step7_uuid",
+              "description": "Test explainability: Verify that the data sources (e.g., tracking system), event classifications, and application of policy timeframes for determining 'A' and 'B' are clearly logged/documented and the calculation is transparent."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-02"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-03_obj1_examine_uuid",
+          "title": "Examine Data Sources for Vulnerability Identification Timeliness Metric (MLA-001-03 Obj1)",
+          "description": "Examine the policies for vulnerability identification timeframes, vulnerability classification methods, and tracking systems for vulnerability disclosure and identification dates used for metric MLA-001-03 Objective 1, as defined in the 'assessment-method' part (uuid: 0e1f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4g5h) of control metric-mla-001-03 in 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "examine"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-03"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "9d0e1f2a-3b4c-5d6e-7f8a-9b0c1d2e3f4g"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-03_obj1_examine_step1_uuid",
+              "description": "Review organizational policies defining timeframes for identifying publicly known high and critical vulnerabilities based on severity (Rule 1)."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj1_examine_step2_uuid",
+              "description": "Inspect the process and systems for tracking vulnerability public disclosure dates, asset commission dates, and organizational identification dates for vulnerabilities (Rule 2)."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj1_examine_step3_uuid",
+              "description": "Verify consistent application of vulnerability classification (e.g., CVSS) (Rule 3)."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj1_examine_step4_uuid",
+              "description": "Identify how variable 'B' (Total number of applicable high/critical vulnerabilities identified or carried over) and 'A' (Number identified within policy timeframe) are determined from tracking systems for a given sampling period, considering Rule 4 for carried-over vulnerabilities."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj1_examine_step5_uuid",
+              "description": "Verify documentation of how 'A' and 'B' are counted and how 'identified within policy-defined timeframe' is determined, ensuring sources and logic support explainability."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-03"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-03_obj1_test_uuid",
+          "title": "Test Accuracy and Reliability of Vulnerability Identification Timeliness Metric (MLA-001-03 Obj1)",
+          "description": "Test the accuracy, precision, repeatability, reliability, and explainability of the reported metric for timeliness of vulnerability identification (MLA-001-03 Objective 1) based on 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "test"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-03"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "9d0e1f2a-3b4c-5d6e-7f8a-9b0c1d2e3f4g"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-03_obj1_test_step1_uuid",
+              "description": "Select a representative sample of applicable high and critical vulnerabilities from the tracking system (variable 'B' population)."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj1_test_step2_uuid",
+              "description": "For each sampled vulnerability, verify its public disclosure date (or asset commission date), its organizational identification date, and compare against the policy-defined timeframe to validate its contribution to variable 'A'."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj1_test_step3_uuid",
+              "description": "Recalculate variables 'A' and 'B' based on the sample findings. Compare these with the reported values to assess accuracy and precision."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj1_test_step4_uuid",
+              "description": "Verify the calculation of the metric: Percentage = $100 * (A/B)$."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj1_test_step5_uuid",
+              "description": "Assess handling of the B=0 case: If B=0, determine if the metric is N/A or 100% based on organizational interpretation, as per Rule for MLA-001-03 Objective 1."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj1_test_step6_uuid",
+              "description": "Test repeatability: Determine if re-evaluating the sample from tracking systems yields consistent counts for 'A' and 'B'."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj1_test_step7_uuid",
+              "description": "Test reliability: Assess if the criteria for 'high/critical', 'applicable', and 'identified within policy timeframe' are consistently applied."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj1_test_step8_uuid",
+              "description": "Test explainability: Verify that the data sources and date-tracking for variables 'A' and 'B' are clearly logged/documented and the calculation is transparent."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-03"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-03_obj2_examine_uuid",
+          "title": "Examine Data Sources for Vulnerability Remediation Timeliness Metric (MLA-001-03 Obj2)",
+          "description": "Examine policies for vulnerability remediation/mitigation timeframes and tracking systems for vulnerability identification and remediation dates used for metric MLA-001-03 Objective 2, as defined in 'assessment-method' part (uuid: 2a3b4c5d-6e7f-8a9b-0c1d-2e3f4g5h6i7j) of control metric-mla-001-03 in 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "examine"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-03"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "1f2a3b4c-5d6e-7f8a-9b0c-1d2e3f4g5h6i"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-03_obj2_examine_step1_uuid",
+              "description": "Review organizational policies defining timeframes for remediating or formally mitigating identified high and critical vulnerabilities (Rule 1)."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj2_examine_step2_uuid",
+              "description": "Inspect the process and systems for tracking vulnerability identification dates and their remediation/mitigation dates (Rule 2)."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj2_examine_step3_uuid",
+              "description": "Verify the definition of 'high and critical vulnerabilities' is consistent (e.g., with CSA CCM TVM-08 or internal risk classification) (Rule 3)."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj2_examine_step4_uuid",
+              "description": "Identify how variable 'Y' (Total number of high/critical vulnerabilities identified or carried over as open) and 'X' (Number remediated/mitigated within policy timeframe) are determined from tracking systems for a given sampling period, considering Rule 4 for age evaluation of open vulnerabilities."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj2_examine_step5_uuid",
+              "description": "Verify documentation of how 'X' and 'Y' are counted and how 'remediated/mitigated within policy timeframe' is determined, ensuring sources and logic support explainability."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-03"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-03_obj2_test_uuid",
+          "title": "Test Accuracy and Reliability of Vulnerability Remediation Timeliness Metric (MLA-001-03 Obj2)",
+          "description": "Test the accuracy, precision, repeatability, reliability, and explainability of the reported metric for timeliness of vulnerability remediation/mitigation (MLA-001-03 Objective 2) based on 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "test"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-03"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "1f2a3b4c-5d6e-7f8a-9b0c-1d2e3f4g5h6i"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-03_obj2_test_step1_uuid",
+              "description": "Select a representative sample of identified high and critical vulnerabilities from the tracking system (variable 'Y' population), including newly identified and carried-over open vulnerabilities."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj2_test_step2_uuid",
+              "description": "For each sampled vulnerability, verify its identification date, remediation/mitigation date (if applicable), and compare the duration against the policy-defined timeframe to validate its contribution to variable 'X'."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj2_test_step3_uuid",
+              "description": "Recalculate variables 'X' and 'Y' based on the sample findings. Compare these with the reported values to assess accuracy and precision."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj2_test_step4_uuid",
+              "description": "Verify the calculation of the metric: Percentage = $100 * (X/Y)$."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj2_test_step5_uuid",
+              "description": "Assess handling of the Y=0 case: If Y=0, determine if the metric is N/A or 100% based on organizational interpretation, as per Rule for MLA-001-03 Objective 2."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj2_test_step6_uuid",
+              "description": "Test repeatability: Determine if re-evaluating the sample from tracking systems yields consistent counts for 'X' and 'Y'."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj2_test_step7_uuid",
+              "description": "Test reliability: Assess if the criteria for 'high/critical', 'remediated/mitigated', and 'within policy timeframe' are consistently applied."
+            },
+            {
+              "uuid": "act_metric-mla-001-03_obj2_test_step8_uuid",
+              "description": "Test explainability: Verify that the data sources and date-tracking for variables 'X' and 'Y' are clearly logged/documented and the calculation is transparent."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-03"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-04_obj1_examine_uuid",
+          "title": "Examine Data Sources for Authenticated Vulnerability Scanning Coverage Metric (MLA-001-04 Obj1)",
+          "description": "Examine the inventory of publicly accessible system components, scanning schedules, and evidence of authenticated scan completion used for metric MLA-001-04 Objective 1, as defined in 'assessment-method' part (uuid: 5d6e7f8a-9b0c-1d2e-3f4g-5h6i7j8k9l0m) of control metric-mla-001-04 in 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "examine"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-04"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "4c5d6e7f-8a9b-0c1d-2e3f-4g5h6i7j8k9l"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-04_obj1_examine_step1_uuid",
+              "description": "Review the maintained and regularly updated inventory of all publicly accessible system components (e.g., servers, services, APIs) that require authenticated vulnerability scanning (basis for variable 'B'). Reference 'asset catalog' (e.g., DCS-06) as per Rule 4."
+            },
+            {
+              "uuid": "act_metric-mla-001-04_obj1_examine_step2_uuid",
+              "description": "Inspect organizational policy defining the required frequency for authenticated vulnerability scans on these components (e.g., monthly) (Rule 2)."
+            },
+            {
+              "uuid": "act_metric-mla-001-04_obj1_examine_step3_uuid",
+              "description": "Examine scan schedules and scan reports to identify which publicly accessible components have been scanned using authenticated methods within the defined frequency during the sampling period (basis for variable 'A'). Verify evidence of authenticated scan completion (Rule 3)."
+            },
+            {
+              "uuid": "act_metric-mla-001-04_obj1_examine_step4_uuid",
+              "description": "Verify documentation of how 'A' and 'B' are counted and how 'scanned using authenticated methods within frequency' is determined, ensuring sources and logic support explainability."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-04"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-04_obj1_test_uuid",
+          "title": "Test Accuracy and Reliability of Authenticated Vulnerability Scanning Coverage Metric (MLA-001-04 Obj1)",
+          "description": "Test the accuracy, precision, repeatability, reliability, and explainability of the reported metric for authenticated vulnerability scanning coverage (MLA-001-04 Objective 1) based on 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "test"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-04"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "4c5d6e7f-8a9b-0c1d-2e3f-4g5h6i7j8k9l"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-04_obj1_test_step1_uuid",
+              "description": "Select a representative sample of publicly accessible system components from the inventory (variable 'B' population)."
+            },
+            {
+              "uuid": "act_metric-mla-001-04_obj1_test_step2_uuid",
+              "description": "For each sampled component, verify from scan records and reports whether it was scanned using authenticated methods within the organizationally defined frequency during the sampling period to validate its contribution to variable 'A'."
+            },
+            {
+              "uuid": "act_metric-mla-001-04_obj1_test_step3_uuid",
+              "description": "Recalculate variables 'A' and 'B' based on the sample findings. Compare these with the reported values to assess accuracy and precision."
+            },
+            {
+              "uuid": "act_metric-mla-001-04_obj1_test_step4_uuid",
+              "description": "Verify the calculation of the metric: Percentage = $100 * (A/B)$."
+            },
+            {
+              "uuid": "act_metric-mla-001-04_obj1_test_step5_uuid",
+              "description": "Assess handling of the B=0 case: If B=0, the metric should be N/A, as per Rule for MLA-001-04 Objective 1."
+            },
+            {
+              "uuid": "act_metric-mla-001-04_obj1_test_step6_uuid",
+              "description": "Test repeatability: Determine if re-evaluating the sample from inventory and scan records yields consistent counts for 'A' and 'B'."
+            },
+            {
+              "uuid": "act_metric-mla-001-04_obj1_test_step7_uuid",
+              "description": "Test reliability: Assess if the criteria for 'publicly accessible component', 'authenticated scan', and 'defined frequency' are consistently applied."
+            },
+            {
+              "uuid": "act_metric-mla-001-04_obj1_test_step8_uuid",
+              "description": "Test explainability: Verify that the inventory, scan records, and policy definitions supporting 'A' and 'B' are clearly logged/documented and the calculation is transparent."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-04"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-05_obj1_examine_uuid",
+          "title": "Examine Data Sources for IaC and Configuration Scanning Pass Rate Metric (MLA-001-05 Obj1)",
+          "description": "Examine the inventory of IaC templates and deployed CIs, security baselines, and scan test results used for metric MLA-001-05 Objective 1, as defined in 'assessment-method' part (uuid: 8a9b0c1d-2e3f-4g5h-6i7j-8k9l0m1n2o3p) of control metric-mla-001-05 in 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "examine"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-05"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "7f8a9b0c-1d2e-3f4g-5h6i-7j8k9l0m1n2o"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-05_obj1_examine_step1_uuid",
+              "description": "Review the maintained inventory of IaC templates and types of deployed system CIs subject to scanning (Rule 1). This forms the basis for items counted in variable 'B'."
+            },
+            {
+              "uuid": "act_metric-mla-001-05_obj1_examine_step2_uuid",
+              "description": "Inspect formally documented security baselines and compliance checks for IaC and system configurations implemented in scanning tools (Rule 2)."
+            },
+            {
+              "uuid": "act_metric-mla-001-05_obj1_examine_step3_uuid",
+              "description": "Examine scan records and test results to identify IaC templates and deployed CIs tested against security baselines (variable 'B') and those that passed successfully (variable 'A') during the sampling period. Consider defined scan frequencies (Rule 4)."
+            },
+            {
+              "uuid": "act_metric-mla-001-05_obj1_examine_step4_uuid",
+              "description": "Verify documentation of how 'A' and 'B' are counted, and the definition of a 'configuration item' (Rule 3) and 'passing successfully', ensuring sources and logic support explainability."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-05"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-05_obj1_test_uuid",
+          "title": "Test Accuracy and Reliability of IaC and Configuration Scanning Pass Rate Metric (MLA-001-05 Obj1)",
+          "description": "Test the accuracy, precision, repeatability, reliability, and explainability of the reported pass rate for IaC and configuration security scans (MLA-001-05 Objective 1) based on 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "test"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-05"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "7f8a9b0c-1d2e-3f4g-5h6i-7j8k9l0m1n2o"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-05_obj1_test_step1_uuid",
+              "description": "Select a representative sample of IaC templates and deployed system CIs from the inventory that were subject to testing during the sampling period (variable 'B' population)."
+            },
+            {
+              "uuid": "act_metric-mla-001-05_obj1_test_step2_uuid",
+              "description": "For each sampled item, review its scan/test results against the established security baselines to verify if it passed successfully, validating its contribution to variable 'A'."
+            },
+            {
+              "uuid": "act_metric-mla-001-05_obj1_test_step3_uuid",
+              "description": "Recalculate variables 'A' and 'B' based on the sample findings. Compare these with the reported values to assess accuracy and precision."
+            },
+            {
+              "uuid": "act_metric-mla-001-05_obj1_test_step4_uuid",
+              "description": "Verify the calculation of the metric: Percentage = $100 * (A/B)$."
+            },
+            {
+              "uuid": "act_metric-mla-001-05_obj1_test_step5_uuid",
+              "description": "Assess handling of the B=0 case: If B=0 (no items tested), the metric should be N/A, as per Rule for MLA-001-05 Objective 1."
+            },
+            {
+              "uuid": "act_metric-mla-001-05_obj1_test_step6_uuid",
+              "description": "Test repeatability: Determine if re-evaluating scan results for the sample yields consistent counts for 'A' and 'B'."
+            },
+            {
+              "uuid": "act_metric-mla-001-05_obj1_test_step7_uuid",
+              "description": "Test reliability: Assess if the criteria for 'passing security tests' and the application of security baselines are consistently applied."
+            },
+            {
+              "uuid": "act_metric-mla-001-05_obj1_test_step8_uuid",
+              "description": "Test explainability: Verify that the inventory, security baselines, and scan results supporting 'A' and 'B' are clearly logged/documented and the calculation is transparent."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-05"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-06_obj1_examine_uuid",
+          "title": "Examine Data Sources for Centralized Vulnerability Tracking Adherence Metric (MLA-001-06 Obj1)",
+          "description": "Examine the definition of the central vulnerability tracking system, policies for data entry timeliness, and sources of vulnerability identification used for metric MLA-001-06 Objective 1, as defined in 'assessment-method' part (uuid: 1d2e3f4g-5h6i-7j8k-9l0m-1n2o3p4q5r6s) of control metric-mla-001-06 in 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "examine"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-06"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "0c1d2e3f-4g5h-6i7j-8k9l-0m1n2o3p4q5r"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-06_obj1_examine_step1_uuid",
+              "description": "Verify the definition of the designated central vulnerability tracking system (Rule 1)."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj1_examine_step2_uuid",
+              "description": "Review organizational policy defining the timeframe for entering newly identified vulnerabilities into this central system (Rule 2)."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj1_examine_step3_uuid",
+              "description": "Inspect the inventory of vulnerability identification sources (e.g., scanners, penetration tests, bug bounties, manual discovery) to ensure comprehensive capture for variable 'B' (Total newly identified vulnerabilities) (Rule 3)."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj1_examine_step4_uuid",
+              "description": "Identify how 'B' is counted across all sources and how 'A' (Number recorded in central system within policy timeframe) is determined from the central tracking system and discovery/reporting dates."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj1_examine_step5_uuid",
+              "description": "Verify documentation of how 'A' and 'B' are counted and how the 'within policy-defined timeframe' criterion is applied, ensuring sources and logic support explainability."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-06"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-06_obj1_test_uuid",
+          "title": "Test Accuracy and Reliability of Centralized Vulnerability Tracking Adherence Metric (MLA-001-06 Obj1)",
+          "description": "Test the accuracy, precision, repeatability, reliability, and explainability of the reported metric for adherence to centralized vulnerability tracking (MLA-001-06 Objective 1) based on 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "test"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-06"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "0c1d2e3f-4g5h-6i7j-8k9l-0m1n2o3p4q5r"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-06_obj1_test_step1_uuid",
+              "description": "From all identified sources, select a representative sample of newly identified vulnerabilities during the sampling period (variable 'B' population)."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj1_test_step2_uuid",
+              "description": "For each sampled vulnerability, verify its initial reporting/discovery date and check if and when it was recorded in the designated central vulnerability tracking system to validate its contribution to variable 'A'."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj1_test_step3_uuid",
+              "description": "Recalculate variables 'A' and 'B' based on the sample findings. Compare these with the reported values to assess accuracy and precision."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj1_test_step4_uuid",
+              "description": "Verify the calculation of the metric: Percentage = $100 * (A/B)$."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj1_test_step5_uuid",
+              "description": "Assess handling of the B=0 case: If B=0, determine if the metric is 100% or N/A based on organizational interpretation (full adherence if no items needed tracking), as per Rule for MLA-001-06 Objective 1."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj1_test_step6_uuid",
+              "description": "Test repeatability: Determine if re-evaluating the sample from source reports and the central tracking system yields consistent counts for 'A' and 'B'."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj1_test_step7_uuid",
+              "description": "Test reliability: Assess if the criteria for 'newly identified vulnerability' and 'recorded in central system within policy timeframe' are consistently applied across all sources."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj1_test_step8_uuid",
+              "description": "Test explainability: Verify that the data sources for 'B', the central tracking system entries for 'A', and associated timestamps are clearly logged/documented and the calculation is transparent."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-06"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-06_obj2_examine_uuid",
+          "title": "Examine Data Sources for Vulnerability Prioritization Policy Adherence Metric (MLA-001-06 Obj2)",
+          "description": "Examine the documented vulnerability prioritization policy and the central tracking system's capability to record priority levels used for metric MLA-001-06 Objective 2, as defined in 'assessment-method' part (uuid: 3f4g5h6i-7j8k-9l0m-1n2o-3p4q5r6s7t8u) of control metric-mla-001-06 in 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "examine"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-06"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "2e3f4g5h-6i7j-8k9l-0m1n-2o3p4q5r6s7t"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-06_obj2_examine_step1_uuid",
+              "description": "Review the formal, documented, and approved vulnerability prioritization policy or methodology (e.g., based on CVSS, threat intelligence, business impact, asset criticality) (Rule 1)."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj2_examine_step2_uuid",
+              "description": "Verify that the central vulnerability tracking system supports the recording of priority levels consistent with the policy (Rule 2)."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj2_examine_step3_uuid",
+              "description": "Inspect the central tracking system to identify how 'active' vulnerabilities (those not yet remediated or formally accepted as risk) are determined (basis for variable 'Y') (Rule 3)."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj2_examine_step4_uuid",
+              "description": "Examine how vulnerabilities in the system are checked for an assigned priority level consistent with the policy (basis for variable 'X')."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj2_examine_step5_uuid",
+              "description": "Verify documentation of how 'X' and 'Y' are counted and how 'priority assigned consistent with policy' is determined, ensuring sources and logic support explainability."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-06"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        },
+        {
+          "uuid": "act_metric-mla-001-06_obj2_test_uuid",
+          "title": "Test Accuracy and Reliability of Vulnerability Prioritization Policy Adherence Metric (MLA-001-06 Obj2)",
+          "description": "Test the accuracy, precision, repeatability, reliability, and explainability of the reported metric for adherence to vulnerability prioritization policy (MLA-001-06 Objective 2) based on 'catalog-ksi-mla.json'.",
+          "props": [
+            {
+              "name": "activity-type",
+              "value": "test"
+            },
+            {
+              "name": "target-control-id",
+              "value": "metric-mla-001-06"
+            },
+            {
+              "name": "target-objective-uuid",
+              "value": "2e3f4g5h-6i7j-8k9l-0m1n-2o3p4q5r6s7t"
+            }
+          ],
+          "steps": [
+            {
+              "uuid": "act_metric-mla-001-06_obj2_test_step1_uuid",
+              "description": "From the central vulnerability tracking system, select a representative sample of 'active' vulnerabilities (variable 'Y' population)."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj2_test_step2_uuid",
+              "description": "For each sampled active vulnerability, verify if a priority level has been assigned and if that assignment is consistent with the organization's documented vulnerability prioritization policy to validate its contribution to variable 'X'."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj2_test_step3_uuid",
+              "description": "Recalculate variables 'X' and 'Y' based on the sample findings. Compare these with the reported values to assess accuracy and precision."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj2_test_step4_uuid",
+              "description": "Verify the calculation of the metric: Percentage = $100 * (X/Y)$."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj2_test_step5_uuid",
+              "description": "Assess handling of the Y=0 case: If Y=0 (no active vulnerabilities), the metric should be 100% or N/A, as per Rule for MLA-001-06 Objective 2."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj2_test_step6_uuid",
+              "description": "Test repeatability: Determine if re-evaluating the sample from the tracking system yields consistent counts for 'X' and 'Y' and consistent application of the prioritization policy."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj2_test_step7_uuid",
+              "description": "Test reliability: Assess if the criteria for 'active vulnerability' and 'assigned priority consistent with policy' are consistently applied."
+            },
+            {
+              "uuid": "act_metric-mla-001-06_obj2_test_step8_uuid",
+              "description": "Test explainability: Verify that the data source (central tracking system), the prioritization policy, and their application for determining 'X' and 'Y' are clearly documented and the calculation is transparent."
+            }
+          ],
+          "related-controls": {
+            "control-selections": [
+              {
+                "include-controls": [
+                  {
+                    "control-id": "metric-mla-001-06"
+                  }
+                ]
+              }
+            ]
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor"
+            }
+          ]
+        }
+      ],
+      "remarks": "This local-definitions section includes examination and test activities for KSI-MLA-001 and its sub-metrics MLA-001-01 through MLA-001-06. Activities are derived from the 'MEASURE' and 'AGGREGATE_MEASURE' methods defined in the 'catalog-ksi-mla.json' catalog."
+    },
+    "terms-and-conditions": {
+      "parts": [
+        {
+          "uuid": "tc-part-uuid-0001",
+          "name": "general-terms",
+          "title": "General Assessment Terms and Conditions",
+          "prose": "The assessment will be conducted according to the principles and procedures outlined in this document and any referenced policies. All parties agree to cooperate fully to facilitate the assessment activities."
+        }
+      ]
+    },
+    "reviewed-controls": {
+      "description": "This assessment plan specifically targets the Key Security Indicator (KSI-MLA) aggregate control and its constituent sub-metric controls. The assessment activities (defined in 'local-definitions') will focus on examining the data sources for each control's 'MEASURE' or 'AGGREGATE_MEASURE' method (as defined in the 'catalog-ksi-mla.json') and testing that the reported metric data is accurate, precise, repeatable, reliable, and explainable against underlying system data.",
+      "control-selections": [
+        {
+          "description": "Selection of the aggregate KSI control and all its sub-metric controls from the KSI-MLA catalog.",
+          "include-controls": [
+            {
+              "control-id": "ksi-mla-001",
+              "description": "Aggregate Key Security Indicator for Monitoring, Logging, and Auditing Effectiveness."
+            },
+            {
+              "control-id": "metric-mla-001-01",
+              "description": "Effectiveness of SIEM Operation for Centralized and Tamper-Resistant Logging."
+            },
+            {
+              "control-id": "metric-mla-001-02",
+              "description": "Effectiveness of Log Review and Audit Procedures."
+            },
+            {
+              "control-id": "metric-mla-001-03",
+              "description": "Timeliness of Vulnerability Detection and Remediation."
+            },
+            {
+              "control-id": "metric-mla-001-04",
+              "description": "Coverage and Configuration of Authenticated Vulnerability Scanning on Publicly Accessible Components."
+            },
+            {
+              "control-id": "metric-mla-001-05",
+              "description": "Effectiveness of IaC and Configuration Scanning."
+            },
+            {
+              "control-id": "metric-mla-001-06",
+              "description": "Effectiveness of Centralized Vulnerability Tracking and Prioritization."
+            }
+          ]
+        }
+      ],
+      "control-objective-selections": [
+        {
+          "description": "Selection of specific assessment objectives (containing 'MEASURE' or 'AGGREGATE_MEASURE' methods) from the KSI-MLA catalog that define how each control is quantified.",
+          "include-objectives": [
+            {
+              "objective-id": "c3d4e5f6-a7b8-9012-3456-7890abcdef01",
+              "description": "Assessment objective for the aggregate KSI-MLA-001 (AGGREGATE_MEASURE)."
+            },
+            {
+              "objective-id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+              "description": "Assessment objective 1 for metric-mla-001-01 (SIEM Centralized Logging/Alerting - MEASURE)."
+            },
+            {
+              "objective-id": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9g",
+              "description": "Assessment objective 2 for metric-mla-001-01 (Log Tamper-Resistance - MEASURE)."
+            },
+            {
+              "objective-id": "7a8b9c0d-1e2f-3a4b-5c6d-7e8f9g0h1i2j",
+              "description": "Assessment objective 1 for metric-mla-001-02 (Log Review/Anomaly Response - MEASURE)."
+            },
+            {
+              "objective-id": "9d0e1f2a-3b4c-5d6e-7f8a-9b0c1d2e3f4g",
+              "description": "Assessment objective 1 for metric-mla-001-03 (Vulnerability Identification Timeliness - MEASURE)."
+            },
+            {
+              "objective-id": "1f2a3b4c-5d6e-7f8a-9b0c-1d2e3f4g5h6i",
+              "description": "Assessment objective 2 for metric-mla-001-03 (Vulnerability Remediation Timeliness - MEASURE)."
+            },
+            {
+              "objective-id": "4c5d6e7f-8a9b-0c1d-2e3f-4g5h6i7j8k9l",
+              "description": "Assessment objective 1 for metric-mla-001-04 (Authenticated Scanning Coverage - MEASURE)."
+            },
+            {
+              "objective-id": "7f8a9b0c-1d2e-3f4g-5h6i-7j8k9l0m1n2o",
+              "description": "Assessment objective 1 for metric-mla-001-05 (IaC/Configuration Scan Pass Rate - MEASURE)."
+            },
+            {
+              "objective-id": "0c1d2e3f-4g5h-6i7j-8k9l-0m1n2o3p4q5r",
+              "description": "Assessment objective 1 for metric-mla-001-06 (Centralized Vulnerability Tracking - MEASURE)."
+            },
+            {
+              "objective-id": "2e3f4g5h-6i7j-8k9l-0m1n-2o3p4q5r6s7t",
+              "description": "Assessment objective 2 for metric-mla-001-06 (Vulnerability Prioritization Adherence - MEASURE)."
+            }
+          ]
+        }
+      ],
+      "remarks": "The assessment will verify the mechanisms and data supporting the 'MEASURE' and 'AGGREGATE_MEASURE' methods associated with these controls and objectives. This includes an evaluation of the underlying data's accuracy, precision, repeatability, reliability, and explainability, as detailed in the planned activities and tasks."
+    },
+    "assessment-subjects": [
+      {
+        "type": "system",
+        "description": "The primary cloud native system being assessed for KSI-MLA effectiveness.",
+        "include-subjects": [
+          {
+            "subject-uuid": "system-under-assessment-uuid-001",
+            "type": "system-component",
+            "title": "Cloud Native System Under Assessment (CNSUA)",
+            "props": [
+              {
+                "name": "description",
+                "value": "The complete cloud native system environment targeted by this KSI assessment."
+              }
+            ]
+          }
+        ],
+        "remarks": "This represents the overall system boundary for the assessment."
+      }
+    ],
+    "assessment-assets": {
+      "components": [
+        {
+          "uuid": "assessment-tool-comp-uuid-001",
+          "type": "software",
+          "title": "Automated Metric Collection Scripts",
+          "description": "A suite of command-line tools and API scripts used to collect raw data for metric calculation.",
+          "status": {
+            "state": "operational"
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor",
+              "party-uuids": [
+                "p1a2b3c4-party-uuid-0001"
+              ]
+            }
+          ]
+        },
+        {
+          "uuid": "data-analysis-platform-comp-uuid-002",
+          "type": "service",
+          "title": "Data Analysis and Verification Platform",
+          "description": "Platform used to analyze collected metric data and perform test calculations.",
+          "status": {
+            "state": "operational"
+          },
+          "responsible-roles": [
+            {
+              "role-id": "assessor",
+              "party-uuids": [
+                "p1a2b3c4-party-uuid-0001"
+              ]
+            }
+          ]
+        }
+      ],
+      "assessment-platforms": [
+        {
+          "uuid": "assessment-platform-uuid-001",
+          "title": "Primary Assessment Platform",
+          "uses-components": [
+            {
+              "component-uuid": "assessment-tool-comp-uuid-001"
+            },
+            {
+              "component-uuid": "data-analysis-platform-comp-uuid-002"
+            }
+          ]
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "uuid": "task_ksi-mla-001_assessment_uuid",
+        "type": "action",
+        "title": "Assess Aggregate KSI: Monitoring, Logging, and Auditing Effectiveness (KSI-MLA-001)",
+        "description": "Perform examination and testing of the aggregation methodology and result for KSI-MLA-001.",
+        "props": [
+          {
+            "name": "target-control-id",
+            "value": "ksi-mla-001"
+          }
+        ],
+        "associated-activities": [
+          {
+            "activity-uuid": "act_ksi-mla-001_examine_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          },
+          {
+            "activity-uuid": "act_ksi-mla-001_test_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessment-lead"
+          }
+        ]
+      },
+      {
+        "uuid": "task_metric-mla-001-01_obj1_assessment_uuid",
+        "type": "action",
+        "title": "Assess Metric MLA-001-01 Obj1: SIEM Centralized Logging and Alert Generation",
+        "description": "Perform examination and testing for metric MLA-001-01, Objective 1: Effectiveness of SIEM for Centralized Logging and Alert Generation.",
+        "props": [
+          {
+            "name": "target-control-id",
+            "value": "metric-mla-001-01"
+          },
+          {
+            "name": "target-objective-title",
+            "value": "Objective 1: Effectiveness of SIEM for Centralized Logging and Alert Generation"
+          }
+        ],
+        "associated-activities": [
+          {
+            "activity-uuid": "act_metric-mla-001-01_obj1_examine_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          },
+          {
+            "activity-uuid": "act_metric-mla-001-01_obj1_test_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessment-lead"
+          }
+        ]
+      },
+      {
+        "uuid": "task_metric-mla-001-01_obj2_assessment_uuid",
+        "type": "action",
+        "title": "Assess Metric MLA-001-01 Obj2: Log Tamper-Resistance Mechanisms",
+        "description": "Perform examination and testing for metric MLA-001-01, Objective 2: Effectiveness of Log Tamper-Resistance Mechanisms.",
+        "props": [
+          {
+            "name": "target-control-id",
+            "value": "metric-mla-001-01"
+          },
+          {
+            "name": "target-objective-title",
+            "value": "Objective 2: Effectiveness of Log Tamper-Resistance Mechanisms"
+          }
+        ],
+        "associated-activities": [
+          {
+            "activity-uuid": "act_metric-mla-001-01_obj2_examine_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          },
+          {
+            "activity-uuid": "act_metric-mla-001-01_obj2_test_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessment-lead"
+          }
+        ]
+      },
+      {
+        "uuid": "task_metric-mla-001-02_obj1_assessment_uuid",
+        "type": "action",
+        "title": "Assess Metric MLA-001-02 Obj1: Log Review and Anomaly Response Timeliness",
+        "description": "Perform examination and testing for metric MLA-001-02, Objective 1: Timeliness and Effectiveness of Log Review and Anomaly Response.",
+        "props": [
+          {
+            "name": "target-control-id",
+            "value": "metric-mla-001-02"
+          },
+          {
+            "name": "target-objective-title",
+            "value": "Objective 1: Timeliness and Effectiveness of Log Review and Anomaly Response"
+          }
+        ],
+        "associated-activities": [
+          {
+            "activity-uuid": "act_metric-mla-001-02_obj1_examine_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          },
+          {
+            "activity-uuid": "act_metric-mla-001-02_obj1_test_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessment-lead"
+          }
+        ]
+      },
+      {
+        "uuid": "task_metric-mla-001-03_obj1_assessment_uuid",
+        "type": "action",
+        "title": "Assess Metric MLA-001-03 Obj1: Vulnerability Identification Timeliness",
+        "description": "Perform examination and testing for metric MLA-001-03, Objective 1: Timeliness of Vulnerability Identification.",
+        "props": [
+          {
+            "name": "target-control-id",
+            "value": "metric-mla-001-03"
+          },
+          {
+            "name": "target-objective-title",
+            "value": "Objective 1: Timeliness of Vulnerability Identification"
+          }
+        ],
+        "associated-activities": [
+          {
+            "activity-uuid": "act_metric-mla-001-03_obj1_examine_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          },
+          {
+            "activity-uuid": "act_metric-mla-001-03_obj1_test_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessment-lead"
+          }
+        ]
+      },
+      {
+        "uuid": "task_metric-mla-001-03_obj2_assessment_uuid",
+        "type": "action",
+        "title": "Assess Metric MLA-001-03 Obj2: Vulnerability Remediation Timeliness",
+        "description": "Perform examination and testing for metric MLA-001-03, Objective 2: Timeliness of Vulnerability Remediation/Mitigation.",
+        "props": [
+          {
+            "name": "target-control-id",
+            "value": "metric-mla-001-03"
+          },
+          {
+            "name": "target-objective-title",
+            "value": "Objective 2: Timeliness of Vulnerability Remediation/Mitigation"
+          }
+        ],
+        "associated-activities": [
+          {
+            "activity-uuid": "act_metric-mla-001-03_obj2_examine_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          },
+          {
+            "activity-uuid": "act_metric-mla-001-03_obj2_test_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessment-lead"
+          }
+        ]
+      },
+      {
+        "uuid": "task_metric-mla-001-04_obj1_assessment_uuid",
+        "type": "action",
+        "title": "Assess Metric MLA-001-04 Obj1: Authenticated Vulnerability Scanning Coverage",
+        "description": "Perform examination and testing for metric MLA-001-04, Objective 1: Coverage of Authenticated Vulnerability Scanning on Publicly Accessible Components.",
+        "props": [
+          {
+            "name": "target-control-id",
+            "value": "metric-mla-001-04"
+          },
+          {
+            "name": "target-objective-title",
+            "value": "Objective 1: Coverage of Authenticated Vulnerability Scanning on Publicly Accessible Components"
+          }
+        ],
+        "associated-activities": [
+          {
+            "activity-uuid": "act_metric-mla-001-04_obj1_examine_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          },
+          {
+            "activity-uuid": "act_metric-mla-001-04_obj1_test_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessment-lead"
+          }
+        ]
+      },
+      {
+        "uuid": "task_metric-mla-001-05_obj1_assessment_uuid",
+        "type": "action",
+        "title": "Assess Metric MLA-001-05 Obj1: IaC and Configuration Scanning Pass Rate",
+        "description": "Perform examination and testing for metric MLA-001-05, Objective 1: Pass Rate of IaC and Configuration Security Scans.",
+        "props": [
+          {
+            "name": "target-control-id",
+            "value": "metric-mla-001-05"
+          },
+          {
+            "name": "target-objective-title",
+            "value": "Objective 1: Pass Rate of IaC and Configuration Security Scans"
+          }
+        ],
+        "associated-activities": [
+          {
+            "activity-uuid": "act_metric-mla-001-05_obj1_examine_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          },
+          {
+            "activity-uuid": "act_metric-mla-001-05_obj1_test_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessment-lead"
+          }
+        ]
+      },
+      {
+        "uuid": "task_metric-mla-001-06_obj1_assessment_uuid",
+        "type": "action",
+        "title": "Assess Metric MLA-001-06 Obj1: Centralized Vulnerability Tracking Adherence",
+        "description": "Perform examination and testing for metric MLA-001-06, Objective 1: Adherence to Centralized Vulnerability Tracking.",
+        "props": [
+          {
+            "name": "target-control-id",
+            "value": "metric-mla-001-06"
+          },
+          {
+            "name": "target-objective-title",
+            "value": "Objective 1: Adherence to Centralized Vulnerability Tracking"
+          }
+        ],
+        "associated-activities": [
+          {
+            "activity-uuid": "act_metric-mla-001-06_obj1_examine_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          },
+          {
+            "activity-uuid": "act_metric-mla-001-06_obj1_test_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessment-lead"
+          }
+        ]
+      },
+      {
+        "uuid": "task_metric-mla-001-06_obj2_assessment_uuid",
+        "type": "action",
+        "title": "Assess Metric MLA-001-06 Obj2: Vulnerability Prioritization Policy Adherence",
+        "description": "Perform examination and testing for metric MLA-001-06, Objective 2: Adherence to Vulnerability Prioritization Policy.",
+        "props": [
+          {
+            "name": "target-control-id",
+            "value": "metric-mla-001-06"
+          },
+          {
+            "name": "target-objective-title",
+            "value": "Objective 2: Adherence to Vulnerability Prioritization Policy"
+          }
+        ],
+        "associated-activities": [
+          {
+            "activity-uuid": "act_metric-mla-001-06_obj2_examine_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          },
+          {
+            "activity-uuid": "act_metric-mla-001-06_obj2_test_uuid",
+            "subjects": [
+              {
+                "subject-uuid": "system-under-assessment-uuid-001",
+                "type": "system-component",
+                "title": "Cloud Native System Under Assessment (CNSUA)"
+              }
+            ],
+            "responsible-roles": [
+              {
+                "role-id": "assessor"
+              }
+            ]
+          }
+        ],
+        "responsible-roles": [
+          {
+            "role-id": "assessment-lead"
+          }
+        ]
+      }
+    ],
+    "back-matter": {
+      "resources": [
+        {
+          "uuid": "ksi-catalog-resource-uuid",
+          "title": "KSI Monitoring, Logging, and Auditing (MLA) Catalog",
+          "description": "The OSCAL catalog defining the KSI-MLA metrics that are the subject of this assessment plan.",
+          "rlinks": [
+            {
+              "href": "#ksi-mla-catalog-placeholder-href",
+              "media-type": "application/json"
+            }
+          ],
+          "citation": {
+            "text": "Metrics Catalog for Monitoring, Logging, and Auditing Effectiveness (KSI-MLA), Version 1.0.0"
+          }
+        },
+        {
+          "uuid": "fedramp-low-baseline-resource-uuid",
+          "title": "FedRAMP Rev 5 Low Baseline Resolved Catalog",
+          "description": "The FedRAMP Rev 5 Low Baseline resolved catalog used for referencing related NIST SP 800-53 controls.",
+          "rlinks": [
+            {
+              "href": "https://github.com/GSA/fedramp-automation/blob/develop/dist/content/rev5/baselines/yaml/FedRAMP_rev5_LOW-baseline-resolved-profile_catalog.yaml",
+              "media-type": "application/yaml"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
