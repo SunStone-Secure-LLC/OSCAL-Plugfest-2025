@@ -1,0 +1,613 @@
+{
+  "catalog": {
+    "uuid": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+    "metadata": {
+      "title": "Metrics Catalog for Monitoring, Logging, and Auditing Effectiveness (KSI-MLA)",
+      "last-modified": "2025-05-19T20:55:00Z",
+      "version": "1.0.0",
+      "oscal-version": "1.1.3",
+      "remarks": "This catalog defines metrics for assessing the effectiveness of monitoring, logging, and auditing capabilities in a cloud service offering.",
+      "parties": [
+        {
+          "uuid": "3e3571ac-6c19-4e8f-bd0f-6c502acd1550",
+          "type": "organization",
+          "name": "Automated Metric Definition Process"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "creator",
+          "party-uuids": [
+            "3e3571ac-6c19-4e8f-bd0f-6c502acd1550"
+          ]
+        }
+      ]
+    },
+    "controls": [
+      {
+        "id": "ksi-mla-001",
+        "class": "ksi",
+        "title": "Key Security Indicator: Monitoring, Logging, and Auditing Effectiveness",
+        "props": [
+          {
+            "name": "status",
+            "value": "draft"
+          }
+        ],
+        "links": [
+          {
+            "href": "#metric-mla-001-01",
+            "rel": "aggregates"
+          },
+          {
+            "href": "#metric-mla-001-02",
+            "rel": "aggregates"
+          },
+          {
+            "href": "#metric-mla-001-03",
+            "rel": "aggregates"
+          },
+          {
+            "href": "#metric-mla-001-04",
+            "rel": "aggregates"
+          },
+          {
+            "href": "#metric-mla-001-05",
+            "rel": "aggregates"
+          },
+          {
+            "href": "#metric-mla-001-06",
+            "rel": "aggregates"
+          }
+        ],
+        "parts": [
+          {
+            "uuid": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+            "name": "description",
+            "prose": "This Key Security Indicator (KSI) measures the overall effectiveness of a cloud service offering's capabilities to monitor, log, and audit all important events, activity, and changes. It aggregates several sub-metrics, each targeting a specific characteristic of a comprehensive monitoring, logging, and auditing strategy."
+          },
+          {
+            "uuid": "b2c3d4e5-f6a7-8901-2345-67890abcdef0",
+            "name": "aggregation-methodology",
+            "prose": "The overall KSI-MLA score is intended to be calculated as a weighted average of the normalized scores of its constituent sub-metric controls (metric-mla-001-01 through metric-mla-001-06). The specific weights for each sub-metric would be defined during a subsequent tailoring phase or by the implementing organization based on their risk assessment and priorities. Each sub-metric score should be normalized (e.g., to a 0-100 scale) before aggregation."
+          },
+          {
+            "uuid": "c3d4e5f6-a7b8-9012-3456-7890abcdef01",
+            "name": "assessment-objective",
+            "prose": "To determine the overall effectiveness and maturity of the cloud service provider's monitoring, logging, and auditing security posture.",
+            "parts": [
+              {
+                "uuid": "d4e5f6a7-b8c9-0123-4567-890abcdef012",
+                "name": "assessment-method",
+                "class": "aggregation-method",
+                "props": [
+                  {
+                    "name": "method-type",
+                    "value": "AGGREGATE_MEASURE"
+                  }
+                ],
+                "prose": "The KSI is assessed by aggregating the measurement results of the individual sub-metric controls (metric-mla-001-01 through metric-mla-001-06) as defined in their respective 'MEASURE' assessment methods and applying the defined aggregation-methodology. The result will be a quantitative score or qualitative assessment representing the overall KSI status."
+              }
+            ]
+          }
+        ],
+        "related-controls": [
+          {
+            "control-id": "ac-7"
+          },
+          {
+            "control-id": "au-2"
+          },
+          {
+            "control-id": "au-3"
+          },
+          {
+            "control-id": "au-4"
+          },
+          {
+            "control-id": "au-8"
+          },
+          {
+            "control-id": "au-11"
+          },
+          {
+            "control-id": "au-12"
+          },
+          {
+            "control-id": "ra-5"
+          },
+          {
+            "control-id": "si-2"
+          }
+        ]
+      },
+      {
+        "id": "metric-mla-001-01",
+        "class": "metric",
+        "title": "Effectiveness of SIEM Operation for Centralized and Tamper-Resistant Logging",
+        "props": [
+          {
+            "name": "status",
+            "value": "draft"
+          }
+        ],
+        "links": [
+          {
+            "href": "https://www.fedramp.gov/rfcs/0006/",
+            "rel": "source-requirement",
+            "text": "FedRAMP RFC 0006 - Monitoring, Logging, and Auditing Requirement 1"
+          }
+        ],
+        "parts": [
+          {
+            "uuid": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+            "name": "description",
+            "prose": "This metric control assesses the effectiveness of the Security Information and Event Management (SIEM) system in performing centralized logging of events, activities, and changes, its capability to generate security alerts, and the mechanisms in place to ensure tamper-resistance of the collected logs."
+          },
+          {
+            "uuid": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+            "name": "assessment-objective",
+            "title": "Objective 1: Effectiveness of SIEM for Centralized Logging and Alert Generation",
+            "prose": "To determine the extent to which critical log sources are integrated into the SIEM and configured to generate security alerts for anomalous or predefined critical events.",
+            "parts": [
+              {
+                "uuid": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+                "name": "assessment-method",
+                "class": "objective-assessment-method",
+                "props": [
+                  {
+                    "name": "method-type",
+                    "value": "MEASURE"
+                  }
+                ],
+                "prose": "The measurement is based on the CSA Metric LOG-03-M1.\n\nExpression: Percentage of critical log sources configured with security alerts = $100 * (A/B)$\n\nWhere:\n- $A$ = Number of critical log sources (e.g., from servers, network devices, applications, cloud services) integrated into the SIEM and configured with security alerts for anomalous or critical activity.\n- $B$ = Total number of critical log sources identified as requiring integration into the SIEM and security alert configuration.\n\nRules:\n1. An inventory of critical log sources must be defined and maintained.\n2. Criteria for what constitutes 'configured with security alerts' (e.g., specific alert rules, coverage of critical event types) must be established.\n3. 'Security alerts include traditional alerts triggered when a log records events in a control domain above a specified threshold, as well as alerts generated by anomaly detection using machine learning.'\n\nIf $B=0$ (no critical log sources are identified as requiring SIEM integration, which is unlikely in a production cloud environment), the metric is N/A. Consider a minimum set of critical log sources that must be present for the system to be considered secure."
+              }
+            ],
+            "related-controls": [
+              {
+                "control-id": "au-2"
+              },
+              {
+                "control-id": "au-12"
+              },
+              {
+                "control-id": "si-4"
+              }
+            ]
+          },
+          {
+            "uuid": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9g",
+            "name": "assessment-objective",
+            "title": "Objective 2: Effectiveness of Log Tamper-Resistance Mechanisms",
+            "prose": "To determine the effectiveness of mechanisms implemented to ensure the integrity and resist tampering of audit logs collected and managed by the SIEM system or associated log management infrastructure.",
+            "parts": [
+              {
+                "uuid": "5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9g0h",
+                "name": "assessment-method",
+                "class": "objective-assessment-method",
+                "props": [
+                  {
+                    "name": "method-type",
+                    "value": "MEASURE"
+                  }
+                ],
+                "prose": "The measurement is defined as the percentage of critical log storage repositories that implement and validate tamper-resistance mechanisms.\n\nExpression: Percentage of critical log repositories with validated tamper-resistance = $100 * (X/Y)$\n\nWhere:\n- $X$ = Number of critical log storage repositories (utilized by or for the SIEM) that have implemented tamper-resistance mechanisms (e.g., write-once storage, cryptographic hashing/chaining of log entries, regular integrity validation checks, access controls restricting modification/deletion) AND where these mechanisms are periodically tested and validated for effectiveness.\n- $Y$ = Total number of critical log storage repositories utilized by or for the SIEM.\n\nRules:\n1. An inventory of critical log storage repositories must be defined and maintained.\n2. Acceptable tamper-resistance mechanisms and validation procedures must be defined by organizational policy (e.g., based on NIST SP 800-92 Guide to Computer Security Log Management).\n3. Validation frequency and success criteria for tests must be defined.\n\nIf $Y=0$ (no critical log storage repositories identified), the metric is N/A. Assume at least one such repository for a SIEM to be functional."
+              }
+            ],
+            "related-controls": [
+              {
+                "control-id": "au-3"
+              },
+              {
+                "control-id": "au-4"
+              },
+              {
+                "control-id": "au-8"
+              },
+              {
+                "control-id": "au-11"
+              }
+            ]
+          }
+        ],
+        "related-controls": [
+          {
+            "control-id": "au-2"
+          },
+          {
+            "control-id": "au-3"
+          },
+          {
+            "control-id": "au-4"
+          },
+          {
+            "control-id": "au-8"
+          },
+          {
+            "control-id": "au-11"
+          },
+          {
+            "control-id": "au-12"
+          },
+          {
+            "control-id": "si-4"
+          }
+        ]
+      },
+      {
+        "id": "metric-mla-001-02",
+        "class": "metric",
+        "title": "Effectiveness of Log Review and Audit Procedures",
+        "props": [
+          {
+            "name": "status",
+            "value": "draft"
+          }
+        ],
+        "links": [
+          {
+            "href": "https://www.fedramp.gov/rfcs/0006/",
+            "rel": "source-requirement",
+            "text": "FedRAMP RFC 0006 - Monitoring, Logging, and Auditing Requirement 2"
+          }
+        ],
+        "parts": [
+          {
+            "uuid": "6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9g0h1i",
+            "name": "description",
+            "prose": "This metric control assesses the effectiveness and timeliness of processes for reviewing security audit logs, analyzing findings, and taking appropriate actions on detected anomalies or policy violations."
+          },
+          {
+            "uuid": "7a8b9c0d-1e2f-3a4b-5c6d-7e8f9g0h1i2j",
+            "name": "assessment-objective",
+            "title": "Objective 1: Timeliness and Effectiveness of Log Review and Anomaly Response",
+            "prose": "To determine the percentage of discovered anomalies or significant security events from audit logs that are reviewed, analyzed, and resolved or appropriately dispositioned within organizationally defined timelines.",
+            "parts": [
+              {
+                "uuid": "8b9c0d1e-2f3a-4b5c-6d7e-8f9g0h1i2j3k",
+                "name": "assessment-method",
+                "class": "objective-assessment-method",
+                "props": [
+                  {
+                    "name": "method-type",
+                    "value": "MEASURE"
+                  }
+                ],
+                "prose": "The measurement is based on the CSA Metric LOG-05-M1.\n\nExpression: Percentage of anomalies resolved in compliance with policy = $100 * (A/B)$ (if B is not 0, or 100 when B is 0).\n\nWhere:\n- $A$ = Number of anomalies or significant security events detected from log reviews during the sampling period that were reviewed, analyzed, and resolved (or formally accepted as a risk) within a timeframe that is in compliance with policy.\n- $B$ = Total number of anomalies or significant security events detected from log reviews during the sampling period requiring action.\n\nRules:\n1. An 'anomaly' is any event happening outside of typical or expected patterns, or predefined significant security events requiring review.\n2. Organizational policies must define the timelines for review, analysis, and resolution/disposition of different classes of anomalies or events.\n3. Anomalies detected during the sampling period but not yet reviewed and resolved/dispositioned within the policy timeframe by the end of the sampling period are not counted in A for that period.\n4. A process for tracking the lifecycle of anomaly review and response must be in place.\n\nIf $B=0$ (no anomalies detected during the sampling period), the metric result is 100%, indicating no outstanding issues requiring action."
+              }
+            ],
+            "related-controls": [
+              {
+                "control-id": "au-2"
+              },
+              {
+                "control-id": "au-3"
+              },
+              {
+                "control-id": "si-4"
+              }
+            ]
+          }
+        ],
+        "related-controls": [
+          {
+            "control-id": "au-2"
+          },
+          {
+            "control-id": "au-3"
+          },
+          {
+            "control-id": "au-4"
+          },
+          {
+            "control-id": "au-8"
+          },
+          {
+            "control-id": "au-11"
+          },
+          {
+            "control-id": "au-12"
+          },
+          {
+            "control-id": "si-4"
+          }
+        ]
+      },
+      {
+        "id": "metric-mla-001-03",
+        "class": "metric",
+        "title": "Timeliness of Vulnerability Detection and Remediation",
+        "props": [
+          {
+            "name": "status",
+            "value": "draft"
+          }
+        ],
+        "links": [
+          {
+            "href": "https://www.fedramp.gov/rfcs/0006/",
+            "rel": "source-requirement",
+            "text": "FedRAMP RFC 0006 - Monitoring, Logging, and Auditing Requirement 3"
+          }
+        ],
+        "parts": [
+          {
+            "uuid": "8c9d0e1f-2a3b-4c5d-6e7f-8a9b0c1d2e3f",
+            "name": "description",
+            "prose": "This metric control assesses the organization's speed and effectiveness in detecting publicly known vulnerabilities on its assets and remediating or mitigating identified high and critical vulnerabilities according to defined policy timeframes."
+          },
+          {
+            "uuid": "9d0e1f2a-3b4c-5d6e-7f8a-9b0c1d2e3f4g",
+            "name": "assessment-objective",
+            "title": "Objective 1: Timeliness of Vulnerability Identification",
+            "prose": "To determine the percentage of publicly known high and critical vulnerabilities that are identified for the organization's assets within the organization's required timeframes from the point of public disclosure or asset commissioning.",
+            "parts": [
+              {
+                "uuid": "0e1f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4g5h",
+                "name": "assessment-method",
+                "class": "objective-assessment-method",
+                "props": [
+                  {
+                    "name": "method-type",
+                    "value": "MEASURE"
+                  }
+                ],
+                "prose": "The measurement is based on the CSA Metric TVM-10-M1.\n\nExpression: Percentage of high and critical vulnerabilities identified within policy timeframes = $100 * (A/B)$\n\nWhere:\n- $A$ = Number of high and critical vulnerabilities applicable to the organization's assets that were identified (e.g., acknowledged for tracking/remediation) within the policy-defined timeframe. The timeframe starts from the later of the vulnerability's public disclosure date or the asset's commissioning date.\n- $B$ = Total number of high and critical vulnerabilities applicable to the organization's assets identified or carried over into the sampling period.\n\nRules:\n1. Organizational policy must define timeframes for identifying vulnerabilities based on severity (e.g., high, critical).\n2. A process for tracking vulnerability disclosure dates, asset commission dates, and organizational identification dates is required.\n3. Classification of vulnerabilities (e.g., using CVSS) must be consistently applied.\n4. Vulnerabilities identified but whose policy timeframe for identification spans into the next reporting period are considered 'carried-over' for B in the subsequent period if not yet identified by then.\n\nIf $B=0$, the metric is N/A or 100% (if interpreted as no applicable vulnerabilities were missed)."
+              }
+            ],
+            "related-controls": [
+              {
+                "control-id": "ra-5"
+              }
+            ]
+          },
+          {
+            "uuid": "1f2a3b4c-5d6e-7f8a-9b0c-1d2e3f4g5h6i",
+            "name": "assessment-objective",
+            "title": "Objective 2: Timeliness of Vulnerability Remediation/Mitigation",
+            "prose": "To determine the percentage of identified high and critical vulnerabilities that are remediated or formally mitigated within the organization's defined policy timeframes from the point of confirmed identification.",
+            "parts": [
+              {
+                "uuid": "2a3b4c5d-6e7f-8a9b-0c1d-2e3f4g5h6i7j",
+                "name": "assessment-method",
+                "class": "objective-assessment-method",
+                "props": [
+                  {
+                    "name": "method-type",
+                    "value": "MEASURE"
+                  }
+                ],
+                "prose": "The measurement is based on the CSA Metric TVM-03-M1.\n\nExpression: Percentage of high and critical vulnerabilities remediated within policy timeframes = $100 * (X/Y)$\n\nWhere:\n- $X$ = Number of high and critical vulnerabilities identified during the sampling period (or carried over as open from previous periods) that were remediated or formally mitigated within policy-defined timeframes.\n- $Y$ = Total number of high and critical vulnerabilities identified during the sampling period plus those still open from previous periods.\n\nRules:\n1. Organizational policy must define timeframes for remediating/mitigating vulnerabilities based on severity.\n2. A process for tracking vulnerability identification dates and remediation/mitigation dates is required.\n3. 'High and critical vulnerabilities are defined consistent with the implementation of TVM-08.' (TVM-08 is a CSA CCM Control, implying internal definition consistent with risk).\n4. If a vulnerability is identified but not yet remediated when the measurement is made, its age against the policy timeframe is evaluated.\n\nIf $Y=0$, the metric is N/A or 100% (if interpreted as no vulnerabilities required remediation)."
+              }
+            ],
+            "related-controls": [
+              {
+                "control-id": "si-2"
+              }
+            ]
+          }
+        ],
+        "related-controls": [
+          {
+            "control-id": "ra-5"
+          },
+          {
+            "control-id": "si-2"
+          }
+        ]
+      },
+      {
+        "id": "metric-mla-001-04",
+        "class": "metric",
+        "title": "Coverage and Configuration of Authenticated Vulnerability Scanning on Publicly Accessible Components",
+        "props": [
+          {
+            "name": "status",
+            "value": "draft"
+          }
+        ],
+        "links": [
+          {
+            "href": "https://www.fedramp.gov/rfcs/0006/",
+            "rel": "source-requirement",
+            "text": "FedRAMP RFC 0006 - Monitoring, Logging, and Auditing Requirement 4"
+          }
+        ],
+        "parts": [
+          {
+            "uuid": "3b4c5d6e-7f8a-9b0c-1d2e-3f4g5h6i7j8k",
+            "name": "description",
+            "prose": "This metric control assesses the extent to which publicly accessible system components are regularly scanned for vulnerabilities using authenticated scanning methods, and the completeness of this scanning coverage."
+          },
+          {
+            "uuid": "4c5d6e7f-8a9b-0c1d-2e3f-4g5h6i7j8k9l",
+            "name": "assessment-objective",
+            "title": "Objective 1: Coverage of Authenticated Vulnerability Scanning on Publicly Accessible Components",
+            "prose": "To determine the percentage of identified publicly accessible system components that are included in regular, authenticated vulnerability scanning schedules.",
+            "parts": [
+              {
+                "uuid": "5d6e7f8a-9b0c-1d2e-3f4g-5h6i7j8k9l0m",
+                "name": "assessment-method",
+                "class": "objective-assessment-method",
+                "props": [
+                  {
+                    "name": "method-type",
+                    "value": "MEASURE"
+                  }
+                ],
+                "prose": "The measurement is adapted from CSA Metric TVM-07-M1, focusing on authenticated scans for publicly accessible components.\n\nExpression: Percentage of publicly accessible components covered by authenticated vulnerability scans = $100 * (A/B)$\n\nWhere:\n- $A$ = Number of identified publicly accessible system components (e.g., servers, services, APIs) that have been scanned using authenticated methods within the organizationally defined frequency (e.g., monthly) during the sampling period.\n- $B$ = Total number of identified publicly accessible system components that require authenticated vulnerability scanning.\n\nRules:\n1. An inventory of all publicly accessible system components must be maintained and regularly updated.\n2. Organizational policy must define the required frequency for authenticated vulnerability scans on these components (e.g., at least monthly).\n3. Evidence of authenticated scan completion (e.g., scan reports showing credentialed access) is required for a component to be counted in A.\n4. 'The \"asset catalog\" refers to the cataloging requirements of DCS-06' or an equivalent inventory for publicly accessible components.\n\nIf $B=0$ (no publicly accessible components identified, which is unlikely for a cloud service), the metric is N/A."
+              }
+            ],
+            "related-controls": [
+              {
+                "control-id": "ra-5"
+              }
+            ]
+          }
+        ],
+        "related-controls": [
+          {
+            "control-id": "ra-5"
+          }
+        ]
+      },
+      {
+        "id": "metric-mla-001-05",
+        "class": "metric",
+        "title": "Effectiveness of IaC and Configuration Scanning",
+        "props": [
+          {
+            "name": "status",
+            "value": "draft"
+          }
+        ],
+        "links": [
+          {
+            "href": "https://www.fedramp.gov/rfcs/0006/",
+            "rel": "source-requirement",
+            "text": "FedRAMP RFC 0006 - Monitoring, Logging, and Auditing Requirement 5"
+          }
+        ],
+        "parts": [
+          {
+            "uuid": "6e7f8a9b-0c1d-2e3f-4g5h-6i7j8k9l0m1n",
+            "name": "description",
+            "prose": "This metric control assesses the effectiveness of scanning Infrastructure as Code (IaC) templates and system configurations for compliance with security policies and baselines."
+          },
+          {
+            "uuid": "7f8a9b0c-1d2e-3f4g-5h6i-7j8k9l0m1n2o",
+            "name": "assessment-objective",
+            "title": "Objective 1: Pass Rate of IaC and Configuration Security Scans",
+            "prose": "To determine the percentage of Infrastructure as Code (IaC) templates and deployed system configuration items that pass security compliance tests based on established baselines and policies.",
+            "parts": [
+              {
+                "uuid": "8a9b0c1d-2e3f-4g5h-6i7j-8k9l0m1n2o3p",
+                "name": "assessment-method",
+                "class": "objective-assessment-method",
+                "props": [
+                  {
+                    "name": "method-type",
+                    "value": "MEASURE"
+                  }
+                ],
+                "prose": "The measurement is adapted from CSA Metric CCC-07-M1.\n\nExpression: Percentage of IaC/configuration items passing security tests = $100 * (A/B)$\n\nWhere:\n- $A$ = Number of IaC templates and deployed system configuration items (CIs) that were tested against security baselines and passed successfully during the sampling period. This includes IaC files (e.g., Terraform, CloudFormation, ARM templates) scanned prior to deployment and deployed system CIs scanned in runtime environments.\n- $B$ = Total number of IaC templates and deployed system CIs that were tested against security baselines during the sampling period.\n\nRules:\n1. An inventory of IaC templates subject to scanning and types of deployed system CIs (e.g., virtual machines, containers, network devices, storage configurations) subject to configuration scanning must be defined.\n2. Security baselines and compliance checks for IaC and system configurations must be formally documented and implemented in scanning tools.\n3. Each test is assumed to verify an IaC template or a 'configuration item,' which is any component or IaC file for which a test can be defined.\n4. Scanning should occur at defined frequencies (e.g., pre-deployment for IaC, continuous or periodic for deployed CIs).\n\nIf $B=0$ (no IaC templates or CIs were tested), the metric is N/A."
+              }
+            ],
+            "related-controls": [
+              {
+                "control-id": "ra-5"
+              }
+            ]
+          }
+        ],
+        "related-controls": [
+          {
+            "control-id": "ra-5"
+          }
+        ]
+      },
+      {
+        "id": "metric-mla-001-06",
+        "class": "metric",
+        "title": "Effectiveness of Centralized Vulnerability Tracking and Prioritization",
+        "props": [
+          {
+            "name": "status",
+            "value": "draft"
+          }
+        ],
+        "links": [
+          {
+            "href": "https://www.fedramp.gov/rfcs/0006/",
+            "rel": "source-requirement",
+            "text": "FedRAMP RFC 0006 - Monitoring, Logging, and Auditing Requirement 6"
+          }
+        ],
+        "parts": [
+          {
+            "uuid": "9b0c1d2e-3f4g-5h6i-7j8k-9l0m1n2o3p4q",
+            "name": "description",
+            "prose": "This metric control assesses the effectiveness of processes and systems for centrally tracking identified vulnerabilities and applying a consistent, risk-informed approach to prioritize their remediation."
+          },
+          {
+            "uuid": "0c1d2e3f-4g5h-6i7j-8k9l-0m1n2o3p4q5r",
+            "name": "assessment-objective",
+            "title": "Objective 1: Adherence to Centralized Vulnerability Tracking",
+            "prose": "To determine the percentage of identified vulnerabilities that are recorded and tracked within a designated central vulnerability management system.",
+            "parts": [
+              {
+                "uuid": "1d2e3f4g-5h6i-7j8k-9l0m-1n2o3p4q5r6s",
+                "name": "assessment-method",
+                "class": "objective-assessment-method",
+                "props": [
+                  {
+                    "name": "method-type",
+                    "value": "MEASURE"
+                  }
+                ],
+                "prose": "The measurement is defined as the percentage of newly identified vulnerabilities (e.g., from scans, penetration tests, bug bounties, manual discovery) that are entered into the official central vulnerability tracking system within a defined timeframe.\n\nExpression: Percentage of vulnerabilities centrally tracked = $100 * (A/B)$\n\nWhere:\n- $A$ = Number of newly identified vulnerabilities during the sampling period that were recorded in the designated central vulnerability tracking system within the policy-defined timeframe from their initial reporting or discovery.\n- $B$ = Total number of newly identified vulnerabilities during the sampling period from all sources.\n\nRules:\n1. A designated central vulnerability tracking system (e.g., a specific tool or database) must be defined.\n2. Organizational policy must define the timeframe for entering new vulnerabilities into this system.\n3. Sources of vulnerability identification (e.g., scanners, manual reports) must be inventoried to ensure B is comprehensive.\n\nIf $B=0$ (no new vulnerabilities identified), the metric is 100% (or N/A, interpreted as full adherence as no items needed tracking)."
+              }
+            ],
+            "related-controls": [
+              {
+                "control-id": "ra-5"
+              }
+            ]
+          },
+          {
+            "uuid": "2e3f4g5h-6i7j-8k9l-0m1n-2o3p4q5r6s7t",
+            "name": "assessment-objective",
+            "title": "Objective 2: Adherence to Vulnerability Prioritization Policy",
+            "prose": "To determine the percentage of tracked vulnerabilities that have been assigned a priority level in accordance with the organization's defined risk-based prioritization policy.",
+            "parts": [
+              {
+                "uuid": "3f4g5h6i-7j8k-9l0m-1n2o-3p4q5r6s7t8u",
+                "name": "assessment-method",
+                "class": "objective-assessment-method",
+                "props": [
+                  {
+                    "name": "method-type",
+                    "value": "MEASURE"
+                  }
+                ],
+                "prose": "The measurement is defined as the percentage of vulnerabilities within the central tracking system that have a documented priority assigned according to the established prioritization scheme.\n\nExpression: Percentage of tracked vulnerabilities with assigned priority = $100 * (X/Y)$\n\nWhere:\n- $X$ = Number of vulnerabilities currently active in the central tracking system that have a priority level assigned consistent with the organization's vulnerability prioritization policy.\n- $Y$ = Total number of vulnerabilities currently active in the central tracking system.\n\nRules:\n1. A formal vulnerability prioritization policy or methodology (e.g., based on CVSS scores, threat intelligence, business impact, asset criticality) must be documented and approved.\n2. The central vulnerability tracking system must support the recording of priority levels.\n3. 'Active' vulnerabilities are those not yet remediated or formally accepted as a risk.\n\nIf $Y=0$ (no active vulnerabilities in the tracking system), the metric is 100% (or N/A)."
+              }
+            ],
+            "related-controls": [
+              {
+                "control-id": "ra-5"
+              },
+              {
+                "control-id": "si-2"
+              }
+            ]
+          }
+        ],
+        "related-controls": [
+          {
+            "control-id": "ra-5"
+          },
+          {
+            "control-id": "si-2"
+          }
+        ]
+      }
+    ],
+    "groups": [
+      {
+        "uuid": "e5f6a7b8-c9d0-1234-5678-90abcdef0123",
+        "title": "Sub-Metrics for KSI-MLA",
+        "class": "metric-group",
+        "remarks": "This group contains individual metric controls that contribute to the KSI-MLA.",
+        "control-ids": [
+          "metric-mla-001-01",
+          "metric-mla-001-02",
+          "metric-mla-001-03",
+          "metric-mla-001-04",
+          "metric-mla-001-05",
+          "metric-mla-001-06"
+        ]
+      }
+    ]
+  }
+}
